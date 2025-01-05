@@ -42,14 +42,14 @@ def preprop_lstat(dfr, dfg, pdict):
     dframe.columns = dframe.columns.str.strip()
 
     # Select relevant columns and rename
-    if 'Nennleistung Ladeeinrichtung [kW]' in dframe.columns:
-        dframe2 = dframe.loc[:, ['Postleitzahl', 'Bundesland', 'Breitengrad', 'Längengrad', 'Nennleistung Ladeeinrichtung [kW]']]
-        dframe2.rename(columns={"Nennleistung Ladeeinrichtung [kW]": "KW", "Postleitzahl": "PLZ"}, inplace=True)
-        # print("Renamed columns in dframe2:", dframe2.columns)
-    else:
-        # print("Warning: 'Nennleistung Ladeeinrichtung [kW]' column not found.")
-        # print("Available columns:", dframe.columns)
-        return None  # Return early if column is missing
+    # if 'Nennleistung Ladeeinrichtung [kW]' in dframe.columns:
+    dframe2 = dframe.loc[:, ['Postleitzahl', 'Bundesland', 'Breitengrad', 'Längengrad', 'Nennleistung Ladeeinrichtung [kW]']]
+    dframe2.rename(columns={"Nennleistung Ladeeinrichtung [kW]": "KW", "Postleitzahl": "PLZ"}, inplace=True)
+    #     # print("Renamed columns in dframe2:", dframe2.columns)
+    # else:
+    #     # print("Warning: 'Nennleistung Ladeeinrichtung [kW]' column not found.")
+    #     # print("Available columns:", dframe.columns)
+    #     return None  # Return early if column is missing
 
     # Convert latitude and longitude to string and replace commas (if applicable)
     dframe2['Breitengrad'] = dframe2['Breitengrad'].astype(str).str.replace(',', '.').astype(float, errors='ignore')
