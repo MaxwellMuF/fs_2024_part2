@@ -6,8 +6,8 @@ import streamlit_authenticator as stauth
 
 from core import methods as m1
 from core import HelperTools as ht
-from config import pdict
-import data_pipeline as dp
+from core.config import pdict
+from core import data_pipeline as dp
 
 
 def init_data():

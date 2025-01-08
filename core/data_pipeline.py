@@ -1,21 +1,11 @@
 import pandas as pd
 from core import methods as m1
 from core import HelperTools as ht
-from config import pdict
+from core.config import pdict
 
 @ht.timer
 def data_process():
     """Data process: Load and process data"""
-
-    try:
-        pd.read_csv("data/gdf_lstat3.csv")
-        pd.read_csv("data/gdf_residents2.csv")
-        print("Loaded Date")
-        
-        return gdf_lstat3, gdf_residents2 
-
-    except:
-        print("Make Data process")
     # Load data
     df_geodat_plz = pd.read_csv('data/datasets/geodata_berlin_plz.csv', sep=';')  # For geospatial data
     df_lstat = pd.read_excel('data/datasets/Ladesaeulenregister_SEP.xlsx', header=10)
@@ -23,10 +13,10 @@ def data_process():
 
 
     # Inspect data (optional debugging statements)
-    # print("Initial columns in df_lstat:", df_lstat.columns)
-    # print("Sample data from df_lstat:", df_lstat.head())
+    print("Initial columns in df_lstat:", df_lstat.columns)
+    print("Sample data from df_lstat:", df_lstat.head(3))
 
-    df_residents = pd.read_csv('data/datasets/plz_einwohner.csv')  # Adjust the path accordingly
+    #df_residents = pd.read_csv('data/datasets/plz_einwohner.csv')  # Adjust the path accordingly
 
     # Data Quality Checks
     required_columns_charging = ['Postleitzahl', 'Bundesland', 'Breitengrad', 'Längengrad', 'Nennleistung Ladeeinrichtung [kW]']
@@ -67,7 +57,18 @@ def data_process():
     gdf_lstat3 = m1.count_plz_occurrences(gdf_lstat)
     gdf_residents2 = m1.preprop_resid(df_residents, df_geodat_plz, pdict)
 
-    gdf_lstat3.to_csv("data/gdf_lstat3.csv")
-    gdf_residents2.to_csv("data/gdf_residents2.csv")
+    gdf_lstat3.to_csv("gdf_lstat3.csv")
+    gdf_residents2.to_csv("gdf_residents2.csv")
 
     return gdf_lstat3, gdf_residents2
+
+def load_or_process_data():
+    try:
+        gdf_lstat3 = pd.read_csv("gdf_lstat3.csv")
+        gdf_residents2 = pd.read_csv("gdf_residents2.csv")
+        print("Loaded Date")
+        return gdf_lstat3, gdf_residents2 
+
+    except:
+        print("Make Data process")
+        return data_process()
