@@ -1,4 +1,6 @@
 import yaml
+import json
+import datetime
 import streamlit as st
 from yaml.loader import SafeLoader
 import streamlit_authenticator as stauth
@@ -62,6 +64,14 @@ def login_widget():
     """Spawn a login widget"""
     try:
         authenticator.login()
+        try:
+            with open("DataBase_user_changes.json", "r") as file:
+                user_database = json.load(file)
+            st.session_state.df_stations_user_edit = user_database[st.session_state.username]
+        except:
+            with open("DataBase_user_changes.json", "w") as file:
+                json.dump({}, file)
+            #st.session_state.df_stations_user_edit = False
     except LoginError as e:
         st.error(e)
     return
@@ -69,7 +79,21 @@ def login_widget():
 def logout_widget():
     """Logout user instant"""
     st.title(f"Thank you for a visit *{st.session_state.name}*")
+    user_name = st.session_state.username
     authenticator.logout()
+    
+    # if st.session_state.Logout:
+    #     # Save user changes as json (easy DB)
+    #     with open("DataBase_user_changes.json", "r") as file:
+    #         user_database = json.load(file)
+    #     print("HELLO \n\n")
+    #     print(st.session_state.df_stations_user_edit)
+    #     user_database[user_name+"_"+datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")] = \
+    #                                                 st.session_state.df_stations_user_edit.to_dict()
+    #     print(st.session_state)
+    #     with open("DataBase_user_changes.json", "w") as file:
+    #         json.dump(user_database, file)
+
     return
 
 # Creating a new user registration widget
@@ -160,7 +184,7 @@ def pages_bevor_login():
 
 def pages_after_login():
     welcome = st.Page("streamlit_app/page_1_welcome.py", title="Welcome", icon=":material/home:")
-    charging_stations = st.Page("streamlit_app/page_2_charging_stations.py", title="Charging Stations", icon=":material/dynamic_form:")
+    charging_stations = st.Page("streamlit_app/page_2_charging_stations.py", title="Charging Stations", icon=":material/dynamic_form:", default=True)
     reset_password = st.Page(reset_password_widget, title="Reset Password", icon=":material/key:")
     logout = st.Page(logout_widget, title="Logout", icon=":material/home:")
     return [welcome, charging_stations, reset_password, logout]

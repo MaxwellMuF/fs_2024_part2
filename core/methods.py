@@ -4,6 +4,9 @@ import geopandas                     as gpd
 import core.HelperTools              as ht
 
 import folium
+import json
+import datetime
+import time
 # from folium.plugins import HeatMap
 import streamlit as st
 from streamlit_folium import folium_static
@@ -220,6 +223,8 @@ def helper_subset_with_criteria(df_orig: pd.DataFrame, column: str, criteria):
 def make_streamlit_electric_Charging_resid_2(dfr1):
     """Makes Streamlit App with Heatmap of Electric Charging Stations"""
     df_every_station = dfr1.copy()
+    df_every_station["Available"] = np.random.choice(["✔️", "❌"], df_every_station.shape[0]).tolist()
+
     df_numbers_per_kW = count_plz_occurrences(dfr1, sort_col=['PLZ', "KW"])
     df_numbers = count_plz_occurrences(dfr1, sort_col=('PLZ'))
     # print(dframe1.head(5))
@@ -296,13 +301,96 @@ def make_streamlit_electric_Charging_resid_2(dfr1):
 
     col1, col2 = st.columns(2)
     with col1:
+        st.write("Number of Charging Stations per kW")
         st.dataframe(df_numbers_per_kW.drop("geometry", axis=1).sort_values("KW", ascending=False))
+        # st.write("Number of Charging Stations per kW")
     with col2:
+        st.write("Number of Charging Stations per zip code")
         st.dataframe(df_numbers.drop("geometry", axis=1).sort_values("Number", ascending=False))
+        # st.write("Number of Charging Stations per zip code")
+
+    # drop unnessesary columns
+    df_user_selected_subset_av = pd.DataFrame(df_user_selected_subset.drop(columns=["geometry", "Breitengrad",
+                                                "Längengrad", "Bundesland", "Ort"])).sort_values("KW", ascending=False)
     
-    df_user_selected_subset["Availability"] = np.random.choice(["✅","❌"], df_user_selected_subset.shape[0])
-    st.dataframe(df_user_selected_subset.drop(["geometry", "Breitengrad",
-                                                "Längengrad"], axis=1).sort_values("KW", ascending=False))
+    # if "df_stations_user_edit" not in st.session_state:
+    #     st.session_state.df_stations_user_edit = False
+    # Spawn interactiv df
+    st.write("All Charging Stations you have selected with their address and availability:")
+    st.dataframe(df_user_selected_subset_av)
+    # df_user_selected_subset_av.copy()
+
+
+    # Spawn a new df to add user input
+    if "df_stations_user_edit" not in st.session_state:
+        try:
+            with open("DataBase_user_changes.json", "r") as file:
+                user_database = json.load(file)
+            df_user_changes = user_database[st.session_state.username]
+        except:
+            df_user_changes = pd.DataFrame(columns=df_user_selected_subset_av.columns.to_list()+["Rating", "Commend"])
+    else:
+        df_user_changes = st.session_state.df_stations_user_edit
+
+    st.subheader("")
+    st.subheader("Do you want to add a Charging Station or leave a commant?")
+    st.write("Tank you for helping the project and other users! Here you can add \
+             a new Charging Station? You can also leave a recommendation or a comment for an existing recommendation:")
+    
+    #df = pd.DataFrame(columns=['name','age','color'])
+    # colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+    config = {
+        'PLZ' : st.column_config.NumberColumn('PLZ', min_value=10115, max_value=14200, required=True), #width='large',
+        'Straße' : st.column_config.TextColumn('Straße', required=True), #width='medium',
+        'Hausnummer' : st.column_config.TextColumn('Hausnummer', required=True),
+        'KW' : st.column_config.NumberColumn('KW', min_value=1, max_value=1000),
+        'Available' : st.column_config.SelectboxColumn('Available', options=["✔️", "❌"]),
+        'Rating' : st.column_config.SelectboxColumn('Rating', options=list(range(1,6))),
+        'Comment' : st.column_config.TextColumn('Comment')
+    }
+
+    df_stations_user_edit = st.data_editor(df_user_changes, column_config = config, num_rows='dynamic')
+    st.session_state.df_stations_user_edit = df_stations_user_edit
+    
+    if st.button('Get results'):
+        st.write("Here is your post. You can change it at any time.")
+        st.dataframe(df_stations_user_edit)
+        if st.button("Submit post", key="submited_post"):
+            st.write("We have saved your post. Thank you for your support!")
+            time.sleep(2)
+
+    if "submited_post" not in st.session_state:
+        st.session_state.submited_post = False
+
+    elif st.session_state.submited_post == True:
+        # Save user changes as json (easy DB)
+        with open("DataBase_user_changes.json", "r") as file:
+            user_database = json.load(file)
+        print(df_stations_user_edit)
+        user_database[st.session_state.username] = df_stations_user_edit #.to_dict()
+        with open("DataBase_user_changes.json", "w") as file:
+            json.dump(user_database, file)
+
+        st.write("We have saved your post. Thank you for your support!")
+        time.sleep(3)
+        st.rerun()
+
+    # st.session_state.df_stations_user_edit = st.data_editor(df_user_changes, num_rows="dynamic")
+
+    # st.write("Debugging only, show edit df:")
+    # st.write(result)
+    # st.write(st.session_state.df_stations_user_edit)
+    
+    # st.button("Click")
+    # st.write(st.session_state.df_stations_user_edit)
+    # with open("DataBase_user_changes.json", "r") as file:
+    #     user_database = json.load(file)
+    
+    # user_database[st.session_state.username+"_"+datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")] = st.session_state.df_stations_user_edit
+    # # print(st.session_state)
+    # with open("DataBase_user_changes.json", "w") as file:
+    #     json.dump(user_database, file)
+    return
 
 
 
