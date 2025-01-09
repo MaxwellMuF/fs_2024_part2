@@ -3,3 +3,4 @@ __pycache__/
 data/datasets_old*
 data/datasets*
 data/evpstation-banner-1024x576.jpg
+datasets/*

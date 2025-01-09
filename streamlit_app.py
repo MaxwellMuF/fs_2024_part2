@@ -156,16 +156,14 @@ def pages_bevor_login():
     register_new_user = st.Page(register_new_user_widget, title="Reset Password", icon=":material/key:")
     forgot_password = st.Page(forgot_password_widget, title="Forget Password", icon=":material/key:")
     forgot_username = st.Page(forgot_username_widget, title="Forget Username", icon=":material/key:")
-    result_page_list = [login, register_new_user, forgot_password, forgot_username]
-    return result_page_list
+    return [login, register_new_user, forgot_password, forgot_username]
 
 def pages_after_login():
     welcome = st.Page("streamlit_app/page_1_welcome.py", title="Welcome", icon=":material/home:")
     charging_stations = st.Page("streamlit_app/page_2_charging_stations.py", title="Charging Stations", icon=":material/dynamic_form:")
     reset_password = st.Page(reset_password_widget, title="Reset Password", icon=":material/key:")
     logout = st.Page(logout_widget, title="Logout", icon=":material/home:")
-    result_page_list = [welcome, charging_stations, reset_password, logout]
-    return result_page_list
+    return [welcome, charging_stations, reset_password, logout]
 
 
 ## Init session_states aka class streamlit properties
