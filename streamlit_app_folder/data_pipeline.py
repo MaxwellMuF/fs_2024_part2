@@ -5,7 +5,7 @@ from streamlit_app_folder import methods
 from streamlit_app_folder.config import pdict
 
 
-@methods.timer
+# @methods.timer
 def data_process():
     """Data process: Load and process data"""
     # Load data
@@ -54,6 +54,3 @@ def data_process():
     df_charging_berlin                  = gpd.GeoDataFrame(df_charging_berlin, geometry='geometry')
 
     return df_charging_berlin
-    
-# df = data_process()
-# print(df.head())

@@ -9,6 +9,7 @@ import streamlit    as st
 from streamlit_folium       import st_folium
 from branca.colormap        import LinearColormap
 
+# Own python files
 from streamlit_app_folder   import methods
 from streamlit_app_folder   import data_pipeline
 
@@ -203,7 +204,7 @@ def spawn_interactiv_df_for_user_comment(df_user_changes):
 # ----------------------------- streamlit page ------------------------------
 
 # Make Heatmap of berlin with number of charging stations
-@methods.timer
+# @methods.timer
 def make_streamlit_page_elements(df):
     """The sequence of streamlit elements on this page:
             Perform user selection and filter data.
@@ -250,7 +251,7 @@ def init_data():
         st.session_state.df_charging_berlin = data_pipeline.data_process()
     return
 
-@methods.timer
+# @methods.timer
 def main():
     """Main of the Charging Stations page: 
             Load and process data and save it as streamlit state.

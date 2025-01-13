@@ -8,3 +8,6 @@ streamlit_authenticator
 folium
 branca
 functools
+pytest
+MagicMock
+streamlit-testing 
