@@ -225,8 +225,8 @@ def make_streamlit_electric_Charging_resid_2(dfr1):
     df_every_station = dfr1.copy()
     df_every_station["Available"] = np.random.choice(["✔️", "❌"], df_every_station.shape[0]).tolist()
 
-    df_numbers_per_kW = count_plz_occurrences(dfr1, sort_col=['PLZ', "KW"])
-    df_numbers = count_plz_occurrences(dfr1, sort_col=('PLZ'))
+    # df_numbers_per_kW = count_plz_occurrences(dfr1, sort_col=['PLZ', "KW"])
+    # df_numbers = count_plz_occurrences(dfr1, sort_col=('PLZ'))
     # print(dframe1.head(5))
     # dframe2 = dfr2.copy()
 
@@ -234,31 +234,36 @@ def make_streamlit_electric_Charging_resid_2(dfr1):
     st.title('Find your Electric Charging Station')
     
     # Add user input for zip code
-    user_zip_code = st.selectbox(
-    "Only show Charging Station in my zip code",
+    st.subheader("Charging Stations in my zip code")
+    user_selected_zip_code = st.selectbox(
+    "Only show Charging Stations in my zip code",
     ["All"] + sorted(df_every_station["PLZ"].unique()))
 
     # Make subset with respect to user selected PLZ
-    df_user_selected_subset = helper_subset_with_criteria(df_orig=df_every_station, column="PLZ", criteria=user_zip_code)
+    df_user_selected_subset = helper_subset_with_criteria(df_orig=df_every_station, column="PLZ", criteria=user_selected_zip_code)
 
+    # Add power selection
+    st.subheader("How much power is appropriate?")
     col1, col2 = st.columns(2)
     with col1:
-        user_criteria_50kW = st.checkbox("Only show Charging Station with 50kW and more!")
+        user_criteria_50kW = st.checkbox("Only show Charging Stations with 50kW and more!")
         if user_criteria_50kW:
             df_user_selected_subset = df_user_selected_subset[df_user_selected_subset["KW"] >= 50].copy() #.reset_index()
 
     with col2:
         # Add selector fpr KW
         user_selected_kw = st.selectbox(
-        "Select the preferred power [kW] of your charging station",
+        "Select the preferred power [kW] of your Charging Station",
         ["All"] + sorted(df_user_selected_subset["KW"].unique()),
         )
 
     # Make subset with respect to user selected kW
-    if user_selected_kw != "All":
-        df_user_selected_subset = df_user_selected_subset[df_user_selected_subset["KW"] == user_selected_kw].copy()
-    else:
-        df_user_selected_subset = df_user_selected_subset
+    df_user_selected_subset = helper_subset_with_criteria(df_orig=df_every_station, column="KW", criteria=user_selected_kw)
+
+    # if user_selected_kw != "All":
+    #     df_user_selected_subset = df_user_selected_subset[df_user_selected_subset["KW"] == user_selected_kw].copy()
+    # else:
+    #     df_user_selected_subset = df_user_selected_subset
 
     # Make grouped dfs
     df_numbers_per_kW = count_plz_occurrences(df_user_selected_subset, sort_col=['PLZ', "KW"])
@@ -303,11 +308,9 @@ def make_streamlit_electric_Charging_resid_2(dfr1):
     with col1:
         st.write("Number of Charging Stations per kW")
         st.dataframe(df_numbers_per_kW.drop("geometry", axis=1).sort_values("KW", ascending=False))
-        # st.write("Number of Charging Stations per kW")
     with col2:
         st.write("Number of Charging Stations per zip code")
         st.dataframe(df_numbers.drop("geometry", axis=1).sort_values("Number", ascending=False))
-        # st.write("Number of Charging Stations per zip code")
 
     # drop unnessesary columns
     df_user_selected_subset_av = pd.DataFrame(df_user_selected_subset.drop(columns=["geometry", "Breitengrad",
@@ -328,12 +331,12 @@ def make_streamlit_electric_Charging_resid_2(dfr1):
                 user_database = json.load(file)
             df_user_changes = user_database[st.session_state.username]
         except:
-            df_user_changes = pd.DataFrame(columns=df_user_selected_subset_av.columns.to_list()+["Rating", "Commend"])
+            df_user_changes = pd.DataFrame(columns=df_user_selected_subset_av.columns.to_list()+["Rating", "Comment"])
     else:
         df_user_changes = st.session_state.df_stations_user_edit
 
     st.subheader("")
-    st.subheader("Do you want to add a Charging Station or leave a commant?")
+    st.subheader("Do you want to add a Charging Station or leave a comment?")
     st.write("Tank you for helping the project and other users! Here you can add \
              a new Charging Station? You can also leave a recommendation or a comment for an existing recommendation:")
     
@@ -366,11 +369,16 @@ def make_streamlit_electric_Charging_resid_2(dfr1):
         # Save user changes as json (easy DB)
         with open("DataBase_user_changes.json", "r") as file:
             user_database = json.load(file)
+        print("Here Load DB\n")
         print(df_stations_user_edit)
-        user_database[st.session_state.username] = df_stations_user_edit #.to_dict()
+        try:
+            user_database[st.session_state.username] = df_stations_user_edit.to_dict()
+        except:
+            user_database[st.session_state.username] = df_stations_user_edit
         with open("DataBase_user_changes.json", "w") as file:
             json.dump(user_database, file)
-
+            print("Here Dump DB \n")
+            print(df_stations_user_edit)
         st.write("We have saved your post. Thank you for your support!")
         time.sleep(3)
         st.rerun()
@@ -401,7 +409,7 @@ def make_streamlit_electric_Charging_resid_2(dfr1):
 
 
 
-### Studito old stuff
+### old stuff
 @ht.timer
 def make_streamlit_electric_Charging_resid_by_kw(dfr1, dfr2):
     """Makes Streamlit App with Separate Layers for Each KW Category of Electric Charging Stations and Residents"""

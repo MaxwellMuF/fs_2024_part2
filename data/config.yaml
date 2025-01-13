@@ -4,6 +4,15 @@ cookie:
   name: some_cookie_name
 credentials:
   usernames:
+    basti:
+      email: b@gmail.de
+      failed_login_attempts: 0
+      first_name: bla
+      last_name: bla
+      logged_in: true
+      password: $2b$12$BYL2m6469knwij3rFB1APus.ukZmeM4e0kYEReUrGYjtE00YozWwO
+      password_hint: bla
+      roles: null
     user1:
       email: user1@gmail.com
       failed_login_attempts: 0

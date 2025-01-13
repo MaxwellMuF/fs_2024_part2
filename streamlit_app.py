@@ -64,14 +64,16 @@ def login_widget():
     """Spawn a login widget"""
     try:
         authenticator.login()
-        try:
-            with open("DataBase_user_changes.json", "r") as file:
-                user_database = json.load(file)
-            st.session_state.df_stations_user_edit = user_database[st.session_state.username]
-        except:
-            with open("DataBase_user_changes.json", "w") as file:
-                json.dump({}, file)
-            #st.session_state.df_stations_user_edit = False
+        if st.session_state.authentication_status and "username" in st.session_state:
+            try:
+                with open("DataBase_user_changes.json", "r") as file:
+                    user_database = json.load(file)
+                st.session_state.df_stations_user_edit = user_database[st.session_state.username]
+            except:
+                pass
+                # with open("DataBase_user_changes.json", "w") as file:
+                #     json.dump({}, file)
+                #st.session_state.df_stations_user_edit = False
     except LoginError as e:
         st.error(e)
     return
@@ -82,7 +84,10 @@ def logout_widget():
     user_name = st.session_state.username
     authenticator.logout()
     
-    # if st.session_state.Logout:
+    if st.session_state.Logout:
+        # delete user DB
+        del st.session_state.df_stations_user_edit
+
     #     # Save user changes as json (easy DB)
     #     with open("DataBase_user_changes.json", "r") as file:
     #         user_database = json.load(file)
