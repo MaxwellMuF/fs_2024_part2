@@ -1,24 +1,15 @@
-import os
 import time
 import json
 import folium  
 
-import numpy as np
-import pandas as pd
-import geopandas as gpd
-import streamlit as st
+import numpy        as np
+import pandas       as pd
+import streamlit    as st
 
-from streamlit_folium import st_folium
-from branca.colormap import LinearColormap
-
-#import streamlit_authenticator as stauth
-
-
-# from core import methods as m1
-# from core import HelperTools as ht
-# from core.config import pdict
-from streamlit_app_folder import methods
-from streamlit_app_folder import data_pipeline as dp
+from streamlit_folium       import st_folium
+from branca.colormap        import LinearColormap
+from streamlit_app_folder   import methods
+from streamlit_app_folder   import data_pipeline
 
 
 # @timer
@@ -125,40 +116,44 @@ def show_selected_stations_as_df(df_numbers_per_kW, df_numbers, df_user_selected
         st.dataframe(df_user_selected_subset_show, use_container_width=True, hide_index=True)
     return
 
-def spawn_interactiv_df_for_user_comment(df_user_selected_subset_show):
-    # init df if new user or load data if page is refreshed
+def init_user_db_if_needed(df_user_selected_subset_show):
+    """User DB: use session_state or (load json or initialize a user DB)"""
+
     if "df_stations_user_edit" not in st.session_state:
-        try:
+        try: # Load user DB from json
             with open("DataBase_user_changes.json", "r") as file:
                 user_database = json.load(file)
-            df_user_changes = pd.DataFrame(user_database[st.session_state.username])
-            df_user_changes.set_index("PLZ", drop=True, inplace=True)
-            print(df_user_changes.head(5))
-        except:
-            df_user_changes = pd.DataFrame(columns=df_user_selected_subset_show.columns.to_list()+["Rating", "Comment"])
+            return pd.DataFrame(user_database[st.session_state.username])
+        
+        except: # Init user DB
+            return pd.DataFrame(columns=df_user_selected_subset_show.columns.to_list()+["Rating", "Comment"])
+        
+    # Take user DB in session_state
     else:
-        df_user_changes = st.session_state.df_stations_user_edit
+        return st.session_state.df_stations_user_edit
+
+def spawn_interactiv_df_for_user_comment(df_user_changes):
     
-    # define config for interactiv df with st.column_config
+    # Define config for interactiv df with st.column_config
     config = {
         'PLZ' : st.column_config.NumberColumn('PLZ', min_value=10115, max_value=14200, required=True), #width='large',
         'Straße' : st.column_config.TextColumn('Straße', required=True), #width='medium',
         'Hausnummer' : st.column_config.TextColumn('Hausnummer', required=True, width='small'),
         'KW' : st.column_config.NumberColumn('KW', min_value=1, max_value=1000, width='small'),
-        'Available' : st.column_config.SelectboxColumn('Available', options=["✔️", "❌"]),
-        'Rating' : st.column_config.SelectboxColumn('Rating', options=list(range(1,6))),
+        'Available' : st.column_config.SelectboxColumn('Available', options=["✔️", "❌"], width='small'),
+        'Rating' : st.column_config.SelectboxColumn('Rating', options=list(range(1,6)), width='small'),
         'Comment' : st.column_config.TextColumn('Comment')
     }
 
-    
+    # Spawn container for user post
     with st.container(border=True):
         st.subheader("Do you want to add a Charging Station or leave a comment?")
         st.write("Tank you for helping the project and other users! Here you can add \
                 a new Charging Station? You can also leave a recommendation or a comment for an existing recommendation:")
         
         # Spawn interactiv df
-        df_stations_user_edit = st.data_editor(df_user_changes, column_config=config, num_rows='dynamic',
-                                               use_container_width=False)
+        df_stations_user_edit = st.data_editor(df_user_changes, column_config=config,
+                                               use_container_width=True, hide_index=True, num_rows='dynamic')
 
         # Reload page iusse solution: save it in a session state
         st.session_state.df_stations_user_edit = df_stations_user_edit
@@ -183,11 +178,8 @@ def spawn_interactiv_df_for_user_comment(df_user_selected_subset_show):
             with open("DataBase_user_changes.json", "r") as file:
                 user_database = json.load(file)
 
-            # try to convert df to dict, except that it is already a dict (happens when refresh the page)  
-            try:
-                user_database[st.session_state.username] = df_stations_user_edit.to_dict()
-            except:
-                user_database[st.session_state.username] = df_stations_user_edit
+            # make new entry in user DB: key=user : value=user_post  
+            user_database[st.session_state.username] = df_stations_user_edit.to_dict()
 
             # save data of the currently submitted post
             with open("DataBase_user_changes.json", "w") as file:
@@ -226,32 +218,29 @@ def make_streamlit_electric_Charging_plz(df):
 
     # drop unnessesary columns for the show data part
     df_user_selected_subset_show = pd.DataFrame(df_user_selected_subset.copy().drop(columns=["geometry", "Breitengrad",
-                                                    "Längengrad", "Bundesland", "Ort"])).sort_values("KW", ascending=False)
+                                                    "Längengrad", "Bundesland", "Ort", "Plug Types"])).sort_values("KW", ascending=False)
     # Show dataframes that user has filtered
     show_selected_stations_as_df(df_numbers_per_kW, df_numbers, df_user_selected_subset_show)
 
-    # Spawn interactiv df for user comments
-    spawn_interactiv_df_for_user_comment(df_user_selected_subset_show)
+    # Load or init user DB
+    df_user_changes = init_user_db_if_needed(df_user_selected_subset_show)
 
+    # Spawn interactiv df for user comments
+    spawn_interactiv_df_for_user_comment(df_user_changes)
     return
 
 # @methods.timer
 def init_data():
     """Init and process data only ones at the start of the app (instead of every tick)"""
     if "df_charging_berlin" not in st.session_state:
-        st.session_state.df_charging_berlin = dp.data_process()
-    return
-
-def Make_berlin_mapp():
-    """Make and start streamlit UI"""
-    make_streamlit_electric_Charging_plz(st.session_state.df_charging_berlin)
+        st.session_state.df_charging_berlin = data_pipeline.data_process()
     return
 
 @methods.timer
 def main():
-    """Generation of Streamlit App for visualizing electric charging stations & residents in Berlin"""
+    """Generation of Streamlit pagecharging stations in Berlin"""
     init_data()
-    Make_berlin_mapp()
+    make_streamlit_electric_Charging_plz(st.session_state.df_charging_berlin)
     return
 
 # call main directly because of st.navigation

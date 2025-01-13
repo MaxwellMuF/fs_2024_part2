@@ -1,5 +1,3 @@
 __pycache__/
 .venv
-data/datasets_old*
-data/datasets*
-data/evpstation-banner-1024x576.jpg
+look_at_data.ipynb

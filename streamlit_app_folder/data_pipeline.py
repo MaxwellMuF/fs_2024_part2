@@ -1,8 +1,6 @@
 import pandas       as pd
 import geopandas    as gpd
 
-# from core import methods        as m1
-#from streamlit_app_folder.page_2_charging_stations import timer
 from streamlit_app_folder.config import pdict
 
 

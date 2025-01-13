@@ -1,6 +1,5 @@
 import yaml
 import json
-import datetime
 import streamlit as st
 from yaml.loader import SafeLoader
 import streamlit_authenticator as stauth
@@ -64,41 +63,18 @@ def login_widget():
     """Spawn a login widget"""
     try:
         authenticator.login()
-        # if st.session_state.authentication_status and "username" in st.session_state:
-        #     try:
-        #         with open("DataBase_user_changes.json", "r") as file:
-        #             user_database = json.load(file)
-        #         st.session_state.df_stations_user_edit = user_database[st.session_state.username]
-        #     except:
-        #         pass
-                # with open("DataBase_user_changes.json", "w") as file:
-                #     json.dump({}, file)
-                #st.session_state.df_stations_user_edit = False
     except LoginError as e:
         st.error(e)
     return
 
 def logout_widget():
-    """Logout user instant"""
+    """Logout user instant and delete user DB df_stations_user_edit"""
     st.title(f"Thank you for a visit *{st.session_state.name}*")
-    user_name = st.session_state.username
     authenticator.logout()
     
     if st.session_state.Logout:
         # delete user DB
         del st.session_state.df_stations_user_edit
-
-    #     # Save user changes as json (easy DB)
-    #     with open("DataBase_user_changes.json", "r") as file:
-    #         user_database = json.load(file)
-    #     print("HELLO \n\n")
-    #     print(st.session_state.df_stations_user_edit)
-    #     user_database[user_name+"_"+datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")] = \
-    #                                                 st.session_state.df_stations_user_edit.to_dict()
-    #     print(st.session_state)
-    #     with open("DataBase_user_changes.json", "w") as file:
-    #         json.dump(user_database, file)
-
     return
 
 # Creating a new user registration widget
@@ -197,7 +173,7 @@ def pages_after_login():
 
 ## Init session_states aka class streamlit properties
 def main():
-    init_st_session_state()
+    # init_st_session_state()
     config = load_config(config_path="data/config.yaml")
     create_authenticator(config)
 
