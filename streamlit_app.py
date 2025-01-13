@@ -10,6 +10,7 @@ def pages_bevor_login():
     register_new_user = st.Page(methods_login.register_new_user_widget, title="Reset Password", icon=":material/key:")
     forgot_password = st.Page(methods_login.forgot_password_widget, title="Forget Password", icon=":material/key:")
     forgot_username = st.Page(methods_login.forgot_username_widget, title="Forget Username", icon=":material/key:")
+
     return [login, register_new_user, forgot_password, forgot_username]
 
 def pages_after_login():
@@ -18,6 +19,7 @@ def pages_after_login():
     charging_stations = st.Page("streamlit_app_folder/page_2_charging_stations.py", title="Charging Stations", icon=":material/dynamic_form:", default=True)
     reset_password = st.Page(methods_login.reset_password_widget, title="Reset Password", icon=":material/key:")
     logout = st.Page(methods_login.logout_widget, title="Logout", icon=":material/home:")
+
     return [welcome, charging_stations, reset_password, logout]
 
 def main():
@@ -46,6 +48,7 @@ def main():
     
     # save authenticator config
     methods_login.save_config(config, config_path="data/config.yaml")
+    
     return
 
 if __name__ == "__main__":

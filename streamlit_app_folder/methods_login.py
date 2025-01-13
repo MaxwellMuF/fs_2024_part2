@@ -17,12 +17,14 @@ def load_config(config_path="data/config.yaml"):
     """Loading config file"""
     with open(config_path, 'r', encoding='utf-8') as file:
         config = yaml.load(file, Loader=SafeLoader)
+
     return config
 
 def save_config(config, config_path="data/config.yaml"):
     """Saving config file"""
     with open(config_path, 'w', encoding='utf-8') as file:
         yaml.dump(config, file, default_flow_style=False)
+
     return
 
 def create_authenticator(config:yaml):
@@ -34,6 +36,7 @@ def create_authenticator(config:yaml):
         config['cookie']['key'],
         config['cookie']['expiry_days']
         )
+    
     return
 
 def init_st_session_state():
@@ -48,6 +51,7 @@ def login_widget():
         authenticator.login()
     except LoginError as e:
         st.error(e)
+
     return
 
 def logout_widget():
@@ -58,6 +62,7 @@ def logout_widget():
     if st.session_state.Logout:
         # delete user DB
         del st.session_state.df_stations_user_edit
+
     return
 
 def register_new_user_widget():
@@ -70,6 +75,7 @@ def register_new_user_widget():
             st.success('User registered successfully')
     except RegisterError as e:
         st.error(e)
+
     return
 
 def forgot_password_widget():
@@ -85,6 +91,7 @@ def forgot_password_widget():
             st.error('Username not found')
     except ForgotError as e:
         st.error(e)
+
     return
 
 def forgot_username_widget():
@@ -99,6 +106,7 @@ def forgot_username_widget():
             st.error('Email not found')
     except ForgotError as e:
         st.error(e)
+
     return
 
 # ----------------------------- After login -----------------------------------
@@ -111,6 +119,8 @@ def reset_password_widget():
                 st.success('Password modified successfully')
         except (CredentialsError, ResetError) as e:
             st.error(e)
+    
+    return
 
 def update_user_details():
     """Spawn an update user details widget"""
@@ -120,3 +130,5 @@ def update_user_details():
                 st.success('Entry updated successfully')
         except UpdateError as e:
             st.error(e)
+    
+    return

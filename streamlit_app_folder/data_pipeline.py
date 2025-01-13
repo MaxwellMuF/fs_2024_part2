@@ -1,10 +1,11 @@
 import pandas       as pd
 import geopandas    as gpd
 
+from streamlit_app_folder import methods
 from streamlit_app_folder.config import pdict
 
 
-#@timer
+@methods.timer
 def data_process():
     """Data process: Load and process data"""
     # Load data
