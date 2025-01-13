@@ -2,22 +2,24 @@ import pandas       as pd
 import geopandas    as gpd
 
 # from core import methods        as m1
-from core import HelperTools    as ht
-from core.config import pdict
+#from streamlit_app_folder.page_2_charging_stations import timer
+from streamlit_app_folder.config import pdict
 
 
-@ht.timer
+#@timer
 def data_process():
     """Data process: Load and process data"""
     # Load data
     df_geodat_plz = pd.read_csv('data/datasets/geodata_berlin_plz.csv', sep=';')  # For geospatial data
     df_charging = pd.read_csv('data/datasets/Ladesaeulenregister.csv', sep=';')  # For geospatial data
 
-    # Preprocessing dataframe from Ladesaeulenregister.csv
+    ## Preprocessing dataframe from Ladesaeulenregister.csv
     
+    # Select subset df_charging with fewer columns
     df_charging = df_charging.loc[:,('Postleitzahl', 'Breitengrad','Längengrad','Bundesland', 'Straße', 'Hausnummer',
                                      'Ort', 'Nennleistung Ladeeinrichtung [kW]', 'Steckertypen1')]
     
+    # Rename some columns of df_charging
     df_charging.rename(columns = {"Nennleistung Ladeeinrichtung [kW]"   : "KW", 
                                   "Postleitzahl"                        : "PLZ",
                                   "Steckertypen1"                       : "Plug Types"}

@@ -4,15 +4,6 @@ cookie:
   name: some_cookie_name
 credentials:
   usernames:
-    basti:
-      email: b@gmail.de
-      failed_login_attempts: 0
-      first_name: bla
-      last_name: bla
-      logged_in: true
-      password: $2b$12$BYL2m6469knwij3rFB1APus.ukZmeM4e0kYEReUrGYjtE00YozWwO
-      password_hint: bla
-      roles: null
     user1:
       email: user1@gmail.com
       failed_login_attempts: 0
@@ -26,7 +17,7 @@ credentials:
       first_name: Test two
       last_name: User
       logged_in: false
-      password: $2b$12$uALb0ATM/hFtjY.C4A9Rle/DzEaqwqEygR2cVKRHBoLpkROOCrXgW
+      password: $2b$12$TT.gJAQvDBSoBLcwGO02uulhQMJgRagYGsh.pdSu9gqNdNodlacoS
       password_hint: user2
-      pw_clear: user!123
+      pw_clear: '123'
       roles: null
