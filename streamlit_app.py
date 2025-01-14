@@ -2,6 +2,16 @@ import streamlit as st
 # Own python files
 from streamlit_app_folder import methods_login
 
+# Initialize st.session_state (st.Class properties) at start or reload of app/page. 
+def init_st_session_state():
+    """Initialize all streamlit.session_states that are needed or required in the app."""
+    # ---- here were a lot of variables (session_state) bevor using st.authenticator and st.navigation -----
+    # "df_charging_berlin" is used for a user thats loged in and deleted with logout
+
+    # is needed for page_2_charging_stations.spawn_interactiv_df_for_user_comment()
+    if "submited_post" not in st.session_state:
+        st.session_state.submited_post = False
+    return
 
 # ------------------------------- Pages --------------------------------------
 
@@ -29,6 +39,7 @@ def main():
     This is where the navigator is defined that leads to all scripts and functions. 
     And the authenticator process is called.
     """
+    init_st_session_state()
     # load authenticator config and create login st.authenticator
     config = methods_login.load_config(config_path="data/config.yaml")
     methods_login.create_authenticator(config)

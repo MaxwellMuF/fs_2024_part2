@@ -39,10 +39,6 @@ def create_authenticator(config:yaml):
     
     return
 
-def init_st_session_state():
-    """Initialize all streamlit.session_states that are needed or required in the app."""
-    return
-
 # ----------------------------- Bevor login -----------------------------------
 
 def login_widget():

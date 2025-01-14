@@ -11,16 +11,9 @@ from branca.colormap        import LinearColormap
 
 # Own python files
 from streamlit_app_folder   import methods
+from streamlit_app_folder   import helper_page_2_charging_stations as helper
 from streamlit_app_folder   import data_pipeline
 
-
-def helper_subset_with_criteria(df_orig: pd.DataFrame, column: str, criteria):
-    """Make subset with respect to user selected criteria"""
-    df = df_orig.copy()
-    if criteria != "All":
-        return df[df[column] == criteria].copy()
-    else:
-        return df
 
 # ----------------------------- streamlit widgets ------------------------------
 
@@ -29,10 +22,11 @@ def filter_zip_code_widget(df):
     with st.container(border=True):
         st.subheader("Charging Stations in my zip code")
         user_selected_zip_code = st.selectbox(
-        "Only show Charging Stations in my zip code",
-        ["All"] + sorted(df["PLZ"].unique()))
+                                            label="Only show Charging Stations in my zip code",
+                                            options=helper.unique_values_of_column(df, "PLZ")
+                                            )
 
-    return helper_subset_with_criteria(df_orig=df, column="PLZ", criteria=user_selected_zip_code)
+    return helper.subset_with_criteria(df=df, column="PLZ", criteria=user_selected_zip_code)
 
 
 def filter_power_widget(df):
@@ -50,10 +44,9 @@ def filter_power_widget(df):
         with col2:
             user_selected_kw = st.selectbox(
             "Select the preferred power [kW] of your Charging Station",
-            ["All"] + sorted(df["KW"].unique()),
-            )
+            helper.unique_values_of_column(df, "KW"))
 
-    return helper_subset_with_criteria(df_orig=df, column="KW", criteria=user_selected_kw)
+    return helper.subset_with_criteria(df=df, column="KW", criteria=user_selected_kw)
 
 def spawn_heatmap_berlin(df_numbers_per_kW, df_numbers):
     """Create folium map with given dfs containing 'KW' and 'Number' columns"""
@@ -73,8 +66,8 @@ def spawn_heatmap_berlin(df_numbers_per_kW, df_numbers):
             # Add polygons to the map for Numbers
             for idx, row in df_numbers.iterrows():
                 # make tooltip with 'sorted list of power' from selected stations
-                list_kW_in_row_sorted = sorted(df_numbers_per_kW.round({'KW':0})
-                                               .astype({'KW':int})[df_numbers_per_kW['PLZ']==row['PLZ']].loc[:,'KW'].to_list())[::-1]
+                list_kW_in_plz_sorted = helper.list_for_tooltip(df_numbers_per_kW,column_name="PLZ",criteria=row['PLZ'])
+                # Add PLZ with geometry to map
                 folium.GeoJson(
                     row['geometry'],
                     style_function=lambda x, color=color_map(row['Number']): {
@@ -84,7 +77,7 @@ def spawn_heatmap_berlin(df_numbers_per_kW, df_numbers):
                         'fillOpacity': 0.7
                     },
                     tooltip=f"PLZ: {row['PLZ']}, Number: {row['Number']}, \
-                            kW: {list_kW_in_row_sorted}"
+                            kW: {list_kW_in_plz_sorted}"
                 ).add_to(m)
 
             # Add color_map to the folium_map
@@ -105,37 +98,47 @@ def show_selected_stations_as_df(df_numbers_per_kW, df_numbers, df_user_selected
         col1, col2 = st.columns(2, gap="large")
         with col1:
             st.write("Number of Charging Stations per kW:")
-            st.dataframe(df_numbers_per_kW.drop("geometry", axis=1).sort_values("KW", ascending=False), 
+            st.dataframe(helper.drop_column_and_sort_by_column(df_numbers_per_kW, ["geometry"], "KW"), 
                          use_container_width=True, hide_index=True)
         with col2:
             st.write("Number of Charging Stations per zip code:")
-            st.dataframe(df_numbers.drop("geometry", axis=1).sort_values("Number", ascending=False),
+            st.dataframe(helper.drop_column_and_sort_by_column(df_numbers, ["geometry"], "Number"),
                          use_container_width=True, hide_index=True)
 
         # Show df_user_selected_subset_av as st.dataframe
         st.write("All Charging Stations you have selected with their address and availability:")
         st.dataframe(df_user_selected_subset_show, use_container_width=True, hide_index=True)
+
     return
 
 def init_user_db_if_needed(df_user_selected_subset_show):
-    """User DB three cases: use as data 1. load json or 
-                                        2. initialize a user DB or 
-                                        3. use session_state)"""
-
-    if "df_stations_user_edit" not in st.session_state:
-        # 1. Load user DB from json
-        try: 
-            with open("DataBase_user_changes.json", "r") as file:
-                user_database = json.load(file)
-            return pd.DataFrame(user_database[st.session_state.username])
-        
-        # 2. Init user DB
-        except:
-            return pd.DataFrame(columns=df_user_selected_subset_show.columns.to_list()+["Rating", "Comment"])
-        
-    # 3. Take user DB in session_state
-    else:
+    """User DB three cases: use as data 1. use session_state or
+                                        2. load json or 
+                                        3. initialize a user DB)"""
+    # 1. use session_state as user DB
+    if "df_stations_user_edit" in st.session_state:
         return st.session_state.df_stations_user_edit
+    else:
+        with open("DataBase_user_changes.json", "r") as file:
+            loaded_database = json.load(file)
+    # 2. use loaded json as user DB
+    if st.session_state.username in loaded_database.keys():
+        return pd.DataFrame(loaded_database[st.session_state.username])
+    # 3. initialize a new user DB
+    else:
+        return pd.DataFrame(columns=df_user_selected_subset_show.columns.to_list()+["Rating", "Comment"])
+
+def config_edit_df_user_posts():
+    config = {
+        'PLZ' : st.column_config.NumberColumn('PLZ', min_value=10115, max_value=14200, required=True), #width='large',
+        'Straße' : st.column_config.TextColumn('Straße', required=True), #width='medium',
+        'Hausnummer' : st.column_config.TextColumn('Hausnummer', required=True, width='small'),
+        'KW' : st.column_config.NumberColumn('KW', min_value=1, max_value=1000, width='small'),
+        'Available' : st.column_config.SelectboxColumn('Available', options=["✔️", "❌"], width='small'),
+        'Rating' : st.column_config.SelectboxColumn('Rating', options=list(range(1,6)), width='small'),
+        'Comment' : st.column_config.TextColumn('Comment')}
+    
+    return config
 
 def spawn_interactiv_df_for_user_comment(df_user_changes):
     """Spawn interactiv df for user posts: 
@@ -144,18 +147,10 @@ def spawn_interactiv_df_for_user_comment(df_user_changes):
             3. Show post bevor submit it
             4. Submit post, i.e. save it in user DB
             """
-    # 1. Define config for interactiv df with st.column_config
-    config = {
-        'PLZ' : st.column_config.NumberColumn('PLZ', min_value=10115, max_value=14200, required=True), #width='large',
-        'Straße' : st.column_config.TextColumn('Straße', required=True), #width='medium',
-        'Hausnummer' : st.column_config.TextColumn('Hausnummer', required=True, width='small'),
-        'KW' : st.column_config.NumberColumn('KW', min_value=1, max_value=1000, width='small'),
-        'Available' : st.column_config.SelectboxColumn('Available', options=["✔️", "❌"], width='small'),
-        'Rating' : st.column_config.SelectboxColumn('Rating', options=list(range(1,6)), width='small'),
-        'Comment' : st.column_config.TextColumn('Comment')
-    }
+        # 1. Define config for interactiv df with st.column_config
+    config = config_edit_df_user_posts()
 
-    # Create container user post
+            # Create container user post
     with st.container(border=True):
         st.subheader("Do you want to add a Charging Station or leave a comment?")
         st.write("Tank you for helping the project and other users! Here you can add \
@@ -165,7 +160,7 @@ def spawn_interactiv_df_for_user_comment(df_user_changes):
         df_stations_user_edit = st.data_editor(df_user_changes, column_config=config,
                                                use_container_width=True, hide_index=True, num_rows='dynamic')
 
-        # Reload page iusse solution: save it in a session state
+            	# Reload page iusse solution: save it in a session state
         st.session_state.df_stations_user_edit = df_stations_user_edit
 
         # 3. Spawn button to check post bevor submit
@@ -173,29 +168,13 @@ def spawn_interactiv_df_for_user_comment(df_user_changes):
             st.write("Here is your post. You can change it at any time.")
             st.dataframe(df_stations_user_edit)
 
-            # 4. Spawn button to submit
+        # 4. Spawn button to submit
             if st.button("Submit post", key="submited_post"):
                 st.write("We have saved your post. Thank you for your support!")
-                time.sleep(2)
 
-        # init session state if not exist
-        if "submited_post" not in st.session_state:
-            st.session_state.submited_post = False
-
-        # Save post if submitted
+            # Save post if submitted: add post to DB and save DB
         elif st.session_state.submited_post == True:
-            # Load DB of previous post
-            with open("DataBase_user_changes.json", "r") as file:
-                user_database = json.load(file)
-
-            # make new entry in user DB: key=user : value=user_post  
-            user_database[st.session_state.username] = df_stations_user_edit.to_dict()
-
-            # save data of the currently submitted post
-            with open("DataBase_user_changes.json", "w") as file:
-                json.dump(user_database, file)
-
-            # print "Thanks for submittion" and reload the page after sleep 3s
+            helper.load_db_add_dict_save_db(path_to_db="DataBase_user_changes.json", df_to_add=df_stations_user_edit)
             st.write("We have saved your post. Thank you for your support!")
             time.sleep(3)
             st.rerun()
@@ -211,9 +190,8 @@ def make_streamlit_page_elements(df):
             Makes heatmap of electric Charging Stations in berlin.
             And show selected data and offer post submission and save user posts."""
 
-    # Add Available column
-    df_every_station = df.copy()
-    df_every_station["Available"] = np.random.choice(["✔️", "❌"], df_every_station.shape[0]).tolist()
+    # Add Available column: generate random values
+    df_every_station = helper.add_col_available(df=df, chance=[0.7,0.3])
 
     # Streamlit page title
     st.title('Find your Electric Charging Station')
@@ -232,8 +210,10 @@ def make_streamlit_page_elements(df):
     spawn_heatmap_berlin(df_numbers_per_kW, df_numbers)
 
     # drop unnessesary columns for the show data part
-    df_user_selected_subset_show = pd.DataFrame(df_user_selected_subset.copy().drop(columns=["geometry", "Breitengrad",
-                                                    "Längengrad", "Bundesland", "Ort", "Plug Types"])).sort_values("KW", ascending=False)
+    df_user_selected_subset_show = helper.drop_column_and_sort_by_column(df_user_selected_subset,
+                    list_drop_column_names=["geometry", "Breitengrad", "Längengrad", "Bundesland", "Ort", "Plug Types"],
+                    sort_column_name="KW")
+    
     # Show dataframes that user has filtered
     show_selected_stations_as_df(df_numbers_per_kW, df_numbers, df_user_selected_subset_show)
 

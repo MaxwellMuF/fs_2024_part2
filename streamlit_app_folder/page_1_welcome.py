@@ -2,7 +2,7 @@ import streamlit as st
 
 def welcome_text():
     """Welcome text with user """
-    st.header(f'Welcome *{st.session_state.get("name", "Guest")}*')
+    st.header(f'Welcome *{st.session_state.get("name", "Guest_default_for_testing")}*') # Use get method to run tests
     st.write(f'We are grateful for your selection of our services and will do our best to assist you in your search.')
 
     return
@@ -17,7 +17,8 @@ def image_with_motivation():
         with col2:
             st.image("data/Ai_pic_berlin_for_welcome2.jpeg")
         st.write("Berlin as it should be. And with your help, we are already one step closer.")
-        # (Source: https://designer.microsoft.com/image-creator)
+
+    return
         
 def main():
     """Main of the Welcome page: Calls up text and images."""
