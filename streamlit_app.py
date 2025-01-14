@@ -27,7 +27,7 @@ def pages_bevor_login():
 def pages_after_login():
     """Pages of streamlit app after login defined by functions and python files"""
     welcome = st.Page("streamlit_app_folder/page_1_welcome.py", title="Welcome", icon=":material/home:")
-    charging_stations = st.Page("streamlit_app_folder/page_2_charging_stations.py", title="Charging Stations", icon=":material/dynamic_form:", default=True)
+    charging_stations = st.Page("streamlit_app_folder/page_2_charging_stations.py", title="Charging Stations", icon=":material/dynamic_form:") #, default=True
     reset_password = st.Page(methods_login.reset_password_widget, title="Reset Password", icon=":material/key:")
     logout = st.Page(methods_login.logout_widget, title="Logout", icon=":material/home:")
 
