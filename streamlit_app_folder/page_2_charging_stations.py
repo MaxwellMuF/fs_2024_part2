@@ -245,10 +245,13 @@ def make_streamlit_page_elements(df):
     return
 
 # @methods.timer
-def init_data():
+def init_data(geodata_path="data/datasets/geodata_berlin_plz.csv", 
+              charging_data_path="data/datasets/Ladesaeulenregister.csv"):
     """Init and process data only ones at the start of the app (instead of every tick)"""
     if "df_charging_berlin" not in st.session_state:
-        st.session_state.df_charging_berlin = data_pipeline.data_process()
+        df_geodat_plz = pd.read_csv(geodata_path, sep=';', low_memory=False)
+        df_charging = pd.read_csv(charging_data_path, sep=';', low_memory=False)
+        st.session_state.df_charging_berlin = data_pipeline.data_process(df_geodat_plz, df_charging)
     return
 
 # @methods.timer

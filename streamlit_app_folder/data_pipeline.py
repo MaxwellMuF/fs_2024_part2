@@ -6,11 +6,12 @@ from streamlit_app_folder.config import pdict
 
 
 # @methods.timer
-def data_process():
+def data_process(df_geodat_plz, df_charging): # geodata_path="data/datasets/geodata_berlin_plz.csv", 
+                  # charging_data_path="data/datasets/Ladesaeulenregister.csv"):
     """Data process: Load and process data"""
     # Load data
-    df_geodat_plz = pd.read_csv('data/datasets/geodata_berlin_plz.csv', sep=';')  # For geospatial data
-    df_charging = pd.read_csv('data/datasets/Ladesaeulenregister.csv', sep=';')  # For geospatial data
+    # df_geodat_plz = pd.read_csv(geodata_path, sep=';')  # For geospatial data
+    # df_charging = pd.read_csv(charging_data_path, sep=';')  # For geospatial data
 
     ## Preprocessing dataframe from Ladesaeulenregister.csv
     

@@ -10,4 +10,4 @@ branca
 functools
 pytest
 MagicMock
-streamlit-testing 
+# streamlit-testing 
