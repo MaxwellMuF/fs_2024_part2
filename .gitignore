@@ -1,3 +1,4 @@
 __pycache__/
 .venv
+.pytest_cache
 look_at_data.ipynb
