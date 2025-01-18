@@ -29,12 +29,13 @@ def drop_column_and_sort_by_column(df: pd.DataFrame, list_drop_column_names: lis
     return pd.DataFrame(df)
 
 def load_json(path="DataBase_user_changes.json"):
-    with open(path, "r") as file:
+    """Load json to python dict. Use encoding='utf-8' to handle german letters like 'ä' or 'ß' """
+    with open(path, "r", encoding='utf-8') as file:
         dict_loaded = json.load(file)
     return dict_loaded
 
 def save_json(dict_for_saving, path="DataBase_user_changes.json"):
-    with open(path, "w") as file:
+    with open(path, "w", encoding='utf-8') as file:
         json.dump(dict_for_saving, file)
     return
 
