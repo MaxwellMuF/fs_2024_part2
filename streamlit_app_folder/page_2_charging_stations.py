@@ -17,23 +17,27 @@ from streamlit_app_folder   import data_pipeline
 
 # ----------------------------- streamlit widgets ------------------------------
 
-def filter_zip_code_widget(df):
+def filter_zip_code_widget(df: pd.DataFrame) -> pd.DataFrame:
     """User select zip code widget: selectbox for zip code and returns selected subset"""
     with st.container(border=True):
-        st.subheader("Charging Stations in my zip code")
-        user_selected_zip_code = st.selectbox(
-                                            label="Only show Charging Stations in my zip code",
-                                            options=helper.unique_values_of_column(df, "PLZ")
-                                            )
+        st.subheader(body="Charging Stations in my zip code",
+                     help="Search for charging stations in a Berlin zip code. \
+                           Click on the select box and choose one. You can type in a number or select a zip code. \
+                           Please note that only Berlin zip codes are accepted.")
+        user_selected_zip_code = st.selectbox(label="Only show Charging Stations in my zip code",
+                                              options=helper.unique_values_of_column(df, "PLZ"))
 
     return helper.subset_with_criteria(df=df, column="PLZ", criteria=user_selected_zip_code)
 
 
-def filter_power_widget(df):
+def filter_power_widget(df: pd.DataFrame) -> pd.DataFrame:
     """User select power widget: checkbox and selectbox for power in two columns.
     Returns selected subset"""
     with st.container(border=True):
-        st.subheader("How much power is appropriate?")
+        st.subheader(body="How much power is appropriate?",
+                     help="Search for charging stations with a certain power. \
+                           \nLeft: Click on the checkbox to display only charging stations with 50kW or more.\
+                           \nRight: Select an output yourself to display only charging stations with this output.")
         col1, col2 = st.columns(2)
 
         with col1:
@@ -48,17 +52,28 @@ def filter_power_widget(df):
 
     return helper.subset_with_criteria(df=df, column="KW", criteria=user_selected_kw)
 
-def spawn_heatmap_berlin(df_numbers_per_kW, df_numbers):
+def spawn_heatmap_berlin(df_numbers_per_kW: pd.DataFrame, df_numbers: pd.DataFrame) -> None:
     """Create folium map with given dfs containing 'KW' and 'Number' columns"""
-    m = folium.Map(location=[52.52, 13.40], zoom_start=10)
-
     with st.container(border=True):
-        st.subheader("Map of berlin with Charging Stations")
+        st.subheader(body="Map of berlin with Charging Stations",
+                     help="A map of Berlin is displayed here. Each highlighted area shows a zip code district of Berlin. \
+                           And the color of the area shows how many charging stations are existing in the respective \
+                           zip code. Please note that the number of charging stations per zip code changes when you \
+                           select a certain power. \
+                           \n\nTooltip: \
+                           \nIf you hover over an area with the mouse, you will be shown more information \
+                           about this zip code: \
+                           \nZip code: The zip code for this area. \
+                           \nNumber: The number of charging stations in this zip code. \
+                           \nkW: The power types of the charging stations in this zip code.")
+        
         st.write("This is a map of Berlin with the number of electric charging stations per zip code")
 
+        m = folium.Map(location=[52.52, 13.40], zoom_start=10)
         # catch case: empty df, i.e. no charging station found
         if len(df_numbers_per_kW) == 0:
-            st.write("Sorry, there is no such Charging Stations in berlin yet")
+            # st.write("Sorry, there is no such Charging Stations in berlin yet")
+            st.warning("Sorry, there is no such Charging Stations in berlin yet", icon="⚠️")
             st_folium(m, width=800, height=600)
         else:
             color_map = LinearColormap(colors=['yellow', 'red'], vmin=1, vmax=df_numbers["Number"].max())
@@ -88,11 +103,29 @@ def spawn_heatmap_berlin(df_numbers_per_kW, df_numbers):
 
     return
 
-def show_selected_stations_as_df(df_numbers_per_kW, df_numbers, df_user_selected_subset_show):
+def show_selected_stations_as_df(df_numbers_per_kW: pd.DataFrame, df_numbers: pd.DataFrame, 
+                                 df_user_selected_subset_show: pd.DataFrame) -> None:
     """Show selected data in three dfs: 1. per KW and per zip code in two columns
                                         2. all selected stations with adress"""
     with st.container(border=True):
-        st.subheader("Here are your selected Charging Stations")
+        st.subheader(body="Here are your selected Charging Stations",
+                     help="Below you will find all the data about the selected charging stations in three tables: \
+                           \nNumber of Charging Stations per kW: We sum up the stations of one power per plz. \
+                           Each row shows the corresponding zip code (plz), a unique power type (KW) and \
+                           how many there are (Number). \
+                           \nNumber of Charging Stations per zip code: We sum up all stations for each zip code. \
+                           Each row shows a zip code (plz) and how many charging stations there are in total (Number). \
+                           \nAll Charging Stations you have selected with their address and availability: \
+                           The details of each individual charging station are shown here. Each row shows a single \
+                           charging station with its zip code, street, house number, power and availability. \
+                           \n\nDo the tables change? \
+                           \nPlease note that all data and therefore the tables will change if you make a different \
+                           selection above. If you enter a zip code, only charging stations in this zip code will be \
+                           displayed. The same applies if you select a service. You can change your selection at any \
+                           time. \
+                           \n\nHow do the tables work? \
+                           \nThe data frames behave similar to an excel table. If you hover over a table, \
+                           you will see three options on the right above the table: Download, Search, Full screen.")
 
         # Show df_numbers_per_kW and df_number as st.dataframe
         col1, col2 = st.columns(2, gap="large")
@@ -111,7 +144,7 @@ def show_selected_stations_as_df(df_numbers_per_kW, df_numbers, df_user_selected
 
     return
 
-def init_user_db_if_needed(df_user_selected_subset_show):
+def init_user_db_if_needed(df_user_selected_subset_show: pd.DataFrame) -> pd.DataFrame:
     """User DB three cases: use as data 1. use session_state or
                                         2. load json or 
                                         3. initialize a user DB)"""
@@ -128,7 +161,7 @@ def init_user_db_if_needed(df_user_selected_subset_show):
     else:
         return pd.DataFrame(columns=df_user_selected_subset_show.columns.to_list()+["Rating", "Comment"])
 
-def config_edit_df_user_posts():
+def config_edit_df_user_posts() -> dict:
     config = {
         'PLZ' : st.column_config.NumberColumn('PLZ', min_value=10115, max_value=14200, required=True), #width='large',
         'Straße' : st.column_config.TextColumn('Straße', required=True), #width='medium',
@@ -140,7 +173,7 @@ def config_edit_df_user_posts():
     
     return config
 
-def spawn_interactiv_df_for_user_comment(df_user_changes):
+def spawn_interactiv_df_for_user_comment(df_user_changes: pd.DataFrame) -> None:
     """Spawn interactiv df for user posts: 
             1. Create config
             2. Spawn interactiv dataframe
@@ -184,7 +217,7 @@ def spawn_interactiv_df_for_user_comment(df_user_changes):
 
 # Make Heatmap of berlin with number of charging stations
 # @methods.timer
-def make_streamlit_page_elements(df):
+def make_streamlit_page_elements(df: pd.DataFrame) -> None:
     """The sequence of streamlit elements on this page:
             Perform user selection and filter data.
             Makes heatmap of electric Charging Stations in berlin.
@@ -193,9 +226,6 @@ def make_streamlit_page_elements(df):
     # Add Available column: generate random values
     df_every_station = helper.add_col_available(df=df, chance=[0.7,0.3])
 
-    # Streamlit page title
-    st.title('Find your Electric Charging Station')
-    
     # Filter zip code widget
     df_user_selected_subset = filter_zip_code_widget(df_every_station)
 
@@ -225,8 +255,8 @@ def make_streamlit_page_elements(df):
     return
 
 # @methods.timer
-def init_data(geodata_path="data/datasets/geodata_berlin_plz.csv", 
-              charging_data_path="data/datasets/Ladesaeulenregister.csv"):
+def init_data(geodata_path: str="data/datasets/geodata_berlin_plz.csv", 
+              charging_data_path: str="data/datasets/Ladesaeulenregister.csv") -> None:
     """Init and process data only ones at the start of the app (instead of every tick)"""
     if "df_charging_berlin" not in st.session_state:
         df_geodat_plz = pd.read_csv(geodata_path, sep=';', low_memory=False)
@@ -235,11 +265,16 @@ def init_data(geodata_path="data/datasets/geodata_berlin_plz.csv",
     return
 
 # @methods.timer
-def main():
+def main() -> None:
     """Main of the Charging Stations page: 
             Load and process data and save it as streamlit state.
             Makes heatmap of electric Charging Stations in berlin.
             And show selected data and submit and save user posts."""
+    
+    st.title(body="Find a suitable Charging Station",
+             help="On this page you will find the charging station search. \
+                  You can also write comments and add new charging stations. \
+                  Look out for the question marks to find out more about each box.")
     init_data()
     make_streamlit_page_elements(st.session_state.df_charging_berlin)
     return
