@@ -203,7 +203,6 @@ def make_streamlit_page_elements(df_every_station: pd.DataFrame) -> None:
     # Load or init user DB
     df_user_db = init_user_db_if_needed(df_user_selected_subset)
 
-    print(df_user_db.columns)
     # Spawn interactiv df show and change previous submissions
     spawn_interactiv_df_for_user_comment_previous_submissions(df_user_db)
 
