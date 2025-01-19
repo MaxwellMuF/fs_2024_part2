@@ -168,6 +168,7 @@ def init_data(geodata_path: str="infrastructure/data/datasets/geodata_berlin_plz
         df_geodat_plz = pd.read_csv(geodata_path, sep=';', low_memory=False)
         df_charging = pd.read_csv(charging_data_path, sep=';', low_memory=False)
         st.session_state.df_charging_berlin = data_pipeline.data_process(df_geodat_plz, df_charging)
+
     return
 
 # @methods.timer
@@ -183,6 +184,7 @@ def main() -> None:
                   Look out for the question marks to find out more about each box.")
     init_data()
     make_streamlit_page_elements(st.session_state.df_charging_berlin)
+    
     return
 
 # call main directly because of st.navigation
