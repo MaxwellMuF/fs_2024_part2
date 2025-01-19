@@ -47,8 +47,8 @@ def filter_zip_code_widget(df: pd.DataFrame) -> pd.DataFrame:
         st.write("Here is your filtered data frame:")
         dict_user_selected_row = show_user_selected_df(df_user_selected_subset_show)
         df_selected_to_rate = user_selected_row_to_df(df_user_selected_subset_show, dict_user_selected_row)
-        st.write("Here are your selected rows:")
-        st.dataframe(df_selected_to_rate, use_container_width=True, hide_index=True,)
+        # st.write("Here are your selected rows:")
+        # st.dataframe(df_selected_to_rate, use_container_width=True, hide_index=True,)
 
     return df_selected_to_rate
 
@@ -68,19 +68,19 @@ def init_user_db_if_needed(df_user_selected_subset_show: pd.DataFrame) -> pd.Dat
     """User DB three cases: use as data 1. use session_state or
                                         2. load json or 
                                         3. initialize a user DB)"""
-    # 1. use session_state as user DB
-    if "df_user_rate_data_base" in st.session_state:
-        return st.session_state.df_user_rate_data_base
-    else:
-        with open("application/data/data_user/DataBase_user_changes.json", "r") as file:
-            loaded_database = json.load(file)
+    # # 1. use session_state as user DB
+    # if "df_user_rate_data_base" in st.session_state:
+    #     return st.session_state.df_user_rate_data_base
+    # else:
+    with open("application/data/data_user/DataBase_user_changes.json", "r") as file:
+        loaded_database = json.load(file)
     # 2. use loaded json as user DB
     if st.session_state.username in loaded_database.keys():
         return pd.DataFrame(loaded_database[st.session_state.username])
     # 3. initialize a new user DB
     else:
 
-        return pd.DataFrame(columns=df_user_selected_subset_show.columns.to_list()+["Rating", "Comment"])
+        return pd.DataFrame(columns=df_user_selected_subset_show)
 
 def config_edit_df_user_posts() -> dict:
     config = {
@@ -121,29 +121,18 @@ def spawn_interactiv_df_for_user_comment(df_user_changes: pd.DataFrame) -> None:
             df_stations_user_edit = st.data_editor(df_user_changes, column_config=config,
                                                    use_container_width=True, hide_index=True, num_rows='dynamic')
 
-            	# Reload page iusse solution: save it in a session state
-        st.session_state.df_stations_user_edit = df_stations_user_edit
-
-        # 3. Spawn button to check post bevor submit
-        if st.button('Get results', key="unused_get_res_1"):
-            st.write("Here is your post. You can change it at any time.")
-            st.dataframe(df_stations_user_edit)
-
         # 4. Spawn button to submit
-            if st.button("Submit post", key="submited_post"):
-                st.write("We have saved your post. Thank you for your support!")
-
+        if st.button("Submit post", key="submited_post"):
             # Save post if submitted: add post to DB and save DB
-        elif st.session_state.submited_post == True:
             helper.load_db_add_dict_save_db(path_to_db="application/data/data_user/DataBase_user_changes.json", 
                                             df_to_add=df_stations_user_edit)
-            st.write("We have saved your post. Thank you for your support!")
+            st.success("We have saved your post. Thank you for your support!", icon=":material/save:")
             time.sleep(3)
             st.rerun()
 
     return
 
-def spawn_interactiv_df_for_user_comment_previous_submissions(df_user_changes: pd.DataFrame) -> None:
+def spawn_interactiv_df_for_user_comment_previous_submissions(df_user_comment_submitted: pd.DataFrame) -> None:
     """Spawn interactiv df for user posts: 
             1. Create config
             2. Spawn interactiv dataframe
@@ -159,30 +148,27 @@ def spawn_interactiv_df_for_user_comment_previous_submissions(df_user_changes: p
         st.write("Do you want to change them? No Problem! Just make your modifications below and submit it.")
         
         # 2. Spawn interactiv df
-        if len(df_user_changes) == 0:
-            df_user_rate_data_base = st.data_editor(df_user_changes, key="unused_df_edit",
+        if df_user_comment_submitted.empty:
+            df_user_rate_data_base = st.data_editor(df_user_comment_submitted, key="unused_df_edit",
                                                    use_container_width=True, hide_index=True, num_rows='dynamic')
         else:
-            df_user_rate_data_base = st.data_editor(df_user_changes, column_config=config, key="unused_df_edit",
+            df_user_rate_data_base = st.data_editor(df_user_comment_submitted, column_config=config, key="unused_df_edit",
                                                    use_container_width=True, hide_index=True, num_rows='dynamic')
 
         # Reload page iusse solution: save it in a session state
-        st.session_state.df_user_rate_data_base = df_user_rate_data_base
+        # st.session_state.df_user_rate_data_base = df_user_rate_data_base
 
-        # 3. Spawn button to check post bevor submit
-        if st.button("Get results", key="unused_get_res_2"):
-            st.write("Here is your post. You can change it at any time.")
-            st.dataframe(df_user_rate_data_base)
+        # # 3. Spawn button to check post bevor submit
+        # if st.button("Get results", key="unused_get_res_2"):
+        #     st.write("Here is your post. You can change it at any time.")
+        #     st.dataframe(df_user_rate_data_base)
 
         # 4. Spawn button to submit
-            if st.button("Submit post", key="submited_post_changes"):
-                st.write("We have saved your post. Thank you for your support!")
-
+        if st.button("Submit post", key="submited_post_changes"):
             # Save post if submitted: add post to DB and save DB
-        elif st.session_state.submited_post_changes == True:
             helper.load_db_add_dict_save_db(path_to_db="application/data/data_user/DataBase_user_changes.json", 
                                             df_to_add=df_user_rate_data_base)
-            st.write("We have saved your post. Thank you for your support!")
+            st.success("We have saved your post. Thank you for your support!", icon=":material/save:")
             time.sleep(3)
             st.rerun()
 
@@ -217,6 +203,7 @@ def make_streamlit_page_elements(df_every_station: pd.DataFrame) -> None:
     # Load or init user DB
     df_user_db = init_user_db_if_needed(df_user_selected_subset)
 
+    print(df_user_db.columns)
     # Spawn interactiv df show and change previous submissions
     spawn_interactiv_df_for_user_comment_previous_submissions(df_user_db)
 

@@ -40,10 +40,17 @@ def save_json(dict_for_saving, path="DataBase_user_changes.json"):
     return
 
 def load_db_add_dict_save_db(path_to_db, df_to_add: pd.DataFrame):
+    # Load data
+    user_name = st.session_state.username
     user_database = load_json(path=path_to_db)
-    st.write("")
-    user_name = st.session_state.get("username", "test_user")
-    user_database[user_name] = df_to_add.to_dict()
+    if user_name in user_database.keys():
+        df_user_database = pd.DataFrame(user_database[user_name])
+    else:
+        df_user_database = pd.DataFrame(columns=df_to_add.columns)
+
+    df_user_database = pd.concat([df_user_database, df_to_add], axis=0)
+    # user_database[user_name] = df_to_add.to_dict()
+    user_database[user_name] = df_user_database.to_dict()
     save_json(user_database, path=path_to_db)
     return
 
