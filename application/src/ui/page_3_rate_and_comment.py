@@ -21,7 +21,7 @@ def init_user_db_if_needed(df_user_selected_subset_show: pd.DataFrame) -> pd.Dat
     if "df_stations_user_edit" in st.session_state:
         return st.session_state.df_stations_user_edit
     else:
-        with open("application\data\data_user\DataBase_user_changes.json", "r") as file:
+        with open("application/data/data_user/DataBase_user_changes.json", "r") as file:
             loaded_database = json.load(file)
     # 2. use loaded json as user DB
     if st.session_state.username in loaded_database.keys():
@@ -77,7 +77,7 @@ def spawn_interactiv_df_for_user_comment(df_user_changes: pd.DataFrame) -> None:
 
             # Save post if submitted: add post to DB and save DB
         elif st.session_state.submited_post == True:
-            helper.load_db_add_dict_save_db(path_to_db="application\data\data_user\DataBase_user_changes.json", 
+            helper.load_db_add_dict_save_db(path_to_db="application/data/data_user/DataBase_user_changes.json", 
                                             df_to_add=df_stations_user_edit)
             st.write("We have saved your post. Thank you for your support!")
             time.sleep(3)
