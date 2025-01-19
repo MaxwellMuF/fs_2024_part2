@@ -13,14 +13,14 @@ from streamlit_authenticator.utilities import (CredentialsError,
 
 # ----------------------------- Data and inits ------------------------------
 
-def load_config(config_path="data/config.yaml"):
+def load_config(config_path="application/data/data_user/config.yaml"):
     """Loading config file"""
     with open(config_path, 'r', encoding='utf-8') as file:
         config = yaml.load(file, Loader=SafeLoader)
 
     return config
 
-def save_config(config, config_path="data/config.yaml"):
+def save_config(config, config_path="application/data/data_user/config.yaml"):
     """Saving config file"""
     with open(config_path, 'w', encoding='utf-8') as file:
         yaml.dump(config, file, default_flow_style=False)

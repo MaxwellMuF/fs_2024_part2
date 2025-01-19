@@ -42,7 +42,7 @@ def main():
     """
     init_st_session_state()
     # load authenticator config and create login st.authenticator
-    config = methods_login.load_config(config_path="application\data\data_user\config.yaml")
+    config = methods_login.load_config(config_path="application/data/data_user/config.yaml")
     methods_login.create_authenticator(config)
 
     # Show pages before a user is logged in
@@ -60,7 +60,7 @@ def main():
         print("We should never get here!")
     
     # save authenticator config
-    methods_login.save_config(config, config_path="application\data\data_user\config.yaml")
+    methods_login.save_config(config, config_path="application/data/data_user/config.yaml")
     
     return
 
