@@ -2,7 +2,7 @@ import unittest
 import pandas as pd
 from io import StringIO
 # Own python files: will be tested
-from streamlit_app_folder.data_pipeline import data_process
+from infrastructure.src.data_process.data_pipeline import data_process
 
 class TestDataProcess(unittest.TestCase):
 

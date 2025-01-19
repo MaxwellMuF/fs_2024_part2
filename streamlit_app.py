@@ -1,6 +1,6 @@
 import streamlit as st
 # Own python files
-from streamlit_app_folder import methods_login
+from application.src.utilities import methods_login
 
 # Initialize st.session_state (st.Class properties) at start or reload of app/page. 
 def init_st_session_state():
@@ -17,8 +17,8 @@ def init_st_session_state():
 
 def pages_bevor_login():
     """Pages of streamlit app bevor login defined by functions"""
-    login = st.Page(methods_login.login_widget, title="Login", icon=":material/home:")
-    register_new_user = st.Page(methods_login.register_new_user_widget, title="Reset Password", icon=":material/key:")
+    login = st.Page(methods_login.login_widget, title="Login", icon=":material/login:")
+    register_new_user = st.Page(methods_login.register_new_user_widget, title="Reset Password", icon=":material/lock_reset:")
     forgot_password = st.Page(methods_login.forgot_password_widget, title="Forget Password", icon=":material/key:")
     forgot_username = st.Page(methods_login.forgot_username_widget, title="Forget Username", icon=":material/key:")
 
@@ -26,12 +26,13 @@ def pages_bevor_login():
 
 def pages_after_login():
     """Pages of streamlit app after login defined by functions and python files"""
-    welcome = st.Page("streamlit_app_folder/page_1_welcome.py", title="Welcome", icon=":material/home:")
-    charging_stations = st.Page("streamlit_app_folder/page_2_charging_stations.py", title="Charging Stations", icon=":material/dynamic_form:") #, default=True
+    welcome = st.Page("application/src/ui/page_1_welcome.py", title="Welcome", icon=":material/home:")
+    charging_stations = st.Page("application/src/ui/page_2_charging_stations.py", title="Charging Stations", icon=":material/dynamic_form:") #, default=True
+    rate_and_comment = st.Page("application/src/ui/page_3_rate_and_comment.py", title="Rate and Comment", icon=":material/chat_bubble:")
     reset_password = st.Page(methods_login.reset_password_widget, title="Reset Password", icon=":material/key:")
-    logout = st.Page(methods_login.logout_widget, title="Logout", icon=":material/home:")
+    logout = st.Page(methods_login.logout_widget, title="Logout", icon=":material/logout:")
 
-    return [welcome, charging_stations, reset_password, logout]
+    return [welcome, charging_stations, rate_and_comment, reset_password, logout]
 
 def main():
     """
@@ -41,7 +42,7 @@ def main():
     """
     init_st_session_state()
     # load authenticator config and create login st.authenticator
-    config = methods_login.load_config(config_path="data/config.yaml")
+    config = methods_login.load_config(config_path="application\data\data_user\config.yaml")
     methods_login.create_authenticator(config)
 
     # Show pages before a user is logged in
@@ -59,7 +60,7 @@ def main():
         print("We should never get here!")
     
     # save authenticator config
-    methods_login.save_config(config, config_path="data/config.yaml")
+    methods_login.save_config(config, config_path="application\data\data_user\config.yaml")
     
     return
 

@@ -1,8 +1,8 @@
 import pandas       as pd
 import geopandas    as gpd
 
-from streamlit_app_folder import methods
-from streamlit_app_folder.config import pdict
+# from application.src.utilities import methods
+from infrastructure.src.utilities.config import pdict
 
 
 # @methods.timer

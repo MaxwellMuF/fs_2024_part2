@@ -6,7 +6,7 @@ import streamlit as st
 
 from unittest.mock import MagicMock, patch
 
-from streamlit_app_folder.helper_page_2_charging_stations import (subset_with_criteria, 
+from application.src.utilities.helper_page_2_charging_stations import (subset_with_criteria, 
                                                         unique_values_of_column,
                                                         list_for_tooltip,
                                                         drop_column_and_sort_by_column,

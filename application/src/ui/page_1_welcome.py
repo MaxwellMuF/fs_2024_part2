@@ -26,9 +26,9 @@ def image_with_motivation():
         st.header("Let's create the future")
         col1, col2 = st.columns(2)
         with col1:
-            st.image("data/Ai_pic_berlin_for_welcome.jpeg")
+            st.image("application/data/data_images/Ai_pic_berlin_for_welcome.jpeg")
         with col2:
-            st.image("data/Ai_pic_berlin_for_welcome2.jpeg")
+            st.image("application/data/data_images/Ai_pic_berlin_for_welcome2.jpeg")
         st.write("Berlin as it should be. And with your help, we are already one step closer.")
 
     return
