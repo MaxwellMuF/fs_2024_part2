@@ -6,7 +6,7 @@ from infrastructure.src.utilities.config import pdict
 
 
 # @methods.timer
-def data_process(df_geodat_plz, df_charging): # geodata_path="data/datasets/geodata_berlin_plz.csv", 
+def data_process(df_geodat_plz: pd.DataFrame, df_charging: pd.DataFrame, required_columns: tuple): # geodata_path="data/datasets/geodata_berlin_plz.csv", 
                   # charging_data_path="data/datasets/Ladesaeulenregister.csv"):
     """Data process: Load and process data"""
     # Load data
@@ -16,8 +16,7 @@ def data_process(df_geodat_plz, df_charging): # geodata_path="data/datasets/geod
     ## Preprocessing dataframe from Ladesaeulenregister.csv
     
     # Select subset df_charging with fewer columns
-    df_charging = df_charging.loc[:,('Postleitzahl', 'Breitengrad','Längengrad','Bundesland', 'Straße', 'Hausnummer',
-                                     'Ort', 'Nennleistung Ladeeinrichtung [kW]', 'Steckertypen1')]
+    df_charging = df_charging.loc[:, required_columns]
     
     # Rename some columns of df_charging
     df_charging.rename(columns = {"Nennleistung Ladeeinrichtung [kW]"   : "KW", 

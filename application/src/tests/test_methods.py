@@ -1,8 +1,13 @@
 import unittest
 import pandas as pd
 from io import StringIO
-from streamlit_app_folder.methods import count_plz_occurrences  # Replace with the actual module name
+from application.src.utilities.methods import count_plz_occurrences  # Replace with the actual module name
 
+
+# # Run test from main directory (as streamlit does with scripts) 
+# python -m unittest application\src\tests\test_methods.py
+
+#  --------------------------------------- Tests ------------------------------------------------------
 class TestCountPLZOccurrences(unittest.TestCase):
 
     def setUp(self):

@@ -1,11 +1,11 @@
 import unittest
 from unittest.mock import MagicMock, patch
-from streamlit_app_folder.page_1_welcome import welcome_text, image_with_motivation  # Replace with your module name
+from application.src.ui.page_1_welcome import welcome_text, image_with_motivation  # Replace with your module name
 
 
 class TestStreamlitFunctions(unittest.TestCase):
 
-    @patch("streamlit_app_folder.page_1_welcome.st")
+    @patch("application.src.ui.page_1_welcome.st")
     def test_welcome_text(self, mock_st):
         """Test the `welcome_text` function."""
         # Simulate session state
@@ -15,10 +15,12 @@ class TestStreamlitFunctions(unittest.TestCase):
         welcome_text()
 
         # Verify the header and write calls
-        mock_st.header.assert_called_once_with("Welcome *Test User*")
-        mock_st.write.assert_called_once_with(
-            "We are grateful for your selection of our services and will do our best to assist you in your search."
-        )
+        mock_st.write.assert_called_once_with("Hello *Test User*! \
+                Thank you for your interest in the project. \
+                Here you will find a short description of what the project is about:")
+        # mock_st.write.assert_called_once_with(
+        #     "We are grateful for your selection of our services and will do our best to assist you in your search."
+        # )
 
     ## Sadly not working: Mock cannot call st.container properly. 
     ## Even with specifing st.columns or leaving columns out of the test.

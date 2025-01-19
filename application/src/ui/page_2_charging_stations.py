@@ -164,10 +164,12 @@ def make_streamlit_page_elements(df: pd.DataFrame) -> None:
 def init_data(geodata_path: str="infrastructure/data/datasets/geodata_berlin_plz.csv", 
               charging_data_path: str="infrastructure/data/datasets/Ladesaeulenregister.csv") -> None:
     """Init and process data only ones at the start of the app (instead of every tick)"""
-    if "df_charging_berlin" not in st.session_state:
+    if "df_charging_berlin_search" not in st.session_state:
         df_geodat_plz = pd.read_csv(geodata_path, sep=';', low_memory=False)
         df_charging = pd.read_csv(charging_data_path, sep=';', low_memory=False)
-        st.session_state.df_charging_berlin = data_pipeline.data_process(df_geodat_plz, df_charging)
+        required_columns = ('Postleitzahl', 'Breitengrad','Längengrad','Bundesland', 'Straße', 'Hausnummer',
+                                     'Ort', 'Nennleistung Ladeeinrichtung [kW]', 'Steckertypen1')
+        st.session_state.df_charging_berlin_search = data_pipeline.data_process(df_geodat_plz, df_charging, required_columns)
 
     return
 
@@ -183,7 +185,7 @@ def main() -> None:
                   You can also write comments and add new charging stations. \
                   Look out for the question marks to find out more about each box.")
     init_data()
-    make_streamlit_page_elements(st.session_state.df_charging_berlin)
+    make_streamlit_page_elements(st.session_state.df_charging_berlin_search)
     
     return
 

@@ -17,12 +17,14 @@ from infrastructure.src.data_process    import data_pipeline
 def init_data(geodata_path: str="infrastructure/data/datasets/geodata_berlin_plz.csv", 
               charging_data_path: str="infrastructure/data/datasets/Ladesaeulenregister.csv") -> None:
     """Init and process data only ones at the start of the app (instead of every tick)"""
-    if "df_charging_berlin" not in st.session_state:
+    if "df_charging_berlin_rate" not in st.session_state:
         df_geodat_plz = pd.read_csv(geodata_path, sep=';', low_memory=False)
         df_charging = pd.read_csv(charging_data_path, sep=';', low_memory=False)
-        st.session_state.df_charging_berlin = data_pipeline.data_process(df_geodat_plz, df_charging)
-        
-    return
+        required_columns = ('Postleitzahl', 'Straße', 'Hausnummer', 'Anzahl Ladepunkte', 'Breitengrad', 'Bundesland',
+                            'Längengrad', 'Nennleistung Ladeeinrichtung [kW]')
+        df_processed_data = data_pipeline.data_process(df_geodat_plz, df_charging, required_columns)
+        st.session_state.df_charging_berlin_rate = df_processed_data
+    return # df_processed_data # return just for testin, user session_state to avoid data process at any click
 
 def filter_zip_code_widget(df: pd.DataFrame) -> pd.DataFrame:
     """User select zip code widget: selectbox for zip code and returns selected subset"""
@@ -38,20 +40,37 @@ def filter_zip_code_widget(df: pd.DataFrame) -> pd.DataFrame:
         df_subset_user_street = helper.subset_with_criteria(df=df_subset_user_zip_code, column="Straße", criteria=user_selected_street)
 
         df_user_selected_subset_show = helper.drop_column_and_sort_by_column(df_subset_user_street,
-                    list_drop_column_names=["geometry", "Breitengrad", "Längengrad", "Bundesland", "Ort", "Plug Types"],
+                    list_drop_column_names=["geometry", "Breitengrad", "Längengrad", "Bundesland"],
                     sort_column_name="KW")
-        
-        st.dataframe(df_user_selected_subset_show, use_container_width=True, hide_index=True)
+        df_user_selected_subset_show.drop_duplicates(inplace=True)
 
-    return df_user_selected_subset_show
+        st.write("Here is your filtered data frame:")
+        dict_user_selected_row = show_user_selected_df(df_user_selected_subset_show)
+        df_selected_to_rate = user_selected_row_to_df(df_user_selected_subset_show, dict_user_selected_row)
+        st.write("Here are your selected rows:")
+        st.dataframe(df_selected_to_rate, use_container_width=True, hide_index=True,)
+
+    return df_selected_to_rate
+
+def show_user_selected_df(df_user_selected_subset_show: pd.DataFrame) -> dict:
+    dict_user_selected_row = st.dataframe(df_user_selected_subset_show, use_container_width=True, hide_index=True, on_select="rerun")
+    
+    return dict_user_selected_row
+
+def user_selected_row_to_df(df_user_selected_subset: pd.DataFrame, dict_user_selected_row: dict) -> pd.DataFrame:
+    row_idx = dict_user_selected_row.selection.rows
+    df_selected_to_rate = df_user_selected_subset.iloc[row_idx,:]
+
+    return df_selected_to_rate
+
 
 def init_user_db_if_needed(df_user_selected_subset_show: pd.DataFrame) -> pd.DataFrame:
     """User DB three cases: use as data 1. use session_state or
                                         2. load json or 
                                         3. initialize a user DB)"""
     # 1. use session_state as user DB
-    if "df_stations_user_edit" in st.session_state:
-        return st.session_state.df_stations_user_edit
+    if "df_user_rate_data_base" in st.session_state:
+        return st.session_state.df_user_rate_data_base
     else:
         with open("application/data/data_user/DataBase_user_changes.json", "r") as file:
             loaded_database = json.load(file)
@@ -69,9 +88,9 @@ def config_edit_df_user_posts() -> dict:
         'Straße' : st.column_config.TextColumn('Straße', required=True), #width='medium',
         'Hausnummer' : st.column_config.TextColumn('Hausnummer', required=True, width='small'),
         'KW' : st.column_config.NumberColumn('KW', min_value=1, max_value=1000, width='small'),
-        'Available' : st.column_config.SelectboxColumn('Available', options=["✔️", "❌"], width='small'),
+        'Anzahl Ladepunkte' : st.column_config.NumberColumn('Anzahl Ladepunkte',min_value=1, max_value=10, width='small'),
         'Rating' : st.column_config.SelectboxColumn('Rating', options=["⭐"*i for i in range(1,6)], width=105),
-        'Comment' : st.column_config.TextColumn('Comment')}
+        'Comment' : st.column_config.TextColumn('Comment', required=False)}
     
     return config
 
@@ -87,19 +106,26 @@ def spawn_interactiv_df_for_user_comment(df_user_changes: pd.DataFrame) -> None:
 
             # Create container user post
     with st.container(border=True):
-        st.header("Do you want to add a Charging Station or leave a comment?")
+        st.header("Rate and comment on your selection")
         st.write("Tank you for helping the project and other users! Here you can add \
                 a new Charging Station? You can also leave a recommendation or a comment for an existing recommendation:")
         
         # 2. Spawn interactiv df
-        df_stations_user_edit = st.data_editor(df_user_changes, column_config=config,
-                                               use_container_width=True, hide_index=True, num_rows='dynamic')
+        df_user_changes["Rating"] = [""] * len(df_user_changes)
+        df_user_changes["Comment"] = [""] * len(df_user_changes)
+
+        if len(df_user_changes) == 0:
+            df_stations_user_edit = st.data_editor(df_user_changes,
+                                                   use_container_width=True, hide_index=True, num_rows='dynamic')
+        else:
+            df_stations_user_edit = st.data_editor(df_user_changes, column_config=config,
+                                                   use_container_width=True, hide_index=True, num_rows='dynamic')
 
             	# Reload page iusse solution: save it in a session state
         st.session_state.df_stations_user_edit = df_stations_user_edit
 
         # 3. Spawn button to check post bevor submit
-        if st.button('Get results'):
+        if st.button('Get results', key="unused_get_res_1"):
             st.write("Here is your post. You can change it at any time.")
             st.dataframe(df_stations_user_edit)
 
@@ -111,6 +137,51 @@ def spawn_interactiv_df_for_user_comment(df_user_changes: pd.DataFrame) -> None:
         elif st.session_state.submited_post == True:
             helper.load_db_add_dict_save_db(path_to_db="application/data/data_user/DataBase_user_changes.json", 
                                             df_to_add=df_stations_user_edit)
+            st.write("We have saved your post. Thank you for your support!")
+            time.sleep(3)
+            st.rerun()
+
+    return
+
+def spawn_interactiv_df_for_user_comment_previous_submissions(df_user_changes: pd.DataFrame) -> None:
+    """Spawn interactiv df for user posts: 
+            1. Create config
+            2. Spawn interactiv dataframe
+            3. Show post bevor submit it
+            4. Submit post, i.e. save it in user DB
+            """
+        # 1. Define config for interactiv df with st.column_config
+    config = config_edit_df_user_posts()
+
+            # Create container user post
+    with st.container(border=True):
+        st.header("Your previous submissions")
+        st.write("Do you want to change them? No Problem! Just make your modifications below and submit it.")
+        
+        # 2. Spawn interactiv df
+        if len(df_user_changes) == 0:
+            df_user_rate_data_base = st.data_editor(df_user_changes, key="unused_df_edit",
+                                                   use_container_width=True, hide_index=True, num_rows='dynamic')
+        else:
+            df_user_rate_data_base = st.data_editor(df_user_changes, column_config=config, key="unused_df_edit",
+                                                   use_container_width=True, hide_index=True, num_rows='dynamic')
+
+        # Reload page iusse solution: save it in a session state
+        st.session_state.df_user_rate_data_base = df_user_rate_data_base
+
+        # 3. Spawn button to check post bevor submit
+        if st.button("Get results", key="unused_get_res_2"):
+            st.write("Here is your post. You can change it at any time.")
+            st.dataframe(df_user_rate_data_base)
+
+        # 4. Spawn button to submit
+            if st.button("Submit post", key="submited_post_changes"):
+                st.write("We have saved your post. Thank you for your support!")
+
+            # Save post if submitted: add post to DB and save DB
+        elif st.session_state.submited_post_changes == True:
+            helper.load_db_add_dict_save_db(path_to_db="application/data/data_user/DataBase_user_changes.json", 
+                                            df_to_add=df_user_rate_data_base)
             st.write("We have saved your post. Thank you for your support!")
             time.sleep(3)
             st.rerun()
@@ -130,18 +201,26 @@ def show_address_and_availibility(df_user_selected_subset_show: pd.DataFrame) ->
 
 def make_streamlit_page_elements(df_every_station: pd.DataFrame) -> None:
 
+    
+    if "text_for_page_help" not in st.session_state:
+        # because of the funny behaior of load a json into python str into streamlit md, we need to trippe '\' in '\n'
+        st.session_state.text_for_page_help = helper.load_json("application/data/data_ui/text_for_page_help.json")
+
     # filter and drop and show
     df_user_selected_subset = filter_zip_code_widget(df_every_station)
-    # df_user_selected_subset_show = helper.drop_column_and_sort_by_column(df_user_selected_subset,
-    #                 list_drop_column_names=["geometry", "Breitengrad", "Längengrad", "Bundesland", "Ort", "Plug Types"],
-    #                 sort_column_name="KW")
-    #show_address_and_availibility(df_user_selected_subset_show)
+   
+
+
+    # Spawn interactiv df for user comment
+    spawn_interactiv_df_for_user_comment(df_user_selected_subset)
 
     # Load or init user DB
-    df_user_changes = init_user_db_if_needed(df_user_selected_subset)
-    st.write("Here are the selected Charging Stations")
-    # Spawn interactiv df for user comment
-    spawn_interactiv_df_for_user_comment(df_user_changes)
+    df_user_db = init_user_db_if_needed(df_user_selected_subset)
+
+    # Spawn interactiv df show and change previous submissions
+    spawn_interactiv_df_for_user_comment_previous_submissions(df_user_db)
+
+    return
 
 def main() -> None:
     """Main of the Charging Stations page: 
@@ -153,8 +232,8 @@ def main() -> None:
              help="On this page you will find the charging station search. \
                   You can also write comments and add new charging stations. \
                   Look out for the question marks to find out more about each box.")
-    
-    make_streamlit_page_elements(st.session_state.df_charging_berlin)
+    init_data()
+    make_streamlit_page_elements(st.session_state.df_charging_berlin_rate)
     return
 
 # call main directly because of st.navigation

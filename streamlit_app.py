@@ -11,6 +11,8 @@ def init_st_session_state():
     # is needed for page_2_charging_stations.spawn_interactiv_df_for_user_comment()
     if "submited_post" not in st.session_state:
         st.session_state.submited_post = False
+    if "submited_post_changes" not in st.session_state:
+        st.session_state.submited_post_changes = False
     return
 
 # ------------------------------- Pages --------------------------------------

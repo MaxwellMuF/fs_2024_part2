@@ -6,7 +6,9 @@ import streamlit as st
 
 from unittest.mock import MagicMock, patch
 
-from application.src.utilities.helper_page_2_charging_stations import (subset_with_criteria, 
+# Test the following methods from helper_page_2
+from application.src.utilities.helper_page_2_charging_stations import (
+                                                        subset_with_criteria, 
                                                         unique_values_of_column,
                                                         list_for_tooltip,
                                                         drop_column_and_sort_by_column,
@@ -16,6 +18,11 @@ from application.src.utilities.helper_page_2_charging_stations import (subset_wi
                                                         add_col_available
                                                         )
 
+
+# # Run test from main directory (as streamlit does with scripts) 
+# python -m unittest application\src\tests\test_helper_page_2_charging_stations.py
+
+#  --------------------------------------- Tests ------------------------------------------------------
 class TestSubsetWithCriteria(unittest.TestCase):
 
     def setUp(self):

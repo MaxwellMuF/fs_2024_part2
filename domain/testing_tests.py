@@ -19,6 +19,9 @@ if False:
     test_dict = {key:value for key,value in zip("abcde", range(5))}
     print(test_dict.keys())
 
-if True:
+if False:
     test_dict = pd.DataFrame({"col1":[1,2], "col2":[3,4]}).to_dict()
     print(test_dict)
+
+if True:
+    print([[""]*5]*2)
