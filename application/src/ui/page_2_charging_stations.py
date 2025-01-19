@@ -137,20 +137,20 @@ def make_streamlit_page_elements(df: pd.DataFrame) -> None:
     df_every_station = helper.add_col_available(df=df, chance=[0.7,0.3])
 
     # Filter zip code widget
-    df_user_selected_subset = filter_zip_code_widget(df_every_station)
+    df_user_selected_subset_zip = filter_zip_code_widget(df_every_station)
 
     # Filter power widget
-    df_user_selected_subset = filter_power_widget(df_user_selected_subset)
+    df_user_selected_subset_zip_power = filter_power_widget(df_user_selected_subset_zip)
 
     # Make grouped dfs
-    df_numbers_per_kW = methods.count_plz_occurrences(df_user_selected_subset, sort_col=['PLZ', "KW"])
-    df_numbers = methods.count_plz_occurrences(df_user_selected_subset, sort_col=('PLZ'))
+    df_numbers_per_kW = methods.count_plz_occurrences(df_user_selected_subset_zip_power, sort_col=['PLZ', "KW"])
+    df_numbers = methods.count_plz_occurrences(df_user_selected_subset_zip_power, sort_col=('PLZ'))
 
     # Spawn heatmap berlin
     spawn_heatmap_berlin(df_numbers_per_kW, df_numbers)
 
     # drop unnessesary columns for the show data part
-    df_user_selected_subset_show = helper.drop_column_and_sort_by_column(df_user_selected_subset,
+    df_user_selected_subset_show = helper.drop_column_and_sort_by_column(df_user_selected_subset_zip_power,
                     list_drop_column_names=["geometry", "Breitengrad", "Längengrad", "Bundesland", "Ort", "Plug Types"],
                     sort_column_name="KW")
     
@@ -164,14 +164,13 @@ def make_streamlit_page_elements(df: pd.DataFrame) -> None:
 def init_data(geodata_path: str="infrastructure/data/datasets/geodata_berlin_plz.csv", 
               charging_data_path: str="infrastructure/data/datasets/Ladesaeulenregister.csv") -> None:
     """Init and process data only ones at the start of the app (instead of every tick)"""
-    if "df_charging_berlin_search" not in st.session_state:
-        df_geodat_plz = pd.read_csv(geodata_path, sep=';', low_memory=False)
-        df_charging = pd.read_csv(charging_data_path, sep=';', low_memory=False)
-        required_columns = ('Postleitzahl', 'Breitengrad','Längengrad','Bundesland', 'Straße', 'Hausnummer',
-                                     'Ort', 'Nennleistung Ladeeinrichtung [kW]', 'Steckertypen1')
-        st.session_state.df_charging_berlin_search = data_pipeline.data_process(df_geodat_plz, df_charging, required_columns)
 
-    return
+    df_geodat_plz = pd.read_csv(geodata_path, sep=';', low_memory=False)
+    df_charging = pd.read_csv(charging_data_path, sep=';', low_memory=False)
+    required_columns = ('Postleitzahl', 'Breitengrad','Längengrad','Bundesland', 'Straße', 'Hausnummer',
+                                'Ort', 'Nennleistung Ladeeinrichtung [kW]', 'Steckertypen1')
+
+    return data_pipeline.data_process(df_geodat_plz, df_charging, required_columns)
 
 # @methods.timer
 def main() -> None:
@@ -184,7 +183,10 @@ def main() -> None:
              help="On this page you will find the charging station search. \
                   You can also write comments and add new charging stations. \
                   Look out for the question marks to find out more about each box.")
-    init_data()
+    
+    if "df_charging_berlin_search" not in st.session_state:
+        st.session_state.df_charging_berlin_search = init_data()
+        
     make_streamlit_page_elements(st.session_state.df_charging_berlin_search)
     
     return

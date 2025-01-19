@@ -14,18 +14,6 @@ from infrastructure.src.data_process    import data_pipeline
 
 # ----------------------------- streamlit widgets ------------------------------
 
-def init_data(geodata_path: str="infrastructure/data/datasets/geodata_berlin_plz.csv", 
-              charging_data_path: str="infrastructure/data/datasets/Ladesaeulenregister.csv") -> None:
-    """Init and process data only ones at the start of the app (instead of every tick)"""
-    if "df_charging_berlin_rate" not in st.session_state:
-        df_geodat_plz = pd.read_csv(geodata_path, sep=';', low_memory=False)
-        df_charging = pd.read_csv(charging_data_path, sep=';', low_memory=False)
-        required_columns = ('Postleitzahl', 'Straße', 'Hausnummer', 'Anzahl Ladepunkte', 'Breitengrad', 'Bundesland',
-                            'Längengrad', 'Nennleistung Ladeeinrichtung [kW]')
-        df_processed_data = data_pipeline.data_process(df_geodat_plz, df_charging, required_columns)
-        st.session_state.df_charging_berlin_rate = df_processed_data
-    return # df_processed_data # return just for testin, user session_state to avoid data process at any click
-
 def filter_zip_code_widget(df: pd.DataFrame) -> pd.DataFrame:
     """User select zip code widget: selectbox for zip code and returns selected subset"""
     with st.container(border=True):
@@ -185,6 +173,17 @@ def show_address_and_availibility(df_user_selected_subset_show: pd.DataFrame) ->
     return
 # ----------------------------- streamlit page ------------------------------
 
+def init_data(geodata_path: str="infrastructure/data/datasets/geodata_berlin_plz.csv", 
+              charging_data_path: str="infrastructure/data/datasets/Ladesaeulenregister.csv") -> None:
+    """Init and process data only ones at the start of the app (instead of every tick)"""
+    if "df_charging_berlin_rate" not in st.session_state:
+        df_geodat_plz = pd.read_csv(geodata_path, sep=';', low_memory=False)
+        df_charging = pd.read_csv(charging_data_path, sep=';', low_memory=False)
+        required_columns = ('Postleitzahl', 'Straße', 'Hausnummer', 'Anzahl Ladepunkte', 'Breitengrad', 'Bundesland',
+                            'Längengrad', 'Nennleistung Ladeeinrichtung [kW]')
+
+    return data_pipeline.data_process(df_geodat_plz, df_charging, required_columns)
+
 def make_streamlit_page_elements(df_every_station: pd.DataFrame) -> None:
 
     
@@ -195,8 +194,6 @@ def make_streamlit_page_elements(df_every_station: pd.DataFrame) -> None:
     # filter and drop and show
     df_user_selected_subset = filter_zip_code_widget(df_every_station)
    
-
-
     # Spawn interactiv df for user comment
     spawn_interactiv_df_for_user_comment(df_user_selected_subset)
 
@@ -218,7 +215,8 @@ def main() -> None:
              help="On this page you will find the charging station search. \
                   You can also write comments and add new charging stations. \
                   Look out for the question marks to find out more about each box.")
-    init_data()
+    if "df_charging_berlin_rate" not in st.session_state:
+        st.session_state.df_charging_berlin_rate = init_data()
     make_streamlit_page_elements(st.session_state.df_charging_berlin_rate)
     return
 
