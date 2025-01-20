@@ -31,7 +31,7 @@ if False:
     print(datetime.today().strftime('%Y-%m-%d %H:%M:%S'))
     print(datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S'))
 
-if True:
+if False:
     for i in {"PLZ": {"1492": 12489}, 
             "Stra\u00dfe": {"1492": "Stromstra\u00dfe"}, 
             "Hausnummer": {"1492": "40"}, 
@@ -64,6 +64,21 @@ if True:
         for col_value in data_of_one_user[column]:
             assert isinstance(col_value, assert_data_types[column])
 
-,
-                                                        collect_user_data,
-                                                        make_new_db_unmut
+
+    """collect_user_data, make_new_db_unmut"""
+            
+if False:
+    test_dict = {"PLZ": {"1492": 12489}, 
+            "Stra\u00dfe": {"1492": "Stromstra\u00dfe"}, 
+            "Hausnummer": {"1492": "40"}, 
+            "Anzahl Ladepunkte": {"1492": 2.0}, 
+            "KW": {"1492": 22.0}, 
+            "Rating": {"1492": "\u2b50\u2b50"}, 
+            "Comment": {"1492": "slow!"}, 
+            "Date": {"1492": "2025-01-20 18:55:19"}}
+    print({k: test_dict[k] for k in test_dict.keys() - {"Date", "KW"}})
+
+    assert {1,2} == {2,1}
+
+if True:
+    print(set([1,2,3]))
