@@ -101,7 +101,7 @@ if False:
     print(all([False, False, False]))
     print(all([1, 1, 1]))
 
-if 1:
+if False:
     test_dict = {"PLZ": {"1492": 12489}, 
             "Stra\u00dfe": {"1492": "Stromstra\u00dfe"}, 
             "Hausnummer": {"1492": "40"}, 
@@ -111,3 +111,7 @@ if 1:
             "Comment": {"1492": "slow!"}, 
             "Date": {"1492": "2025-01-20 18:55:19"}}
     print(test_dict["PLZ"].values())
+
+if True:
+    if "":
+        print(True)

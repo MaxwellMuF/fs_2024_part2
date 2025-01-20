@@ -7,7 +7,8 @@ import streamlit as st
 # Test the following methods from user_data_process
 from domain.src.customer_data.user_data_process import (
                                                         check_required_columns_exist,
-                                                        check_columns_types
+                                                        check_columns_types,
+                                                        check_required_column_values_not_empty
                                                         )
 
 # # Run test from main directory (as streamlit does with scripts) 
@@ -60,7 +61,28 @@ def test_check_columns_types():
 
     return 
 
+def test_check_required_column_values_not_empty():
+    """Test of function: check_columns_types. Three test cases."""
+    columns_expected_example_1  = ["PLZ", "Straße"]
+    columns_expected_example_2  = ["PLZ", "Straße", "Hausnummer"]
+    columns_expected_example_3  = ["PLZ", "Straße", "Hausnummer", "Anzahl Ladepunkte"]
+    
+    user_data_example           = {"PLZ"                : {"1492": 12489,            "1493": 12489}, 
+                                   "Straße"             : {"1492": "Stromstraße",    "1493": "Stromstraße"}, 
+                                   "Hausnummer"         : {"1492": "40",             "1493": ""},
+                                   "Anzahl Ladepunkte"  : {"1492": 2.0,              "1493": None}}
+
+    # Case 1: True: All required columns have non-empty values
+    assert check_required_column_values_not_empty(user_data_example, columns_expected_example_1) == True
+    
+    # Case 2: False: str value is empty 
+    assert check_required_column_values_not_empty(user_data_example, columns_expected_example_2) == False
+    
+    # Case 2: False: float value is None
+    assert check_required_column_values_not_empty(user_data_example, columns_expected_example_3) == False
+
 if __name__ == "__main__":
     test_check_required_columns_exist()
     test_check_columns_types()
+    test_check_required_column_values_not_empty()
     print("test passed")
