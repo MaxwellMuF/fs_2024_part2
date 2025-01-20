@@ -6,7 +6,8 @@ import streamlit as st
 
 # Test the following methods from user_data_process
 from domain.src.customer_data.user_data_process import (
-                                                        check_one_user_data
+                                                        check_required_columns_exist,
+                                                        check_columns_types
                                                         )
 
 # # Run test from main directory (as streamlit does with scripts) 
@@ -15,22 +16,51 @@ from domain.src.customer_data.user_data_process import (
 #  --------------------------------------- Tests ------------------------------------------------------
 
 # RED: Test for Check_data_class
-def test_check_one_user_data():
-    """Test of function: check_one_user_data. Testcase True and False."""
+def test_check_required_columns_exist():
+    """Test of function: check_required_columns_exist. Testcase True and False."""
 
-    columns_expected_example_1 = ["PLZ", "Straße", "Hausnummer"]
-    columns_expected_example_2 = ["PLZ", "Straße", "Hausnummer", "Date", "KW"]
+    columns_expected_example_1  = ["PLZ", "Straße", "Hausnummer"]
+    columns_expected_example_2  = ["PLZ", "Straße", "Hausnummer", "Date", "KW"]
     
-    user_data_example_1 = {"PLZ"              : {"1492": 12489}, 
-                           "Straße"            : {"1492": "Stromstraße"}, 
-                           "Hausnummer"        : {"1492": "40"}}
+    user_data_example_1         = {"PLZ"        : {"1492": 12489}, 
+                                   "Straße"     : {"1492": "Stromstraße"}, 
+                                   "Hausnummer" : {"1492": "40"}}
     
-    assert check_one_user_data(user_data_example_1, columns_expected_example_1) == True
-    assert check_one_user_data(user_data_example_1, columns_expected_example_2) == False
+    assert check_required_columns_exist(user_data_example_1, columns_expected_example_1) == True
+    assert check_required_columns_exist(user_data_example_1, columns_expected_example_2) == False
     
     return 
 
+def test_check_columns_types():
+    """Test of function: check_columns_types. Testcase True and False."""
+    user_data_example    = {"PLZ"               : {"1492": 12489}, 
+                            "Stra\u00dfe"       : {"1492": "Stromstra\u00dfe"}, 
+                            "Hausnummer"        : {"1492": "40"}, 
+                            "Anzahl Ladepunkte" : {"1492": 2.0}, 
+                            "KW"                : {"1492": 22.0}, 
+                            "Rating"            : {"1492": "\u2b50\u2b50"}, 
+                            "Comment"           : {"1492": "slow!"}, 
+                            "Date"              : {"1492": "2025-01-20 18:55:19"}}
+    
+    assert_data_types    = {"PLZ"               : int, 
+                            "Straße"            : str, 
+                            "Hausnummer"        : str, 
+                            "Anzahl Ladepunkte" : float, 
+                            "KW"                : float, 
+                            "Rating"            : str, 
+                            "Comment"           : str, 
+                            "Date"              : str}
+    
+    # Case 1: True: Match all types
+    assert check_columns_types(user_data_example, assert_data_types) == True
+    
+    # Case 2: Mismatched type
+    user_data_example["Date"] = 1687
+    assert check_columns_types(user_data_example, assert_data_types) == False
+
+    return 
 
 if __name__ == "__main__":
-    test_check_one_user_data()
+    test_check_required_columns_exist()
+    test_check_columns_types()
     print("test passed")
