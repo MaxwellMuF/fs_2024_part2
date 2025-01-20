@@ -113,5 +113,5 @@ if False:
     print(test_dict["PLZ"].values())
 
 if True:
-    if "":
-        print(True)
+    print([bool(i) for i in [0,1,"", "0", None]])
+    print(all([0,1,0]))
