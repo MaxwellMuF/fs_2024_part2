@@ -55,7 +55,7 @@ def test_check_columns_types():
     assert check_columns_types(user_data_example, assert_data_types) == True
     
     # Case 2: Mismatched type
-    user_data_example["Date"] = 1687
+    user_data_example["Date"] = {"1492": 1687}
     assert check_columns_types(user_data_example, assert_data_types) == False
 
     return 

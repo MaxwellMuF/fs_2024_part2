@@ -80,5 +80,34 @@ if False:
 
     assert {1,2} == {2,1}
 
-if True:
+if False:
     print(set([1,2,3]))
+
+if False:
+    test_dict = {"PLZ": {"1492": 12489}, 
+            "Stra\u00dfe": {"1492": "Stromstra\u00dfe"}, 
+            "Hausnummer": {"1492": "40"}, 
+            "Anzahl Ladepunkte": {"1492": 2.0}, 
+            "KW": {"1492": 22.0}, 
+            "Rating": {"1492": "\u2b50\u2b50"}, 
+            "Comment": {"1492": "slow!"}, 
+            "Date": {"1492": "2025-01-20 18:55:19"}}
+    print(test_dict.keys())
+    print(test_dict.items())
+    print([type(i) for i in test_dict.values()])
+
+if False:
+    print(all([True, True, True]))
+    print(all([False, False, False]))
+    print(all([1, 1, 1]))
+
+if 1:
+    test_dict = {"PLZ": {"1492": 12489}, 
+            "Stra\u00dfe": {"1492": "Stromstra\u00dfe"}, 
+            "Hausnummer": {"1492": "40"}, 
+            "Anzahl Ladepunkte": {"1492": 2.0}, 
+            "KW": {"1492": 22.0}, 
+            "Rating": {"1492": "\u2b50\u2b50"}, 
+            "Comment": {"1492": "slow!"}, 
+            "Date": {"1492": "2025-01-20 18:55:19"}}
+    print(test_dict["PLZ"].values())
