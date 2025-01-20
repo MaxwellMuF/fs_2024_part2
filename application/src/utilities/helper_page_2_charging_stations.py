@@ -2,6 +2,7 @@ import json
 import numpy        as np
 import pandas       as pd
 import streamlit    as st
+from datetime       import datetime
 
 def subset_with_criteria(df: pd.DataFrame, column: str, criteria: str):
     """Make subset with respect to user selected criteria"""
@@ -39,7 +40,17 @@ def save_json(dict_for_saving, path="DataBase_user_changes.json"):
         json.dump(dict_for_saving, file)
     return
 
-def load_db_add_dict_save_db(path_to_db, df_to_add: pd.DataFrame):
+def add_date_or_date_column(df: pd.DataFrame):
+    if "Date" in df.columns:
+        for idx in df.index:
+            if df.loc[idx,"Date"] == "":
+                df.loc[idx,"Date"] = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+    else:
+        df["Date"] = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+    
+    return df
+
+def load_db_add_dict_save_db(path_to_db, df_to_add: pd.DataFrame, overwrite: str=False):
     # Load data
     user_name = st.session_state.username
     user_database = load_json(path=path_to_db)
@@ -47,10 +58,17 @@ def load_db_add_dict_save_db(path_to_db, df_to_add: pd.DataFrame):
         df_user_database = pd.DataFrame(user_database[user_name])
     else:
         df_user_database = pd.DataFrame(columns=df_to_add.columns)
+    
+    df_to_add_with_date = add_date_or_date_column(df_to_add)
 
-    df_user_database = pd.concat([df_user_database, df_to_add], axis=0)
+    if overwrite:
+        df_user_database_all = df_to_add_with_date
+    else:
+        df_user_database_all = pd.concat([df_to_add_with_date, df_user_database], axis=0)
+
+    # df_user_database_all.drop_duplicates(inplace=True)
     # user_database[user_name] = df_to_add.to_dict()
-    user_database[user_name] = df_user_database.to_dict()
+    user_database[user_name] = df_user_database_all.to_dict()
     save_json(user_database, path=path_to_db)
     return
 

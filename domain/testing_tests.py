@@ -1,4 +1,5 @@
 import pandas as pd
+from datetime import datetime
 
 if False:
     print(pd.DataFrame({
@@ -23,5 +24,9 @@ if False:
     test_dict = pd.DataFrame({"col1":[1,2], "col2":[3,4]}).to_dict()
     print(test_dict)
 
-if True:
+if False:
     print([[""]*5]*2)
+
+if True:
+    print(datetime.today().strftime('%Y-%m-%d %H:%M:%S'))
+    print(datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S'))

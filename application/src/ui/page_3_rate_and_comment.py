@@ -5,6 +5,7 @@ import numpy        as np
 import pandas       as pd
 import streamlit    as st
 
+# from datetime       import datetime
 # Own python files
 # from application.src.utilities          import methods
 from application.src.utilities          import helper_page_2_charging_stations as helper
@@ -155,7 +156,8 @@ def spawn_interactiv_df_for_user_comment_previous_submissions(df_user_comment_su
         if st.button("Submit post", key="submited_post_changes"):
             # Save post if submitted: add post to DB and save DB
             helper.load_db_add_dict_save_db(path_to_db="application/data/data_user/DataBase_user_changes.json", 
-                                            df_to_add=df_user_rate_data_base)
+                                            df_to_add=df_user_rate_data_base,
+                                            overwrite=True)
             st.success("We have saved your post. Thank you for your support!", icon=":material/save:")
             time.sleep(3)
             st.rerun()
