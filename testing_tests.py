@@ -63,3 +63,7 @@ if True:
     for column in data_of_one_user.keys():
         for col_value in data_of_one_user[column]:
             assert isinstance(col_value, assert_data_types[column])
+
+,
+                                                        collect_user_data,
+                                                        make_new_db_unmut

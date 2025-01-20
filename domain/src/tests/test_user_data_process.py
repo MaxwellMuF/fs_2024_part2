@@ -6,9 +6,7 @@ import streamlit as st
 
 # Test the following methods from user_data_process
 from domain.src.customer_data.user_data_process import (
-                                                        check_one_user_data,
-                                                        collect_user_data,
-                                                        make_new_db_unmut
+                                                        check_one_user_data
 )
 
 # # Run test from main directory (as streamlit does with scripts) 
@@ -17,9 +15,8 @@ from domain.src.customer_data.user_data_process import (
 #  --------------------------------------- Tests ------------------------------------------------------
 
 # RED: First Test
-
-def test_check_one_user_data(data_of_one_user):
-    """ Check data quality of one user"""
+def test_check_one_user_data():
+    """Test of function: check_one_user_data"""
 
     columns_expected_example = ['PLZ', 'Straße', 'Hausnummer', 'Anzahl Ladepunkte', 'KW', 'Rating', 'Comment', 'Date']
 
@@ -52,4 +49,9 @@ def test_check_one_user_data(data_of_one_user):
     assert result_1 == expected_result_user_data_example
     assert result_2 == expected_result_user_data_example_2
     
-    return
+    return 
+
+
+if __name__ == "__main__":
+    test_check_one_user_data()
+    print("test passed")
