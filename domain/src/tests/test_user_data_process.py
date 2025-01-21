@@ -1,8 +1,4 @@
-import json
 import unittest
-import tempfile
-import pandas as pd
-import streamlit as st
 
 # Test the following methods from user_data_process
 from domain.src.customer_data.user_data_process import DataValidator
