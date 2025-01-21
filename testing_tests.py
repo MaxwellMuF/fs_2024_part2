@@ -112,6 +112,14 @@ if False:
             "Date": {"1492": "2025-01-20 18:55:19"}}
     print(test_dict["PLZ"].values())
 
-if True:
+if False:
     print([bool(i) for i in [0,1,"", "0", None]])
     print(all([0,1,0]))
+
+class SomeClass:
+    def __call__(self):
+        print("hello")
+
+if True:
+    tester = SomeClass
+    tester()
