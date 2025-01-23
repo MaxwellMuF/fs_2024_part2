@@ -96,7 +96,7 @@ def make_density_df(df_charging_numbers: pd.DataFrame, df_residents: pd.DataFram
                             \nChecked: Show charging stations per inhabitant (Where are many stations)"):
         df_density.loc[:,"Density"] = df_density["Density"].rdiv(1).round(5)
     else:
-        df_density = df_density.round(0)
+        df_density.loc[:,"Density"] = df_density["Density"].round(0).astype(int)
     
     return df_density
 
@@ -124,8 +124,6 @@ def show_df_charging(df: pd.DataFrame) -> None:
                   help=st.session_state.text_for_page_4_help["show_df_charging_help"])
         st.write("Charging Stations from the map as you have chosen above:")
         df = df.drop(["geometry"], axis=1)
-        # print(df.columns)
-        # df = pd.DataFrame(df)
         st.dataframe(df, column_order=["PLZ", "Straße", "Hausnummer", "KW", "Art der Ladeeinrichung"],
                      use_container_width=True, hide_index=True)
     return
@@ -136,7 +134,7 @@ def show_df_density(df: pd.DataFrame) -> None:
         st.header(body="Selected Density per zip code",
                   help=st.session_state.text_for_page_4_help["show_df_density_help"])
         st.write("Density data from the map as you have chosen above:")
-        df.drop(["geometry"], axis=1, inplace=True)
+        df = df.drop(["geometry"], axis=1)
         df = pd.DataFrame(df)
         st.dataframe(df, column_order=["PLZ", "Density", "Number", "Einwohner"],
                      use_container_width=True, hide_index=True)
