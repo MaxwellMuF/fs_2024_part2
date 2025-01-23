@@ -3,6 +3,7 @@ import pandas as pd
 
 df_charging_stations = pd.read_excel("infrastructure\data\datasets\Ladesaeulenregister.xlsx", header=10)
 
+df_charging_stations.drop([f"Public Key{i}" for i in range(1,7)], axis=1, inplace=True)
 # df_charging_stations = pd.read_csv("infrastructure\data\datasets\Ladesaeulenregister.csv")
 
 # rex_pattern = r'\W'
