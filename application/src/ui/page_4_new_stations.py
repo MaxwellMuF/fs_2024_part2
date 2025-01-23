@@ -217,12 +217,12 @@ def main() -> None:
                   You can also write comments and add new charging stations. \
                   Look out for the question marks to find out more about each box.")
     
-    if "df_charging_berlin_search" not in st.session_state:
-        st.session_state.df_charging_berlin_search = init_data()[0]
+    if "df_charging_berlin_new_stations" not in st.session_state:
+        st.session_state.df_charging_berlin_new_stations = init_data()[0]
     if "df_residents_new_stations" not in st.session_state:
         st.session_state.df_residents_new_stations = init_data()[1]
         
-    make_streamlit_page_elements(st.session_state.df_charging_berlin_search,
+    make_streamlit_page_elements(st.session_state.df_charging_berlin_new_stations,
                                  st.session_state.df_residents_new_stations)
     
     return
