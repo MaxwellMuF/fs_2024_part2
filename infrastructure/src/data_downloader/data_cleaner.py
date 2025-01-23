@@ -13,3 +13,6 @@ df_charging_stations = pd.read_excel("infrastructure\data\datasets\Ladesaeulenre
 # print(df_charging_stations.head(5))
 
 df_charging_stations.to_csv("infrastructure\data\datasets\Ladesaeulenregister.csv")
+
+# df_charging_stations_2 = pd.read_csv("infrastructure\data\datasets\Ladesaeulenregister.csv")
+# df_charging_stations_2.to_csv("infrastructure\data\Ladesaeulenregister.csv")
