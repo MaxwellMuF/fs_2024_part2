@@ -191,7 +191,7 @@ def make_streamlit_page_elements(df_charging: pd.DataFrame, df_residents: pd.Dat
 # @methods.timer
 def init_data(geodata_path: str="infrastructure/data/datasets/geodata_berlin_plz.csv", 
               charging_data_path: str="infrastructure/data/datasets/Ladesaeulenregister.csv",
-              residents_path: str="infrastructure\data\datasets\plz_einwohner.csv") -> None:
+              residents_path: str="infrastructure/data/datasets/plz_einwohner.csv") -> None:
     """Init and process data only ones at the start of the app (instead of every tick)"""
 
     df_geodat_plz = pd.read_csv(geodata_path, sep=';', low_memory=False)
