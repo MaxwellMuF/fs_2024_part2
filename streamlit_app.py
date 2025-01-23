@@ -1,6 +1,7 @@
 import streamlit as st
 # Own python files
 from application.src.utilities import methods_login
+from infrastructure.src.data_downloader import download_data, data_cleaner
 
 # Initialize st.session_state (st.Class properties) at start or reload of app/page. 
 def init_st_session_state():
@@ -15,6 +16,10 @@ def init_st_session_state():
         st.session_state.submited_post_changes = False
     return
 
+@st.cache_resource()
+def download_data_from_url():
+    download_data.data_download_from_url()
+    data_cleaner.process_excel_to_csv()
 # ------------------------------- Pages --------------------------------------
 
 def pages_bevor_login():
