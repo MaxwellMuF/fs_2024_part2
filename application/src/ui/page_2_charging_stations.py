@@ -166,7 +166,7 @@ def init_data(geodata_path: str="infrastructure/data/datasets/geodata_berlin_plz
     """Init and process data only ones at the start of the app (instead of every tick)"""
 
     df_geodat_plz = pd.read_csv(geodata_path, sep=';', low_memory=False)
-    df_charging = pd.read_csv(charging_data_path, sep=';', low_memory=False)
+    df_charging = pd.read_csv(charging_data_path, sep=',', low_memory=False)
     required_columns = ('Postleitzahl', 'Breitengrad','Längengrad','Bundesland', 'Straße', 'Hausnummer',
                                 'Ort', 'Nennleistung Ladeeinrichtung [kW]', 'Steckertypen1')
 

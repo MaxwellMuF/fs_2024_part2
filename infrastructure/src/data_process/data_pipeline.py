@@ -16,7 +16,7 @@ def data_process(df_geodat_plz: pd.DataFrame, df_charging: pd.DataFrame, require
     ## Preprocessing dataframe from Ladesaeulenregister.csv
     
     # Select subset df_charging with fewer columns
-    df_charging = df_charging.loc[:, required_columns]
+    df_charging = df_charging.loc[:, required_columns].copy()
     
     # Rename some columns of df_charging
     df_charging.rename(columns = {"Nennleistung Ladeeinrichtung [kW]"   : "KW", 
@@ -27,7 +27,7 @@ def data_process(df_geodat_plz: pd.DataFrame, df_charging: pd.DataFrame, require
     # Now replace the commas with periods
     df_charging.loc[:,'Breitengrad']    = df_charging['Breitengrad'].str.replace(',', '.')
     df_charging.loc[:,'Längengrad']     = df_charging['Längengrad'].str.replace(',', '.')
-    df_charging.loc[:,'KW']             = df_charging['KW'].str.replace(',', '.')
+    # df_charging.loc[:,'KW']             = df_charging['KW'].str.replace(',', '.')
 
     # Convert to string
     df_charging                         = df_charging.astype({"Breitengrad"   : str, 
