@@ -25,9 +25,9 @@ def download_data_from_url():
 def pages_bevor_login():
     """Pages of streamlit app bevor login defined by functions"""
     login = st.Page(methods_login.login_widget, title="Login", icon=":material/login:")
-    register_new_user = st.Page(methods_login.register_new_user_widget, title="Reset Password", icon=":material/lock_reset:")
-    forgot_password = st.Page(methods_login.forgot_password_widget, title="Forget Password", icon=":material/key:")
-    forgot_username = st.Page(methods_login.forgot_username_widget, title="Forget Username", icon=":material/key:")
+    register_new_user = st.Page(methods_login.register_new_user_widget, title="Sign Up", icon=":material/person_add:")
+    forgot_password = st.Page(methods_login.forgot_password_widget, title="Forget Password", icon=":material/lock_reset:")
+    forgot_username = st.Page(methods_login.forgot_username_widget, title="Forget Username", icon=":material/help_outline:")
 
     return [login, register_new_user, forgot_password, forgot_username]
 
@@ -37,7 +37,7 @@ def pages_after_login():
     charging_stations = st.Page("application/src/ui/page_2_charging_stations.py", title="Charging Stations", icon=":material/dynamic_form:") #, default=True
     rate_and_comment = st.Page("application/src/ui/page_3_rate_and_comment.py", title="Rate and Comment", icon=":material/chat_bubble:")
     new_stations = st.Page("application/src/ui/page_4_new_stations.py", title="Add New Stations", icon=":material/add_circle:")    
-    reset_password = st.Page(methods_login.reset_password_widget, title="Reset Password", icon=":material/key:")
+    reset_password = st.Page(methods_login.reset_password_widget, title="Reset Password", icon=":material/lock_reset:")
     logout = st.Page(methods_login.logout_widget, title="Logout", icon=":material/logout:")
 
     # add_notes
