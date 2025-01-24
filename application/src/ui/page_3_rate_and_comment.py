@@ -16,20 +16,23 @@ from infrastructure.src.data_process    import data_pipeline
 # ----------------------------- streamlit widgets ------------------------------
 
 def filter_zip_code_widget(df: pd.DataFrame) -> pd.DataFrame:
-    """User select zip code widget: selectbox for zip code and returns selected subset"""
+    """User filter widget: selectbox for zip code and street. Returns selected subset"""
     with st.container(border=True):
         st.header(body="Charging Stations in my zip code",
                   help=st.session_state.text_for_page_3_help["filter_zip_code_widget_help"])
+        
+        # Filter zip code
         user_selected_zip_code = st.selectbox(label="Filter one zip code:",
                                               options=helper.unique_values_of_column(df, "PLZ"))
         df_subset_user_zip_code = helper.subset_with_criteria(df=df, column="PLZ", criteria=user_selected_zip_code)
 
+        # Filter street
         user_selected_street = st.selectbox(label="Filter one street:",
                                               options=helper.unique_values_of_column(df_subset_user_zip_code, "Straße"))
-        
         df_subset_user_street = helper.subset_with_criteria(df=df_subset_user_zip_code, column="Straße", 
                                                             criteria=user_selected_street)
 
+        # make subset data to show it
         df_user_selected_subset_show = helper.drop_column_and_sort_by_column(df_subset_user_street,
                     list_drop_column_names=["geometry", "Breitengrad", "Längengrad", "Bundesland"],
                     sort_column_name="KW")
@@ -42,12 +45,15 @@ def filter_zip_code_widget(df: pd.DataFrame) -> pd.DataFrame:
     return df_selected_to_rate
 
 def show_user_selected_df(df_user_selected_subset_show: pd.DataFrame) -> dict:
+    """Show data frame and return the rows that the user has selected"""
     dict_user_selected_row = st.dataframe(df_user_selected_subset_show, use_container_width=True, 
                                           hide_index=True, on_select="rerun")
     
     return dict_user_selected_row
 
 def user_selected_row_to_df(df_user_selected_subset: pd.DataFrame, dict_user_selected_row: dict) -> pd.DataFrame:
+    """Use index of selected rows (dict_user) to make subset of data (df_user) and
+       return the selected subset (df_seleced)"""
     row_idx = dict_user_selected_row.selection.rows
     df_selected_to_rate = df_user_selected_subset.iloc[row_idx,:]
 
@@ -55,25 +61,20 @@ def user_selected_row_to_df(df_user_selected_subset: pd.DataFrame, dict_user_sel
 
 
 def init_user_db_if_needed(df_user_selected_subset_show: pd.DataFrame) -> pd.DataFrame:
-    """User DB three cases: use as data 1. use session_state or
-                                        2. load json or 
-                                        3. initialize a user DB)"""
-    # # 1. use session_state as user DB
-    # if "df_user_rate_data_base" in st.session_state:
-    #     return st.session_state.df_user_rate_data_base
-    # else:
+    """User DB two cases: use as data 1. loadet data if user in DB
+                                      2. initialize a user DB"""
+
     with open("application/data/data_user/DataBase_user_changes.json", "r") as file:
         loaded_database = json.load(file)
-    # 2. use loaded json as user DB
+    # 1. user in DB
     if st.session_state.username in loaded_database.keys():
         return pd.DataFrame(loaded_database[st.session_state.username])
-    # 3. initialize a new user DB
+    # 2. new user DB
     else:
-
         return pd.DataFrame(columns=df_user_selected_subset_show)
 
 def config_edit_df_user_posts() -> dict[str:st.column_config]:
-    """"""
+    """Define the configuration of the columns for the editable dataframes"""
     config = {
         'PLZ' : st.column_config.NumberColumn('PLZ', min_value=10115, max_value=14200, required=True, disabled=True),
         'Straße' : st.column_config.TextColumn('Straße', required=True, disabled=True), #width='medium',
@@ -161,6 +162,9 @@ def interactiv_df_users_previous_submissions_widget(df_user_comment_submitted: p
 
     return
 
+def all_users_submissions_widget():
+    """Load user DBs and show them as one dataframe"""
+    
 # ----------------------------- streamlit page ------------------------------
 
 def init_data(geodata_path: str="infrastructure/data/datasets/geodata_berlin_plz.csv", 
