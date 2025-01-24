@@ -11,7 +11,7 @@ from branca.colormap        import LinearColormap
 
 # Own python files
 from application.src.utilities   import methods
-from application.src.utilities   import helper_page_2_charging_stations as helper
+from application.src.utilities   import helper_page_2 as helper2
 from infrastructure.src.data_process   import data_pipeline
 
 
@@ -23,9 +23,9 @@ def filter_zip_code_widget(df: pd.DataFrame) -> pd.DataFrame:
         st.header(body="Charging Stations in my zip code",
                   help=st.session_state.text_for_page_2_help["filter_zip_code_widget_help"])
         user_selected_zip_code = st.selectbox(label="Only show Charging Stations in my zip code",
-                                              options=helper.unique_values_of_column(df, "PLZ"))
+                                              options=helper2.unique_values_of_column(df, "PLZ"))
 
-    return helper.subset_with_criteria(df=df, column="PLZ", criteria=user_selected_zip_code)
+    return helper2.subset_with_criteria(df=df, column="PLZ", criteria=user_selected_zip_code)
 
 
 def filter_power_widget(df: pd.DataFrame) -> pd.DataFrame:
@@ -44,9 +44,9 @@ def filter_power_widget(df: pd.DataFrame) -> pd.DataFrame:
         with col2:
             user_selected_kw = st.selectbox(
             "Select the preferred power [kW] of your Charging Station",
-            helper.unique_values_of_column(df, "KW"))
+            helper2.unique_values_of_column(df, "KW"))
 
-    return helper.subset_with_criteria(df=df, column="KW", criteria=user_selected_kw)
+    return helper2.subset_with_criteria(df=df, column="KW", criteria=user_selected_kw)
 
 def spawn_heatmap_berlin(df_numbers_per_kW: pd.DataFrame, df_numbers: pd.DataFrame) -> None:
     """Create folium map with given dfs containing 'KW' and 'Number' columns"""
@@ -67,7 +67,7 @@ def spawn_heatmap_berlin(df_numbers_per_kW: pd.DataFrame, df_numbers: pd.DataFra
             # Add polygons to the map for Numbers
             for idx, row in df_numbers.iterrows():
                 # make tooltip with 'sorted list of power' from selected stations
-                list_kW_in_plz_sorted = helper.list_for_tooltip(df_numbers_per_kW,column_name="PLZ",criteria=row['PLZ'])
+                list_kW_in_plz_sorted = helper2.list_for_tooltip(df_numbers_per_kW,column_name="PLZ",criteria=row['PLZ'])
                 # Add PLZ with geometry to map
                 folium.GeoJson(
                     row['geometry'],
@@ -100,11 +100,11 @@ def show_selected_stations_as_df(df_numbers_per_kW: pd.DataFrame, df_numbers: pd
         col1, col2 = st.columns(2, gap="large")
         with col1:
             st.write("Number of Charging Stations per zip code:")
-            st.dataframe(helper.drop_column_and_sort_by_column(df_numbers, ["geometry"], "Number"),
+            st.dataframe(helper2.drop_column_and_sort_by_column(df_numbers, ["geometry"], "Number"),
                          use_container_width=True, hide_index=True)
         with col2:
             st.write("Number of Charging Stations per kW:")
-            st.dataframe(helper.drop_column_and_sort_by_column(df_numbers_per_kW, ["geometry"], "KW"), 
+            st.dataframe(helper2.drop_column_and_sort_by_column(df_numbers_per_kW, ["geometry"], "KW"), 
                          use_container_width=True, hide_index=True)
 
     return
@@ -123,7 +123,6 @@ def show_address_and_availibility(df_user_selected_subset_show: pd.DataFrame) ->
 # ----------------------------- streamlit page ------------------------------
 
 # Make Heatmap of berlin with number of charging stations
-# @methods.timer
 def make_streamlit_page_elements(df: pd.DataFrame) -> None:
     """The sequence of streamlit elements on this page:
             Perform user selection and filter data.
@@ -131,7 +130,7 @@ def make_streamlit_page_elements(df: pd.DataFrame) -> None:
             And show selected data and offer post submission and save user posts."""
 
     # Add Available column: generate random values
-    df_every_station = helper.add_col_available(df=df, chance=[0.7,0.3])
+    df_every_station = helper2.add_col_available(df=df, chance=[0.7,0.3])
 
     # Filter zip code widget
     df_user_selected_subset_zip = filter_zip_code_widget(df_every_station)
@@ -147,7 +146,7 @@ def make_streamlit_page_elements(df: pd.DataFrame) -> None:
     spawn_heatmap_berlin(df_numbers_per_kW, df_numbers)
 
     # drop unnessesary columns for the show data part
-    df_user_selected_subset_show = helper.drop_column_and_sort_by_column(df_user_selected_subset_zip_power,
+    df_user_selected_subset_show = helper2.drop_column_and_sort_by_column(df_user_selected_subset_zip_power,
                     list_drop_column_names=["geometry", "Breitengrad", "Längengrad", "Bundesland", "Ort", "Plug Types"],
                     sort_column_name="KW")
     
@@ -178,7 +177,7 @@ def main() -> None:
     
     if "text_for_page_2_help" not in st.session_state:
         # because of the funny behaior of load a json into python str into streamlit md, we need to trippe '\' in '\n'
-        st.session_state.text_for_page_2_help = helper.load_json("application/data/data_ui/text_for_page_2_help.json")
+        st.session_state.text_for_page_2_help = helper2.load_json("application/data/data_ui/text_for_page_2_help.json")
     if "df_charging_berlin_search" not in st.session_state:
         st.session_state.df_charging_berlin_search = init_data()
 

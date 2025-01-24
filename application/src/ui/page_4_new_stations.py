@@ -8,7 +8,7 @@ from branca.colormap        import LinearColormap
 
 # Own python files
 from application.src.utilities   import methods
-from application.src.utilities   import helper_page_2_charging_stations as helper
+from application.src.utilities   import helper_page_2 as helper
 from infrastructure.src.data_process   import data_pipeline, data_pipeline_residents
 
 

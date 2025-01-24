@@ -8,7 +8,8 @@ import streamlit    as st
 # from datetime       import datetime
 # Own python files
 # from application.src.utilities          import methods
-from application.src.utilities          import helper_page_2_charging_stations as helper
+from application.src.utilities          import helper_page_2 as helper2
+from application.src.utilities          import helper_page_3 as helper3
 from infrastructure.src.data_process    import data_pipeline
 
 
@@ -23,24 +24,24 @@ def filter_zip_code_widget(df: pd.DataFrame) -> pd.DataFrame:
         
         # Filter zip code
         user_selected_zip_code = st.selectbox(label="Filter one zip code:",
-                                              options=helper.unique_values_of_column(df, "PLZ"))
-        df_subset_user_zip_code = helper.subset_with_criteria(df=df, column="PLZ", criteria=user_selected_zip_code)
+                                              options=helper2.unique_values_of_column(df, "PLZ"))
+        df_subset_user_zip_code = helper2.subset_with_criteria(df=df, column="PLZ", criteria=user_selected_zip_code)
 
         # Filter street
         user_selected_street = st.selectbox(label="Filter one street:",
-                                              options=helper.unique_values_of_column(df_subset_user_zip_code, "Straße"))
-        df_subset_user_street = helper.subset_with_criteria(df=df_subset_user_zip_code, column="Straße", 
+                                              options=helper2.unique_values_of_column(df_subset_user_zip_code, "Straße"))
+        df_subset_user_street = helper2.subset_with_criteria(df=df_subset_user_zip_code, column="Straße", 
                                                             criteria=user_selected_street)
 
         # make subset data to show it
-        df_user_selected_subset_show = helper.drop_column_and_sort_by_column(df_subset_user_street,
+        df_user_selected_subset_show = helper2.drop_column_and_sort_by_column(df_subset_user_street,
                     list_drop_column_names=["geometry", "Breitengrad", "Längengrad", "Bundesland"],
                     sort_column_name="KW")
         df_user_selected_subset_show.drop_duplicates(inplace=True)
 
         st.write("Here is your filtered data frame:")
         dict_user_selected_row = show_user_selected_df(df_user_selected_subset_show)
-        df_selected_to_rate = user_selected_row_to_df(df_user_selected_subset_show, dict_user_selected_row)
+        df_selected_to_rate = helper3.user_selected_row_to_df(df_user_selected_subset_show, dict_user_selected_row)
 
     return df_selected_to_rate
 
@@ -51,27 +52,6 @@ def show_user_selected_df(df_user_selected_subset_show: pd.DataFrame) -> dict:
     
     return dict_user_selected_row
 
-def user_selected_row_to_df(df_user_selected_subset: pd.DataFrame, dict_user_selected_row: dict) -> pd.DataFrame:
-    """Use index of selected rows (dict_user) to make subset of data (df_user) and
-       return the selected subset (df_seleced)"""
-    row_idx = dict_user_selected_row.selection.rows
-    df_selected_to_rate = df_user_selected_subset.iloc[row_idx,:]
-
-    return df_selected_to_rate
-
-
-def init_user_db_if_needed(df_user_selected_subset_show: pd.DataFrame) -> pd.DataFrame:
-    """User DB two cases: use as data 1. loadet data if user in DB
-                                      2. initialize a user DB"""
-
-    with open("application/data/data_user/DataBase_user_changes.json", "r") as file:
-        loaded_database = json.load(file)
-    # 1. user in DB
-    if st.session_state.username in loaded_database.keys():
-        return pd.DataFrame(loaded_database[st.session_state.username])
-    # 2. new user DB
-    else:
-        return pd.DataFrame(columns=df_user_selected_subset_show)
 
 def config_edit_df_user_posts() -> dict[str:st.column_config]:
     """Define the configuration of the columns for the editable dataframes"""
@@ -95,10 +75,10 @@ def interactiv_df_for_user_comment_widget(df_user_changes: pd.DataFrame) -> None
             3. Spawn submit button
             4. If submitted, save data in user DB
             """
-        # 1. Define config for interactiv df with st.column_config
+    # 1. Define config for interactiv df with st.column_config
     config = config_edit_df_user_posts()
 
-            # Create container user post
+    # Create container user post
     with st.container(border=True):
         st.header(body="Rate and comment on your selection",
                   help=st.session_state.text_for_page_3_help["interactiv_df_for_user_comment_widget_help"])
@@ -118,7 +98,7 @@ def interactiv_df_for_user_comment_widget(df_user_changes: pd.DataFrame) -> None
         # 4. Spawn button to submit
         if st.button("Submit post", key="submited_post"):
             # Save post if submitted: add post to DB and save DB
-            helper.load_db_add_dict_save_db(path_to_db="application/data/data_user/DataBase_user_changes.json", 
+            helper2.load_db_add_dict_save_db(path_to_db="application/data/data_user/DataBase_user_changes.json", 
                                             df_to_add=df_stations_user_edit)
             st.success("We have saved your post. Thank you for your support!", icon=":material/save:")
             time.sleep(3)
@@ -133,10 +113,10 @@ def interactiv_df_users_previous_submissions_widget(df_user_comment_submitted: p
             3. Spawn submit button
             4. If submitted, save data in user DB
             """
-        # 1. Define config for interactiv df with st.column_config
+    # 1. Define config for interactiv df with st.column_config
     config = config_edit_df_user_posts()
 
-            # Create container user post
+    # Create container user post
     with st.container(border=True):
         st.header(body="Your previous submissions", 
                   help=st.session_state.text_for_page_3_help["interactiv_df_users_previous_submissions_widget_help"])
@@ -148,12 +128,12 @@ def interactiv_df_users_previous_submissions_widget(df_user_comment_submitted: p
                                                    use_container_width=True, hide_index=True, num_rows='fixed')
         else:
             df_user_rate_data_base = st.data_editor(df_user_comment_submitted, column_config=config, key="unused_df_edit",
-                                                   use_container_width=True, hide_index=True, num_rows='fixed')
+                                                   use_container_width=True, hide_index=True, num_rows='dynamic')
 
         # 4. Spawn button to submit
         if st.button("Submit post", key="submited_post_changes"):
             # Save post if submitted: add post to DB and save DB
-            helper.load_db_add_dict_save_db(path_to_db="application/data/data_user/DataBase_user_changes.json", 
+            helper2.load_db_add_dict_save_db(path_to_db="application/data/data_user/DataBase_user_changes.json", 
                                             df_to_add=df_user_rate_data_base,
                                             overwrite=True)
             st.success("We have saved your post. Thank you for your support!", icon=":material/save:")
@@ -164,7 +144,16 @@ def interactiv_df_users_previous_submissions_widget(df_user_comment_submitted: p
 
 def all_users_submissions_widget():
     """Load user DBs and show them as one dataframe"""
-    
+    # data process
+    df_all_users_posts = helper3.load_all_users_db()
+
+    # steamlit elemets
+    with st.container(border=True):
+        st.header(body="Other users recommendations")
+        st.dataframe(df_all_users_posts, column_config=config_edit_df_user_posts(), use_container_width=True,
+                     hide_index=True)
+        
+    return 
 # ----------------------------- streamlit page ------------------------------
 
 def init_data(geodata_path: str="infrastructure/data/datasets/geodata_berlin_plz.csv", 
@@ -187,10 +176,13 @@ def make_streamlit_page_elements(df_every_station: pd.DataFrame) -> None:
     interactiv_df_for_user_comment_widget(df_user_selected_subset)
 
     # Load or init user DB
-    df_user_db = init_user_db_if_needed(df_user_selected_subset)
+    df_user_db = helper3.load_or_init_user_db(df_user_selected_subset)
 
     # Spawn interactiv df show and change previous submissions
     interactiv_df_users_previous_submissions_widget(df_user_db)
+
+    # Show all user submissions
+    all_users_submissions_widget()
 
     return
 
@@ -201,7 +193,7 @@ def main() -> None:
             And show selected data and submit and save user posts."""
     if "text_for_page_3_help" not in st.session_state:
         # because of the funny behaior of load a json into python str into streamlit md, we need to trippe '\' in '\n'
-        st.session_state.text_for_page_3_help = helper.load_json("application/data/data_ui/text_for_page_3_help.json")
+        st.session_state.text_for_page_3_help = helper2.load_json("application/data/data_ui/text_for_page_3_help.json")
 
     st.title(body="Rate your Charging Station",
              help=st.session_state.text_for_page_3_help["main_help"])
