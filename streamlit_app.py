@@ -49,7 +49,7 @@ def main():
     This is where the navigator is defined that leads to all scripts and functions. 
     And the authenticator process is called.
     """
-    download_data_from_url()
+    # download_data_from_url()
     init_st_session_state()
     # load authenticator config and create login st.authenticator
     config = methods_login.load_config(config_path="application/data/data_user/config.yaml")

@@ -12,6 +12,66 @@ from application.src.utilities   import helper_page_2_charging_stations as helpe
 from infrastructure.src.data_process   import data_pipeline, data_pipeline_residents
 
 
+# ----------------------------- Helper ------------------------------
+
+def radio_selectors(df_charging: pd.DataFrame) -> tuple[pd.DataFrame, str]:
+    """Make two columns with radio selectors"""
+    col1, col2 = st.columns(2)
+    with col1:
+        selected_df = st.radio("Select Data:",  ("Residents", "Charging Stations", "Density"))
+    with col2:
+        selected_filter = st.radio("Select Filter:",  ("All", "Slow Charger only", "Fast Charger only"))
+
+    if selected_filter == "Slow Charger only":
+        df_charging_2 = df_charging[df_charging["Art der Ladeeinrichung"] == "Normalladeeinrichtung"]
+    elif selected_filter == "Fast Charger only":
+        df_charging_2 = df_charging[df_charging["Art der Ladeeinrichung"] == "Schnellladeeinrichtung"]
+    else:
+        df_charging_2 = df_charging.copy()
+    return df_charging_2, selected_df
+        
+def make_density_df(df_charging_numbers: pd.DataFrame, df_residents: pd.DataFrame) -> pd.DataFrame:
+    """Make df_density with df_charging_numbers and df_residents. Also spawn checkbox for reciprocal density"""
+    # Make df_density
+    df_density = df_charging_numbers.merge(df_residents.drop("geometry", axis=1), how='left', on="PLZ")
+    df_density["Density"] = df_density["Einwohner"] / df_density["Number"]
+
+    # Make reciprocal of the density
+    if st.checkbox(label="Reciprocal Density", 
+                    help="Not checked: Show residents per charging station (Where are few stations)\
+                            \nChecked: Show charging stations per inhabitant (Where are many stations)"):
+        df_density.loc[:,"Density"] = df_density["Density"].rdiv(1).round(5)
+    else:
+        df_density.loc[:,"Density"] = df_density["Density"].round(0).astype(int)
+    
+    return df_density
+
+def select_show_df(selected_df: str, df_charging_numbers: pd.DataFrame, df_residents: pd.DataFrame, 
+                   df_density: pd.DataFrame) -> tuple[pd.DataFrame, str]:
+    """Choose the data that the user has selected. Return a df and a specific column_name"""
+    if selected_df == "Charging Stations":
+        df_map_show = df_charging_numbers
+        column_show = "Number"
+
+    elif selected_df == "Residents":
+        df_map_show = df_residents
+        column_show = "Einwohner"
+    
+    elif selected_df == "Density":
+        df_map_show = df_density
+        column_show = "Density"
+
+    return df_map_show, column_show
+
+def count_plz_occurrences(df_lstat2, sort_col=("PLZ")):
+    """Counts loading stations per PLZ"""
+    # Group by PLZ and count occurrences, keeping geometry
+    result_df = df_lstat2.groupby(sort_col).agg(
+        Number=('PLZ','count'),
+        geometry=('geometry', 'first')
+    ).reset_index()
+    
+    return result_df
 # ----------------------------- streamlit widgets ------------------------------
 
 def make_selector_widget(df_charging: pd.DataFrame, df_residents: pd.DataFrame) -> tuple[pd.DataFrame,pd.DataFrame,str]:
@@ -28,7 +88,7 @@ def make_selector_widget(df_charging: pd.DataFrame, df_residents: pd.DataFrame) 
         df_density = make_density_df(df_charging_numbers, df_residents)
         df_map_show, column_show = select_show_df(selected_df, df_charging_numbers, df_residents, df_density)
     
-    return df_map_show, df_density, column_show
+    return df_map_show, df_charging, df_density, column_show
 
 def spawn_heatmap_berlin_widget(df_map_show: pd.DataFrame, column_show: str) -> None:
     """Create folium map with given dfs containing 'KW' and 'Number' columns"""
@@ -69,55 +129,7 @@ def spawn_heatmap_berlin_widget(df_map_show: pd.DataFrame, column_show: str) -> 
 
     return
 
-def radio_selectors(df_charging: pd.DataFrame) -> tuple[pd.DataFrame, str]:
-    """Make two columns with radio selectors"""
-    col1, col2 = st.columns(2)
-    with col1:
-        selected_df = st.radio("Select Data:",  ("Residents", "Charging_Stations", "Density"))
-    with col2:
-        selected_filter = st.radio("Select Filter:",  ("All", "Slow Charger only", "Fast Charger only"))
-
-    if selected_filter == "Slow Charger only":
-        df_charging = df_charging[df_charging["Art der Ladeeinrichung"] == "Normalladeeinrichtung"]
-    elif selected_filter == "Fast Charger only":
-        df_charging = df_charging[df_charging["Art der Ladeeinrichung"] == "Schnellladeeinrichtung"]
-    
-    return df_charging, selected_df
-        
-def make_density_df(df_charging_numbers: pd.DataFrame, df_residents: pd.DataFrame) -> pd.DataFrame:
-    """Make df_density with df_charging_numbers and df_residents. Also spawn checkbox for reciprocal density"""
-    # Make df_density
-    df_density = df_charging_numbers.merge(df_residents.drop("geometry", axis=1), how='left', on="PLZ")
-    df_density["Density"] = df_density["Einwohner"] / df_density["Number"]
-
-    # Make reciprocal of the density
-    if st.checkbox(label="Reciprocal Density", 
-                    help="Not checked: Show residents per charging station (Where are few stations)\
-                            \nChecked: Show charging stations per inhabitant (Where are many stations)"):
-        df_density.loc[:,"Density"] = df_density["Density"].rdiv(1).round(5)
-    else:
-        df_density.loc[:,"Density"] = df_density["Density"].round(0).astype(int)
-    
-    return df_density
-
-def select_show_df(selected_df: str, df_charging_numbers: pd.DataFrame, df_residents: pd.DataFrame, 
-                   df_density: pd.DataFrame) -> tuple[pd.DataFrame, str]:
-    """Choose the data that the user has selected. Return a df and a specific column_name"""
-    if selected_df == "Charging_Stations":
-        df_map_show = df_charging_numbers
-        column_show = "Number"
-
-    elif selected_df == "Residents":
-        df_map_show = df_residents
-        column_show = "Einwohner"
-    
-    elif selected_df == "Density":
-        df_map_show = df_density
-        column_show = "Density"
-
-    return df_map_show, column_show
-    
-def show_df_charging(df: pd.DataFrame) -> None:
+def show_df_charging_widget(df: pd.DataFrame) -> None:
     """Show df_charging as st.dataframe"""
     with st.container(border=True):
         st.header(body="Selected Charing Stations",
@@ -128,7 +140,7 @@ def show_df_charging(df: pd.DataFrame) -> None:
                      use_container_width=True, hide_index=True)
     return
 
-def show_df_density(df: pd.DataFrame) -> None:
+def show_df_density_widget(df: pd.DataFrame) -> None:
     """Show df_charging as st.dataframe"""
     with st.container(border=True):
         st.header(body="Selected Density per zip code",
@@ -140,16 +152,6 @@ def show_df_density(df: pd.DataFrame) -> None:
                      use_container_width=True, hide_index=True)
     return
 
-def count_plz_occurrences(df_lstat2, sort_col=("PLZ")):
-    """Counts loading stations per PLZ"""
-    # Group by PLZ and count occurrences, keeping geometry
-    result_df = df_lstat2.groupby(sort_col).agg(
-        Number=('PLZ','count'),
-        geometry=('geometry', 'first')
-    ).reset_index()
-    
-    return result_df
-
 # ----------------------------- streamlit page ------------------------------
 
 def init_data(geodata_path: str="infrastructure/data/datasets/geodata_berlin_plz.csv", 
@@ -157,15 +159,15 @@ def init_data(geodata_path: str="infrastructure/data/datasets/geodata_berlin_plz
               residents_path: str="infrastructure/data/datasets/plz_einwohner.csv") -> pd.DataFrame:
     """Init and process data only ones at the start of the app (instead of every tick)"""
 
-    df_geodat_plz = pd.read_csv(geodata_path, sep=';', low_memory=False)
-    df_charging = pd.read_csv(charging_data_path, sep=',', low_memory=False)
-    df_plz_res = pd.read_csv(residents_path, sep=",", low_memory=False)
-    charging_required_columns = ('Postleitzahl', 'Breitengrad','Längengrad','Bundesland', 'Straße', 'Hausnummer',
-                                'Ort', 'Nennleistung Ladeeinrichtung [kW]', "Art der Ladeeinrichung")
+    df_geodat_plz               = pd.read_csv(geodata_path, sep=';', low_memory=False)
+    df_charging                 = pd.read_csv(charging_data_path, sep=',', low_memory=False)
+    df_plz_res                  = pd.read_csv(residents_path, sep=",", low_memory=False)
+    charging_required_columns   = ('Postleitzahl', 'Breitengrad','Längengrad','Bundesland', 'Straße', 'Hausnummer',
+                                   'Ort', 'Nennleistung Ladeeinrichtung [kW]', "Art der Ladeeinrichung")
     
     # apply data process
-    df_charging = data_pipeline.data_process(df_geodat_plz, df_charging, charging_required_columns)
-    df_residents = data_pipeline_residents.data_process_res(df_geodat_plz, df_plz_res)
+    df_charging                 = data_pipeline.data_process(df_geodat_plz, df_charging, charging_required_columns)
+    df_residents                = data_pipeline_residents.data_process_res(df_geodat_plz, df_plz_res)
 
     return df_charging, df_residents
 
@@ -187,18 +189,15 @@ def make_streamlit_page_elements(df_charging: pd.DataFrame, df_residents: pd.Dat
             Makes heatmap of electric Charging Stations in berlin.
             And show selected data."""
 
-    # Spawn selector widget
-    df_map_show, df_density, column_show = make_selector_widget(df_charging.copy(), df_residents.copy())
+    # Selector widget
+    df_map_show, df_charging, df_density, column_show = make_selector_widget(df_charging.copy(), df_residents.copy())
 
-    # df_map_show.loc[:,"geometry"] = df_map_show["geometry"].astype(str)
-    # Spawn map
+    # Heatmap widget
     spawn_heatmap_berlin_widget(df_map_show, column_show)
 
-    # Show Data Frames
-    # print(df_density.columns)
-    # df_charging.drop(["geometry"], axis=1, inplace=True)
-    show_df_charging(df_charging)
-    show_df_density(df_density)
+    # Data Frames widgets
+    show_df_charging_widget(df_charging)
+    show_df_density_widget(df_density)
 
     return
 
