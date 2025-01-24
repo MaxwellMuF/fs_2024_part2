@@ -4,8 +4,8 @@ The associated streamlit app was applied via streamlit.io and can be accessed un
 Test users  : `user1` or `user2`
 
 Passwort    : `123`
----
 
+---
 # Project 1
 First, the data is automatically downloaded [Data dowload](infrastructure/src/data_downloader/download_data.py) and converted into the correct format [Data cleaner](infrastructure/src/data_downloader/data_cleaner.py).
 This process is triggered (@st.cache_resource()) when the app is deployed again and is intended to keep the data up to date (see app main script: [streamlit_app.py](streamlit_app.py)).
