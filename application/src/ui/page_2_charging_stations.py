@@ -21,7 +21,7 @@ def filter_zip_code_widget(df: pd.DataFrame) -> pd.DataFrame:
     """User select zip code widget: selectbox for zip code and returns selected subset"""
     with st.container(border=True):
         st.header(body="Charging Stations in my zip code",
-                  help=st.session_state.text_for_page_help["filter_zip_code_widget_help"])
+                  help=st.session_state.text_for_page_2_help["filter_zip_code_widget_help"])
         user_selected_zip_code = st.selectbox(label="Only show Charging Stations in my zip code",
                                               options=helper.unique_values_of_column(df, "PLZ"))
 
@@ -33,7 +33,7 @@ def filter_power_widget(df: pd.DataFrame) -> pd.DataFrame:
     Returns selected subset"""
     with st.container(border=True):
         st.header(body="How much power is appropriate?",
-                  help=st.session_state.text_for_page_help["filter_power_widget_help"])
+                  help=st.session_state.text_for_page_2_help["filter_power_widget_help"])
         
         col1, col2 = st.columns(2)
         with col1:
@@ -52,7 +52,7 @@ def spawn_heatmap_berlin(df_numbers_per_kW: pd.DataFrame, df_numbers: pd.DataFra
     """Create folium map with given dfs containing 'KW' and 'Number' columns"""
     with st.container(border=True):
         st.header(body="Map of berlin with Charging Stations",
-                  help=st.session_state.text_for_page_help["spawn_heatmap_berlin_help"])
+                  help=st.session_state.text_for_page_2_help["spawn_heatmap_berlin_help"])
         st.write("This is a map of Berlin with the number of electric charging stations per zip code")
 
         m = folium.Map(location=[52.52, 13.40], zoom_start=10)
@@ -94,7 +94,7 @@ def show_selected_stations_as_df(df_numbers_per_kW: pd.DataFrame, df_numbers: pd
                                         2. all selected stations with adress"""
     with st.container(border=True):
         st.header(body="Summary of my zip code",
-                  help=st.session_state.text_for_page_help["show_selected_stations_as_df_help"])
+                  help=st.session_state.text_for_page_2_help["show_selected_stations_as_df_help"])
 
         # Show df_numbers_per_kW and df_number as st.dataframe
         col1, col2 = st.columns(2, gap="large")
@@ -113,7 +113,7 @@ def show_address_and_availibility(df_user_selected_subset_show: pd.DataFrame) ->
     """Show df_user_selected_subset_av as st.dataframe"""
     with st.container(border=True):
         st.header(body="Address and Availability",
-                  help=st.session_state.text_for_page_help["show_address_and_availibility"])
+                  help=st.session_state.text_for_page_2_help["show_address_and_availibility"])
         st.write("All Charging Stations you have selected with their address and availability:")
         st.dataframe(df_user_selected_subset_show, use_container_width=True, hide_index=True)
 
@@ -130,9 +130,6 @@ def make_streamlit_page_elements(df: pd.DataFrame) -> None:
             Makes heatmap of electric Charging Stations in berlin.
             And show selected data and offer post submission and save user posts."""
 
-    if "text_for_page_help" not in st.session_state:
-        # because of the funny behaior of load a json into python str into streamlit md, we need to trippe '\' in '\n'
-        st.session_state.text_for_page_help = helper.load_json("application/data/data_ui/text_for_page_help.json")
     # Add Available column: generate random values
     df_every_station = helper.add_col_available(df=df, chance=[0.7,0.3])
 
@@ -179,14 +176,15 @@ def main() -> None:
             Makes heatmap of electric Charging Stations in berlin.
             And show selected data and submit and save user posts."""
     
-    st.title(body="Find a suitable Charging Station",
-             help="On this page you will find the charging station search. \
-                  You can also write comments and add new charging stations. \
-                  Look out for the question marks to find out more about each box.")
-    
+    if "text_for_page_2_help" not in st.session_state:
+        # because of the funny behaior of load a json into python str into streamlit md, we need to trippe '\' in '\n'
+        st.session_state.text_for_page_2_help = helper.load_json("application/data/data_ui/text_for_page_2_help.json")
     if "df_charging_berlin_search" not in st.session_state:
         st.session_state.df_charging_berlin_search = init_data()
-        
+
+    st.title(body="Find a suitable Charging Station",
+             help=st.session_state.text_for_page_2_help["main_help"])
+
     make_streamlit_page_elements(st.session_state.df_charging_berlin_search)
     
     return

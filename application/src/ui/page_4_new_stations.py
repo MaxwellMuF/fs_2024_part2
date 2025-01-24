@@ -38,8 +38,7 @@ def make_density_df(df_charging_numbers: pd.DataFrame, df_residents: pd.DataFram
 
     # Make reciprocal of the density
     if st.checkbox(label="Reciprocal Density", 
-                    help="Not checked: Show residents per charging station (Where are few stations)\
-                            \nChecked: Show charging stations per inhabitant (Where are many stations)"):
+                    help=st.session_state.text_for_page_4_help["make_density_df_help"]):
         df_density.loc[:,"Density"] = df_density["Density"].rdiv(1).round(5)
     else:
         df_density.loc[:,"Density"] = df_density["Density"].round(0).astype(int)
