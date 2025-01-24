@@ -4,9 +4,9 @@ The associated streamlit app was applied via streamlit.io and can be accessed un
 Test users  : `user1` or `user2`
 
 Passwort    : `123`
-
 ---
-# project 1
+
+# Project 1
 First, the data is automatically downloaded [Data dowload](infrastructure/src/data_downloader/download_data.py) and converted into the correct format [Data cleaner](infrastructure/src/data_downloader/data_cleaner.py).
 This process is triggered (@st.cache_resource()) when the app is deployed again and is intended to keep the data up to date (see app main script: [streamlit_app.py](streamlit_app.py)).
 
@@ -24,4 +24,11 @@ The analysis of the geovisualizations shows:
 However, fast charging is an important part of the acceptance of electromobility. If you look at the center of Berlin, the problem becomes clear. And it should be supported privately as well as statewide in order to encourage electromobility.
 
 ## Code and program structure
-The python file of the page [Add New Stations](application/src/ui/page_4_new_stations.py) contains many functions, including name_widget() for streamlit boxes on the page and some helpers and date processors. However, this file has not been split into other files to clearly separate the work for part 1 from part 2. 
+The python file of the page [Add New Stations](application/src/ui/page_4_new_stations.py) contains many functions, including name_widget() for streamlit boxes on the page and some helpers and date processors. However, this file has not been split into other files to clearly separate the work for part 1 from part 2.
+
+The code is structured in such a way that it is best read from bottom to top (since all parts are functions, this could also be reversed): 
+1. layer, `main()`: The function at the end of the script is main() and forms the top layer. It loads the data (init_session_states[init_data]) and calls the streamlit elements (make_streamlit_page_elements).
+2. layer, `make_streamlit_page_elements()`: All 4 streamlit widgets are called here (the 4 boxes on the website). Each of these forms a subpart of the page and calls its own elements.
+3. layer, `make_selector_widget()`: Look at this widget, for example. Here again 4 functions are called. Some of them are responsible for streamlit elements like radio_selectors(). And others are just data processors like make_density_df().
+4. layer `radio_selectors()`: On this 4th and last level are the helper functions and the smallest streamlit methods. radio_selectors(), for example, makes the ratio options and sorts a pd df. Like these functions, most functions can be reduced and atomized in further refactoring cycles. This is of course essential for larger software products, but it might only make this MVP a little clearer.
+
