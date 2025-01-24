@@ -36,7 +36,7 @@ def pages_after_login():
     welcome = st.Page("application/src/ui/page_1_welcome.py", title="Welcome", icon=":material/home:")
     charging_stations = st.Page("application/src/ui/page_2_charging_stations.py", title="Charging Stations", icon=":material/dynamic_form:") #, default=True
     rate_and_comment = st.Page("application/src/ui/page_3_rate_and_comment.py", title="Rate and Comment", icon=":material/chat_bubble:")
-    new_stations = st.Page("application/src/ui/page_4_new_stations.py", title="Add New Stations", icon=":material/add_notes:")    
+    new_stations = st.Page("application/src/ui/page_4_new_stations.py", title="Add New Stations", icon=":material/add_circle:")    
     reset_password = st.Page(methods_login.reset_password_widget, title="Reset Password", icon=":material/key:")
     logout = st.Page(methods_login.logout_widget, title="Logout", icon=":material/logout:")
 
