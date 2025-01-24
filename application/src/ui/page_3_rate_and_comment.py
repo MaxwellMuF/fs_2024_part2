@@ -20,11 +20,11 @@ def filter_zip_code_widget(df: pd.DataFrame) -> pd.DataFrame:
     with st.container(border=True):
         st.header(body="Charging Stations in my zip code",
                   help=st.session_state.text_for_page_3_help["filter_zip_code_widget_help"])
-        user_selected_zip_code = st.selectbox(label="Only show Charging Stations in my zip code",
+        user_selected_zip_code = st.selectbox(label="Filter one zip code:",
                                               options=helper.unique_values_of_column(df, "PLZ"))
         df_subset_user_zip_code = helper.subset_with_criteria(df=df, column="PLZ", criteria=user_selected_zip_code)
 
-        user_selected_street = st.selectbox(label="Only show Charging Stations in that street",
+        user_selected_street = st.selectbox(label="Filter one street:",
                                               options=helper.unique_values_of_column(df_subset_user_zip_code, "Straße"))
         
         df_subset_user_street = helper.subset_with_criteria(df=df_subset_user_zip_code, column="Straße", 
@@ -72,7 +72,8 @@ def init_user_db_if_needed(df_user_selected_subset_show: pd.DataFrame) -> pd.Dat
 
         return pd.DataFrame(columns=df_user_selected_subset_show)
 
-def config_edit_df_user_posts() -> dict:
+def config_edit_df_user_posts() -> dict[str:st.column_config]:
+    """"""
     config = {
         'PLZ' : st.column_config.NumberColumn('PLZ', min_value=10115, max_value=14200, required=True, disabled=True),
         'Straße' : st.column_config.TextColumn('Straße', required=True, disabled=True), #width='medium',
@@ -124,7 +125,7 @@ def interactiv_df_for_user_comment_widget(df_user_changes: pd.DataFrame) -> None
 
     return
 
-def spawn_interactiv_df_for_user_comment_previous_submissions(df_user_comment_submitted: pd.DataFrame) -> None:
+def interactiv_df_users_previous_submissions_widget(df_user_comment_submitted: pd.DataFrame) -> None:
     """Spawn interactiv df for user posts: 
             1. Create config
             2. Spawn interactiv dataframe from loaded user DB
@@ -136,7 +137,8 @@ def spawn_interactiv_df_for_user_comment_previous_submissions(df_user_comment_su
 
             # Create container user post
     with st.container(border=True):
-        st.header("Your previous submissions")
+        st.header(body="Your previous submissions", 
+                  help=st.session_state.text_for_page_3_help["interactiv_df_users_previous_submissions_widget_help"])
         st.write("Do you want to change them? No Problem! Just make your modifications below and submit it.")
         
         # 2. Spawn interactiv df
@@ -159,15 +161,6 @@ def spawn_interactiv_df_for_user_comment_previous_submissions(df_user_comment_su
 
     return
 
-def show_address_and_availibility(df_user_selected_subset_show: pd.DataFrame) -> pd.DataFrame:
-    """Show df_user_selected_subset_av as st.dataframe"""
-    with st.container(border=True):
-        st.header(body="Address and Availability",
-                  help=st.session_state.text_for_page_3_help["show_address_and_availibility"])
-        st.write("All Charging Stations you have selected with their address and availability:")
-        st.dataframe(df_user_selected_subset_show, use_container_width=True, hide_index=True)
-
-    return
 # ----------------------------- streamlit page ------------------------------
 
 def init_data(geodata_path: str="infrastructure/data/datasets/geodata_berlin_plz.csv", 
@@ -193,7 +186,7 @@ def make_streamlit_page_elements(df_every_station: pd.DataFrame) -> None:
     df_user_db = init_user_db_if_needed(df_user_selected_subset)
 
     # Spawn interactiv df show and change previous submissions
-    spawn_interactiv_df_for_user_comment_previous_submissions(df_user_db)
+    interactiv_df_users_previous_submissions_widget(df_user_db)
 
     return
 
@@ -206,7 +199,7 @@ def main() -> None:
         # because of the funny behaior of load a json into python str into streamlit md, we need to trippe '\' in '\n'
         st.session_state.text_for_page_3_help = helper.load_json("application/data/data_ui/text_for_page_3_help.json")
 
-    st.title(body="Rate and comment Charging Station",
+    st.title(body="Rate your Charging Station",
              help=st.session_state.text_for_page_3_help["main_help"])
     if "df_charging_berlin_rate" not in st.session_state:
         st.session_state.df_charging_berlin_rate = init_data()
