@@ -149,7 +149,8 @@ def all_users_submissions_widget():
 
     # steamlit elemets
     with st.container(border=True):
-        st.header(body="Other users recommendations")
+        st.header(body="Other users recommendations", 
+                  help=st.session_state.text_for_page_3_help["all_users_submissions_widget_help"])
         st.dataframe(df_all_users_posts, column_config=config_edit_df_user_posts(), use_container_width=True,
                      hide_index=True)
         
