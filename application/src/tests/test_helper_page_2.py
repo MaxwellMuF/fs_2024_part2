@@ -1,28 +1,26 @@
-import json
 import unittest
 import tempfile
 import pandas as pd
-import streamlit as st
 
 from unittest.mock import MagicMock, patch
 
 # Test the following methods from helper_page_2
 from application.src.utilities.helper_page_2 import (
-                                                        subset_with_criteria, 
-                                                        unique_values_of_column,
-                                                        list_for_tooltip,
-                                                        drop_column_and_sort_by_column,
-                                                        load_json,
-                                                        save_json,
-                                                        load_db_add_dict_save_db,
-                                                        add_col_available
+                                                        subset_with_criteria,           # 1
+                                                        unique_values_of_column,        # 2
+                                                        list_for_tooltip,               # 3
+                                                        drop_column_and_sort_by_column, # 4
+                                                        load_json,                      # 5
+                                                        add_col_available               # 6
                                                         )
 
 
 # # Run test from main directory (as streamlit does with scripts) 
-# python -m unittest application\src\tests\test_helper_page_2_charging_stations.py
+# python -m unittest application\src\tests\test_helper_page_2.py
 
 #  --------------------------------------- Tests ------------------------------------------------------
+
+# 1
 class TestSubsetWithCriteria(unittest.TestCase):
 
     def setUp(self):
@@ -60,7 +58,7 @@ class TestSubsetWithCriteria(unittest.TestCase):
         pd.testing.assert_frame_equal(result, expected_df)
         return
 
-
+# 2
 class TestUniqueValuesOfColumn(unittest.TestCase):
 
     def test_helper_unique_values_of_column(self):
@@ -86,7 +84,7 @@ class TestUniqueValuesOfColumn(unittest.TestCase):
         self.assertEqual(result_city, expected_output_kW)
         return
 
-
+# 3
 class TestListForTooltip(unittest.TestCase):
     def test_list_for_tooltip(self):
         """Test list_for_tooltip function"""
@@ -102,6 +100,7 @@ class TestListForTooltip(unittest.TestCase):
         self.assertEqual(result, expected)
         return
 
+# 4
 class TestDropColumnAndSortByColumn(unittest.TestCase):
     def test_drop_column_and_sort_by_column(self):
         """Test drop_column_and_sort_by_column function"""
@@ -118,7 +117,7 @@ class TestDropColumnAndSortByColumn(unittest.TestCase):
 
         pd.testing.assert_frame_equal(result.reset_index(drop=True), expected)
 
-
+# 5
 class TestLoadJson(unittest.TestCase):
     def test_load_json(self):
         """Test load_json function"""
@@ -131,42 +130,7 @@ class TestLoadJson(unittest.TestCase):
 
         self.assertEqual(result, expected)
 
-
-class TestSaveJson(unittest.TestCase):
-    def test_save_json(self):
-        """Test save_json function"""
-        temp_file = tempfile.NamedTemporaryFile(delete=False, suffix=".json")
-
-        dict_to_save = {"key": "value"}
-        save_json(dict_to_save, temp_file.name)
-
-        with open(temp_file.name, "r") as file:
-            result = json.load(file)
-
-        self.assertEqual(result, dict_to_save)
-
-## spending too much time on trying to implement streamlit methods like st.session_state in tests
-# class TestLoadDbAddDictSaveDb(unittest.TestCase):
-#     @patch("streamlit_app_folder.helper_page_2_charging_stations.st")
-#     @patch("streamlit_app_folder.helper_page_2_charging_stations.save_json")
-#     @patch("streamlit_app_folder.helper_page_2_charging_stations.load_json", return_value={"existing_user": {"col1": {0: 1, 1: 2}, "col2": {0: 3, 1: 4}}})
-#     def test_load_db_add_dict_save_db(self, mock_st, mock_save_json, mock_load_json):
-#         """Test load_db_add_dict_save_db function."""
-#         temp_db_path = "test.json"
-#         df_to_add = pd.DataFrame({"col1":[1,2], "col2":[3,4]})
-#         mock_st.session_state = {"username": "test_user"}
-#         st.write("")
-#         load_db_add_dict_save_db(temp_db_path, df_to_add)
-
-#         mock_load_json.assert_called_once_with(path=temp_db_path)
-#         mock_save_json.assert_called_once()
-
-#         saved_data = mock_save_json.call_args[0][0]
-#         self.assertIn("test_user", saved_data)
-#         self.assertEqual(saved_data["test_user"], df_to_add.to_dict())
-
-
-
+# 6
 class TestAddColAvailable(unittest.TestCase):
     @patch("numpy.random.choice", return_value=["✔️", "❌", "✔️"])
     def test_add_col_available(self, mock_random_choice):

@@ -15,7 +15,7 @@ class TestDataValidation(unittest.TestCase):
         """Set up all required test data"""
         # Data test 1
         self.user_data_test_1           =  {"PLZ"               : {"1492": 12489}, 
-                                            "Stra\u00dfe"       : {"1492": "Stromstra\u00dfe"}, 
+                                            "Straße"       : {"1492": "Stromstraße"}, 
                                             "Hausnummer"        : {"1492": "40"}, 
                                             "Anzahl Ladepunkte" : {"1492": 2.0}, 
                                             "KW"                : {"1492": 22.0}, 

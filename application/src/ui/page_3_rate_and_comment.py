@@ -98,7 +98,7 @@ def interactiv_df_for_user_comment_widget(df_user_changes: pd.DataFrame) -> None
         # 4. Spawn button to submit
         if st.button("Submit post", key="submited_post"):
             # Save post if submitted: add post to DB and save DB
-            helper2.load_db_add_dict_save_db(path_to_db="application/data/data_user/DataBase_user_changes.json", 
+            helper3.load_db_add_dict_save_db(path_to_db="application/data/data_user/DataBase_user_changes.json", 
                                             df_to_add=df_stations_user_edit)
             st.success("We have saved your post. Thank you for your support!", icon=":material/save:")
             time.sleep(3)
@@ -133,7 +133,7 @@ def interactiv_df_users_previous_submissions_widget(df_user_comment_submitted: p
         # 4. Spawn button to submit
         if st.button("Submit post", key="submited_post_changes"):
             # Save post if submitted: add post to DB and save DB
-            helper2.load_db_add_dict_save_db(path_to_db="application/data/data_user/DataBase_user_changes.json", 
+            helper3.load_db_add_dict_save_db(path_to_db="application/data/data_user/DataBase_user_changes.json", 
                                             df_to_add=df_user_rate_data_base,
                                             overwrite=True)
             st.success("We have saved your post. Thank you for your support!", icon=":material/save:")
