@@ -178,7 +178,7 @@ def init_session_states():
         st.session_state.df_residents_new_stations = init_data()[1]
     if "text_for_page_4_help" not in st.session_state:
         # because of the funny behaior of load a json into python str into streamlit md, we need to trippe '\' in '\n'
-        st.session_state.text_for_page_4_help = helper.load_json("application/data/data_ui/text_for_page_4_help.json")
+        st.session_state.text_for_page_4_help = helper.load_json("application/data/data_ui_texts/text_for_page_4_help.json")
 
     return
 

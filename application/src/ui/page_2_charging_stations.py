@@ -177,7 +177,7 @@ def main() -> None:
     
     if "text_for_page_2_help" not in st.session_state:
         # because of the funny behaior of load a json into python str into streamlit md, we need to trippe '\' in '\n'
-        st.session_state.text_for_page_2_help = helper2.load_json("application/data/data_ui/text_for_page_2_help.json")
+        st.session_state.text_for_page_2_help = helper2.load_json("application/data/data_ui_texts/text_for_page_2_help.json")
     if "df_charging_berlin_search" not in st.session_state:
         st.session_state.df_charging_berlin_search = init_data()
 
