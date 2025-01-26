@@ -60,4 +60,11 @@ class Validator:
         print(f"Validator: Validated data types. Remaining rows: {len(validated_data)}")
         return validated_data
         
-    
+
+@dataclass
+class Pipeline:
+    steps: List[Any]  
+
+    def run(self, data: List[Dict[str, Any]]):
+        """Executes a series of steps to process the data."""
+        return

@@ -1,7 +1,11 @@
 import unittest
 
 # Test the following methods from user_data_process
-from domain.src.berlin_data_process import data_pipeline_berlin
+from domain.src.berlin_data_process.data_pipeline_berlin import (FilterColumns,
+                                                                 Cleaner,
+                                                                 FilterBerlin,
+                                                                 Validator,
+                                                                 Pipeline)
 
 
 # # Run test from main directory (as streamlit does with scripts) 
@@ -20,13 +24,13 @@ class TestFilterColumns(unittest.TestCase):
         """Process test: 1. filter correct, 2. missing column"""
         # 1. Case: pass test
         expected            = [{key:value for key,value in zip(range(5),range(5))}]*2
-        filter_columns      = data_pipeline_berlin.FilterColumns(self.required_columns)
+        filter_columns      = FilterColumns(self.required_columns)
 
         self.assertEqual(filter_columns.process(self.testdata), expected)
 
         # 2. Case: incomplete data
         expected            = []
-        filter_columns2     = data_pipeline_berlin.FilterColumns(self.required_columns)
+        filter_columns2     = FilterColumns(self.required_columns)
 
         with self.assertRaises(KeyError) as context:
             filter_columns2.process(self.testdata_incorrect)
@@ -45,7 +49,7 @@ class TestCleaner(unittest.TestCase):
     def test_process(self):
         """Process test: 2 of 6 rows pass"""
         expected = [{"key":"some_value"}, {"key2":"some_value2"}]
-        cleaner1 = data_pipeline_berlin.Cleaner()
+        cleaner1 = Cleaner()
         self.assertEqual(cleaner1.process(self.test_data, self.residents_reject_data), 
                          expected)
         
@@ -59,7 +63,7 @@ class TestFilterBerlin(unittest.TestCase):
     def test_process(self):
         """Process test: filter rows correctly"""
         expected                    = [{"PLZ":value} for value in range(1001, 1401, 100)]
-        filter_berlin1              = data_pipeline_berlin.FilterBerlin(self.filter_plz_min, self.filter_plz_max)
+        filter_berlin1              = FilterBerlin(self.filter_plz_min, self.filter_plz_max)
 
         self.assertEqual(filter_berlin1.process(self.testdata), expected)
 
@@ -78,12 +82,12 @@ class TestValidator(unittest.TestCase):
         """Process test: filter rows correctly"""
         # 1. Case: pass test
         expected                    = self.testdata
-        validator1                  = data_pipeline_berlin.Validator(self.required_types)
+        validator1                  = Validator(self.required_types)
 
         self.assertEqual(validator1.process(self.testdata), expected)
 
         # 2. Case:
-        validator2                  = data_pipeline_berlin.Validator(self.required_types)
+        validator2                  = Validator(self.required_types)
 
         with self.assertRaises(ValueError) as context:
             validator2.process(self.testdata_incorrect)
@@ -91,3 +95,24 @@ class TestValidator(unittest.TestCase):
                       str(context.exception))
         self.assertEqual(validator2.process(self.testdata), expected)
 
+
+class TestPipeline(unittest.TestCase):
+    def setUp(self):
+        """Set up all required test data"""
+        self.testdata               = [{"PLZ":10, "Straße":"some_street", "KW":3.7}] #* 100_000
+        # self.testdata_incorrect     = [{"PLZ":10, "Straße":"some_street", "KW":3.7},
+        #                                {"PLZ":10.1, "Straße":"some_street", "KW":3.7},
+        #                                {"PLZ":10, "Straße":"some_street", "KW":"some_str"}]
+        
+        self.required_types         = {"PLZ":int, "Straße":str, "KW":float}
+
+    def test_pipeline_end_to_end(self):
+        filter_columns = FilterColumns(required_columns =["PLZ", "Straße", "KW"])
+        cleaner = Cleaner()
+        filter_berlin = FilterBerlin(filter_plz_min     =1000, filter_plz_max=1400)
+        validator = Validator(required_types            ={"PLZ":int, "Straße":str, "KW":float})
+        pipeline = Pipeline(steps                       =[filter_columns, cleaner, filter_berlin, validator])
+
+        expected = self.testdata
+
+        self.assertEqual(pipeline.run(self.testdata), expected)
