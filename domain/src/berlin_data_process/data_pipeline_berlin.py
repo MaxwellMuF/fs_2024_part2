@@ -6,7 +6,7 @@ from typing         import List, Dict, Any
 #  --------------------------------------- Pipeline Classes ------------------------------------------------------
 
 @dataclass
-class DataCleaner:
+class Cleaner:
     """Cleans the data by removing rows with missing values."""
     
     def process(self, data: List[Dict[str, Any]]):
