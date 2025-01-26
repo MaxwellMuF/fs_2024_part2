@@ -1,10 +1,11 @@
 import unittest
+from datetime import datetime
 
 # Test the following methods from user_data_process
 from domain.src.customer_data.user_data_process import DataValidator
 
 # # Run test from main directory (as streamlit does with scripts) 
-# python -m unittest domain\src\tests\test_user_data_process.py
+# python -m unittest domain/src/customer_data/tests/test_user_data_process.py >> domain/src/customer_data/tests/test_prints.txt
 
 #  --------------------------------------- Tests ------------------------------------------------------
 
@@ -116,6 +117,7 @@ class TestDataValidation(unittest.TestCase):
                                       columns_required  =self.columns_required_1)
         validator_4_1
         self.assertTrue(validator_4_1.run_validations())
+        print("Run Validator successfully: ", validator_4_1.run_validations())
 
         # Case 2: fail one test
         validator_4_2 = DataValidator(data_of_one_user  =self.user_data_test_1,
@@ -124,3 +126,6 @@ class TestDataValidation(unittest.TestCase):
                                       columns_required  =self.columns_required_1)
         validator_4_2
         self.assertFalse(validator_4_2.run_validations())
+
+# Print test runs: # unfortunately @time and time.time is not working because of wrapper of unittest 
+print(f"{'-'*100}\nTest data pipeline Berlin, date: {datetime.today().strftime('%Y-%m-%d %H:%M:%S')}\n")

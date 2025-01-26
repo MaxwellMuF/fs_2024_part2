@@ -37,10 +37,11 @@ class Cleaner:
 class FilterBerlin:
     filter_plz_min: int
     filter_plz_max: int
+    filter_column: str
 
     def process(self, data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Filer rows by given List[str] and remove unnessesary ones"""
-        return [row for row in data if self.filter_plz_min < int(row['PLZ']) < self.filter_plz_max]
+        return [row for row in data if self.filter_plz_min < int(row[self.filter_column]) < self.filter_plz_max]
 
 @dataclass
 class Validator:
@@ -76,7 +77,7 @@ class Pipeline:
 class LoadRawData:
     load_path: str
 
-    def process(self)-> List[Dict[str, Any]]:
+    def process(self, data=None) -> List[Dict[str, Any]]: # data=None for testing
         """Load raw data from directory"""
         with open(self.load_path, mode="r", encoding="utf-8") as csvfile:
             reader = list(csv.DictReader(csvfile))
@@ -87,7 +88,7 @@ class LoadRawData:
 class SaveProcessedDate:
     save_path: str
 
-    def process(self, data: List[Dict[str, Any]])-> None:
+    def process(self, data: List[Dict[str, Any]])-> List[Dict[str, Any]]:
         """Save processed data at given path"""
         if not data:
             print("No data to save.")
@@ -97,4 +98,4 @@ class SaveProcessedDate:
             writer.writeheader()
             writer.writerows(data)
         print(f"Saved data '{self.save_path.split('/')[-1]}' successfully")
-        return
+        return data # for Testing

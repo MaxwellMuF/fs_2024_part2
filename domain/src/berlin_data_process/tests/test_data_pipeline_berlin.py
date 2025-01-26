@@ -14,7 +14,7 @@ from domain.src.berlin_data_process.data_pipeline_berlin import (FilterColumns,
 
 
 # # Run test from main directory (as streamlit does with scripts) 
-# python -m unittest domain\src\berlin_data_process\tests\test_data_pipeline_berlin.py >> domain/src/berlin_data_process/tests/test_prints.txt
+# python -m unittest domain/src/berlin_data_process/tests/test_data_pipeline_berlin.py >> domain/src/berlin_data_process/tests/test_prints.txt
 
 #  --------------------------------------- Tests ------------------------------------------------------
 
@@ -63,11 +63,12 @@ class TestFilterBerlin(unittest.TestCase):
         self.testdata               = [{"PLZ":value} for value in range(901, 1501, 100)]
         self.filter_plz_min         = 1000
         self.filter_plz_max         = 1400
+        self.filter_column          = "PLZ"
         
     def test_process(self):
         """Process test: filter rows correctly"""
         expected                    = [{"PLZ":value} for value in range(1001, 1401, 100)]
-        filter_berlin1              = FilterBerlin(self.filter_plz_min, self.filter_plz_max)
+        filter_berlin1              = FilterBerlin(self.filter_plz_min, self.filter_plz_max, self.filter_column)
 
         self.assertEqual(filter_berlin1.process(self.testdata), expected)
 
@@ -99,28 +100,6 @@ class TestValidator(unittest.TestCase):
                       str(context.exception))
         self.assertEqual(validator2.process(self.testdata), expected)
 
-
-class TestPipeline(unittest.TestCase):
-    def setUp(self):
-        """Set up all required test data"""
-        self.testdata               = [{"PLZ":1100, "Straße":"some_street", "KW":3.7}] * 100_000
-        # self.testdata_incorrect     = [{"PLZ":10, "Straße":"some_street", "KW":3.7},
-        #                                {"PLZ":10.1, "Straße":"some_street", "KW":3.7},
-        #                                {"PLZ":10, "Straße":"some_street", "KW":"some_str"}]
-        
-        self.required_types         = {"PLZ":int, "Straße":str, "KW":float}
-
-    def test_pipeline_end_to_end(self):
-        filter_columns = FilterColumns(required_columns =["PLZ", "Straße", "KW"])
-        cleaner = Cleaner(reject_data                   =["", "None", "NaN", "0"])
-        filter_berlin = FilterBerlin(filter_plz_min     =1000, filter_plz_max=1400)
-        validator = Validator(required_types            ={"PLZ":int, "Straße":str, "KW":float})
-        pipeline = Pipeline(steps                       =[filter_columns, cleaner, filter_berlin, validator])
-
-        expected = self.testdata
-
-        self.assertEqual(pipeline.run(self.testdata), expected)
-
 class TestLoadRawData(unittest.TestCase):
     def setUp(self):
         """Set up all required test data"""
@@ -148,6 +127,30 @@ class TestSaveProcessedDate(unittest.TestCase):
         self.assertTrue(os.path.isfile(self.path))
         os.remove(self.path)
         
+class TestPipeline(unittest.TestCase):
+    def setUp(self):
+        """Set up all required test data"""
+        self.testdata               = [{"PLZ":1100, "Straße":"some_street", "KW":3.7}] *10
+        # self.testdata_incorrect     = [{"PLZ":10, "Straße":"some_street", "KW":3.7},
+        #                                {"PLZ":10.1, "Straße":"some_street", "KW":3.7},
+        #                                {"PLZ":10, "Straße":"some_street", "KW":"some_str"}]
+        
+        self.required_types         = {"PLZ":int, "Straße":str, "KW":float}
+
+    def test_pipeline_end_to_end(self):
+        test_file_path = "domain/src/berlin_data_process/tests/test_file.csv"
+        loader = LoadRawData(load_path= test_file_path)
+        filter_columns = FilterColumns(required_columns =["PLZ", "Straße", "KW"])
+        cleaner = Cleaner(reject_data                   =["", "None", "NaN", "0"])
+        filter_berlin = FilterBerlin(filter_plz_min     =1000, filter_plz_max=1400, filter_column="PLZ")
+        validator = Validator(required_types            ={"PLZ":int, "Straße":str, "KW":float})
+        saver = SaveProcessedDate(save_path=test_file_path)
+        pipeline = Pipeline(steps                       =[loader, filter_columns, cleaner, 
+                                                          filter_berlin, validator, saver])
+
+        expected = self.testdata
+
+        self.assertEqual(pipeline.run(self.testdata), self.testdata)
 
 # Print test runs: # unfortunately @time and time.time is not working because of wrapper of unittest 
 print(f"{'-'*100}\nTest data pipeline Berlin, date: {datetime.today().strftime('%Y-%m-%d %H:%M:%S')}\n")
