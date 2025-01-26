@@ -9,7 +9,7 @@ from typing         import List, Dict, Any
 class FilterColumns:
     required_columns: List[str]
 
-    def process(self, data: List[Dict[str, Any]]):
+    def process(self, data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Filer columns by given List[str] and remove unnessesary ones"""
         filtered_data = []
         for row in data:
@@ -24,10 +24,11 @@ class FilterColumns:
 
 @dataclass
 class Cleaner:
+    reject_data: List[str]
     
-    def process(self, data: List[Dict[str, Any]], reject_data: List[str]):
+    def process(self, data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Cleans the data by removing rows with missing values."""
-        cleaned_data = [row for row in data if all(value not in reject_data for value in row.values())]
+        cleaned_data = [row for row in data if all(value not in self.reject_data for value in row.values())]
         print(f"Cleaner: Removed {len(data)-len(cleaned_data)} rows")
         return cleaned_data
 
@@ -37,7 +38,7 @@ class FilterBerlin:
     filter_plz_min: int
     filter_plz_max: int
 
-    def process(self, data: List[Dict[str, Any]]):
+    def process(self, data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Filer rows by given List[str] and remove unnessesary ones"""
         return [row for row in data if self.filter_plz_min < int(row['PLZ']) < self.filter_plz_max]
 
@@ -45,7 +46,7 @@ class FilterBerlin:
 class Validator:
     required_types: Dict[str, Any]
 
-    def process(self, data: List[Dict[str, Any]]):
+    def process(self, data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Validate if column value can be converted to required type"""
         validated_data = []
         for row in data:
@@ -65,6 +66,9 @@ class Validator:
 class Pipeline:
     steps: List[Any]  
 
-    def run(self, data: List[Dict[str, Any]]):
+    def run(self, data: List[Dict[str, Any]])-> List[Dict[str, Any]]:
         """Executes a series of steps to process the data."""
-        return
+        for step in self.steps:
+            data = step.process(data)
+        return data
+
