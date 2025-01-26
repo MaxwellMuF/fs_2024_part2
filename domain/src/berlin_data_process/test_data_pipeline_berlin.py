@@ -54,11 +54,12 @@ class TestFilterBerlin(unittest.TestCase):
         """Set up all required test data"""
         self.testdata               = [{"PLZ":value} for value in range(901, 1501, 100)]
 
-        self.filter_plz       = (1000,1400)
+        self.filter_plz_min       = 1000
+        self.filter_plz_max       = 1400
         
     def test_process(self):
         """Process test: 1 of 5 rows pass"""
         expected = [{"PLZ":value} for value in range(1001, 1401, 100)]
-        filter_berlin1 = data_pipeline_berlin.FilterBerlin(self.filter_plz)
-        self.assertEqual(filter_berlin1.process(self.test_data), expected)
+        filter_berlin1 = data_pipeline_berlin.FilterBerlin(self.filter_plz_min, self.filter_plz_max)
+        self.assertEqual(filter_berlin1.process(self.testdata), expected)
 

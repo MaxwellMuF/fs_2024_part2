@@ -35,7 +35,10 @@ class Cleaner:
 @dataclass
 class FilterBerlin:
     """Filer rows by given List[str] and remove unnessesary ones"""
-    filter_plz: tuple
+    filter_plz_min: int
+    filter_plz_max: int
+
     def process(self, data: List[Dict[str, Any]]):
-        return
+        return [row for row in data if self.filter_plz_min < int(row['PLZ']) < self.filter_plz_max]
+        
     
