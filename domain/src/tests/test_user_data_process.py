@@ -8,7 +8,6 @@ from domain.src.customer_data.user_data_process import DataValidator
 
 #  --------------------------------------- Tests ------------------------------------------------------
 
-import unittest
 
 class TestDataValidation(unittest.TestCase):
     def setUp(self):
