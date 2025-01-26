@@ -8,7 +8,18 @@ from typing         import List, Dict, Any
 @dataclass
 class FilterColumns:
     """Filer columns by given List[str] and remove unnessesary ones """
+    required_columns: List[str]
 
+    def process(self, data: List[Dict[str, Any]]):#
+        filtered_data = []
+        for row in data:
+            try:
+                # Create a filtered row containing only required columns
+                filtered_row = {key: row[key] for key in self.required_columns}
+                filtered_data.append(filtered_row)
+            except KeyError as e:
+                raise KeyError(f"Missing required column: {e.args[0]} in row: {row}")
+        return filtered_data
 
 @dataclass
 class Cleaner:
