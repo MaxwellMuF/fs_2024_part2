@@ -6,6 +6,11 @@ from typing         import List, Dict, Any
 #  --------------------------------------- Pipeline Classes ------------------------------------------------------
 
 @dataclass
+class FilterColumns:
+    """Filer columns by given List[str] and remove unnessesary ones """
+
+
+@dataclass
 class Cleaner:
     """Cleans the data by removing rows with missing values."""
     
