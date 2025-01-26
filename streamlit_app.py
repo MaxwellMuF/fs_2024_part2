@@ -2,23 +2,18 @@ import streamlit as st
 # Own python files
 from application.src.utilities import methods_login
 from infrastructure.src.data_downloader import downloader_pipeline
+from domain.src.berlin_data_process import data_pipeline_berlin
 
 # Initialize st.session_state (st.Class properties) at start or reload of app/page. 
 def init_st_session_state():
     """Initialize all streamlit.session_states that are needed or required in the app."""
     # ---- here were a lot of variables (session_state) bevor using st.authenticator and st.navigation -----
-    # "df_charging_berlin" is used for a user thats loged in and deleted with logout
-
-    # is needed for page_2_charging_stations.spawn_interactiv_df_for_user_comment()
-    # if "submited_post" not in st.session_state:
-    #     st.session_state.submited_post = False
-    # if "submited_post_changes" not in st.session_state:
-    #     st.session_state.submited_post_changes = False
     return
 
 @st.cache_resource()
 def download_data_from_url():
     downloader_pipeline.activate_dowload()
+    data_pipeline_berlin.activate_pipeline_berlin()
 # ------------------------------- Pages --------------------------------------
 
 def pages_bevor_login():

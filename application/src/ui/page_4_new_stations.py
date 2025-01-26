@@ -40,7 +40,8 @@ def make_density_df(df_charging_numbers: pd.DataFrame, df_residents: pd.DataFram
                     help=st.session_state.text_for_page_4_help["make_density_df_help"]):
         df_density.loc[:,"Density"] = df_density["Density"].rdiv(1).round(5)
     else:
-        df_density.loc[:,"Density"] = df_density["Density"].round(0).astype(int)
+        df_density.loc[:,"Density"] = df_density["Density"].round(0)
+        df_density = df_density.astype({"Density":int})
     
     return df_density
 
@@ -67,7 +68,7 @@ def count_plz_occurrences(df_lstat2, sort_col=("PLZ")):
     result_df = df_lstat2.groupby(sort_col).agg(
         Number=("Anzahl Ladepunkte","sum"),
         geometry=("geometry", "first")
-    ).reset_index()
+    ).reset_index().astype({"Number":int})
     
     return result_df
 # ----------------------------- streamlit widgets ------------------------------
@@ -79,14 +80,15 @@ def make_selector_widget(df_charging: pd.DataFrame, df_residents: pd.DataFrame) 
                   help=st.session_state.text_for_page_4_help["make_selector_widget_help"])
 
         # Spawn radio selectors
-        df_charging, selected_df = radio_selectors(df_charging.copy())
+        df_charging, selected_df    = radio_selectors(df_charging.copy())
 
-        df_charging.dropna(subset="Anzahl Ladepunkte", inplace=True)
-        df_residents.dropna(subset="Residents", inplace=True)
+        df_charging.dropna(subset   ="Anzahl Ladepunkte", inplace=True)
+        df_residents.dropna(subset  ="Residents", inplace=True)
+        df_residents                = df_residents.astype({"Residents":int})
         # Process data for map
-        df_charging_numbers = count_plz_occurrences(df_charging, sort_col=("PLZ"))
-        df_density = make_density_df(df_charging_numbers, df_residents)
-        df_map_show, column_show = select_show_df(selected_df, df_charging_numbers, df_residents, df_density)
+        df_charging_numbers         = count_plz_occurrences(df_charging, sort_col=("PLZ"))
+        df_density                  = make_density_df(df_charging_numbers, df_residents)
+        df_map_show, column_show    = select_show_df(selected_df, df_charging_numbers, df_residents, df_density)
     
     return df_map_show, df_charging, df_density, column_show
 
@@ -103,7 +105,6 @@ def spawn_heatmap_berlin_widget(df_map_show: pd.DataFrame, column_show: str) -> 
 
         # catch case: empty df, i.e. no charging station found
         if len(df_map_show) == 0:
-            # st.write("Sorry, there is no such Charging Stations in berlin yet")
             st.warning("Sorry, there is no such Charging Stations in berlin yet", icon="⚠️")
             st_folium(m, width=800, height=600)
         else:

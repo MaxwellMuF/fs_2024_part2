@@ -22,6 +22,6 @@ def count_plz_occurrences(df_lstat2, sort_col=("PLZ")):
     result_df = df_lstat2.groupby(sort_col).agg(
         Number=('Anzahl Ladepunkte', 'sum'),
         geometry=('geometry', 'first')
-    ).reset_index()
+    ).reset_index().astype({"Number":int})
     
     return result_df
