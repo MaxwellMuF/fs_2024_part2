@@ -1,15 +1,18 @@
 import unittest
+from typing         import List, Dict, Any
+from datetime       import datetime
 
 # Test the following methods from user_data_process
 from domain.src.berlin_data_process.data_pipeline_berlin import (FilterColumns,
                                                                  Cleaner,
                                                                  FilterBerlin,
                                                                  Validator,
-                                                                 Pipeline)
+                                                                 Pipeline,
+                                                                 LoadRawData)
 
 
 # # Run test from main directory (as streamlit does with scripts) 
-# python -m unittest domain\src\berlin_data_process\test_data_pipeline_berlin.py
+# python -m unittest domain\src\berlin_data_process\tests\test_data_pipeline_berlin.py >> domain/src/berlin_data_process/tests/test_prints.txt
 
 #  --------------------------------------- Tests ------------------------------------------------------
 
@@ -115,3 +118,16 @@ class TestPipeline(unittest.TestCase):
         expected = self.testdata
 
         self.assertEqual(pipeline.run(self.testdata), expected)
+
+class TestLoadRawData(unittest.TestCase):
+    def setUp(self):
+        """Set up all required test data"""
+        self.path = "infrastructure/data/raw_data/plz_einwohner.csv"
+
+    def test_process(self):
+        loader = LoadRawData(path=self.path)
+
+        self.assertIsInstance(type(loader), List[Dict[str,str]])
+
+# Print test runs: # unfortunately @time and time.time is not working because of wrapper of unittest 
+print(f"{'-'*100}\nTest data pipeline Berlin, date: {datetime.today().strftime('%Y-%m-%d %H:%M:%S')}\n")

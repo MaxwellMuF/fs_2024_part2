@@ -72,3 +72,10 @@ class Pipeline:
             data = step.process(data)
         return data
 
+@dataclass
+class LoadRawData:
+    path: str
+
+    def process(self)-> List[Dict[str, Any]]:
+        """Load raw data from directory"""
+        return 
