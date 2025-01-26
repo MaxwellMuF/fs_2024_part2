@@ -87,6 +87,14 @@ class LoadRawData:
 class SaveProcessedDate:
     save_path: str
 
-    def process(self)-> List[Dict[str, Any]]:
+    def process(self, data: List[Dict[str, Any]])-> None:
         """Save processed data at given path"""
+        if not data:
+            print("No data to save.")
+            return
+        with open(self.save_path, mode="w", newline="", encoding="utf-8") as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=data[0].keys())
+            writer.writeheader()
+            writer.writerows(data)
+        print(f"Saved data '{self.save_path.split('/')[-1]}' successfully")
         return

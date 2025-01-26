@@ -1,3 +1,4 @@
+import os
 import unittest
 from typing         import List, Dict, Any
 from datetime       import datetime
@@ -136,15 +137,16 @@ class TestSaveProcessedDate(unittest.TestCase):
     def setUp(self):
         """Set up all required test data"""
         self.testdata               = [{"PLZ":1100, "Straße":"some_street", "KW":3.7}] * 10
-        self.path = "infrastructure/data/raw_data/plz_einwohner.csv"
+        self.path = "domain/data/processed_data_for_ui/test_file.csv"
 
     def test_process(self):
         saver = SaveProcessedDate(save_path=self.path)
 
-        with self.assertRaises(ValueError) as context:
-            saver.process(self, data=self.testdata)
-        self.assertIn("Saved data '{self.load_path.split('/')[-1]}' successfully", 
-                      str(context.exception))
+        # with self.assertRaises(print) as context:
+        saver.process(data=self.testdata)
+
+        self.assertTrue(os.path.isfile(self.path))
+        os.remove(self.path)
         
 
 # Print test runs: # unfortunately @time and time.time is not working because of wrapper of unittest 
