@@ -12,7 +12,6 @@ from branca.colormap        import LinearColormap
 # Own python files
 from application.src.utilities   import methods
 from application.src.utilities   import helper_page_2 as helper2
-from infrastructure.src.data_process   import data_pipeline
 
 
 # ----------------------------- streamlit widgets ------------------------------
@@ -48,7 +47,7 @@ def filter_power_widget(df: pd.DataFrame) -> pd.DataFrame:
 
     return helper2.subset_with_criteria(df=df, column="KW", criteria=user_selected_kw)
 
-def spawn_heatmap_berlin(df_numbers_per_kW: pd.DataFrame, df_numbers: pd.DataFrame) -> None:
+def spawn_heatmap_berlin_widget(df_numbers_per_kW: pd.DataFrame, df_numbers: pd.DataFrame) -> None:
     """Create folium map with given dfs containing 'KW' and 'Number' columns"""
     with st.container(border=True):
         st.header(body="Map of berlin with Charging Stations",
@@ -62,7 +61,8 @@ def spawn_heatmap_berlin(df_numbers_per_kW: pd.DataFrame, df_numbers: pd.DataFra
             st.warning("Sorry, there is no such Charging Stations in berlin yet", icon="⚠️")
             st_folium(m, width=800, height=600)
         else:
-            color_map = LinearColormap(colors=['yellow', 'red'], vmin=1, vmax=df_numbers["Number"].max())
+            color_map = LinearColormap(colors=['yellow', 'red'], vmin=0, vmax=df_numbers["Number"].max(), 
+                                       caption="Number of Charging Stations")
             
             # Add polygons to the map for Numbers
             for idx, row in df_numbers.iterrows():
@@ -89,7 +89,7 @@ def spawn_heatmap_berlin(df_numbers_per_kW: pd.DataFrame, df_numbers: pd.DataFra
 
     return
 
-def show_selected_stations_as_df(df_numbers_per_kW: pd.DataFrame, df_numbers: pd.DataFrame) -> None:
+def show_selected_stations_as_df_widget(df_numbers_per_kW: pd.DataFrame, df_numbers: pd.DataFrame) -> None:
     """Show selected data in three dfs: 1. per KW and per zip code in two columns
                                         2. all selected stations with adress"""
     with st.container(border=True):
@@ -109,13 +109,31 @@ def show_selected_stations_as_df(df_numbers_per_kW: pd.DataFrame, df_numbers: pd
 
     return
 
-def show_address_and_availibility(df_user_selected_subset_show: pd.DataFrame) -> pd.DataFrame:
+def config_edit_df_user_posts() -> dict[str:st.column_config]:
+    """Define the configuration of the columns for the editable dataframes"""
+    config = {
+        'PLZ' : st.column_config.NumberColumn('PLZ', min_value=10115, max_value=14200, required=True, disabled=True),
+        'Straße' : st.column_config.TextColumn('Straße', required=True, disabled=True), #width='medium',
+        'Hausnummer' : st.column_config.TextColumn('Hausnummer', required=True, disabled=True, width='small'),
+        'KW' : st.column_config.NumberColumn('KW', min_value=1, max_value=1000, disabled=True, width='small'),
+        'Anzahl Ladepunkte' : st.column_config.NumberColumn('Anzahl Ladepunkte',min_value=1, max_value=10, 
+                                                            disabled=True, width='small'),
+        'Availability' : st.column_config.TextColumn('Availability', required=False)}
+    
+    return config
+
+def calculate_number_charging_stations(df: pd.DataFrame) -> int:
+    return int(df["Anzahl Ladepunkte"].sum())
+
+def show_address_and_availibility_widget(df_user_selected_subset_show: pd.DataFrame) -> pd.DataFrame:
     """Show df_user_selected_subset_av as st.dataframe"""
     with st.container(border=True):
         st.header(body="Address and Availability",
                   help=st.session_state.text_for_page_2_help["show_address_and_availibility"])
-        st.write("All Charging Stations you have selected with their address and availability:")
-        st.dataframe(df_user_selected_subset_show, use_container_width=True, hide_index=True)
+        st.write(f"We have found {calculate_number_charging_stations(df_user_selected_subset_show)} \
+                 charging stations that match your selection. Here you can see their address and availability:")
+        st.dataframe(df_user_selected_subset_show, column_config=config_edit_df_user_posts(),
+                     use_container_width=True, hide_index=True)
 
     return
 
@@ -143,30 +161,30 @@ def make_streamlit_page_elements(df: pd.DataFrame) -> None:
     df_numbers = methods.count_plz_occurrences(df_user_selected_subset_zip_power, sort_col=('PLZ'))
 
     # Spawn heatmap berlin
-    spawn_heatmap_berlin(df_numbers_per_kW, df_numbers)
+    spawn_heatmap_berlin_widget(df_numbers_per_kW, df_numbers)
 
     # drop unnessesary columns for the show data part
     df_user_selected_subset_show = helper2.drop_column_and_sort_by_column(df_user_selected_subset_zip_power,
-                    list_drop_column_names=["geometry", "Breitengrad", "Längengrad", "Bundesland", "Ort", "Plug Types"],
+                    list_drop_column_names=["geometry"],
                     sort_column_name="KW")
     
     # Show dataframes that user has filtered
-    show_selected_stations_as_df(df_numbers_per_kW, df_numbers)
-    show_address_and_availibility(df_user_selected_subset_show)
+    show_selected_stations_as_df_widget(df_numbers_per_kW, df_numbers)
+    show_address_and_availibility_widget(df_user_selected_subset_show)
 
     return
 
 # @methods.timer
-def init_data(geodata_path: str="infrastructure/data/datasets/geodata_berlin_plz.csv", 
-              charging_data_path: str="infrastructure/data/datasets/Ladesaeulenregister.csv") -> None:
+def init_data(geodata_path: str="domain/data/processed_data_for_ui/geodata_berlin_plz.csv", 
+              charging_data_path: str="domain/data/processed_data_for_ui/Ladesaeulenregister.csv") -> None:
     """Init and process data only ones at the start of the app (instead of every tick)"""
 
-    df_geodat_plz = pd.read_csv(geodata_path, sep=';', low_memory=False)
+    df_geodat_plz = pd.read_csv(geodata_path, sep=',', low_memory=False)
     df_charging = pd.read_csv(charging_data_path, sep=',', low_memory=False)
-    required_columns = ('Postleitzahl', 'Breitengrad','Längengrad','Bundesland', 'Straße', 'Hausnummer',
-                                'Ort', 'Nennleistung Ladeeinrichtung [kW]', 'Steckertypen1')
+    # required_columns = ('Postleitzahl', 'Bundesland', 'Straße', 'Hausnummer',
+    #                             'Ort', 'Nennleistung Ladeeinrichtung [kW]')
 
-    return data_pipeline.data_process(df_geodat_plz, df_charging, required_columns)
+    return helper2.merge_with_geometry(df=df_charging, df_geo=df_geodat_plz)
 
 # @methods.timer
 def main() -> None:

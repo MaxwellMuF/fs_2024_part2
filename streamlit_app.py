@@ -1,7 +1,7 @@
 import streamlit as st
 # Own python files
 from application.src.utilities import methods_login
-from infrastructure.src.data_downloader import download_data, data_cleaner
+from infrastructure.src.data_downloader import downloader_pipeline
 
 # Initialize st.session_state (st.Class properties) at start or reload of app/page. 
 def init_st_session_state():
@@ -10,16 +10,15 @@ def init_st_session_state():
     # "df_charging_berlin" is used for a user thats loged in and deleted with logout
 
     # is needed for page_2_charging_stations.spawn_interactiv_df_for_user_comment()
-    if "submited_post" not in st.session_state:
-        st.session_state.submited_post = False
-    if "submited_post_changes" not in st.session_state:
-        st.session_state.submited_post_changes = False
+    # if "submited_post" not in st.session_state:
+    #     st.session_state.submited_post = False
+    # if "submited_post_changes" not in st.session_state:
+    #     st.session_state.submited_post_changes = False
     return
 
 @st.cache_resource()
 def download_data_from_url():
-    download_data.data_download_from_url()
-    data_cleaner.process_excel_to_csv()
+    downloader_pipeline.activate_dowload()
 # ------------------------------- Pages --------------------------------------
 
 def pages_bevor_login():
@@ -50,7 +49,8 @@ def main():
     And the authenticator process is called.
     """
     # download_data_from_url()
-    init_st_session_state()
+    # init_st_session_state()
+
     # load authenticator config and create login st.authenticator
     config = methods_login.load_config(config_path="application/data/data_user/config.yaml")
     methods_login.create_authenticator(config)

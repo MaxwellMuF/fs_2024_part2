@@ -1,0 +1,3175 @@
+PLZ,Straße,Hausnummer,Art der Ladeeinrichung,Anzahl Ladepunkte,KW
+10115,Koppenplatz,11,Normalladeeinrichtung,2,30.0
+10115,Schröderstr.,9,Normalladeeinrichtung,2,22.0
+10115,Ruppiner Str.,5,Normalladeeinrichtung,2,22.0
+10115,Hannoversche Str.,6,Normalladeeinrichtung,2,22.0
+10115,Eichendorffstr.,12,Normalladeeinrichtung,2,22.0
+10115,Anklamer Str.,12,Normalladeeinrichtung,2,22.0
+10115,Kieler Str.,5,Normalladeeinrichtung,2,22.0
+10115,Borsigstr.,1,Normalladeeinrichtung,2,22.0
+10115,Invalidenstr.,44,Normalladeeinrichtung,2,22.0
+10115,Wöhlertstr.,18,Normalladeeinrichtung,2,22.0
+10115,Schlegelstr.,28,Normalladeeinrichtung,2,22.0
+10115,Krausnickstr.,13,Normalladeeinrichtung,2,22.0
+10115,Habersaathstr.,34,Normalladeeinrichtung,2,22.0
+10115,Ackerstr.,29,Normalladeeinrichtung,2,30.0
+10115,Ackerstr.,118,Normalladeeinrichtung,2,44.0
+10115,Ackerstr.,118,Normalladeeinrichtung,2,44.0
+10115,Chausseestr.,61,Schnellladeeinrichtung,1,175.0
+10115,Chausseestr.,61,Schnellladeeinrichtung,1,175.0
+10115,Torstraße,165,Normalladeeinrichtung,2,44.0
+10115,Anklamer Straße,8,Normalladeeinrichtung,2,44.0
+10115,Pflugstraße,9,Normalladeeinrichtung,2,22.0
+10115,Scharnhorststr.,31,Normalladeeinrichtung,2,22.0
+10115,Boyenstr.,23,Normalladeeinrichtung,2,44.0
+10115,Platz vor dem Neuen Tor,0,Normalladeeinrichtung,2,44.0
+10115,Ackerstraße,6,Normalladeeinrichtung,2,22.0
+10115,Gartenstr.,13,Normalladeeinrichtung,2,44.0
+10115,Gartenstraße,87,Normalladeeinrichtung,1,22.0
+10115,Gartenstraße,87,Normalladeeinrichtung,1,22.0
+10115,Gartenstraße,87,Normalladeeinrichtung,1,22.0
+10115,Gartenstraße,87,Normalladeeinrichtung,1,22.0
+10115,Gartenstraße,87,Normalladeeinrichtung,1,22.0
+10117,Friedrichstr.,191,Normalladeeinrichtung,2,30.0
+10117,Taubenstr.,14,Normalladeeinrichtung,2,22.0
+10117,Mauerstr.,32,Normalladeeinrichtung,2,22.0
+10117,Zimmerstr.,77,Normalladeeinrichtung,2,22.0
+10117,Jägerstr.,61,Normalladeeinrichtung,2,22.0
+10117,Wilhelmstr.,43G,Normalladeeinrichtung,1,3.7
+10117,Dorotheenstr.,63,Normalladeeinrichtung,2,22.0
+10117,Voßstr.,24,Normalladeeinrichtung,2,22.0
+10117,Claire-Waldoff-Str.,6,Normalladeeinrichtung,2,22.0
+10117,Neustädtische Kirchstr.,8,Normalladeeinrichtung,2,22.0
+10117,Leipziger Str.,59,Normalladeeinrichtung,2,22.0
+10117,Markgrafenstr.,33,Normalladeeinrichtung,2,22.0
+10117,Beuthstr.,2,Normalladeeinrichtung,2,22.0
+10117,Seydelstr.,7,Normalladeeinrichtung,2,22.0
+10117,Jägerstr.,49,Normalladeeinrichtung,2,22.0
+10117,Markgrafenstr.,28,Normalladeeinrichtung,2,22.0
+10117,Schiffbauerdamm,1,Normalladeeinrichtung,2,22.0
+10117,Bebelplatz,2,Normalladeeinrichtung,1,11.0
+10117,Bebelplatz,2,Normalladeeinrichtung,1,11.0
+10117,Bebelplatz,2,Normalladeeinrichtung,1,11.0
+10117,Bebelplatz,2,Normalladeeinrichtung,1,11.0
+10117,Bebelplatz,2,Normalladeeinrichtung,1,11.0
+10117,Unter den Linden,77,Normalladeeinrichtung,1,11.0
+10117,Behrenstraße,28,Normalladeeinrichtung,2,44.0
+10117,Planckstraße,4,Normalladeeinrichtung,2,44.0
+10117,Georgenstraße,47,Normalladeeinrichtung,2,44.0
+10117,Getrude-Kolmar-Straße Ecke in den Ministergärten,2,Normalladeeinrichtung,2,44.0
+10117,Reinhardtstraße,32,Normalladeeinrichtung,2,44.0
+10117,Gertude-Kolmar-Straße Ecke in den Ministergärten,2,Normalladeeinrichtung,2,44.0
+10117,Zimmerstr.,88,Normalladeeinrichtung,2,44.0
+10117,Behrenstr.,28,Normalladeeinrichtung,2,44.0
+10117,Schumannstr.,6,Normalladeeinrichtung,2,44.0
+10117,Friedrichstraße,151,Normalladeeinrichtung,2,22.0
+10117,Friedrichstraße,151,Normalladeeinrichtung,2,22.0
+10117,Friedrichstraße,151,Normalladeeinrichtung,2,22.0
+10117,Friedrichstraße,151,Normalladeeinrichtung,2,22.0
+10117,Friedrichstraße,151,Normalladeeinrichtung,2,22.0
+10117,Friedrichstraße,151,Normalladeeinrichtung,2,22.0
+10117,Friedrichstraße,151,Normalladeeinrichtung,2,22.0
+10117,Friedrichstraße,151,Normalladeeinrichtung,2,22.0
+10117,Friedrichstraße,151,Normalladeeinrichtung,2,22.0
+10117,Friedrichstraße,151,Normalladeeinrichtung,2,22.0
+10117,Am Zirkus,7,Normalladeeinrichtung,4,22.0
+10117,Oranienburger Str.,65,Normalladeeinrichtung,2,22.0
+10117,Oranienburger Str.,65,Normalladeeinrichtung,4,44.0
+10117,Krausenstr.,72,Normalladeeinrichtung,2,44.0
+10117,Auguststraße,50A,Normalladeeinrichtung,2,22.0
+10117,Seydelstraße,2,Normalladeeinrichtung,1,22.0
+10117,Hufelandweg,16,Normalladeeinrichtung,1,22.0
+10117,Hufelandweg,16,Normalladeeinrichtung,1,22.0
+10117,Hufelandweg,16,Normalladeeinrichtung,1,22.0
+10117,Hufelandweg,16,Normalladeeinrichtung,1,22.0
+10117,Hufelandweg,16,Normalladeeinrichtung,1,22.0
+10117,Hufelandweg,16,Normalladeeinrichtung,1,22.0
+10117,Unter den Linden ,77,Normalladeeinrichtung,1,11.0
+10119,Christinenstr.,13,Normalladeeinrichtung,2,30.0
+10119,Zionskirchstr.,67,Normalladeeinrichtung,2,22.0
+10119,Weinbergsweg,10,Normalladeeinrichtung,2,22.0
+10119,Alte Schönhauser Str.,20,Normalladeeinrichtung,2,30.0
+10119,Fehrbelliner Straße,25,Normalladeeinrichtung,2,44.0
+10119,Alte Schönhauser Straße,5,Normalladeeinrichtung,2,22.0
+10119,Alte Schönhauser Straße,5,Normalladeeinrichtung,2,22.0
+10119,Lottumstraße,27,Normalladeeinrichtung,2,22.0
+10177,Gasteiner Str.,9,Normalladeeinrichtung,2,22.0
+10178,Weydingerstr.,10,Normalladeeinrichtung,2,30.0
+10178,Alexanderstr.,9,Normalladeeinrichtung,2,22.0
+10178,Spandauer Str.,2,Normalladeeinrichtung,2,22.0
+10178,Karl-Liebknecht-Str.,29,Normalladeeinrichtung,2,22.0
+10178,Dircksenstr.,38,Normalladeeinrichtung,2,22.0
+10178,Mollstr.,30,Normalladeeinrichtung,2,22.0
+10178,Breite Str.,37,Normalladeeinrichtung,2,22.0
+10178,Karl-Marx-Allee,35,Normalladeeinrichtung,2,22.0
+10178,Alexanderstrasse,2,Normalladeeinrichtung,1,11.0
+10178,Alexanderstrasse,2,Normalladeeinrichtung,1,11.0
+10178,Alexanderstrasse,2,Normalladeeinrichtung,1,11.0
+10178,Alexanderstrasse,2,Normalladeeinrichtung,1,11.0
+10178,Alexanderstrasse,2,Normalladeeinrichtung,1,11.0
+10178,Alexanderstrasse,2,Normalladeeinrichtung,1,11.0
+10178,Alexanderstrasse,2,Normalladeeinrichtung,1,11.0
+10178,Alexanderstrasse,2,Normalladeeinrichtung,1,11.0
+10178,Alexanderstrasse,2,Normalladeeinrichtung,1,11.0
+10178,Alexanderstrasse,2,Normalladeeinrichtung,1,11.0
+10178,Alexanderstr.,4,Schnellladeeinrichtung,2,150.0
+10178,Dircksenstraße 50,50,Normalladeeinrichtung,2,44.0
+10178,Karl-Liebknechtstraße,13,Schnellladeeinrichtung,2,93.0
+10178,Jüdenstr.,1,Normalladeeinrichtung,2,44.0
+10178,Alex-Wedding-Straße,3,Normalladeeinrichtung,2,22.0
+10178,Rosa-Luxemburg-Straße,19,Normalladeeinrichtung,2,22.0
+10178,Behringstraße,21,Normalladeeinrichtung,2,22.0
+10178,Mollstr.,4,Normalladeeinrichtung,2,44.0
+10178,Karl-Liebknecht-Straße,5,Normalladeeinrichtung,2,22.0
+10178,Karl-Liebknecht-Straße,5,Normalladeeinrichtung,2,22.0
+10178,Karl-Liebknecht-Straße,5,Normalladeeinrichtung,2,22.0
+10178,Karl-Liebknecht-Straße,5,Normalladeeinrichtung,2,22.0
+10178,Karl-Liebknecht-Straße,5,Normalladeeinrichtung,2,22.0
+10179,Littenstr.,15,Normalladeeinrichtung,2,30.0
+10179,Heinrich-Heine-Str.,13,Normalladeeinrichtung,2,22.0
+10179,Engeldamm,30,Normalladeeinrichtung,2,22.0
+10179,Am Köllnischen Park,3,Normalladeeinrichtung,2,22.0
+10179,Rungestr.,22,Normalladeeinrichtung,2,22.0
+10179,Wilhelmine-Gemberg-Weg,3,Normalladeeinrichtung,2,22.0
+10179,Adalbertstr.,66,Normalladeeinrichtung,2,22.0
+10179,Neue Blumenstr.,24,Normalladeeinrichtung,2,44.0
+10179,Littenstr.,9,Normalladeeinrichtung,2,44.0
+10179,Littenstr.,9,Normalladeeinrichtung,2,44.0
+10179,Dircksenstraße,36,Normalladeeinrichtung,2,22.0
+10179,Dircksenstraße,36,Normalladeeinrichtung,2,22.0
+10179,Dircksenstraße,36,Normalladeeinrichtung,2,22.0
+10179,Gruner Straße,20,Normalladeeinrichtung,4,11.0
+10179,Alte Jakobstraße,76,Normalladeeinrichtung,2,44.0
+10179,Am Köllnischen Park,16,Normalladeeinrichtung,2,44.0
+10179,Melchiorstraße,32,Normalladeeinrichtung,2,22.0
+10179,Dresdener Straße,44,Normalladeeinrichtung,2,22.0
+10179,Dresdener Straße,44,Normalladeeinrichtung,2,22.0
+10179,Schmidstraße,2D,Normalladeeinrichtung,2,22.0
+10179,Holzmarkstraße,12-14,Schnellladeeinrichtung,1,50.0
+10179,Holzmarkstraße,12-14,Schnellladeeinrichtung,1,50.0
+10179,Am Köllnischen Park,1,Normalladeeinrichtung,1,11.0
+10179,Am Köllnischen Park,1,Normalladeeinrichtung,1,11.0
+10179,Dircksenstr.,103,Normalladeeinrichtung,2,44.0
+10179,Neue Jüdenstr.,1,Normalladeeinrichtung,2,44.0
+10179,Dresdener Straße,44,Normalladeeinrichtung,2,22.0
+10179,Schmidstraße,2D,Normalladeeinrichtung,2,22.0
+10179,Legiendamm,24,Normalladeeinrichtung,2,22.0
+10179,Neue Jakobstraße,7,Normalladeeinrichtung,2,22.0
+10179,Michaelkirchplatz,9,Normalladeeinrichtung,2,22.0
+10179,Heinrich-Heine-Platz,5,Normalladeeinrichtung,2,22.0
+10179,Grunerstraße,20,Schnellladeeinrichtung,1,250.0
+10179,Grunerstraße,20,Schnellladeeinrichtung,1,250.0
+10179,Grunerstraße,20,Schnellladeeinrichtung,1,250.0
+10179,Grunerstraße,20,Schnellladeeinrichtung,1,250.0
+10179,Grunerstraße,20,Schnellladeeinrichtung,1,250.0
+10179,Grunerstraße,20,Schnellladeeinrichtung,1,250.0
+10179,Grunerstraße,20,Schnellladeeinrichtung,1,250.0
+10179,Grunerstraße,20,Schnellladeeinrichtung,1,250.0
+10179,Grunerstraße,20,Schnellladeeinrichtung,1,250.0
+10179,Grunerstraße,20,Schnellladeeinrichtung,1,250.0
+10179,Grunerstraße,20,Schnellladeeinrichtung,1,250.0
+10179,Grunerstraße,20,Schnellladeeinrichtung,1,250.0
+10179,Grunerstraße ,20,Normalladeeinrichtung,1,11.0
+10179,Grunerstraße ,20,Normalladeeinrichtung,1,11.0
+10179,Grunerstraße ,20,Normalladeeinrichtung,1,11.0
+10179,Grunerstraße ,20,Normalladeeinrichtung,1,11.0
+10179,Schönhauser Allee,79-80,Normalladeeinrichtung,1,11.0
+10179,Grunerstraße ,20,Normalladeeinrichtung,1,11.0
+10179,Grunerstraße ,20,Normalladeeinrichtung,1,11.0
+10179,Dircksenstraße,36,Normalladeeinrichtung,2,22.0
+10179,Dircksenstraße,36,Normalladeeinrichtung,2,22.0
+10179,Dircksenstraße,36,Normalladeeinrichtung,2,22.0
+10243,Koppenstr.,75,Normalladeeinrichtung,2,22.0
+10243,Koppenstr.,46,Normalladeeinrichtung,2,22.0
+10243,Marchlewskistr.,107,Normalladeeinrichtung,2,22.0
+10243,Friedrichsberger Str.,24,Normalladeeinrichtung,2,22.0
+10243,Kadiner Str.,1,Normalladeeinrichtung,2,22.0
+10243,Andreasstr.,47,Normalladeeinrichtung,2,22.0
+10243,Fredersdorfer Str.,25,Normalladeeinrichtung,2,22.0
+10243,Straße der Pariser Kommune,18,Normalladeeinrichtung,2,22.0
+10243,Grünberger Str.,4,Normalladeeinrichtung,2,22.0
+10243,Edith-Kiss-Str.,26,Normalladeeinrichtung,2,44.0
+10243,Krautstr.,27,Normalladeeinrichtung,2,44.0
+10243,Krautstr.,24,Normalladeeinrichtung,2,44.0
+10243,Straußberger Str.,8a,Normalladeeinrichtung,2,44.0
+10243,Straußberger Str.,8a,Normalladeeinrichtung,2,44.0
+10243,An der Ostbahn,5,Schnellladeeinrichtung,2,150.0
+10243,An der Ostbahn,5,Schnellladeeinrichtung,2,150.0
+10243,An der Ostbahn,5,Schnellladeeinrichtung,2,300.0
+10243,An der Ostbahn,5,Schnellladeeinrichtung,2,300.0
+10243,An der Ostbahn,5,Normalladeeinrichtung,1,22.0
+10243,An der Ostbahn,5,Normalladeeinrichtung,1,22.0
+10243,An der Ostbahn,5,Normalladeeinrichtung,1,22.0
+10243,An der Ostbahn,5,Normalladeeinrichtung,2,22.0
+10243,An der Ostbahn,5,Normalladeeinrichtung,1,22.0
+10243,An der Ostbahn,5,Normalladeeinrichtung,2,22.0
+10243,An der Ostbahn,5,Normalladeeinrichtung,2,22.0
+10243,Lange Straße,32,Normalladeeinrichtung,2,22.0
+10243,Marchlewskistraße,99,Normalladeeinrichtung,4,44.0
+10243,Marchlewskistraße,99,Normalladeeinrichtung,4,44.0
+10243,Lange Straße,32,Normalladeeinrichtung,2,22.0
+10243,Helen-Ernst-Straße,1,Normalladeeinrichtung,2,22.0
+10243,Helen-Ernst-Straße,1,Normalladeeinrichtung,2,22.0
+10243,Helen-Ernst-Straße,1,Normalladeeinrichtung,2,22.0
+10243,Helen-Ernst-Straße,1,Normalladeeinrichtung,2,22.0
+10243,Helen-Ernst-Straße,1,Normalladeeinrichtung,2,22.0
+10243,Fredersdorfer Straße,6,Normalladeeinrichtung,2,22.0
+10243,Marchlewskistraße,99,Normalladeeinrichtung,4,44.0
+10243,Lange Straße,32,Normalladeeinrichtung,2,22.0
+10243,Franz-Mehring-Platz,6,Normalladeeinrichtung,2,44.0
+10243,Andreasstraße,10,Normalladeeinrichtung,4,44.0
+10243,Andreasstraße,10,Normalladeeinrichtung,4,44.0
+10243,Andreasstraße,10,Normalladeeinrichtung,2,22.0
+10243,Wanda-Kallenbach-Straße,2,Normalladeeinrichtung,2,22.0
+10243,Stralauer Platz,29-31,Normalladeeinrichtung,2,22.0
+10245,Revaler Str.,33,Schnellladeeinrichtung,2,150.0
+10245,Revaler Str.,33,Schnellladeeinrichtung,2,150.0
+10245,Revaler Str.,33,Schnellladeeinrichtung,2,150.0
+10245,Wühlischstr.,54,Normalladeeinrichtung,2,22.0
+10245,Markgrafendamm,6,Normalladeeinrichtung,1,3.7
+10245,Glasbläserallee,2,Normalladeeinrichtung,2,22.0
+10245,Rochowstr.,13,Normalladeeinrichtung,1,3.7
+10245,Krachtstr.,15,Normalladeeinrichtung,2,30.0
+10245,Modersohnstr.,63,Normalladeeinrichtung,2,22.0
+10245,Holteistr.,2,Normalladeeinrichtung,2,22.0
+10245,Gryphiusstr.,23,Normalladeeinrichtung,2,30.0
+10245,Gabriel-Max-Str.,11,Normalladeeinrichtung,2,30.0
+10245,Markgrafendamm,25C,Schnellladeeinrichtung,3,72.0
+10245,Markgrafendamm,25c,Schnellladeeinrichtung,3,72.0
+10245,Seumestraße,12,Normalladeeinrichtung,2,22.0
+10245,Seumestraße,12,Normalladeeinrichtung,2,22.0
+10245,Seumestraße,12,Normalladeeinrichtung,2,22.0
+10245,Danneckerstr.,26,Normalladeeinrichtung,2,22.0
+10245,Rotherstraße,5,Normalladeeinrichtung,2,22.0
+10245,Neue Bahnhofstraße,1,Normalladeeinrichtung,2,22.0
+10245,Stralauer Allee ,22,Normalladeeinrichtung,1,22.0
+10247,Mainzer Str.,1,Normalladeeinrichtung,2,22.0
+10247,Gryphiusstr.,17,Normalladeeinrichtung,2,22.0
+10247,Kinzigstr.,19,Normalladeeinrichtung,2,22.0
+10247,Scharnweberstr.,1A,Normalladeeinrichtung,2,22.0
+10247,Pettenkoferstr.,1,Normalladeeinrichtung,2,22.0
+10247,August-Lindemann-Str.,9,Normalladeeinrichtung,2,22.0
+10247,Niederbarnimstr.,1,Normalladeeinrichtung,2,30.0
+10247,Weichselstr.,25,Normalladeeinrichtung,2,44.0
+10247,Eldenaer Str,34a,Schnellladeeinrichtung,2,50.0
+10247,Colbestraße,18,Normalladeeinrichtung,4,44.0
+10247,Colbestraße,18,Normalladeeinrichtung,4,44.0
+10247,Hübnerstraße,6,Normalladeeinrichtung,2,22.0
+10247,Waldeyerstr.,12,Normalladeeinrichtung,2,22.0
+10247,Colbestraße,18,Normalladeeinrichtung,4,44.0
+10247,Schreinerstraße,36,Normalladeeinrichtung,2,22.0
+10247,Hübnerstraße,6,Normalladeeinrichtung,2,22.0
+10247,Oderstr.,ggü. 2,Normalladeeinrichtung,2,22.0
+10249,Kochhannstr.,9,Normalladeeinrichtung,2,22.0
+10249,Straßmannstr.,24,Normalladeeinrichtung,2,22.0
+10249,Ebertystr.,22,Normalladeeinrichtung,2,22.0
+10249,Friedenstr.,68,Normalladeeinrichtung,2,22.0
+10249,Büschingstr.,1,Normalladeeinrichtung,2,22.0
+10249,Matthiasstr.,3,Normalladeeinrichtung,2,22.0
+10249,Mühsamstr.,20,Normalladeeinrichtung,2,22.0
+10249,Kochhannstr.,3,Normalladeeinrichtung,2,44.0
+10249,Kochhannstr.,3,Normalladeeinrichtung,2,44.0
+10249,Georgenkirchstr.,10,Normalladeeinrichtung,2,30.0
+10249,Hermann-Blankenstein-Straße,40-44,Normalladeeinrichtung,2,44.0
+10249,Höchste Straße,17,Normalladeeinrichtung,2,44.0
+10249,Höchste Straße,17,Normalladeeinrichtung,2,44.0
+10249,Hermann-Blankenstein-Str.,6,Normalladeeinrichtung,2,44.0
+10249,Hermann-Blankenstein-Str.,6,Normalladeeinrichtung,2,44.0
+10249,Landsberger Allee,49,Normalladeeinrichtung,6,144.0
+10249,Kochhannstraße,19,Normalladeeinrichtung,2,22.0
+10249,Kochhannstraße,19,Normalladeeinrichtung,2,22.0
+10249,Hermann-Blankenstein-Straße,48,Schnellladeeinrichtung,1,320.0
+10249,Hermann-Blankenstein-Straße,48,Schnellladeeinrichtung,1,320.0
+10249,Hermann-Blankenstein-Straße,48,Schnellladeeinrichtung,1,320.0
+10249,Hermann-Blankenstein-Straße,48,Schnellladeeinrichtung,1,320.0
+10249,Hermann Blankenstein-Straße,38,Schnellladeeinrichtung,3,75.0
+10249,Kochhannstraße,19,Normalladeeinrichtung,2,22.0
+10249,Petersburger Straße,16,Normalladeeinrichtung,2,22.0
+10249,Petersburger Straße,16,Normalladeeinrichtung,2,44.0
+10249,Petersburger Straße,16,Normalladeeinrichtung,2,44.0
+10249,Petersburger Straße,16,Normalladeeinrichtung,2,44.0
+10249,Petersburger Straße,16,Normalladeeinrichtung,2,22.0
+10249,Petersburger Straße,16,Normalladeeinrichtung,2,44.0
+10249,Petersburger Straße,16,Normalladeeinrichtung,2,44.0
+10249,Petersburger Straße,16,Normalladeeinrichtung,2,44.0
+10249,Virchowstr.,69,Normalladeeinrichtung,2,22.0
+10315,Alfred-Kowalke-Str.,29,Normalladeeinrichtung,2,30.0
+10315,Rhinstr.,163,Normalladeeinrichtung,2,22.0
+10315,Einbeckerstr.,59,Normalladeeinrichtung,2,44.0
+10315,Einbecker Straße,119,Normalladeeinrichtung,2,44.0
+10315,Rhinstraße,141,Schnellladeeinrichtung,2,600.0
+10315,Lincolnstraße,78,Normalladeeinrichtung,2,22.0
+10315,Lincolnstraße,78,Normalladeeinrichtung,2,22.0
+10315,Archenholdstr.,2,Normalladeeinrichtung,2,22.0
+10315,Marie-Curie-Allee,35,Normalladeeinrichtung,2,22.0
+10317,Nöldnerstr.,9,Normalladeeinrichtung,2,22.0
+10317,Clara-Grunwald-Str.,7,Normalladeeinrichtung,2,22.0
+10317,Eitelstr.,29,Normalladeeinrichtung,2,22.0
+10317,Hirschberger Str.,3,Normalladeeinrichtung,2,22.0
+10317,Fischerstr.,2,Normalladeeinrichtung,2,30.0
+10317,An der Bucht,5G,Normalladeeinrichtung,2,30.0
+10317,Margaretenstr.,9,Normalladeeinrichtung,2,30.0
+10317,Giselastraße,20,Normalladeeinrichtung,2,22.0
+10317,Giselastraße,33,Normalladeeinrichtung,2,22.0
+10317,Wönnichstraße,64,Normalladeeinrichtung,2,22.0
+10317,Giselastraße,33,Normalladeeinrichtung,2,22.0
+10317,Wönnichstraße,64,Normalladeeinrichtung,2,22.0
+10317,Leopoldstraße,19A,Normalladeeinrichtung,2,22.0
+10317,Einbecker Straße,1,Normalladeeinrichtung,2,44.0
+10317,Georg-Löwenstein-Str.,22,Normalladeeinrichtung,1,11.0
+10317,Eichhorster Weg,96,Schnellladeeinrichtung,2,72.0
+10317,Giselastraße,20,Normalladeeinrichtung,2,22.0
+10317,Wönnichstraße,64,Normalladeeinrichtung,2,22.0
+10317,Egmontstraße,5A,Normalladeeinrichtung,2,22.0
+10317,Leopoldstraße,19A,Normalladeeinrichtung,2,22.0
+10317,Kaskelstraße,31,Normalladeeinrichtung,2,22.0
+10317,Sophienstraße,28,Normalladeeinrichtung,2,22.0
+10317,Georg-Löwenstein-Straße ,20,Normalladeeinrichtung,1,22.0
+10317,Georg-Löwenstein-Str.,20,Normalladeeinrichtung,1,22.0
+10317,Stadthausstr.,2,Normalladeeinrichtung,2,44.0
+10318,Römerweg,38,Normalladeeinrichtung,2,22.0
+10318,Dönhoffstr.,12,Normalladeeinrichtung,2,22.0
+10318,Rheinsteinstr.,9,Normalladeeinrichtung,2,22.0
+10318,Stolzenfelsstraße,1,Normalladeeinrichtung,2,44.0
+10319,Sewanstr.,144,Normalladeeinrichtung,2,22.0
+10319,Sewanstr.,43,Normalladeeinrichtung,2,22.0
+10319,Ontarioseestr.,17,Schnellladeeinrichtung,3,50.0
+10319,Moldaustraße,2,Normalladeeinrichtung,2,22.0
+10319,Sewandstraße,4 + 6,Schnellladeeinrichtung,2,93.0
+10365,Buchberger Str.,30,Schnellladeeinrichtung,2,300.0
+10365,Buchberger Str.,30,Schnellladeeinrichtung,1,150.0
+10365,Buchberger Straße,4,Schnellladeeinrichtung,3,150.0
+10365,Alfredstr.,11,Normalladeeinrichtung,2,22.0
+10365,Volkerstr.,8,Normalladeeinrichtung,2,22.0
+10365,Wotanstr.,16,Normalladeeinrichtung,2,22.0
+10365,Frankfurter Allee,113-117,Normalladeeinrichtung,4,44.0
+10365,Schulze-Boysen-Str.,18,Normalladeeinrichtung,2,44.0
+10365,Schulze-Boysen-Str.,18,Normalladeeinrichtung,2,44.0
+10365,Landsberger Allee,364,Normalladeeinrichtung,2,42.0
+10365,Landsberger Allee,364,Normalladeeinrichtung,2,42.0
+10365,Landsberger Allee,364,Normalladeeinrichtung,2,42.0
+10365,Frankfurter Allee,248,Normalladeeinrichtung,2,44.0
+10365,Frankfurter Allee,208-212,Schnellladeeinrichtung,3,72.0
+10365,Frankfurter Allee,208,Schnellladeeinrichtung,3,72.0
+10365,Gotlindestr.,40a,Schnellladeeinrichtung,2,150.0
+10365,Gotlindestr.,40a,Schnellladeeinrichtung,2,150.0
+10365,Rüdigerstraße,45,Normalladeeinrichtung,2,22.0
+10365,John-Sieg-Str.,1,Normalladeeinrichtung,1,22.0
+10365,Siegfriedstraße,150,Normalladeeinrichtung,2,33.0
+10365,Siegfriedstraße,150,Schnellladeeinrichtung,2,72.0
+10367,Josef-Orlopp-Str.,4,Normalladeeinrichtung,2,22.0
+10367,Rathausstr.,12A,Normalladeeinrichtung,2,30.0
+10367,Möllendorffstr.,3,Normalladeeinrichtung,2,22.0
+10367,Normannenstraße,1,Normalladeeinrichtung,2,44.0
+10367,Bernhard-Bästlein-Str.,1,Normalladeeinrichtung,2,44.0
+10369,Erich-Kuttner-Str.,26,Normalladeeinrichtung,2,22.0
+10369,Bänschstr.,26,Normalladeeinrichtung,2,22.0
+10369,Storkower Str.,174,Schnellladeeinrichtung,1,175.0
+10369,Storkower Str.,174,Schnellladeeinrichtung,1,175.0
+10369,Storkower Str.,174,Schnellladeeinrichtung,1,175.0
+10369,Landsberger Allee,179B,Normalladeeinrichtung,2,22.0
+10369,Landsberger Allee,174,Normalladeeinrichtung,2,44.0
+10405,Heinrich-Roller-Str.,21,Normalladeeinrichtung,2,22.0
+10405,Kollwitzstr.,35,Normalladeeinrichtung,2,22.0
+10405,Chodowieckistr.,1,Normalladeeinrichtung,2,22.0
+10405,Wörther Str.,19,Normalladeeinrichtung,2,22.0
+10405,Straßburger Str.,26,Normalladeeinrichtung,2,22.0
+10405,Chodowieckistr.,22,Normalladeeinrichtung,2,22.0
+10405,Fröbelstr.,15,Normalladeeinrichtung,2,22.0
+10405,Straßburger Str.,2,Normalladeeinrichtung,2,22.0
+10405,Immanuelkirchstr.,14,Normalladeeinrichtung,2,22.0
+10405,Heinrich-Roller-Straße,13,Normalladeeinrichtung,2,44.0
+10405,Heinrich-Roller-Straße,13,Normalladeeinrichtung,2,44.0
+10405,Marienburger Straße,22,Normalladeeinrichtung,3,33.0
+10407,Bötzowstr.,53,Normalladeeinrichtung,2,22.0
+10407,Pasteurstr.,12,Normalladeeinrichtung,2,22.0
+10407,Liselotte-Herrmann-Str.,8,Normalladeeinrichtung,2,22.0
+10407,Hufelandstr.,13,Normalladeeinrichtung,2,22.0
+10407,Bötzowstr.,2,Normalladeeinrichtung,2,22.0
+10407,Käthe-Niederkirchner-Str.,1,Normalladeeinrichtung,2,11.0
+10407,John-Schehr-Str.,66,Normalladeeinrichtung,2,22.0
+10407,Ernst-Fürstenberg-Str.,19,Normalladeeinrichtung,2,22.0
+10407,Oderbruchstr.,13,Normalladeeinrichtung,1,3.7
+10407,Landsberger Allee,119,Schnellladeeinrichtung,2,300.0
+10407,Margarete-Sommer-Str.,2,Schnellladeeinrichtung,2,300.0
+10407,Margarete-Sommer-Str.,2,Schnellladeeinrichtung,2,300.0
+10407,Cotheniusstr.,12,Normalladeeinrichtung,2,30.0
+10407,Kniprodestr.,25,Schnellladeeinrichtung,2,72.0
+10407,Kniprodestr.,26,Normalladeeinrichtung,2,44.0
+10407,Landsberger Allee,87Y,Normalladeeinrichtung,2,44.0
+10407,Storkower Str.,139,Schnellladeeinrichtung,2,93.0
+10407,Storkowerstraße,108,Normalladeeinrichtung,2,11.0
+10407,Storkowerstraße,108,Normalladeeinrichtung,2,11.0
+10407,Storkowerstraße,108,Normalladeeinrichtung,2,11.0
+10409,Naugarder Str.,1,Normalladeeinrichtung,2,22.0
+10409,Hosemannstr.,39,Normalladeeinrichtung,2,22.0
+10409,Erich-Weinert-Str.,104,Normalladeeinrichtung,2,22.0
+10409,Storkower Str.,53,Normalladeeinrichtung,2,22.0
+10409,Erich-Weinert-Str.,95,Normalladeeinrichtung,2,22.0
+10409,Mandelstr.,12,Normalladeeinrichtung,2,22.0
+10409,Greifswalder Straße 154 / Erich-Weinert-Straße 145,154 / 145,Normalladeeinrichtung,3,24.0
+10409,Prenzlauer Allee,93,Schnellladeeinrichtung,3,75.0
+10409,Cohnstraße,2,Normalladeeinrichtung,4,44.0
+10409,Cohnstraße,2,Normalladeeinrichtung,4,44.0
+10409,Cohnstraße,2,Normalladeeinrichtung,4,44.0
+10409,Erich-Weinert-Straße,95,Schnellladeeinrichtung,2,180.0
+10435,Sredzkistr.,1,Normalladeeinrichtung,2,30.0
+10435,Swinemünder Str.,126,Normalladeeinrichtung,2,22.0
+10435,Sredzkistr.,35,Normalladeeinrichtung,2,22.0
+10435,Kollwitzstr.,80,Normalladeeinrichtung,2,22.0
+10435,Oderberger Str.,22,Normalladeeinrichtung,2,22.0
+10435,Kastanienallee,79,Normalladeeinrichtung,2,22.0
+10435,Griebenowstr.,5,Normalladeeinrichtung,2,44.0
+10437,Raumerstr.,6,Normalladeeinrichtung,2,22.0
+10437,Gneiststr.,10,Normalladeeinrichtung,2,22.0
+10437,Gaudystr.,27,Normalladeeinrichtung,2,22.0
+10437,Dunckerstr.,70,Normalladeeinrichtung,2,22.0
+10437,Kopenhagener Str.,77,Normalladeeinrichtung,2,22.0
+10437,Am Falkplatz,5,Normalladeeinrichtung,2,22.0
+10437,Kopenhagener Str.,27,Normalladeeinrichtung,2,22.0
+10437,Raumerstr.,31,Normalladeeinrichtung,2,22.0
+10437,Cantianstr.,1,Normalladeeinrichtung,2,22.0
+10437,Lychener Str.,8,Normalladeeinrichtung,2,30.0
+10439,Kanzowstr.,1,Normalladeeinrichtung,2,30.0
+10439,Schönfließer Str.,9,Normalladeeinrichtung,2,22.0
+10439,Erich-Weinert-Str.,74,Normalladeeinrichtung,2,22.0
+10439,Wichertstr.,34,Normalladeeinrichtung,2,22.0
+10439,Schönfließer Str.,3,Normalladeeinrichtung,2,22.0
+10439,Krügerstr.,25,Normalladeeinrichtung,2,22.0
+10439,Paul-Robeson-Str.,50,Normalladeeinrichtung,2,22.0
+10439,Schönhauser Allee,79-80,Normalladeeinrichtung,2,11.0
+10439,Bornholmer Str.,65,Schnellladeeinrichtung,3,50.0
+10439,Scherenbergstraße,4,Normalladeeinrichtung,4,44.0
+10439,Scherenbergstraße,4,Normalladeeinrichtung,4,44.0
+10439,Driesener Straße,25,Normalladeeinrichtung,4,44.0
+10439,Paul-Robeson-Str.,19,Normalladeeinrichtung,2,22.0
+10439,Stahlheimer Straße,31,Schnellladeeinrichtung,2,180.0
+10439,Schönhauser Allee ,79-80,Normalladeeinrichtung,1,11.0
+10551,Birkenstr.,33,Normalladeeinrichtung,2,22.0
+10551,Wilhelmshavener Str.,58,Normalladeeinrichtung,2,22.0
+10551,Waldenserstr.,10,Normalladeeinrichtung,2,22.0
+10551,Jonasstr.,1,Normalladeeinrichtung,2,22.0
+10551,Waldstraße,31,Normalladeeinrichtung,2,22.0
+10551,Oldenburger Straße,42B,Normalladeeinrichtung,2,22.0
+10553,Erasmusstr.,20,Normalladeeinrichtung,2,22.0
+10553,Kaiserin-Augusta-Allee,113,Normalladeeinrichtung,2,22.0
+10553,Ufnaustr.,10,Normalladeeinrichtung,2,22.0
+10553,Rostocker Str.,20,Normalladeeinrichtung,2,30.0
+10553,Sickingenstr.,42-46,Normalladeeinrichtung,2,22.0
+10553,Sickingenstr.,42-46,Normalladeeinrichtung,2,22.0
+10553,Sickingenstr.,42-46,Normalladeeinrichtung,2,22.0
+10553,Wiebestr.,14,Normalladeeinrichtung,2,22.0
+10553,Reuchlinstraße,10-11,Normalladeeinrichtung,2,22.0
+10553,Reuchlinstraße,10-11,Normalladeeinrichtung,2,22.0
+10553,Reuchlinstraße,10-11,Schnellladeeinrichtung,2,150.0
+10553,Kaiserin-Augusta-Allee,16-24,Normalladeeinrichtung,4,44.0
+10555,Alt Moabit,72,Normalladeeinrichtung,2,22.0
+10555,Flotowstr.,12,Normalladeeinrichtung,2,22.0
+10555,Jagowstr.,20,Normalladeeinrichtung,2,22.0
+10555,Essener Str.,20,Normalladeeinrichtung,2,44.0
+10555,Essener Str.,21,Normalladeeinrichtung,2,44.0
+10555,Krefelder Str.,13,Normalladeeinrichtung,2,44.0
+10555,Zwinglistr.,1,Normalladeeinrichtung,2,44.0
+10555,Zwinglistr.,1,Normalladeeinrichtung,2,44.0
+10555,Zwinglistr.,29a,Normalladeeinrichtung,2,30.0
+10555,Solinger Straße,12,Normalladeeinrichtung,2,22.0
+10555,Solinger Straße,12,Normalladeeinrichtung,2,22.0
+10555,Solinger Straße,12,Normalladeeinrichtung,2,22.0
+10557,Kirchstr.,2,Normalladeeinrichtung,2,22.0
+10557,Flensburger Str.,20,Normalladeeinrichtung,2,22.0
+10557,Lüneburger Str.,19,Normalladeeinrichtung,2,22.0
+10557,Thomasiusstr.,16,Normalladeeinrichtung,2,22.0
+10557,Lehrter Str.,61,Normalladeeinrichtung,2,22.0
+10557,Heidestr.,2,Normalladeeinrichtung,2,22.0
+10557,Clara-Jaschke-Str.,88,Normalladeeinrichtung,2,22.0
+10557,Lüneburger Str.,13,Normalladeeinrichtung,2,44.0
+10557,Seydlitzstr.,17a,Normalladeeinrichtung,2,44.0
+10557,Seydlitzstr.,15,Normalladeeinrichtung,2,44.0
+10557,Lydia-Rabinowitsch-Straße,3,Normalladeeinrichtung,2,44.0
+10557,Hedwig-Porschütz-Str.,4-6,Normalladeeinrichtung,2,44.0
+10557,Hedwig-Porschütz-Str.,4-6,Normalladeeinrichtung,2,44.0
+10557,Kruppstr.,7,Normalladeeinrichtung,2,44.0
+10557,Ella-Trebe-Straße,5,Normalladeeinrichtung,1,11.0
+10557,Ella-Trebe-Straße,5,Normalladeeinrichtung,1,11.0
+10557,Ella-Trebe-Straße,5,Normalladeeinrichtung,1,11.0
+10557,Ella-Trebe-Straße,5,Normalladeeinrichtung,1,11.0
+10557,Invalidenstraße,54,Normalladeeinrichtung,2,22.0
+10557,Invalidenstraße,54,Normalladeeinrichtung,2,22.0
+10557,Invalidenstraße,54,Normalladeeinrichtung,2,22.0
+10557,Invalidenstraße,54,Normalladeeinrichtung,2,22.0
+10557,Invalidenstraße,54,Normalladeeinrichtung,2,22.0
+10557,Invalidenstraße,54,Normalladeeinrichtung,2,22.0
+10557,Invalidenstraße,54,Normalladeeinrichtung,2,22.0
+10557,Invalidenstraße,54,Normalladeeinrichtung,2,22.0
+10557,Invalidenstraße,54,Normalladeeinrichtung,2,22.0
+10557,Paulstraße,21,Normalladeeinrichtung,2,22.0
+10557,Paulstraße,21,Normalladeeinrichtung,2,22.0
+10557,Heidestrasse,40,Normalladeeinrichtung,4,88.0
+10557,Heidestrasse,40,Normalladeeinrichtung,4,88.0
+10557,Heidestrasse,40,Normalladeeinrichtung,4,88.0
+10557,Heidestrasse,40,Normalladeeinrichtung,4,88.0
+10557,Heidestrasse,40,Normalladeeinrichtung,4,88.0
+10557,Heidestrasse,40,Normalladeeinrichtung,4,88.0
+10557,Heidestrasse,40,Normalladeeinrichtung,1,22.0
+10557,Flensburger Straße,4,Normalladeeinrichtung,2,44.0
+10557,Clara-Jaschke-Straße,1,Normalladeeinrichtung,1,11.0
+10557,Clara-Jaschke-Straße,1,Normalladeeinrichtung,1,11.0
+10557,Clara-Jaschke-Straße,1,Normalladeeinrichtung,1,11.0
+10557,Clara-Jaschke-Straße,1,Normalladeeinrichtung,1,11.0
+10557,Clara-Jaschke-Straße,1,Normalladeeinrichtung,1,11.0
+10557,Clara-Jaschke-Straße,1,Normalladeeinrichtung,1,11.0
+10557,Clara-Jaschke-Straße,1,Normalladeeinrichtung,1,11.0
+10557,Clara-Jaschke-Straße,1,Normalladeeinrichtung,1,11.0
+10557,Clara-Jaschke-Straße,1,Normalladeeinrichtung,1,11.0
+10557,Clara-Jaschke-Straße,1,Normalladeeinrichtung,1,11.0
+10557,Alt-Moabit,5,Normalladeeinrichtung,2,44.0
+10557,Spenerstraße,26,Normalladeeinrichtung,2,22.0
+10557,Werftstraße,21,Normalladeeinrichtung,2,22.0
+10557,Invalidenstraße,54,Normalladeeinrichtung,2,22.0
+10557,Invalidenstraße,54,Normalladeeinrichtung,2,22.0
+10557,Invalidenstraße,54,Normalladeeinrichtung,2,22.0
+10557,Invalidenstraße,54,Normalladeeinrichtung,2,22.0
+10557,Invalidenstraße,54,Normalladeeinrichtung,2,22.0
+10557,Invalidenstraße,54,Normalladeeinrichtung,2,22.0
+10557,Invalidenstraße,54,Normalladeeinrichtung,2,22.0
+10557,Invalidenstraße,54,Normalladeeinrichtung,2,22.0
+10557,Invalidenstraße,54,Normalladeeinrichtung,2,22.0
+10557,Paulstraße,21,Normalladeeinrichtung,2,22.0
+10557,Paulstraße,21,Normalladeeinrichtung,2,22.0
+10559,Havelberger Str.,17,Normalladeeinrichtung,2,22.0
+10559,Rathenower Str.,35,Normalladeeinrichtung,2,22.0
+10559,Birkenstr.,68,Normalladeeinrichtung,2,22.0
+10559,Ellen-Epstein-Straße,1,Schnellladeeinrichtung,2,150.0
+10559,Ellen-Epstein-Straße,1,Schnellladeeinrichtung,2,150.0
+10559,Ellen-Epstein-Straße,1,Schnellladeeinrichtung,2,300.0
+10559,Ellen-Epstein-Straße,1,Schnellladeeinrichtung,2,300.0
+10559,Stephanstr.,30,Normalladeeinrichtung,2,44.0
+10559,Stephanstr.,30,Normalladeeinrichtung,2,44.0
+10559,Havelberger Str.,28,Normalladeeinrichtung,2,44.0
+10559,Kruppstr.,2,Normalladeeinrichtung,2,44.0
+10559,Kruppstr.,2,Normalladeeinrichtung,2,44.0
+10559,Lübecker Str.,3-4,Normalladeeinrichtung,2,44.0
+10559,Lübecker Str.,3-4,Normalladeeinrichtung,2,44.0
+10559,Quitzowstr.,23,Normalladeeinrichtung,2,44.0
+10559,Stephanstr.,62-63,Normalladeeinrichtung,2,44.0
+10559,Stendaler Str.,2-3,Normalladeeinrichtung,2,22.0
+10559,Wilsnacker Str.,58,Normalladeeinrichtung,2,22.0
+10559,Birkenstr.,21,Normalladeeinrichtung,2,22.0
+10559,Birkenstr.,21,Normalladeeinrichtung,4,22.0
+10559,Birkenstr.,21,Normalladeeinrichtung,4,22.0
+10559,Birkenstr.,21,Normalladeeinrichtung,4,22.0
+10559,Birkenstr.,21,Normalladeeinrichtung,4,22.0
+10559,Birkenstr.,21,Normalladeeinrichtung,4,22.0
+10559,Birkenstr.,21,Normalladeeinrichtung,4,22.0
+10559,Birkenstr.,21,Normalladeeinrichtung,4,22.0
+10559,Birkenstr.,21,Normalladeeinrichtung,4,22.0
+10559,Birkenstr.,21,Normalladeeinrichtung,4,22.0
+10559,Birkenstr.,21,Normalladeeinrichtung,4,22.0
+10559,Birkenstr.,21,Normalladeeinrichtung,4,22.0
+10559,Birkenstr.,21,Normalladeeinrichtung,4,22.0
+10559,Birkenstr.,21,Normalladeeinrichtung,4,22.0
+10559,Birkenstr.,21,Normalladeeinrichtung,4,22.0
+10559,Birkenstr.,21,Normalladeeinrichtung,4,22.0
+10559,Birkenstr.,21,Normalladeeinrichtung,4,22.0
+10559,Birkenstr.,21,Normalladeeinrichtung,4,22.0
+10559,Birkenstr.,21,Normalladeeinrichtung,4,22.0
+10559,Turmstraße,26,Normalladeeinrichtung,3,22.0
+10559,Turmstr.,26,Normalladeeinrichtung,4,22.0
+10559,Turmstr.,26,Normalladeeinrichtung,2,11.0
+10585,Zillestr.,2,Normalladeeinrichtung,2,22.0
+10585,Kaiser-Friedrich-Str.,17,Normalladeeinrichtung,2,22.0
+10585,Richard-Wagner-Str.,52,Normalladeeinrichtung,2,44.0
+10585,Krumme Straße,73,Normalladeeinrichtung,2,44.0
+10585,Zillestr.,86,Normalladeeinrichtung,2,22.0
+10585,Krumme Str.,85,Schnellladeeinrichtung,2,150.0
+10585,Thrasoltstraße,4,Normalladeeinrichtung,2,22.0
+10585,Otto-Suhr-Allee,84,Normalladeeinrichtung,2,44.0
+10587,Fraunhofer Str.,33,Normalladeeinrichtung,2,22.0
+10587,Guerickestr.,39,Normalladeeinrichtung,2,22.0
+10587,Charlottenburger Ufer,1,Normalladeeinrichtung,2,22.0
+10587,Wilmersdorfer Str.,8,Normalladeeinrichtung,2,22.0
+10587,Morsestr.,2,Normalladeeinrichtung,2,22.0
+10587,Englische Str.,1-4,Normalladeeinrichtung,2,22.0
+10587,Arcostr.,20,Normalladeeinrichtung,2,22.0
+10587,Franklinstr.,13,Normalladeeinrichtung,2,22.0
+10587,Pascalstraße,8,Normalladeeinrichtung,1,11.0
+10587,Pascalstraße,8,Normalladeeinrichtung,1,11.0
+10587,Pascalstraße,8,Normalladeeinrichtung,1,11.0
+10587,Pascalstraße,8,Normalladeeinrichtung,1,11.0
+10587,Pascalstraße,8,Normalladeeinrichtung,1,11.0
+10587,Pascalstraße,8,Normalladeeinrichtung,1,11.0
+10587,Pascalstraße,8,Normalladeeinrichtung,1,11.0
+10587,Pascalstraße,8,Normalladeeinrichtung,1,11.0
+10587,Pascalstraße,8,Normalladeeinrichtung,1,11.0
+10587,Pascalstraße,8,Normalladeeinrichtung,1,11.0
+10587,Pascalstraße,8,Schnellladeeinrichtung,3,50.0
+10587,Englische Strasse,1-4,Normalladeeinrichtung,4,11.0
+10587,Englische Strasse,1-4,Normalladeeinrichtung,4,11.0
+10587,Englische Strasse,1-4,Normalladeeinrichtung,2,11.0
+10587,Franklinstr.,7,Schnellladeeinrichtung,2,150.0
+10587,Salzufer,1,Normalladeeinrichtung,2,44.0
+10587,Salzufer,1,Normalladeeinrichtung,2,44.0
+10587,Salzufer,1,Normalladeeinrichtung,2,44.0
+10587,Salzufer,1,Normalladeeinrichtung,2,44.0
+10587,Salzufer,1,Normalladeeinrichtung,2,44.0
+10587,Salzufer,1,Normalladeeinrichtung,2,44.0
+10587,Franklinstraße (Gebauer Höfe),2-15a,Normalladeeinrichtung,2,22.0
+10587,Franklinstraße,27,Normalladeeinrichtung,2,22.0
+10587,Helmholtzstraße,2-9,Normalladeeinrichtung,2,22.0
+10587,Helmholtzstraße,2-9,Normalladeeinrichtung,2,22.0
+10587,Iburger Ufer,14,Normalladeeinrichtung,2,22.0
+10587,Franklinstraße,23,Schnellladeeinrichtung,2,350.0
+10587,Marchstr.,0,Normalladeeinrichtung,2,44.0
+10589,Lise-Meitner-Straße,10,Schnellladeeinrichtung,3,150.0
+10589,Osnabrücker Str.,26,Normalladeeinrichtung,2,22.0
+10589,Klaustaler Str.,34,Normalladeeinrichtung,2,22.0
+10589,Lise-Meitner-Str.,25,Normalladeeinrichtung,2,22.0
+10589,Nordhauser Str.,26,Normalladeeinrichtung,2,22.0
+10589,Tauroggener Str.,47,Normalladeeinrichtung,2,22.0
+10589,Kaiserin-Augusta-Allee,31,Normalladeeinrichtung,2,22.0
+10589,Kaiserin-Augusta-Allee,31,Normalladeeinrichtung,2,22.0
+10589,Kaiserin-Augusta-Allee,31,Normalladeeinrichtung,2,22.0
+10589,Kaiserin-Augusta-Allee,31,Normalladeeinrichtung,2,22.0
+10589,Lise-Meitner-Str.,6,Normalladeeinrichtung,2,44.0
+10589,Max-Dohrn-Straße,P,Normalladeeinrichtung,2,44.0
+10589,Max-Dohrn-Straße,P,Normalladeeinrichtung,2,44.0
+10623,Knesebeckstr.,2,Normalladeeinrichtung,2,22.0
+10623,Fasanenstr.,88,Normalladeeinrichtung,2,22.0
+10623,Kantstr.,10,Schnellladeeinrichtung,2,50.0
+10623,Kantstr.,10,Schnellladeeinrichtung,2,50.0
+10623,Kantstr.,10,Schnellladeeinrichtung,2,50.0
+10623,Kantstr.,10,Schnellladeeinrichtung,2,50.0
+10623,Goethestraße 13,13,Normalladeeinrichtung,2,44.0
+10623,Fasanenstr.,12,Normalladeeinrichtung,2,44.0
+10623,Savignyplatz,2,Normalladeeinrichtung,2,44.0
+10623,Savignyplatz,6,Normalladeeinrichtung,2,44.0
+10623,Straße des 17. Juni,115,Normalladeeinrichtung,2,44.0
+10623,Fasanenstraße,85,Normalladeeinrichtung,1,22.0
+10623,Fasanenstraße,85,Normalladeeinrichtung,1,22.0
+10623,Fasanenstraße,85,Normalladeeinrichtung,1,22.0
+10623,Fasanenstraße,85,Normalladeeinrichtung,1,22.0
+10623,Fasanenstraße,85,Normalladeeinrichtung,1,22.0
+10623,Fasanenstraße,85,Normalladeeinrichtung,1,22.0
+10623,Fasanenstraße,85,Normalladeeinrichtung,1,22.0
+10623,Fasanenstraße,85,Normalladeeinrichtung,1,22.0
+10623,Fasanenstraße,85,Normalladeeinrichtung,1,22.0
+10623,Fasanenstraße,85,Normalladeeinrichtung,1,22.0
+10623,Fasanenstraße,85,Normalladeeinrichtung,1,22.0
+10623,Fasanenstraße,85,Normalladeeinrichtung,1,22.0
+10623,Fasanenstraße,85,Normalladeeinrichtung,1,22.0
+10623,Fasanenstraße,85,Normalladeeinrichtung,1,22.0
+10625,Schillerstr.,29,Normalladeeinrichtung,2,22.0
+10625,Schlüterstr.,62,Normalladeeinrichtung,2,22.0
+10625,Schillerstr.,10,Normalladeeinrichtung,2,22.0
+10625,Herderstr.,2,Normalladeeinrichtung,2,22.0
+10625,Goethestraße,32,Normalladeeinrichtung,2,22.0
+10625,Weimarer Straße,4,Normalladeeinrichtung,2,22.0
+10627,Suarezstr.,1,Normalladeeinrichtung,2,22.0
+10627,Pestalozzistr.,44,Normalladeeinrichtung,2,22.0
+10627,Windscheidstr.,20,Normalladeeinrichtung,2,44.0
+10629,Waitzstr.,7,Normalladeeinrichtung,2,22.0
+10629,Gervinusstr.,27,Normalladeeinrichtung,2,22.0
+10629,Dahlmannstr.,1,Normalladeeinrichtung,2,22.0
+10629,Clausewitzstr.,5,Normalladeeinrichtung,2,22.0
+10629,Leibnizstr.,59,Normalladeeinrichtung,2,22.0
+10629,Sybelstraße,6,Normalladeeinrichtung,2,22.0
+10707,Fehrbelliner Platz,8,Normalladeeinrichtung,2,22.0
+10707,Kurfürstendamm,49,Normalladeeinrichtung,2,22.0
+10707,Wittelsbacherstr.,19,Normalladeeinrichtung,2,22.0
+10707,Düsseldorfer Str.,51,Normalladeeinrichtung,2,22.0
+10707,Olivaer Platz,1,Schnellladeeinrichtung,2,50.0
+10707,Olivaer Platz,1,Normalladeeinrichtung,2,30.0
+10707,Olivaer Platz,1,Normalladeeinrichtung,2,30.0
+10707,Olivaer Platz,1,Normalladeeinrichtung,2,30.0
+10707,Schlüterstr.,46,Normalladeeinrichtung,2,44.0
+10707,Bregenzer Straße,7,Normalladeeinrichtung,2,22.0
+10709,Hektorstr.,21,Normalladeeinrichtung,2,22.0
+10709,Kurfürstendamm,90,Normalladeeinrichtung,2,22.0
+10709,Cicerostr.,13,Normalladeeinrichtung,2,22.0
+10709,Westfälische Str.,81,Normalladeeinrichtung,2,22.0
+10709,Eisenzahnstr.,36,Normalladeeinrichtung,2,22.0
+10709,Seesenerstraße,58-59,Normalladeeinrichtung,2,44.0
+10709,Seesenerstraße,58-59,Normalladeeinrichtung,2,44.0
+10709,Seesener Str.,60-61,Normalladeeinrichtung,2,22.0
+10709,Albrecht-Achilles-Straße,58,Normalladeeinrichtung,2,22.0
+10711,Bornimer Str.,4,Normalladeeinrichtung,2,22.0
+10711,Bornstedter Str.,20,Normalladeeinrichtung,2,22.0
+10711,Kurfürstendamm,129 A,Schnellladeeinrichtung,2,150.0
+10711,Kurfürstendamm,129 A,Schnellladeeinrichtung,2,150.0
+10711,Kurfürstendamm,129 A,Schnellladeeinrichtung,2,300.0
+10711,Kurfürstendamm,129 A,Schnellladeeinrichtung,2,300.0
+10713,Hohenzollerndamm,41,Schnellladeeinrichtung,2,360.0
+10713,Hohenzollerndamm,41,Schnellladeeinrichtung,2,360.0
+10713,Altonaer Str.,15,Normalladeeinrichtung,2,22.0
+10713,Sigmaringer Str.,28,Normalladeeinrichtung,2,22.0
+10713,Aachener Str.,5,Normalladeeinrichtung,2,22.0
+10713,Rudolstädter Str.,123,Normalladeeinrichtung,2,22.0
+10715,Mainzer Str.,22,Normalladeeinrichtung,2,22.0
+10715,Detmolder Str.,11,Normalladeeinrichtung,1,3.7
+10715,Durlacher Str.,11,Normalladeeinrichtung,2,22.0
+10715,Durlacher Str.,35,Normalladeeinrichtung,2,22.0
+10715,Babelsberger Str.,46,Normalladeeinrichtung,2,44.0
+10715,Bundesplatz,16,Normalladeeinrichtung,2,22.0
+10715,Babelsberger Str.,12,Normalladeeinrichtung,2,22.0
+10715,Babelsberger Str.,12,Normalladeeinrichtung,2,22.0
+10715,Wilhelmsaue,4,Normalladeeinrichtung,2,22.0
+10717,Holsteinische Str.,19,Normalladeeinrichtung,2,22.0
+10717,Bundesallee,22,Normalladeeinrichtung,2,22.0
+10717,Prinzregentenstr.,89,Normalladeeinrichtung,2,22.0
+10717,Trautenaustr.,13,Normalladeeinrichtung,2,22.0
+10717,Landhausstr.,31-32,Normalladeeinrichtung,2,44.0
+10717,Bundesallee,204-206,Normalladeeinrichtung,2,22.0
+10717,Bundesallee,200,Schnellladeeinrichtung,2,300.0
+10717,Güntzelstr.,56,Normalladeeinrichtung,2,44.0
+10719,Meinekestr.,1,Normalladeeinrichtung,2,22.0
+10719,Kurfürstendamm,26,Normalladeeinrichtung,2,22.0
+10719,Düsseldorfer Str.,17,Normalladeeinrichtung,2,22.0
+10719,Uhlandstr.,61,Normalladeeinrichtung,2,22.0
+10719,Ludwigkirchstr.,6,Normalladeeinrichtung,2,22.0
+10719,Fasanenstr.,38,Normalladeeinrichtung,2,22.0
+10719,Uhlandstr,32,Normalladeeinrichtung,1,11.0
+10719,Uhlandstr,32,Normalladeeinrichtung,1,11.0
+10719,Uhlandstr,32,Normalladeeinrichtung,1,11.0
+10719,Uhlandstr,32,Normalladeeinrichtung,1,11.0
+10719,Uhlandstr,32,Normalladeeinrichtung,1,11.0
+10719,Uhlandstr,32,Normalladeeinrichtung,1,11.0
+10719,Uhlandstr,32,Normalladeeinrichtung,1,11.0
+10719,Uhlandstr,32,Normalladeeinrichtung,1,11.0
+10719,Uhlandstr,3,Normalladeeinrichtung,1,11.0
+10719,Schaperstraße,17,Normalladeeinrichtung,2,44.0
+10777,Motzstr.,59,Normalladeeinrichtung,2,22.0
+10777,Eisenacher Str.,1,Normalladeeinrichtung,2,22.0
+10777,Nachodstr.,2,Normalladeeinrichtung,2,22.0
+10777,Fuggerstr.,34,Normalladeeinrichtung,2,22.0
+10777,Grainauer Str.,2,Normalladeeinrichtung,2,30.0
+10777,Motzstraße,43,Normalladeeinrichtung,2,44.0
+10777,Nollendorfstraße,34,Normalladeeinrichtung,2,22.0
+10777,Nollendorfstraße,34,Normalladeeinrichtung,2,22.0
+10779,Hohenstaufenstr.,31,Normalladeeinrichtung,2,22.0
+10781,Winterfeldtstr.,59,Normalladeeinrichtung,2,22.0
+10781,Elßholzstr.,4,Normalladeeinrichtung,2,22.0
+10781,Pallasstr.,2,Normalladeeinrichtung,2,22.0
+10781,Eisenacher Str.,32,Normalladeeinrichtung,2,22.0
+10781,Kyffhäuser Str.,21,Normalladeeinrichtung,1,3.7
+10781,Eisenacherstr.,102,Normalladeeinrichtung,2,22.0
+10781,Gleditschstraße,69,Normalladeeinrichtung,2,22.0
+10781,Gleditschstraße,69,Normalladeeinrichtung,2,22.0
+10783,Frobenstr.,22,Normalladeeinrichtung,2,22.0
+10783,Zietenstr.,23,Normalladeeinrichtung,2,22.0
+10783,Kirchbachstr.,1,Normalladeeinrichtung,2,22.0
+10785,Potsdamer Platz,2,Normalladeeinrichtung,2,22.0
+10785,Am Karlsbad,11,Normalladeeinrichtung,2,22.0
+10785,Karl-Heinrich-Ulrichs-Str.,25,Normalladeeinrichtung,2,11.0
+10785,Pohlstr.,31,Normalladeeinrichtung,2,22.0
+10785,Kurfürstenstr.,164,Normalladeeinrichtung,2,22.0
+10785,Ludwig-Beck-Straße,2,Normalladeeinrichtung,1,11.0
+10785,Ludwig-Beck-Straße,2,Normalladeeinrichtung,1,11.0
+10785,Ludwig-Beck-Straße,2,Normalladeeinrichtung,1,11.0
+10785,Ludwig-Beck-Straße,2,Normalladeeinrichtung,1,11.0
+10785,Ludwig-Beck-Straße,2,Normalladeeinrichtung,1,11.0
+10785,Ludwig-Beck-Straße,2,Normalladeeinrichtung,1,11.0
+10785,Ludwig-Beck-Straße,2,Normalladeeinrichtung,1,11.0
+10785,Ludwig-Beck-Straße,2,Normalladeeinrichtung,1,11.0
+10785,Ludwig-Beck-Straße,2,Normalladeeinrichtung,1,11.0
+10785,Ludwig-Beck-Straße,2,Normalladeeinrichtung,1,11.0
+10785,Ludwig-Beck-Straße,2,Normalladeeinrichtung,1,11.0
+10785,Ludwig-Beck-Straße,2,Normalladeeinrichtung,1,11.0
+10785,Ludwig-Beck-Straße,2,Normalladeeinrichtung,1,11.0
+10785,Ludwig-Beck-Straße,2,Normalladeeinrichtung,1,11.0
+10785,Ludwig-Beck-Straße,2,Normalladeeinrichtung,1,11.0
+10785,Potsdamer Strasse,90,Normalladeeinrichtung,4,11.0
+10785,Potsdamer Strasse,90,Normalladeeinrichtung,4,11.0
+10785,Potsdamer Strasse,90,Normalladeeinrichtung,1,11.0
+10785,Schöneberger Ufer,5,Normalladeeinrichtung,2,44.0
+10785,Schöneberger Ufer,5,Normalladeeinrichtung,2,44.0
+10785,Schöneberger Ufer,5,Normalladeeinrichtung,2,44.0
+10785,Schöneberger Ufer,5,Normalladeeinrichtung,2,44.0
+10785,Schöneberger Ufer,5,Normalladeeinrichtung,2,44.0
+10785,Schöneberger Ufer,5,Normalladeeinrichtung,2,44.0
+10785,Schöneberger Ufer,5,Normalladeeinrichtung,2,44.0
+10785,Schöneberger Ufer,5,Normalladeeinrichtung,2,44.0
+10785,Schöneberger Ufer,5,Normalladeeinrichtung,1,22.0
+10785,Schöneberger Ufer,5,Normalladeeinrichtung,1,22.0
+10785,Schöneberger Ufer,5,Normalladeeinrichtung,2,22.0
+10785,Pohlstr.,48,Normalladeeinrichtung,2,44.0
+10785,Lützowplatz,11,Normalladeeinrichtung,2,44.0
+10785,Bellevuestr.,3,Normalladeeinrichtung,2,44.0
+10785,Schöneberger Ufer,3,Schnellladeeinrichtung,1,250.0
+10785,Schöneberger Ufer,3,Schnellladeeinrichtung,1,250.0
+10785,Schöneberger Ufer,3,Schnellladeeinrichtung,1,250.0
+10785,Schöneberger Ufer,3,Schnellladeeinrichtung,1,250.0
+10785,Schöneberger Ufer,3,Schnellladeeinrichtung,1,250.0
+10785,Schöneberger Ufer,3,Schnellladeeinrichtung,1,250.0
+10785,Schöneberger Ufer,3,Schnellladeeinrichtung,1,250.0
+10785,Schöneberger Ufer,3,Schnellladeeinrichtung,1,250.0
+10785,Schöneberger Ufer,3,Schnellladeeinrichtung,1,250.0
+10785,Schöneberger Ufer,3,Schnellladeeinrichtung,1,250.0
+10785,Schöneberger Ufer,3,Schnellladeeinrichtung,1,250.0
+10785,Schöneberger Ufer,3,Schnellladeeinrichtung,1,250.0
+10785,Schöneberger Ufer,3,Schnellladeeinrichtung,1,250.0
+10785,Schöneberger Ufer,3,Schnellladeeinrichtung,1,250.0
+10785,Schöneberger Ufer,3,Schnellladeeinrichtung,1,250.0
+10785,Schöneberger Ufer,3,Schnellladeeinrichtung,1,250.0
+10785,Schöneberger Ufer,3,Schnellladeeinrichtung,1,250.0
+10785,Schöneberger Ufer,3,Schnellladeeinrichtung,1,250.0
+10785,Schöneberger Ufer,3,Schnellladeeinrichtung,1,250.0
+10785,Schöneberger Ufer,3,Schnellladeeinrichtung,1,250.0
+10785,Inge-Beisheim-Platz,1,Normalladeeinrichtung,3,66.0
+10785,Inge-Beisheim-Platz,1,Normalladeeinrichtung,1,11.0
+10785,Inge-Beisheim-Platz,1,Normalladeeinrichtung,1,11.0
+10785,Inge-Beisheim-Platz,1,Normalladeeinrichtung,1,11.0
+10787,Budapester Str.,11,Normalladeeinrichtung,2,22.0
+10787,Karl-Heinrich-Ulrichs-Str.,5,Normalladeeinrichtung,2,22.0
+10787,Keithstr.,8,Normalladeeinrichtung,2,22.0
+10787,Hardenbergplatz,8,Normalladeeinrichtung,2,22.0
+10787,An der Urania,12-14,Normalladeeinrichtung,2,22.0
+10787,An der Urania,12-14,Normalladeeinrichtung,2,22.0
+10787,An der Urania,12-14,Normalladeeinrichtung,2,22.0
+10787,An der Urania,12-14,Normalladeeinrichtung,2,22.0
+10787,An der Urania,12-14,Normalladeeinrichtung,2,22.0
+10787,An der Urania,12-14,Normalladeeinrichtung,2,22.0
+10787,An der Urania,12-14,Normalladeeinrichtung,2,22.0
+10787,An der Urania,12-14,Normalladeeinrichtung,2,22.0
+10787,Stülerstr.,11,Normalladeeinrichtung,2,44.0
+10787,An der Urania,12-14,Normalladeeinrichtung,2,22.0
+10787,An der Urania,12-14,Normalladeeinrichtung,2,22.0
+10787,An der Urania,12-14,Normalladeeinrichtung,2,22.0
+10787,An der Urania,12-14,Normalladeeinrichtung,2,22.0
+10787,An der Urania,12-14,Normalladeeinrichtung,2,22.0
+10787,An der Urania,12-14,Normalladeeinrichtung,2,22.0
+10787,An der Urania,12-14,Normalladeeinrichtung,2,22.0
+10787,An der Urania,12-14,Normalladeeinrichtung,2,22.0
+10789,Nürnberger Str.,25,Normalladeeinrichtung,2,22.0
+10789,Rankestr.,5,Normalladeeinrichtung,2,22.0
+10789,Rankestr.,21,Normalladeeinrichtung,2,22.0
+10789,Rankestr.,21,Normalladeeinrichtung,2,22.0
+10789,Rankestr.,21,Normalladeeinrichtung,2,22.0
+10789,Rankestr.,21,Normalladeeinrichtung,2,22.0
+10789,Rankestr.,21,Normalladeeinrichtung,2,22.0
+10789,Rankestr.,21,Normalladeeinrichtung,2,22.0
+10789,Augsburger Str.,25,Normalladeeinrichtung,2,44.0
+10789,Bayreuther Str.,36,Normalladeeinrichtung,2,44.0
+10823,Grunewaldstr.,69,Normalladeeinrichtung,2,22.0
+10823,Apostel-Paulus-Str.,5,Normalladeeinrichtung,2,22.0
+10825,Berchtesgadener Str.,13,Normalladeeinrichtung,2,22.0
+10825,Belziger Str.,19,Normalladeeinrichtung,2,22.0
+10825,Badensche Str.,8,Normalladeeinrichtung,2,22.0
+10825,Fritz-Elsas-Str.,22,Normalladeeinrichtung,2,22.0
+10825,Freiherr-vom-Stein-Straße,2,Normalladeeinrichtung,1,3.7
+10825,Grunewaldstraße,57,Normalladeeinrichtung,2,44.0
+10827,Helmstr.,10,Normalladeeinrichtung,2,22.0
+10827,Ebersstr.,87,Normalladeeinrichtung,2,22.0
+10827,Großgörschenstr.,1,Normalladeeinrichtung,2,22.0
+10827,Haupstraße,122,Schnellladeeinrichtung,2,50.0
+10827,Hauptstr.,122,Schnellladeeinrichtung,3,50.0
+10829,Ella-Barowsky-Straße,44,Normalladeeinrichtung,2,44.0
+10829,Katzlerstr.,5,Normalladeeinrichtung,2,22.0
+10829,Leberstr.,6,Normalladeeinrichtung,2,22.0
+10829,Vorarlberger Damm,39,Normalladeeinrichtung,2,22.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,EUREF-Campus,21/22,Normalladeeinrichtung,1,11.0
+10829,Hedwig-Dohm-Straße,30,Normalladeeinrichtung,2,44.0
+10829,Hedwig-Dohm-Straße,30,Normalladeeinrichtung,2,44.0
+10829,Hedwig-Dohm-Straße,30,Normalladeeinrichtung,2,44.0
+10829,Sachsendamm,47,Normalladeeinrichtung,2,42.0
+10829,Sachsendamm,47,Normalladeeinrichtung,2,42.0
+10829,Sachsendamm,47,Normalladeeinrichtung,2,42.0
+10829,Geneststr.,5,Normalladeeinrichtung,2,22.0
+10829,Geneststr.,5,Normalladeeinrichtung,2,22.0
+10829,Lotte-Laserstein-Str.,1,Schnellladeeinrichtung,3,50.0
+10829,Lotte-Laserstein-Str.,1,Normalladeeinrichtung,2,22.0
+10829,Lotte-Laserstein-Str.,1,Normalladeeinrichtung,2,22.0
+10829,Lotte-Laserstein-Str.,1,Normalladeeinrichtung,1,22.0
+10829,EUREF-Campus,23-24,Normalladeeinrichtung,2,44.0
+10829,EUREF-Campus,23-24,Normalladeeinrichtung,2,44.0
+10829,EUREF-Campus,23-24,Normalladeeinrichtung,2,44.0
+10829,EUREF-Campus,23-24,Normalladeeinrichtung,2,44.0
+10829,Wilhelm-Kabus-Str.,79,Normalladeeinrichtung,2,22.0
+10936,Köthener Straße,4,Normalladeeinrichtung,2,22.0
+10961,Nostitzstr.,47,Normalladeeinrichtung,2,30.0
+10961,Blücherstr.,19,Normalladeeinrichtung,2,22.0
+10961,Solmsstr.,16,Normalladeeinrichtung,2,22.0
+10961,Südstern,14,Normalladeeinrichtung,2,22.0
+10961,Nostitzstr.,36,Normalladeeinrichtung,2,22.0
+10961,Baerwaldstr.,44,Normalladeeinrichtung,2,22.0
+10961,Tempelherrenstr.,14,Normalladeeinrichtung,2,22.0
+10961,Mehringdamm,8,Schnellladeeinrichtung,2,150.0
+10961,Blücherstraße,22,Normalladeeinrichtung,2,22.0
+10961,Blücherstraße,22,Normalladeeinrichtung,2,22.0
+10963,Wartenburgstr.,24,Normalladeeinrichtung,2,22.0
+10963,Wilhelmstr.,138,Normalladeeinrichtung,2,22.0
+10963,Bernburger Str.,34,Normalladeeinrichtung,2,22.0
+10963,Trebbiner Straße,9,Schnellladeeinrichtung,3,150.0
+10963,Trebbiner Straße,9,Schnellladeeinrichtung,2,150.0
+10963,Dessauer Str.,14,Normalladeeinrichtung,2,44.0
+10963,Dessauer Str.,14,Normalladeeinrichtung,2,44.0
+10963,Gabriele-Tergit-Promenade,15,Normalladeeinrichtung,2,30.0
+10963,Gabriele-Tergit-Promenade,1,Normalladeeinrichtung,2,44.0
+10963,Obentrautstr.,27,Normalladeeinrichtung,2,22.0
+10963,Stresemannstr.,68-78,Normalladeeinrichtung,4,22.0
+10963,Stresemannstr.,68-78,Normalladeeinrichtung,2,22.0
+10963,Gabriele-Tergit-Promenade,19,Normalladeeinrichtung,1,22.0
+10963,Gabriele-Tergit-Promenade,19,Normalladeeinrichtung,1,22.0
+10963,Gabriele-Tergit-Promenade,19,Normalladeeinrichtung,1,22.0
+10963,Gabriele-Tergit-Promenade,19,Normalladeeinrichtung,1,22.0
+10963,Gabriele-Tergit-Promenade,19,Normalladeeinrichtung,1,22.0
+10963,Gabriele-Tergit-Promenade,19,Normalladeeinrichtung,1,22.0
+10963,Gabriele-Tergit-Promenade,19,Normalladeeinrichtung,1,22.0
+10963,Gabriele-Tergit-Promenade,19,Normalladeeinrichtung,1,22.0
+10963,Gabriele-Tergit-Promenade,19,Normalladeeinrichtung,1,22.0
+10963,Gabriele-Tergit-Promenade,19,Normalladeeinrichtung,1,22.0
+10963,Gabriele-Tergit-Promenade,19,Normalladeeinrichtung,1,22.0
+10963,Gabriele-Tergit-Promenade,19,Normalladeeinrichtung,1,22.0
+10963,Gabriele-Tergit-Promenade,19,Normalladeeinrichtung,1,22.0
+10963,Gabriele-Tergit-Promenade,19,Normalladeeinrichtung,1,22.0
+10963,Gabriele-Tergit-Promenade,19,Normalladeeinrichtung,1,22.0
+10963,Gabriele-Tergit-Promenade,19,Normalladeeinrichtung,1,22.0
+10965,Yorckstraße,24,Normalladeeinrichtung,2,44.0
+10965,Yorckstraße,24,Normalladeeinrichtung,2,44.0
+10965,Monumentenstr.,24,Normalladeeinrichtung,2,22.0
+10965,Schwiebusser Str.,46,Normalladeeinrichtung,2,22.0
+10965,Kreuzbergstr.,22,Normalladeeinrichtung,2,22.0
+10965,Dudenstr.,10,Normalladeeinrichtung,2,22.0
+10965,Schenkendorfstr.,8,Normalladeeinrichtung,2,22.0
+10965,Willibald-Alexis-Str.,43,Normalladeeinrichtung,2,22.0
+10965,Mehringdamm,85,Normalladeeinrichtung,2,30.0
+10965,Yorckstr,38-39,Schnellladeeinrichtung,2,150.0
+10965,Yorckstr,38-39,Schnellladeeinrichtung,2,300.0
+10965,Yorckstr,38-39,Schnellladeeinrichtung,2,150.0
+10965,Yorckstr,38-39,Schnellladeeinrichtung,2,300.0
+10965,Colubiadamm,111,Normalladeeinrichtung,2,22.0
+10965,Colubiadamm,111,Normalladeeinrichtung,2,22.0
+10965,Methfesselstraße,31,Normalladeeinrichtung,2,22.0
+10965,Hagelberger Straße,9,Normalladeeinrichtung,2,22.0
+10965,Willibald-Alexis-Straße,22,Normalladeeinrichtung,2,22.0
+10967,Lenaustr.,1,Normalladeeinrichtung,2,22.0
+10967,Sanderstr.,1,Normalladeeinrichtung,2,22.0
+10967,Grimmstr.,9,Normalladeeinrichtung,2,22.0
+10967,Fontanepromenade,4,Normalladeeinrichtung,2,22.0
+10967,Schönleinstr.,20,Normalladeeinrichtung,2,22.0
+10967,Dieffenbachstr.,19,Normalladeeinrichtung,2,22.0
+10967,Gaefestraße,59A,Normalladeeinrichtung,2,30.0
+10967,Dieffenbachstraße,1,Normalladeeinrichtung,2,43.0
+10967,Dieffenbachstraße,1,Normalladeeinrichtung,2,43.0
+10967,Dieffenbachstraße,1,Normalladeeinrichtung,2,22.0
+10967,Dieffenbachstraße,1,Normalladeeinrichtung,2,22.0
+10967,Boppstraße,10,Normalladeeinrichtung,2,22.0
+10967,Boppstraße,10,Normalladeeinrichtung,2,22.0
+10967,Boppstraße,10,Normalladeeinrichtung,2,22.0
+10967,Jahnstraße,15,Normalladeeinrichtung,2,22.0
+10967,Fontanepromenade,1,Normalladeeinrichtung,2,44.0
+10967,Fontanepromenade,1,Normalladeeinrichtung,2,44.0
+10967,Freiligrathstraße,9,Normalladeeinrichtung,2,22.0
+10967,Graefestr.,59 A,Normalladeeinrichtung,2,22.0
+10969,Oranienstr.,138,Schnellladeeinrichtung,2,360.0
+10969,Oranienstr.,138,Schnellladeeinrichtung,2,360.0
+10969,Markgrafenstr.,18,Normalladeeinrichtung,2,22.0
+10969,Alte Jakobstr.,121,Normalladeeinrichtung,2,22.0
+10969,Wassertorstr.,53,Normalladeeinrichtung,2,22.0
+10969,Lobeckstr.,82,Normalladeeinrichtung,2,22.0
+10969,Stallschreiberstr.,55,Normalladeeinrichtung,2,22.0
+10969,Hedemannstr.,13,Normalladeeinrichtung,2,30.0
+10969,Neuenburger Str.,16,Normalladeeinrichtung,2,44.0
+10969,Alte Jakobstraße,172,Normalladeeinrichtung,2,22.0
+10969,Segitzdamm,14,Normalladeeinrichtung,2,22.0
+10969,Alte Jakobstraße,172,Normalladeeinrichtung,2,22.0
+10969,Segitzdamm,14,Normalladeeinrichtung,2,22.0
+10969,Gitschiner Straße,64,Normalladeeinrichtung,2,44.0
+10969,Lindenstr.,113,Schnellladeeinrichtung,2,150.0
+10969,Alexandrinenstr.,2-3,Normalladeeinrichtung,2,22.0
+10969,Lobeckstraße,30-35,Normalladeeinrichtung,2,22.0
+10969,Lobeckstraße,30-35,Schnellladeeinrichtung,1,150.0
+10969,Segitzdamm,14,Normalladeeinrichtung,2,22.0
+10969,Lindenstraße,113,Normalladeeinrichtung,2,11.0
+10969,Lindenstraße,113,Normalladeeinrichtung,2,11.0
+10969,Prinzenstraße,40-42,Normalladeeinrichtung,1,22.0
+10969,Prinzenstraße,40-42,Normalladeeinrichtung,1,22.0
+10997,Skalitzer Straße,48,Schnellladeeinrichtung,2,360.0
+10997,Muskauer Str.,45,Normalladeeinrichtung,2,22.0
+10997,Wrangelstr.,35,Normalladeeinrichtung,2,22.0
+10997,Eisenbahnstr.,39,Normalladeeinrichtung,2,22.0
+10997,Schlesische Str.,26,Normalladeeinrichtung,2,22.0
+10997,Audre-Lorde-Str.,122,Normalladeeinrichtung,2,30.0
+10997,Zeughofstr.,23 A,Schnellladeeinrichtung,3,97.0
+10997,Bevernstraße,6,Normalladeeinrichtung,2,22.0
+10997,Oranienstraße,6,Normalladeeinrichtung,2,22.0
+10997,Köpenicker Straße,154a-157,Normalladeeinrichtung,2,22.0
+10997,Cuvrystraße,26,Normalladeeinrichtung,4,44.0
+10997,Bevernstraße,6,Normalladeeinrichtung,2,22.0
+10997,Wrangelstr.,53,Normalladeeinrichtung,2,22.0
+10997,Muskauer Straße,53,Normalladeeinrichtung,2,22.0
+10999,Lausitzer Str.,6,Normalladeeinrichtung,2,22.0
+10999,Glogauer Str.,20,Normalladeeinrichtung,2,22.0
+10999,Leuschnerdamm,1,Normalladeeinrichtung,2,22.0
+10999,Reichenberger Str.,20,Normalladeeinrichtung,2,22.0
+10999,Dresdener Str.,124,Normalladeeinrichtung,2,22.0
+10999,Paul-Lincke-Ufer,39,Normalladeeinrichtung,2,22.0
+10999,Erkelenzdamm,29,Normalladeeinrichtung,2,30.0
+10999,Skalitzer Str.,38,Normalladeeinrichtung,2,30.0
+10999,Reichenberger Straße,124,Normalladeeinrichtung,2,22.0
+10999,Reichenberger Straße,124,Schnellladeeinrichtung,2,150.0
+10999,Waldemarstraße,33a,Normalladeeinrichtung,2,22.0
+10999,Mariannenstraße,32,Normalladeeinrichtung,2,22.0
+10999,Ohlauer Straße,43,Normalladeeinrichtung,2,22.0
+12043,Donaustr.,89,Schnellladeeinrichtung,2,93.0
+12043,Karl-Marx-Str.,4,Normalladeeinrichtung,2,22.0
+12043,Donaustr.,96,Normalladeeinrichtung,2,44.0
+12043,Treptower Straße,97,Normalladeeinrichtung,2,44.0
+12043,Donaustraße,80,Normalladeeinrichtung,2,22.0
+12043,Anzengruberstraße,2,Normalladeeinrichtung,2,22.0
+12043,Fuldastraße,3,Normalladeeinrichtung,2,22.0
+12043,Richardstr.,16,Normalladeeinrichtung,2,22.0
+12045,Wildenbruchstr.,89,Normalladeeinrichtung,2,22.0
+12045,Jansastr.,13,Normalladeeinrichtung,2,22.0
+12045,Wildenbruchplatz,1,Normalladeeinrichtung,2,44.0
+12045,Innstraße,38,Normalladeeinrichtung,2,22.0
+12045,Innstraße,38,Normalladeeinrichtung,2,22.0
+12045,Innstraße,38,Normalladeeinrichtung,2,22.0
+12045,Fuldastr.,41,Normalladeeinrichtung,2,22.0
+12047,Spremberger Str.,7,Normalladeeinrichtung,2,22.0
+12047,Friedelstr.,5,Normalladeeinrichtung,2,22.0
+12047,Maybachufer,32-33,Schnellladeeinrichtung,3,92.0
+12047,Hobrechtstraße,55,Normalladeeinrichtung,3,33.0
+12047,Bürknerstr.,6,Normalladeeinrichtung,2,22.0
+12047,Lenaustraße,19,Normalladeeinrichtung,2,22.0
+12047,Pflügerstraße,24,Normalladeeinrichtung,2,22.0
+12047,Hobrechtstraße,67,Normalladeeinrichtung,2,22.0
+12049,Lichtenrader Str.,50,Normalladeeinrichtung,2,22.0
+12049,Hermannstr.,1,Normalladeeinrichtung,2,44.0
+12049,Schillerpromenade,29,Normalladeeinrichtung,2,22.0
+12051,Glasower Str.,68,Normalladeeinrichtung,2,22.0
+12051,Bambachstr.,3,Normalladeeinrichtung,2,22.0
+12051,Emser Str.,39,Normalladeeinrichtung,2,22.0
+12051,Juliusstr.,36,Normalladeeinrichtung,2,22.0
+12051,Kirchhoffstr.,17,Normalladeeinrichtung,2,22.0
+12053,Werbellinstr.,8,Normalladeeinrichtung,2,22.0
+12053,Leykestr.,18,Normalladeeinrichtung,2,22.0
+12053,Reuterstr.,82,Normalladeeinrichtung,2,22.0
+12053,Rollbergstr.,72,Normalladeeinrichtung,2,22.0
+12053,Ilsestr.,7,Normalladeeinrichtung,2,22.0
+12053,Isarstr.,4,Normalladeeinrichtung,2,22.0
+12053,Neckarstraße,3,Normalladeeinrichtung,2,44.0
+12053,Kienitzer Straße,9,Normalladeeinrichtung,2,22.0
+12053,Rollbergstr.,10-18,Normalladeeinrichtung,4,44.0
+12053,Boddinstr.,31,Normalladeeinrichtung,2,22.0
+12053,Werbellinstr.,79,Normalladeeinrichtung,2,44.0
+12053,Mainzer Straße,36,Normalladeeinrichtung,2,22.0
+12055,Braunschweiger Str.,1,Normalladeeinrichtung,2,22.0
+12055,Braunschweiger Straße,61,Normalladeeinrichtung,2,22.0
+12055,Schudomastraße,39,Normalladeeinrichtung,4,22.0
+12055,Schudomastraße,39,Normalladeeinrichtung,4,44.0
+12055,Saalestr.,11,Normalladeeinrichtung,2,44.0
+12055,Schöneweider Str.,24,Normalladeeinrichtung,2,22.0
+12055,Schudomastraße,3,Normalladeeinrichtung,2,22.0
+12057,Planetenstr.,47,Normalladeeinrichtung,2,22.0
+12057,Grenzallee,8,Schnellladeeinrichtung,2,150.0
+12057,Grenzallee,6,Schnellladeeinrichtung,2,300.0
+12057,Grenzallee,6,Schnellladeeinrichtung,2,300.0
+12057,Nobelstr.,20,Normalladeeinrichtung,1,22.0
+12057,Nobelstr.,20,Normalladeeinrichtung,1,22.0
+12057,Nobelstr.,20,Normalladeeinrichtung,1,22.0
+12057,Nobelstr.,66,Normalladeeinrichtung,1,22.0
+12057,Nobelstrasse,66,Normalladeeinrichtung,1,22.0
+12057,Nobelstrasse,66,Normalladeeinrichtung,1,22.0
+12057,Nobelstrasse,66,Normalladeeinrichtung,1,22.0
+12057,Nobelstrasse,66,Normalladeeinrichtung,1,22.0
+12057,Nobelstrasse,66,Normalladeeinrichtung,1,22.0
+12057,Nobelstrasse,66,Normalladeeinrichtung,1,22.0
+12057,Nobelstrasse,66,Normalladeeinrichtung,1,22.0
+12057,Nobelstrasse,66,Normalladeeinrichtung,1,22.0
+12059,Roseggerstr.,14,Normalladeeinrichtung,2,22.0
+12059,Elsenstr.,74,Normalladeeinrichtung,2,22.0
+12059,Treptower Str.,51,Normalladeeinrichtung,1,3.7
+12059,Harzer Str.,14,Normalladeeinrichtung,2,44.0
+12059,Sonnenallee,192,Schnellladeeinrichtung,3,50.0
+12059,Sonnenallee,224,Normalladeeinrichtung,2,44.0
+12059,Roseggerstraße,35,Normalladeeinrichtung,2,22.0
+12099,Felixstr.,12,Normalladeeinrichtung,2,22.0
+12099,Colditzstr.,30,Normalladeeinrichtung,2,22.0
+12099,Lorenzweg,2,Normalladeeinrichtung,2,22.0
+12099,Oberlandstr.,17,Schnellladeeinrichtung,3,50.0
+12099,Tempelhofer Damm,130,Schnellladeeinrichtung,3,50.0
+12099,Wenckebachstr.,23,Normalladeeinrichtung,4,88.0
+12099,Colditzstr.,31,Normalladeeinrichtung,2,22.0
+12099,Tempelhofer Weg,5,Normalladeeinrichtung,2,33.0
+12099,Mariendorfer Damm,1,Normalladeeinrichtung,1,6.0
+12101,Tempelhofer Damm,76,Normalladeeinrichtung,2,22.0
+12101,Manfred von Richthofen Str.,144,Normalladeeinrichtung,2,22.0
+12101,Boelckestr.,98,Normalladeeinrichtung,2,22.0
+12101,Tempelhofer Damm,28/30,Schnellladeeinrichtung,2,150.0
+12101,Columbiadamm,22,Normalladeeinrichtung,2,22.0
+12101,Tempelhofer Damm,45,Normalladeeinrichtung,2,22.0
+12101,Columbiadamm,22,Normalladeeinrichtung,2,22.0
+12101,Tempelhofer Damm,2,Normalladeeinrichtung,2,44.0
+12101,Loewenhardtdamm,56,Normalladeeinrichtung,1,11.0
+12103,Manteuffelstr.,6-7,Schnellladeeinrichtung,2,360.0
+12103,Manteuffelstr.,6-7,Schnellladeeinrichtung,2,360.0
+12103,Ringbahnstr.,131,Normalladeeinrichtung,2,22.0
+12103,Friedrich-Karl-Str.,5,Normalladeeinrichtung,2,22.0
+12103,Burchardstr.,30,Normalladeeinrichtung,2,22.0
+12103,Friedrich-Karl-Str.,36,Normalladeeinrichtung,2,22.0
+12103,Blumenthalstr.,2,Normalladeeinrichtung,2,22.0
+12103,Alboinstr.,4,Schnellladeeinrichtung,2,144.0
+12103,Bessemerstraße,28 - 36,Normalladeeinrichtung,2,44.0
+12103,Bessemerstraße,28 - 36,Normalladeeinrichtung,2,44.0
+12103,Manteuffelstr.,24-25,Schnellladeeinrichtung,3,50.0
+12103,Schöneberger Str.,19-20,Schnellladeeinrichtung,2,300.0
+12103,Schöneberger Str.,19-20,Schnellladeeinrichtung,2,300.0
+12103,Schöneberger Str.,7,Schnellladeeinrichtung,2,93.0
+12103,Bessemerstraße,57-75,Schnellladeeinrichtung,2,72.0
+12103,Bessemerstr.,16-22,Normalladeeinrichtung,2,44.0
+12103,Bessemerstr.,16-22,Normalladeeinrichtung,2,44.0
+12103,Bessemerstr.,16-22,Normalladeeinrichtung,2,44.0
+12103,Bessemerstr.,16-22,Normalladeeinrichtung,2,44.0
+12105,Kurfürstenstr.,67,Normalladeeinrichtung,2,22.0
+12105,Prinzenstr.,14,Normalladeeinrichtung,2,22.0
+12105,Rathausstraße,31,Normalladeeinrichtung,1,22.0
+12105,Rathausstraße,31,Normalladeeinrichtung,1,22.0
+12105,Rathausstraße,31,Normalladeeinrichtung,1,22.0
+12105,Rathausstraße,31,Normalladeeinrichtung,1,22.0
+12105,Rathausstraße,31,Normalladeeinrichtung,1,22.0
+12105,Rathausstraße,31,Normalladeeinrichtung,1,22.0
+12105,Rathausstraße,31,Normalladeeinrichtung,1,22.0
+12105,Ringstr.,54,Normalladeeinrichtung,1,11.0
+12105,Ringstr.,54,Normalladeeinrichtung,1,11.0
+12105,Ringstr.,54,Normalladeeinrichtung,1,11.0
+12105,Ringstr.,54,Normalladeeinrichtung,1,11.0
+12107,Mariendorfer Damm,170-172,Schnellladeeinrichtung,2,360.0
+12107,Forddamm,37,Normalladeeinrichtung,2,22.0
+12107,Großbeerenstr.,2,Schnellladeeinrichtung,3,50.0
+12107,Alt-Mariendorf,37,Normalladeeinrichtung,2,44.0
+12107,Großbeerenstraße,133,Schnellladeeinrichtung,2,93.0
+12107,Großbeerenstraße,133,Schnellladeeinrichtung,2,93.0
+12107,Mariendorfer Damm,153,Schnellladeeinrichtung,2,150.0
+12109,Andlauer Weg,28,Normalladeeinrichtung,2,22.0
+12109,Ullsteinstr.,141,Normalladeeinrichtung,2,22.0
+12109,Imbrosweg,22,Normalladeeinrichtung,2,22.0
+12109,Rixdorfer Straße,67-69,Schnellladeeinrichtung,2,72.0
+12109,Rixdorfer Straße,67-69,Schnellladeeinrichtung,2,72.0
+12109,Rixdorfer Str.,64,Normalladeeinrichtung,2,22.0
+12109,Ullsteinstraße,73,Normalladeeinrichtung,2,22.0
+12109,Ullsteinstraße,73,Schnellladeeinrichtung,1,150.0
+12109,Britzer Str.,2-20,Schnellladeeinrichtung,2,72.0
+12109,Britzer Str.,2-20,Schnellladeeinrichtung,2,72.0
+12109,Mariendorfer Damm,11-13,Schnellladeeinrichtung,2,150.0
+12109,Westphalweg,43,Normalladeeinrichtung,2,44.0
+12109,Rixdorfer Str.,66,Normalladeeinrichtung,2,22.0
+12137,Am Feuchten Winkel,11,Schnellladeeinrichtung,1,175.0
+12137,Am Feuchten Winkel,11,Schnellladeeinrichtung,1,175.0
+12154,Grunewaldstr.,1-3,Normalladeeinrichtung,2,11.0
+12157,Peter-Vischer-Str.,37,Normalladeeinrichtung,2,22.0
+12157,Sachsenwaldstr.,7,Normalladeeinrichtung,2,22.0
+12157,Rubensstr.,125,Normalladeeinrichtung,6,120.0
+12157,Kniephofstr.,25,Normalladeeinrichtung,2,22.0
+12157,Vorarlberger Damm,24/26,Schnellladeeinrichtung,3,71.0
+12157,Kniephofstraße,58,Normalladeeinrichtung,2,22.0
+12159,Hedwigstr.,1,Normalladeeinrichtung,2,22.0
+12159,Schmargendorfer Str.,6,Normalladeeinrichtung,1,3.7
+12159,Stierstr.,6,Normalladeeinrichtung,2,22.0
+12159,Rubensstr.,13,Normalladeeinrichtung,1,3.7
+12159,Hauptstr.,91,Schnellladeeinrichtung,2,150.0
+12159,Bahnhofstraße,4,Normalladeeinrichtung,2,44.0
+12159,Lauterstr.,12,Normalladeeinrichtung,2,22.0
+12159,Rheinstr.,46,Normalladeeinrichtung,2,22.0
+12161,Taunusstr.,1,Normalladeeinrichtung,1,3.7
+12161,Fröaufstr.,2,Normalladeeinrichtung,1,3.7
+12161,Wiesbadener Str.,14a,Normalladeeinrichtung,1,3.7
+12161,Wiesbadener Str.,84,Normalladeeinrichtung,2,22.0
+12161,Odenwaldstr.,8,Normalladeeinrichtung,2,22.0
+12161,Friedrich-Wilhelm-Platz,7,Normalladeeinrichtung,2,44.0
+12161,Südwestkorso,10,Normalladeeinrichtung,2,44.0
+12161,Bundesallee,87,Normalladeeinrichtung,2,22.0
+12161,Holsteinische Straße,28,Normalladeeinrichtung,2,22.0
+12163,Lepsiusstr.,14,Normalladeeinrichtung,2,22.0
+12163,Schöneberger Str.,4,Normalladeeinrichtung,2,22.0
+12163,Markelstr.,62,Normalladeeinrichtung,2,22.0
+12163,Paulsenstr.,1,Normalladeeinrichtung,2,22.0
+12163,Hubertusstr.,14,Normalladeeinrichtung,2,30.0
+12163,Ahornstr.,32,Normalladeeinrichtung,2,30.0
+12163,Zimmermannstraße,11,Normalladeeinrichtung,1,3.7
+12163,Deitmerstraße,6-7,Normalladeeinrichtung,1,3.7
+12163,Deitmerstraße,10,Normalladeeinrichtung,1,3.7
+12163,Deitmerstraße,3-4,Normalladeeinrichtung,1,3.7
+12163,Herrfurthstraße,11,Normalladeeinrichtung,1,3.7
+12163,Herrfurthstraße,5,Normalladeeinrichtung,1,3.7
+12163,Herrfurthstraße,2,Normalladeeinrichtung,1,3.7
+12163,Paulsenstr.,41,Normalladeeinrichtung,2,22.0
+12163,Schildhornstraße,47,Normalladeeinrichtung,2,44.0
+12163,Bornstrasse,6,Normalladeeinrichtung,1,11.0
+12163,Bornstrasse,6,Normalladeeinrichtung,1,11.0
+12163,Bornstrasse,6,Normalladeeinrichtung,1,11.0
+12163,Bornstrasse,6,Normalladeeinrichtung,1,11.0
+12163,Bornstrasse,6,Normalladeeinrichtung,1,11.0
+12163,Bornstrasse,6,Normalladeeinrichtung,1,11.0
+12163,Bornstrasse,6,Normalladeeinrichtung,1,11.0
+12163,Bornstrasse,6,Normalladeeinrichtung,1,11.0
+12163,Bornstrasse,6,Normalladeeinrichtung,1,11.0
+12163,Bornstrasse,6,Normalladeeinrichtung,1,11.0
+12163,Bornstrasse,6,Normalladeeinrichtung,1,11.0
+12163,Bornstrasse,6,Normalladeeinrichtung,1,11.0
+12163,Paulsenstraße,5,Normalladeeinrichtung,2,22.0
+12163,Brentanostraße,19,Normalladeeinrichtung,2,22.0
+12163,Ahornstraße,10,Normalladeeinrichtung,2,22.0
+12163,Grunewaldstraße,3,Normalladeeinrichtung,1,11.0
+12163,Grunewaldstraße,3,Normalladeeinrichtung,1,11.0
+12165,Wrangelstr.,2,Normalladeeinrichtung,2,22.0
+12165,Hindenburgdamm,65 c/d,Normalladeeinrichtung,2,22.0
+12165,Schützenstraße,2,Normalladeeinrichtung,1,3.7
+12165,Schützenstraße,0,Normalladeeinrichtung,1,3.7
+12165,Schützenstraße,0,Normalladeeinrichtung,1,3.7
+12165,Schützenstraße,0,Normalladeeinrichtung,1,3.7
+12165,Fronhoferstraße,2A,Normalladeeinrichtung,2,22.0
+12165,Leydenallee,99,Normalladeeinrichtung,2,22.0
+12167,Birkbuschstr.,88,Normalladeeinrichtung,2,22.0
+12167,Beymestr,2,Normalladeeinrichtung,1,3.7
+12167,Beymestr,9,Normalladeeinrichtung,1,3.7
+12167,Beymestr,10,Normalladeeinrichtung,1,3.7
+12167,Beymestr,10,Normalladeeinrichtung,1,3.7
+12167,Beymestr,4,Normalladeeinrichtung,1,3.7
+12167,Liebenowzeile,16,Normalladeeinrichtung,1,3.7
+12167,Liebenowzeile,16C,Normalladeeinrichtung,1,3.7
+12167,Liebenowzeile,15,Normalladeeinrichtung,1,3.7
+12167,Liebenowzeile,23,Normalladeeinrichtung,1,3.7
+12167,Liebenowzeile,0,Normalladeeinrichtung,1,3.7
+12167,Liebenowzeile,27,Normalladeeinrichtung,1,3.7
+12167,Breite Str.,39,Normalladeeinrichtung,2,22.0
+12167,Stephanstr.,1,Normalladeeinrichtung,2,22.0
+12167,Leydenallee,79,Normalladeeinrichtung,2,22.0
+12167,Karl-Stieler-Straße,20,Normalladeeinrichtung,2,22.0
+12167,Martinstraße,3,Normalladeeinrichtung,2,22.0
+12169,Bismarckstr.,36,Normalladeeinrichtung,2,22.0
+12169,Munsterdamm,51,Normalladeeinrichtung,2,22.0
+12169,Hanstedter Weg,4,Normalladeeinrichtung,1,3.7
+12169,Hanstedter Weg,0,Normalladeeinrichtung,1,3.7
+12169,Bergstr.,31-32,Schnellladeeinrichtung,2,150.0
+12169,Bismarckstr.,20,Schnellladeeinrichtung,2,150.0
+12169,Steglitzer Damm,95,Normalladeeinrichtung,2,44.0
+12169,Bergstr.,86,Schnellladeeinrichtung,3,75.0
+12169,Körnerstraße,4,Normalladeeinrichtung,2,22.0
+12169,Bergstraße,2,Normalladeeinrichtung,2,22.0
+12203,Unter den Eichen,102,Normalladeeinrichtung,2,22.0
+12203,Sophienstr.,1,Normalladeeinrichtung,2,22.0
+12203,Manteuffelstr.,21,Normalladeeinrichtung,2,22.0
+12203,Hindenburgdamm,29,Normalladeeinrichtung,2,22.0
+12203,Karwendelstr.,10,Normalladeeinrichtung,2,22.0
+12203,Moltkestraße,22,Normalladeeinrichtung,1,3.7
+12203,Moltkestraße,21,Normalladeeinrichtung,1,3.7
+12203,Moltkestraße,20,Normalladeeinrichtung,1,3.7
+12203,Moltkestraße,18,Normalladeeinrichtung,1,3.7
+12203,Moltkestraße,16A,Normalladeeinrichtung,1,3.7
+12203,Augustaplatz,4C,Normalladeeinrichtung,1,3.7
+12203,Augustaplatz,5,Normalladeeinrichtung,1,3.7
+12203,Augustaplatz,6,Normalladeeinrichtung,1,3.7
+12203,Klingsorplatz,1,Normalladeeinrichtung,1,3.7
+12203,Klingsorplatz,2,Normalladeeinrichtung,1,3.7
+12203,Karwendelstraße,25,Normalladeeinrichtung,1,3.7
+12203,Karwendelstraße,27,Normalladeeinrichtung,1,3.7
+12203,Karwendelstraße,43,Normalladeeinrichtung,1,3.7
+12203,Karwendelstraße,19,Normalladeeinrichtung,1,3.7
+12203,Klingsorplatz,4,Normalladeeinrichtung,1,3.7
+12203,Ringstraße,19-19c,Normalladeeinrichtung,1,3.7
+12203,Ringstraße,21,Normalladeeinrichtung,1,3.7
+12203,Ringstraße,16,Normalladeeinrichtung,1,3.7
+12203,Ringstraße,20a,Normalladeeinrichtung,1,3.7
+12203,Ringstraße,14,Normalladeeinrichtung,1,3.7
+12203,Tietzenweg,130,Normalladeeinrichtung,1,3.7
+12203,Tietzenweg,122,Normalladeeinrichtung,1,3.7
+12203,Tietzenweg,92,Normalladeeinrichtung,1,3.7
+12203,Tietzenweg,126,Normalladeeinrichtung,1,3.7
+12203,Tulpenstr.,5,Normalladeeinrichtung,2,22.0
+12203,Hyazinthenstraße,2,Normalladeeinrichtung,2,22.0
+12203,Marschnerstraße,7,Normalladeeinrichtung,2,22.0
+12203,Brahmstraße,22,Normalladeeinrichtung,1,22.0
+12203,Brahmstraße,22,Normalladeeinrichtung,1,22.0
+12203,Brahmstraße,22,Normalladeeinrichtung,1,22.0
+12203,Brahmstraße,22,Normalladeeinrichtung,1,22.0
+12203,Tulpenstr.,31,Normalladeeinrichtung,2,22.0
+12203,Hindenburgdamm,68,Normalladeeinrichtung,2,44.0
+12203,Hindenburgdamm,30,Normalladeeinrichtung,1,22.0
+12203,Hindenburgdamm,30,Normalladeeinrichtung,1,22.0
+12203,Hindenburgdamm,30,Normalladeeinrichtung,1,22.0
+12205,Unter den Eichen,67,Schnellladeeinrichtung,2,300.0
+12205,Curtiusstr.,6,Normalladeeinrichtung,2,22.0
+12205,Ringstr.,37,Normalladeeinrichtung,2,22.0
+12205,Altdorfer Straße,10B,Normalladeeinrichtung,1,3.7
+12205,Altdorfer Straße,14,Normalladeeinrichtung,1,3.7
+12205,Altdorfer Straße,8,Normalladeeinrichtung,1,3.7
+12205,Baseler Straße,134,Normalladeeinrichtung,1,3.7
+12205,Baseler Straße,86,Normalladeeinrichtung,1,3.7
+12205,Baseler Straße,90,Normalladeeinrichtung,1,3.7
+12205,Weißwasserweg,22,Normalladeeinrichtung,1,3.7
+12205,Weißwasserweg,24,Normalladeeinrichtung,1,3.7
+12205,Theklastraße,12,Normalladeeinrichtung,1,3.7
+12205,Theklastraße,6,Normalladeeinrichtung,1,3.7
+12205,Theklastraße,5,Normalladeeinrichtung,1,3.7
+12205,Theklastraße,11,Normalladeeinrichtung,1,3.7
+12205,Kadettenweg,63,Normalladeeinrichtung,1,3.7
+12205,Kadettenweg,84,Normalladeeinrichtung,1,3.7
+12205,Kadettenweg,80,Normalladeeinrichtung,1,3.7
+12205,Kadettenweg,66,Normalladeeinrichtung,1,3.7
+12205,Baseler Straße,0,Normalladeeinrichtung,1,3.7
+12205,Baseler Straße,0,Normalladeeinrichtung,1,3.7
+12205,Baseler Straße,148,Normalladeeinrichtung,1,3.7
+12205,Carstennstraße,0,Normalladeeinrichtung,1,3.7
+12205,Kadettenweg,78,Normalladeeinrichtung,1,3.7
+12205,Jägerndorfer Zeile,58,Normalladeeinrichtung,1,3.7
+12205,Lausanner Str.,32,Normalladeeinrichtung,2,22.0
+12205,Theklastr.,17 -30,Normalladeeinrichtung,2,22.0
+12205,Curtiusstr.,36-38,Schnellladeeinrichtung,3,50.0
+12205,Theklastr.,17-30,Normalladeeinrichtung,2,22.0
+12207,Königsberger Str.,8,Schnellladeeinrichtung,1,175.0
+12207,Königsberger Str.,8,Schnellladeeinrichtung,1,175.0
+12207,Giesensdorfer Str.,12,Normalladeeinrichtung,2,22.0
+12207,Promenadenstr.,15c,Normalladeeinrichtung,1,3.7
+12207,Morgensternstr.,7,Normalladeeinrichtung,1,3.7
+12207,Ahlener Weg,10,Normalladeeinrichtung,1,3.7
+12207,Jungfernstieg,4c,Normalladeeinrichtung,1,3.7
+12207,Osdorferstr.,125a,Schnellladeeinrichtung,2,150.0
+12207,Celsiusstraße,70,Normalladeeinrichtung,1,3.7
+12207,Celsiusstraße,1,Normalladeeinrichtung,1,3.7
+12207,Celsiusstraße,39,Normalladeeinrichtung,1,3.7
+12207,Celsiusstraße,43,Normalladeeinrichtung,1,3.7
+12207,Celsiusstraße,9,Normalladeeinrichtung,1,3.7
+12207,Lippstädter Straße,0,Normalladeeinrichtung,1,3.7
+12207,Lippstädter Str.,0,Normalladeeinrichtung,1,3.7
+12207,Lippstädter Str.,5,Normalladeeinrichtung,1,3.7
+12207,Lippstädter Str.,0,Normalladeeinrichtung,1,3.7
+12207,Ostpreussendamm,62,Schnellladeeinrichtung,2,150.0
+12207,Ostpreußendamm,60,Schnellladeeinrichtung,2,72.0
+12207,Heinrichstraße,3-4,Normalladeeinrichtung,1,11.0
+12207,Heinrichstraße,3-4,Normalladeeinrichtung,1,11.0
+12207,Heinrichstraße,3-4,Normalladeeinrichtung,1,11.0
+12207,Heinrichstraße,3-4,Normalladeeinrichtung,1,11.0
+12207,Heinrichstraße,3-4,Normalladeeinrichtung,1,11.0
+12207,Heinrichstraße,3-4,Normalladeeinrichtung,1,11.0
+12207,Heinrichstraße,3-4,Normalladeeinrichtung,1,11.0
+12209,Scheelestr.,81,Normalladeeinrichtung,2,30.0
+12209,Geraer Straße,40,Normalladeeinrichtung,1,3.7
+12209,Geraer Straße,38,Normalladeeinrichtung,1,3.7
+12209,Geraer Straße,33,Normalladeeinrichtung,1,3.7
+12209,Geraer Straße,31,Normalladeeinrichtung,1,3.7
+12209,Parallelstraße,8a,Normalladeeinrichtung,1,3.7
+12209,Parallelstraße,7,Normalladeeinrichtung,1,3.7
+12209,Parallelstraße,6,Normalladeeinrichtung,1,3.7
+12209,Parallelstraße,0,Normalladeeinrichtung,1,3.7
+12209,Parallelstraße,0,Normalladeeinrichtung,1,3.7
+12209,Scheelestraße,77,Normalladeeinrichtung,1,3.7
+12209,Scheelestraße,73,Normalladeeinrichtung,1,3.7
+12209,Lankwitzer Str.,8,Normalladeeinrichtung,2,22.0
+12209,Jenbacher Weg ,64,Normalladeeinrichtung,1,11.0
+12247,Charlottenstr.,37,Normalladeeinrichtung,1,3.7
+12247,Bernkastler Str.,2,Normalladeeinrichtung,1,3.7
+12247,Siemensstr.,37,Normalladeeinrichtung,2,22.0
+12247,Alt-Lankwitz,0,Normalladeeinrichtung,1,3.7
+12247,Alt-Lankwitz,84,Normalladeeinrichtung,1,3.7
+12247,Alt-Lankwitz,88,Normalladeeinrichtung,1,3.7
+12247,Alt-Lankwitz,94,Normalladeeinrichtung,1,3.7
+12247,Alt-Lankwitz,98,Normalladeeinrichtung,1,3.7
+12247,Alt-Lankwitz,100,Normalladeeinrichtung,1,3.7
+12247,Alt-Lankwitz,102,Normalladeeinrichtung,1,3.7
+12247,Alt-Lankwitz,102,Normalladeeinrichtung,1,3.7
+12247,Dillgesstraße,8,Normalladeeinrichtung,1,3.7
+12247,Dillgesstraße,10,Normalladeeinrichtung,1,3.7
+12247,Dillgesstraße,12,Normalladeeinrichtung,1,3.7
+12247,Alsheimer Straße,2,Normalladeeinrichtung,1,3.7
+12247,Alsheimer Straße,5,Normalladeeinrichtung,1,3.7
+12247,Alsheimer Str.,3,Normalladeeinrichtung,1,3.7
+12247,Dillgesstraße,8,Normalladeeinrichtung,1,3.7
+12247,Siemensstraße,21-23,Schnellladeeinrichtung,2,72.0
+12247,Siemensstraße,21-23,Schnellladeeinrichtung,2,72.0
+12247,Siemensstraße,21-23,Schnellladeeinrichtung,2,72.0
+12247,Kaiser-Wilhelm-Str.,127,Schnellladeeinrichtung,3,72.0
+12247,Corneliusstr.,35,Normalladeeinrichtung,2,30.0
+12249,Friedrichrodaer Str.,66,Normalladeeinrichtung,2,22.0
+12249,Zietenstr.,28,Normalladeeinrichtung,2,22.0
+12249,Haynauer Str.,20,Normalladeeinrichtung,1,3.7
+12249,Orlamünder Weg,47,Normalladeeinrichtung,1,3.7
+12249,Orlamünder Weg,45,Normalladeeinrichtung,1,3.7
+12249,Orlamünder Weg,47,Normalladeeinrichtung,1,3.7
+12249,Wichurastraße,40,Normalladeeinrichtung,1,3.7
+12249,Wichurastraße,40,Normalladeeinrichtung,1,3.7
+12249,Wichurastraße,53,Normalladeeinrichtung,1,3.7
+12249,Wichurastraße,59,Normalladeeinrichtung,1,3.7
+12249,Wichurastraße,61,Normalladeeinrichtung,1,3.7
+12249,Eiswaldstraße,9-11,Normalladeeinrichtung,1,3.7
+12249,Eiswaldstraße,9-11,Normalladeeinrichtung,1,3.7
+12249,Eiswaldstraße,15,Normalladeeinrichtung,1,3.7
+12249,Eiswaldstraße,15,Normalladeeinrichtung,1,3.7
+12249,Eiswaldstraße,21 A-D,Normalladeeinrichtung,1,3.7
+12249,Eiswaldstraße,21 A-D,Normalladeeinrichtung,1,3.7
+12277,Nahmitzer Damm,0,Schnellladeeinrichtung,2,150.0
+12277,Nahmitzer Damm,26,Schnellladeeinrichtung,2,150.0
+12277,Nahmitzer Damm,26,Schnellladeeinrichtung,2,300.0
+12277,Daimlerstraße,165,Normalladeeinrichtung,2,44.0
+12277,Daimlerstraße,165,Normalladeeinrichtung,2,44.0
+12277,Daimlerstraße,165,Normalladeeinrichtung,2,44.0
+12277,Daimlerstraße,165,Normalladeeinrichtung,2,44.0
+12277,Daimlerstraße,165,Normalladeeinrichtung,2,44.0
+12277,Daimlerstraße,165,Normalladeeinrichtung,2,44.0
+12277,Daimlerstraße,165,Normalladeeinrichtung,2,44.0
+12277,Daimlerstraße,165,Normalladeeinrichtung,2,44.0
+12277,Wilhelm-von-Siemens-Str.,23,Normalladeeinrichtung,2,22.0
+12277,Wilhelm-von-Siemens-Str.,23,Schnellladeeinrichtung,1,150.0
+12277,Buckower Chaussee,100-102,Schnellladeeinrichtung,3,75.0
+12277,Säntisstr.,49,Schnellladeeinrichtung,3,71.0
+12277,Säntisstraße,51/57,Normalladeeinrichtung,2,33.0
+12277,Säntisstraße,51/57,Normalladeeinrichtung,1,11.0
+12277,Säntisstraße,51/57,Normalladeeinrichtung,1,11.0
+12277,Säntisstraße,51/57,Normalladeeinrichtung,1,11.0
+12279,Lichterfelder Ring,90,Normalladeeinrichtung,1,3.7
+12279,Tirschenreuther Ring,8,Normalladeeinrichtung,2,22.0
+12305,Bahnhofstraße,1,Schnellladeeinrichtung,2,360.0
+12305,Bahnhofstraße,1,Schnellladeeinrichtung,2,360.0
+12305,Bahnhofstr.,1,Schnellladeeinrichtung,2,300.0
+12307,Wünsdorfer Str.,105,Normalladeeinrichtung,1,3.7
+12307,Nuthestr.,69,Normalladeeinrichtung,2,22.0
+12309,Bornhagenweg,9,Normalladeeinrichtung,1,11.0
+12347,Friedrichsbrunner Str.,19,Normalladeeinrichtung,2,22.0
+12347,Franz-Körner-Str.,66,Normalladeeinrichtung,2,22.0
+12347,Tempelhofer Weg,50,Normalladeeinrichtung,2,22.0
+12347,Buschrosensteig,7,Normalladeeinrichtung,2,30.0
+12347,Mohriner Allee,21B,Normalladeeinrichtung,2,22.0
+12347,Heidekampweg,13,Normalladeeinrichtung,2,22.0
+12347,Tempelhofer Weg,11,Schnellladeeinrichtung,2,150.0
+12347,Tempelhofer Weg,11,Schnellladeeinrichtung,2,150.0
+12347,Tempelhofer Weg,11,Schnellladeeinrichtung,2,300.0
+12347,Mohriner Allee,21B,Normalladeeinrichtung,2,22.0
+12347,Gradestraße,100,Schnellladeeinrichtung,2,300.0
+12347,Gradestraße,100,Schnellladeeinrichtung,2,150.0
+12347,Gradestraße,100,Normalladeeinrichtung,2,22.0
+12349,Marienfelder Chaussee,6,Schnellladeeinrichtung,2,150.0
+12349,Buckower Damm,100,Normalladeeinrichtung,2,44.0
+12349,Asbestweg,5,Normalladeeinrichtung,1,3.7
+12349,Buckower Damm,11,Schnellladeeinrichtung,2,156.0
+12349,Buckower Damm,194,Schnellladeeinrichtung,3,75.0
+12351,Rudower Straße,102-104,Schnellladeeinrichtung,1,175.0
+12351,Rudower Straße,102-104,Schnellladeeinrichtung,1,175.0
+12351,Johannisthaler Chaussee,335,Normalladeeinrichtung,2,22.0
+12351,Johannisthaler Chaussee,254,Normalladeeinrichtung,2,22.0
+12351,Rudower Straße,100,Schnellladeeinrichtung,2,160.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Parkhaus Juchaczweg,0,Normalladeeinrichtung,1,22.0
+12351,Rudower Str.,120,Schnellladeeinrichtung,2,93.0
+12351,Johannisthaler Chaussee,300,Normalladeeinrichtung,2,44.0
+12353,Theodor-Loos-Weg,47,Normalladeeinrichtung,1,3.7
+12353,Zwickauer Damm,12,Normalladeeinrichtung,1,3.7
+12353,Löwensteinring,9,Normalladeeinrichtung,2,22.0
+12353,Theodor-Loos-Weg,41,Normalladeeinrichtung,2,22.0
+12355,Jeanette-Wolff-Str.,17,Normalladeeinrichtung,2,22.0
+12355,Helene-Weber-Str.,21,Normalladeeinrichtung,2,22.0
+12355,Alt-Rudow,74,Normalladeeinrichtung,2,44.0
+12355,Gockelweg,23,Normalladeeinrichtung,1,22.0
+12355,Matthäusweg ,7,Normalladeeinrichtung,1,11.0
+12355,Schönefelder Str.,5,Normalladeeinrichtung,2,33.0
+12357,Mistelweg,2,Normalladeeinrichtung,1,22.0
+12357,Mistelweg,2,Normalladeeinrichtung,1,22.0
+12357,Mistelweg,2,Normalladeeinrichtung,1,22.0
+12357,Mistelweg,2,Normalladeeinrichtung,1,22.0
+12359,Haarlemer Str.,3,Normalladeeinrichtung,2,22.0
+12359,Buschkrugallee,35,Normalladeeinrichtung,2,44.0
+12359,Buschkrugallee,35,Normalladeeinrichtung,2,44.0
+12359,Buschkrugallee,43,Normalladeeinrichtung,2,44.0
+12359,Buschkrugallee,43,Normalladeeinrichtung,2,44.0
+12359,Buschkrugallee,43,Normalladeeinrichtung,2,44.0
+12359,Gutschmidtstr.,101,Schnellladeeinrichtung,3,50.0
+12359,Späthstr.,162,Schnellladeeinrichtung,3,50.0
+12359,Geisbergstraße,37,Normalladeeinrichtung,2,44.0
+12359,Möwenweg 42,42,Normalladeeinrichtung,2,44.0
+12359,Krischanweg,62,Normalladeeinrichtung,2,22.0
+12359,Krischanweg,62,Normalladeeinrichtung,2,22.0
+12359,Gutschmiedtstr.,19,Schnellladeeinrichtung,2,72.0
+12359,Talberger Straße,2,Normalladeeinrichtung,2,34.0
+12359,Krischanweg,62,Normalladeeinrichtung,2,22.0
+12435,Bouchéstr.,22,Normalladeeinrichtung,2,22.0
+12435,Lohmühlenstr.,62,Normalladeeinrichtung,2,11.0
+12435,Am Plänterwald,2,Normalladeeinrichtung,2,22.0
+12435,Puschkinallee,9a,Normalladeeinrichtung,1,3.7
+12435,Kiefholzstr.,44,Normalladeeinrichtung,1,3.7
+12435,Herkomerstr.,3,Normalladeeinrichtung,2,22.0
+12435,Galileistraße,48,Normalladeeinrichtung,1,3.7
+12435,Heidelberger Straße,90,Normalladeeinrichtung,2,22.0
+12435,Karpfenteichstr.,19,Normalladeeinrichtung,2,30.0
+12435,Kiefholzstr.,386,Schnellladeeinrichtung,3,96.0
+12435,Lohmühlenstraße,49,Normalladeeinrichtung,2,44.0
+12435,Schmollerplatz,17,Normalladeeinrichtung,2,22.0
+12435,Karl-Kunger-Straße,12,Normalladeeinrichtung,2,22.0
+12435,Lexisstraße,5,Normalladeeinrichtung,2,22.0
+12435,Kiefholzstraße,420,Schnellladeeinrichtung,2,175.0
+12435,Plesser Str.,2,Normalladeeinrichtung,2,30.0
+12437,Glanzstr.,3,Normalladeeinrichtung,2,22.0
+12437,Eichbuschallee,7,Normalladeeinrichtung,2,22.0
+12437,Glanzstraße,10,Normalladeeinrichtung,1,3.7
+12437,Glanzstraße,14,Normalladeeinrichtung,1,3.7
+12437,Glanzstraße,17,Normalladeeinrichtung,1,3.7
+12437,Trojanstr.,8,Normalladeeinrichtung,2,30.0
+12437,Kiefholzstraße,189,Schnellladeeinrichtung,3,72.0
+12437,Frauenlobstraße,21,Normalladeeinrichtung,2,22.0
+12437,Frauenlobstraße,21,Normalladeeinrichtung,2,22.0
+12437,Bodelschwinghstraße,27,Normalladeeinrichtung,2,22.0
+12437,Frauenlobstraße,21,Normalladeeinrichtung,2,22.0
+12437,mahonienweg,7,Normalladeeinrichtung,1,3.7
+12437,mahonienweg,7,Normalladeeinrichtung,1,3.7
+12439,Rudower Str.,11,Normalladeeinrichtung,2,22.0
+12439,Ostritzer Straße,63,Normalladeeinrichtung,1,3.7
+12439,Britzer Straße,21,Normalladeeinrichtung,1,3.7
+12439,Britzer Straße,19,Normalladeeinrichtung,1,3.7
+12439,Bruno-Bürgel-Weg,31,Normalladeeinrichtung,1,3.7
+12439,Köllnische Straße,6,Normalladeeinrichtung,1,3.7
+12439,Köllnische Straße,68,Normalladeeinrichtung,1,3.7
+12439,Köllnische Straße,63,Normalladeeinrichtung,1,3.7
+12439,Köllnische Straße,60,Normalladeeinrichtung,1,3.7
+12439,Köllnische Straße,45,Normalladeeinrichtung,1,3.7
+12439,Köllnische Straße,43,Normalladeeinrichtung,1,3.7
+12439,Köllnische Straße,41A,Normalladeeinrichtung,1,3.7
+12439,Schnellerstraße,139,Schnellladeeinrichtung,2,150.0
+12439,Schnellerstraße,139,Schnellladeeinrichtung,2,150.0
+12439,Schnellerstraße,139,Schnellladeeinrichtung,2,300.0
+12439,Schnellerstraße,139,Schnellladeeinrichtung,2,300.0
+12439,Schnellerstraße,131,Schnellladeeinrichtung,2,72.0
+12439,Schnellerstraße,131,Schnellladeeinrichtung,2,72.0
+12439,Kupferkamp,0,Normalladeeinrichtung,2,44.0
+12439,Am Werkstor,0,Normalladeeinrichtung,2,44.0
+12439,Schnellerstraße,133,Schnellladeeinrichtung,2,300.0
+12439,Schnellerstraße,133,Schnellladeeinrichtung,2,150.0
+12439,Schnellerstraße,133,Schnellladeeinrichtung,2,150.0
+12439,Schnellerstraße,133,Normalladeeinrichtung,2,22.0
+12439,Schnellerstraße,133,Schnellladeeinrichtung,2,150.0
+12439,Schnellerstraße,133,Schnellladeeinrichtung,2,300.0
+12439,Schnellerstraße,133,Schnellladeeinrichtung,2,300.0
+12439,Schnellerstraße,133,Normalladeeinrichtung,2,22.0
+12439,Schnellerstraße,20,Schnellladeeinrichtung,2,300.0
+12439,Schnellerstraße,20,Schnellladeeinrichtung,2,300.0
+12439,Michael-Brückner-Str.,25,Schnellladeeinrichtung,2,300.0
+12439,Michael-Brückner-Str.,25,Schnellladeeinrichtung,2,300.0
+12439,Schneller Straße,20,Schnellladeeinrichtung,4,150.0
+12439,Schneller Straße,20,Normalladeeinrichtung,2,22.0
+12459,Rummelsburger Landstraße,16,Schnellladeeinrichtung,2,300.0
+12459,Reinbeckstr.,1,Normalladeeinrichtung,2,22.0
+12459,Fritz-Kirsch-Zeile,26,Normalladeeinrichtung,2,22.0
+12459,Deulstraße,30,Normalladeeinrichtung,1,3.7
+12459,Mentelinstraße,15,Normalladeeinrichtung,1,3.7
+12459,Firlstraße,31,Normalladeeinrichtung,1,3.7
+12459,Goethestraße,18,Normalladeeinrichtung,1,3.7
+12459,Parsevalstraße,16,Normalladeeinrichtung,1,3.7
+12459,Plönzeile,42,Normalladeeinrichtung,1,3.7
+12459,Plönzeile,28,Normalladeeinrichtung,1,3.7
+12459,Slabystraße,0,Normalladeeinrichtung,1,3.7
+12459,Slabystraße,0,Normalladeeinrichtung,1,3.7
+12459,Slabystraße,0,Normalladeeinrichtung,1,3.7
+12459,Slabystraße,3,Normalladeeinrichtung,1,3.7
+12459,Slabystraße,17,Normalladeeinrichtung,1,3.7
+12459,Slabystraße,21,Normalladeeinrichtung,1,3.7
+12459,Wattstraße,3,Normalladeeinrichtung,1,3.7
+12459,Wattstraße,77,Normalladeeinrichtung,1,3.7
+12459,Wattstraße,0,Normalladeeinrichtung,1,3.7
+12459,Grenzweg,223,Normalladeeinrichtung,1,22.0
+12459,Rathenaustraße,27,Normalladeeinrichtung,2,22.0
+12459,Großstraße,20,Normalladeeinrichtung,2,22.0
+12459,Wattstraße,16,Normalladeeinrichtung,2,22.0
+12459,Plönzeile,17,Normalladeeinrichtung,2,22.0
+12459,Tabbertstraße,6,Normalladeeinrichtung,2,22.0
+12459,Siemensstraße,34,Normalladeeinrichtung,2,44.0
+12487,Herweghstr.,19,Normalladeeinrichtung,2,22.0
+12487,Waldstr.,8,Normalladeeinrichtung,2,22.0
+12487,Springbornstraße,104,Normalladeeinrichtung,1,3.7
+12487,Springbornstraße,100/102,Normalladeeinrichtung,1,3.7
+12487,Springbornstraße Bei Hausnr.,98,Normalladeeinrichtung,1,3.7
+12487,Springbornstraße,98,Normalladeeinrichtung,1,3.7
+12487,Springbornstraße,94,Normalladeeinrichtung,1,3.7
+12487,Gerhard-Sedlmayr-Straße,0,Normalladeeinrichtung,1,3.7
+12487,Gerhard-Sedlmayr-Straße,0,Normalladeeinrichtung,1,3.7
+12487,Gerhard-Sedlmayr-Straße,0,Normalladeeinrichtung,1,3.7
+12487,Segelfliegerdamm,87A,Normalladeeinrichtung,1,3.7
+12487,Segelfliegerdamm,85,Normalladeeinrichtung,1,3.7
+12487,Gerhard-Sedlmayr-Straße,23,Normalladeeinrichtung,1,3.7
+12487,Gerhard-Sedlmayr-Straße,23,Normalladeeinrichtung,1,3.7
+12487,Gerhard-Sedlmayr-Straße,25,Normalladeeinrichtung,1,3.7
+12487,Gerhard-Sedlmayr-Straße,29,Normalladeeinrichtung,1,3.7
+12487,Am Grünen Anger,3,Normalladeeinrichtung,2,30.0
+12487,Hermann-Dorner-Allee,98,Schnellladeeinrichtung,1,350.0
+12487,Hermann-Dorner-Allee,98,Schnellladeeinrichtung,1,350.0
+12487,Hagedornstraße,1,Normalladeeinrichtung,2,22.0
+12487,Engelhardstraße,27,Normalladeeinrichtung,2,22.0
+12487,Arthur-Müller-Straße,36,Normalladeeinrichtung,2,22.0
+12487,Arthur-Müller-Str.,36a,Normalladeeinrichtung,2,22.0
+12487,Arthur-Müller-Straße,36,Normalladeeinrichtung,2,22.0
+12487,Winckelmannstr.,3,Normalladeeinrichtung,2,22.0
+12487,Segelfliegerdamm,18,Schnellladeeinrichtung,2,180.0
+12487,Segelfliegerdamm,18,Schnellladeeinrichtung,2,180.0
+12489,Rudower Chaussee,25,Normalladeeinrichtung,2,22.0
+12489,Ostritzer Straße,32,Normalladeeinrichtung,1,3.7
+12489,Wilhelm-Hoff-Straße Höhe Hausnr.,21,Normalladeeinrichtung,1,3.7
+12489,Wilhelm-Hoff-Straße Höhe Hausnr.,20,Normalladeeinrichtung,1,3.7
+12489,Wilhelm-Hoff-Straße Höhe Hausnr.,24,Normalladeeinrichtung,1,3.7
+12489,Wilhelm-Hoff-Straße Höhe Hausnr.,26,Normalladeeinrichtung,1,3.7
+12489,Wilhelm-Hoff-Straße Höhe Hausnr.,26,Normalladeeinrichtung,1,3.7
+12489,Hans-Schmidt-Straße,0,Normalladeeinrichtung,1,3.7
+12489,Hans-Schmidt-Straße,0,Normalladeeinrichtung,1,3.7
+12489,Katharina-Boll-Dornberger-Straße,0,Normalladeeinrichtung,1,3.7
+12489,Abram-Joffe-Str.,18,Normalladeeinrichtung,2,22.0
+12489,Albert-Einstein-Straße,1,Normalladeeinrichtung,2,22.0
+12489,Albert-Einstein-Straße,1,Normalladeeinrichtung,2,22.0
+12489,Albert-Einstein-Straße,1,Normalladeeinrichtung,2,22.0
+12489,Albert-Einstein-Straße,1,Normalladeeinrichtung,2,22.0
+12489,Zinsgutstr.,25,Normalladeeinrichtung,2,22.0
+12489,Rudower Chaussee,19,Normalladeeinrichtung,1,11.0
+12489,Justus-von-Liebig-Straße,5,Normalladeeinrichtung,2,22.0
+12489,Rutherfordstraße,1,Normalladeeinrichtung,2,22.0
+12489,Johann-Hittorf-Straße,8,Normalladeeinrichtung,2,22.0
+12489,Friedenstraße,3,Normalladeeinrichtung,2,22.0
+12489,Stromstraße,40,Normalladeeinrichtung,2,22.0
+12524,Semmelweißstr.,18,Normalladeeinrichtung,2,30.0
+12524,Wegedornstraße,281,Normalladeeinrichtung,1,3.7
+12524,Wegedornstraße,275,Normalladeeinrichtung,1,3.7
+12524,Leberblumenweg,71,Normalladeeinrichtung,1,3.7
+12524,Birnenweg,0,Normalladeeinrichtung,1,3.7
+12524,Birnenweg,0,Normalladeeinrichtung,1,3.7
+12524,Birnenweg,0,Normalladeeinrichtung,1,3.7
+12524,Frankenstraße,20,Normalladeeinrichtung,1,3.7
+12524,Ortolfstraße,195,Normalladeeinrichtung,1,3.7
+12524,Wegedornstraße,287,Normalladeeinrichtung,1,3.7
+12524,Weidenweg,6A,Normalladeeinrichtung,1,3.7
+12524,Weidenweg,4,Normalladeeinrichtung,1,3.7
+12524,Kleeblattstraße,0,Normalladeeinrichtung,1,3.7
+12524,Mittelweg,6,Normalladeeinrichtung,1,3.7
+12524,Mittelweg,3,Normalladeeinrichtung,1,3.7
+12524,Mittelweg,2,Normalladeeinrichtung,1,3.7
+12524,Siriusstraße,1,Normalladeeinrichtung,2,44.0
+12524,Rudower Straße,88,Normalladeeinrichtung,2,22.0
+12524,Rudower Straße,88,Normalladeeinrichtung,2,22.0
+12524,Schönefelder Chaussee,1,Normalladeeinrichtung,2,44.0
+12526,Siebweg,87,Normalladeeinrichtung,2,22.0
+12526,Gebrüder-Hirth-Straße,0,Normalladeeinrichtung,1,3.7
+12526,Gebrüder-Hirth-Straße,47,Normalladeeinrichtung,1,3.7
+12526,Melitta-Schiller-Straße,0,Normalladeeinrichtung,1,3.7
+12526,Melitta-Schiller-Straße,27,Normalladeeinrichtung,1,3.7
+12526,Melitta-Schiller-Straße,29,Normalladeeinrichtung,1,3.7
+12526,Grabenstraße,15,Normalladeeinrichtung,1,3.7
+12526,Grabenstraße,21,Normalladeeinrichtung,1,3.7
+12526,Paradiesstraße,287,Normalladeeinrichtung,1,3.7
+12526,Grünbergallee,279,Schnellladeeinrichtung,2,93.0
+12526,Grünbergallee,279,Normalladeeinrichtung,2,44.0
+12526,Lindenblütenstr.,15,Normalladeeinrichtung,2,22.0
+12526,Lindenblütenstr.,15,Normalladeeinrichtung,2,22.0
+12526,Grünbergallee ,76,Normalladeeinrichtung,1,11.0
+12526,Prieborner Straße ,25A,Normalladeeinrichtung,1,11.0
+12526,Binswangersteig ,22,Normalladeeinrichtung,1,22.0
+12526,Binswangersteig ,22,Normalladeeinrichtung,1,22.0
+12526,Stromstraße,40,Normalladeeinrichtung,2,22.0
+12526,Stromstraße,40,Normalladeeinrichtung,2,11.0
+12526,Stromstraße,40,Normalladeeinrichtung,2,22.0
+12527,Relingstr.,4,Normalladeeinrichtung,2,22.0
+12527,Adlergestell,391,Schnellladeeinrichtung,2,72.0
+12555,Am Krusenick,1,Normalladeeinrichtung,2,22.0
+12555,Parrisiusstr.,2,Normalladeeinrichtung,2,22.0
+12555,Hämmerlingstraße,116,Normalladeeinrichtung,1,3.7
+12555,Hoernlestraße,77,Normalladeeinrichtung,1,3.7
+12555,Kaulsdorfer Straße,0,Normalladeeinrichtung,1,3.7
+12555,Friedrichshagener Straße,38-42,Schnellladeeinrichtung,2,150.0
+12555,Friedrichshagener Straße,38-42,Schnellladeeinrichtung,2,300.0
+12555,Salvador-Allende-Straße,115,Schnellladeeinrichtung,2,150.0
+12555,Salvador-Allende-Straße,115,Schnellladeeinrichtung,2,150.0
+12555,Salvador-Allende-Straße,115,Schnellladeeinrichtung,2,300.0
+12555,Salvador-Allende-Straße,115,Schnellladeeinrichtung,2,300.0
+12555,Lüneburger Straße,34-38,Normalladeeinrichtung,2,22.0
+12555,Alte Försterei - An der Wuhlheide,263,Normalladeeinrichtung,2,44.0
+12555,Alte Försterei - An der Wuhlheide,263,Normalladeeinrichtung,2,44.0
+12555,Alte Försterei - An der Wuhlheide,263,Normalladeeinrichtung,2,44.0
+12555,Lindenstraße,16,Normalladeeinrichtung,2,44.0
+12555,Lindenstraße,16,Normalladeeinrichtung,2,44.0
+12555,Borgmannstr.,12,Normalladeeinrichtung,2,11.0
+12555,Puchanstraße,18,Normalladeeinrichtung,2,22.0
+12555,Mentzelstraße,26,Normalladeeinrichtung,2,22.0
+12555,Borgmannstraße,12,Normalladeeinrichtung,2,22.0
+12555,Güldenauer Weg,0,Normalladeeinrichtung,2,22.0
+12555,Mentzelstraße,26,Normalladeeinrichtung,2,22.0
+12555,Borgmannstraße,12,Normalladeeinrichtung,2,22.0
+12555,Güldenauer Weg,65,Normalladeeinrichtung,2,22.0
+12555,Parrisiusstraße,30,Normalladeeinrichtung,2,22.0
+12555,Kirchstraße,6,Normalladeeinrichtung,2,22.0
+12555,Puchanstraße,34,Normalladeeinrichtung,2,22.0
+12555,Elcknerplatz,8,Normalladeeinrichtung,1,11.0
+12555,Elcknerplatz,8,Normalladeeinrichtung,1,11.0
+12555,Salvador-Allende-Straße,117,Normalladeeinrichtung,2,44.0
+12557,Glienicker Str.,60,Schnellladeeinrichtung,2,150.0
+12557,Glienicker Str.,60,Schnellladeeinrichtung,2,150.0
+12557,Dregerhoffstr.,49,Normalladeeinrichtung,2,30.0
+12557,Charlottenstr.,14,Normalladeeinrichtung,2,30.0
+12557,Zum Dahmeufer,4,Normalladeeinrichtung,1,3.7
+12557,Zum Dahmeufer Bei Hausnr.,6,Normalladeeinrichtung,1,3.7
+12557,Finkeldeweg,130,Normalladeeinrichtung,1,3.7
+12557,Finkeldeweg,116,Normalladeeinrichtung,1,3.7
+12557,Rudower Str.,5,Normalladeeinrichtung,2,44.0
+12557,Pohlestraße,12,Normalladeeinrichtung,2,22.0
+12557,Luisenstraße,19,Normalladeeinrichtung,2,22.0
+12557,Gutenbergstraße,33,Normalladeeinrichtung,2,22.0
+12559,Geinsheimer Weg,2,Normalladeeinrichtung,2,30.0
+12559,(Gegenüber) Pablo-Neruda-Straße,29-30,Normalladeeinrichtung,2,22.0
+12559,Salvador-Allende-Straße ,80,Normalladeeinrichtung,1,11.0
+12559,Ludwigshöheweg,18,Normalladeeinrichtung,1,22.0
+12587,Breestpromenade,5,Normalladeeinrichtung,1,3.7
+12587,Josef-Nawrocki-Straße,0,Normalladeeinrichtung,1,3.7
+12587,Karl-Pokern-Straße Schräg,0,Normalladeeinrichtung,1,3.7
+12587,Karl-Pokern-Straße,27,Normalladeeinrichtung,1,3.7
+12587,Karl-Pokern-Straße,23,Normalladeeinrichtung,1,3.7
+12587,Klutstraße,15,Normalladeeinrichtung,1,3.7
+12587,Klutstraße,0,Normalladeeinrichtung,1,3.7
+12587,Klutstraße,11,Normalladeeinrichtung,1,3.7
+12587,Kastanienallee,16,Normalladeeinrichtung,1,3.7
+12587,Klutstraße,28,Normalladeeinrichtung,1,3.7
+12587,Klutstraße,24,Normalladeeinrichtung,1,3.7
+12587,Karl-Pokern Straße,6,Normalladeeinrichtung,2,22.0
+12589,Erknerstr.,36,Normalladeeinrichtung,2,30.0
+12589,Am Mühlenfließ,1,Normalladeeinrichtung,1,3.7
+12619,Carola-Neher-Straße,0,Normalladeeinrichtung,1,3.7
+12619,Parchimer Straße LM2,0,Normalladeeinrichtung,1,3.7
+12619,Parchimer Straße LM11,0,Normalladeeinrichtung,1,3.7
+12619,Parchimer Straße,0,Normalladeeinrichtung,1,3.7
+12619,Carola-Neher-Straße,4,Normalladeeinrichtung,1,3.7
+12619,Carola-Neher-Straße,14,Normalladeeinrichtung,1,3.7
+12619,Maxie-Wander-Straße,40,Normalladeeinrichtung,1,3.7
+12619,Cecilienstraße,233,Normalladeeinrichtung,1,3.7
+12619,Cecilienstraße,243,Normalladeeinrichtung,1,3.7
+12619,Etkar-Andre-Str.,7,Normalladeeinrichtung,2,30.0
+12619,Cecilienstraße,225,Normalladeeinrichtung,2,22.0
+12619,Kummerower Ring,9,Normalladeeinrichtung,2,22.0
+12619,Teterower Ring,43,Normalladeeinrichtung,2,44.0
+12619,Feldberger Ring,68,Normalladeeinrichtung,2,22.0
+12621,Ferdinandstraße,18,Normalladeeinrichtung,1,3.7
+12621,Ferdinandstraße,3,Normalladeeinrichtung,1,3.7
+12621,Ferdinandstraße,32,Normalladeeinrichtung,1,3.7
+12621,Ferdinandstraße,50,Normalladeeinrichtung,1,3.7
+12621,Georgstraße,4,Normalladeeinrichtung,1,3.7
+12621,Ferdinandstraße,11,Normalladeeinrichtung,1,3.7
+12621,Ferdinandstraße,10,Normalladeeinrichtung,1,3.7
+12621,Ferdinandstraße,39,Normalladeeinrichtung,1,3.7
+12621,Ferdinandstraße,46,Normalladeeinrichtung,1,3.7
+12621,Georgstraße,2A,Normalladeeinrichtung,1,3.7
+12621,Georgstraße,1,Normalladeeinrichtung,1,3.7
+12621,Mädewalder Weg,53,Normalladeeinrichtung,1,3.7
+12621,Seebadstraße,34,Normalladeeinrichtung,1,3.7
+12621,Seebadstraße,33,Normalladeeinrichtung,1,3.7
+12621,Seebadstraße,31B,Normalladeeinrichtung,1,3.7
+12621,Seebadstraße,31,Normalladeeinrichtung,1,3.7
+12621,Seebadstraße,0,Normalladeeinrichtung,1,3.7
+12621,Seebadstraße,29,Normalladeeinrichtung,1,3.7
+12621,Georgstraße,1,Normalladeeinrichtung,1,3.7
+12621,Mädewalder Weg,47,Normalladeeinrichtung,1,3.7
+12621,Mädewalder Weg,49,Normalladeeinrichtung,1,3.7
+12621,Mädewalder Weg,49,Normalladeeinrichtung,1,3.7
+12621,Mädewalder Weg,57,Normalladeeinrichtung,1,3.7
+12621,Lenbachstraße,7,Normalladeeinrichtung,1,3.7
+12621,Lenbachstraße,9,Normalladeeinrichtung,1,3.7
+12621,Schönagelstraße,49,Normalladeeinrichtung,1,3.7
+12621,Kaulsdorfer Straße,94,Normalladeeinrichtung,2,22.0
+12621,Myslowitzer Straße,45,Normalladeeinrichtung,2,43.0
+12621,Myslowitzer Straße,45,Normalladeeinrichtung,1,22.0
+12621,Myslowitzer Straße,45,Normalladeeinrichtung,1,22.0
+12621,Bausdorfstr.,10,Normalladeeinrichtung,2,30.0
+12621,Dorfstr.,12,Normalladeeinrichtung,1,22.0
+12621,Dorfstr.,12,Normalladeeinrichtung,1,22.0
+12621,Alt-Kaulsdorf,45-49,Schnellladeeinrichtung,2,300.0
+12621,Wernitzer Str.,1,Normalladeeinrichtung,2,22.0
+12621,Planitzstr.,1,Normalladeeinrichtung,2,44.0
+12621,Ulmenstr.,43,Normalladeeinrichtung,2,22.0
+12623,Hultschiner Damm,129 - 130,Schnellladeeinrichtung,1,175.0
+12623,Hultschiner Damm,129 - 130,Schnellladeeinrichtung,2,360.0
+12623,Hultschiner Damm,129 - 130,Schnellladeeinrichtung,1,175.0
+12623,Landsberger Str.,178F,Normalladeeinrichtung,1,3.7
+12623,Alt-Mahlsdorf,59,Schnellladeeinrichtung,2,150.0
+12623,Bisamstraße,4A,Normalladeeinrichtung,1,3.7
+12623,Bisamstraße,0,Normalladeeinrichtung,1,3.7
+12623,Bisamstraße,21,Normalladeeinrichtung,1,3.7
+12623,Bisamstraße,26,Normalladeeinrichtung,1,3.7
+12623,Bisamstraße,0,Normalladeeinrichtung,1,3.7
+12623,Bisamstraße,0,Normalladeeinrichtung,1,3.7
+12623,Briesener Weg,21,Normalladeeinrichtung,1,3.7
+12623,Briesener Weg,23,Normalladeeinrichtung,1,3.7
+12623,Briesener Weg,27,Normalladeeinrichtung,1,3.7
+12623,Briesener Weg,29,Normalladeeinrichtung,1,3.7
+12623,Briesener Weg,33A,Normalladeeinrichtung,1,3.7
+12623,Briesener Weg,0,Normalladeeinrichtung,1,3.7
+12623,Linderhofstraße,10A,Normalladeeinrichtung,1,3.7
+12623,Linderhofstraße,11,Normalladeeinrichtung,1,3.7
+12623,Linderhofstraße,14,Normalladeeinrichtung,1,3.7
+12623,Linderhofstraße,23,Normalladeeinrichtung,1,3.7
+12623,Linderhofstraße,5,Normalladeeinrichtung,1,3.7
+12623,Linderhofstraße,6,Normalladeeinrichtung,1,3.7
+12623,Sudermannstraße,50,Normalladeeinrichtung,1,3.7
+12623,Sudermannstraße,60,Normalladeeinrichtung,1,3.7
+12623,Sudermannstraße,69B,Normalladeeinrichtung,1,3.7
+12623,Eichenhofweg,10A,Normalladeeinrichtung,1,3.7
+12623,Eichenhofweg,14,Normalladeeinrichtung,1,3.7
+12623,Eichenhofweg,16,Normalladeeinrichtung,1,3.7
+12623,Eichenhofweg,20,Normalladeeinrichtung,1,3.7
+12623,Eichenhofweg,24,Normalladeeinrichtung,1,3.7
+12623,Neuenhagener Straße,3,Normalladeeinrichtung,1,3.7
+12623,Neuenhagener Straße,5,Normalladeeinrichtung,1,3.7
+12623,Lübzer Straße,13,Normalladeeinrichtung,1,3.7
+12623,Lübzer Straße,7A,Normalladeeinrichtung,1,3.7
+12623,Lübzer Straße,4,Normalladeeinrichtung,1,3.7
+12623,Theodorstraße,0,Normalladeeinrichtung,1,3.7
+12623,Theodorstraße,39,Normalladeeinrichtung,1,3.7
+12623,Theodorstraße,0,Normalladeeinrichtung,1,3.7
+12623,Uhlandstraße,0,Normalladeeinrichtung,1,3.7
+12623,Uhlandstraße,2,Normalladeeinrichtung,1,3.7
+12623,Uhlandstraße,184,Normalladeeinrichtung,1,3.7
+12623,Uhlandstraße,184,Normalladeeinrichtung,1,3.7
+12623,Erich-Baron-Weg,66,Normalladeeinrichtung,1,3.7
+12623,Erich-Baron-Weg,60,Normalladeeinrichtung,1,3.7
+12623,Erich-Baron-Weg,56,Normalladeeinrichtung,1,3.7
+12623,Pilgramer Straße,245,Normalladeeinrichtung,1,3.7
+12623,Pilgramer Straße,249,Normalladeeinrichtung,1,3.7
+12623,Pilgramer Straße,253,Normalladeeinrichtung,1,3.7
+12623,Pilsener Straße,0,Normalladeeinrichtung,1,3.7
+12623,Pilsener Straße,0,Normalladeeinrichtung,1,3.7
+12623,Ruhlsdorfer Straße,0,Normalladeeinrichtung,1,3.7
+12623,Ruhlsdorfer Straße,0,Normalladeeinrichtung,1,3.7
+12623,Ruhlsdorfer Straße,0,Normalladeeinrichtung,1,3.7
+12623,Schrobsdorffstraße,0,Normalladeeinrichtung,1,3.7
+12623,Schrobsdorffstraße,0,Normalladeeinrichtung,1,3.7
+12623,Schrobsdorffstraße,0,Normalladeeinrichtung,1,3.7
+12623,Linderhofstraße,0,Normalladeeinrichtung,1,3.7
+12623,Linderhofstraße,0,Normalladeeinrichtung,1,3.7
+12623,Linderhofstraße,39,Normalladeeinrichtung,1,3.7
+12623,Lemkestraße,161A,Normalladeeinrichtung,1,3.7
+12623,Lübzer Straße,23,Normalladeeinrichtung,1,3.7
+12623,Ruhlsdorfer Straße,19,Normalladeeinrichtung,1,3.7
+12623,Ruhlsdorfer Straße,25,Normalladeeinrichtung,1,3.7
+12623,Ruhlsdorfer Straße,29,Normalladeeinrichtung,1,3.7
+12623,Ruhlsdorfer Straße,31,Normalladeeinrichtung,1,3.7
+12623,Ruhlsdorfer Straße,35a,Normalladeeinrichtung,1,3.7
+12623,Neuenhagener Str.,48,Schnellladeeinrichtung,2,300.0
+12623,Florastr.,1,Normalladeeinrichtung,2,30.0
+12623,An der Schule,82,Schnellladeeinrichtung,2,300.0
+12623,An der Schule,82,Schnellladeeinrichtung,2,300.0
+12623,An der Schule,82,Schnellladeeinrichtung,2,300.0
+12623,Hönower Str.,99,Schnellladeeinrichtung,3,93.0
+12623,Raststatter Str.,3,Schnellladeeinrichtung,2,50.0
+12623,Kastanienallee,1,Normalladeeinrichtung,2,44.0
+12623,Hönower Straße,89,Normalladeeinrichtung,2,44.0
+12623,Hönower Str.,99,Schnellladeeinrichtung,3,72.0
+12623,Pilgramer Straße,335b,Normalladeeinrichtung,1,11.0
+12623,An der Schule,82,Schnellladeeinrichtung,2,300.0
+12623,An der Schule,82,Schnellladeeinrichtung,2,300.0
+12623,An der Schule,82,Schnellladeeinrichtung,2,300.0
+12623,An der Schule,82,Schnellladeeinrichtung,2,300.0
+12623,Dahlwitzer Str.,60,Schnellladeeinrichtung,2,180.0
+12623,Dahlwitzer Str.,60,Schnellladeeinrichtung,2,180.0
+12623,Landsberger Straße,233,Normalladeeinrichtung,1,22.0
+12623,Landsberger Straße,233,Normalladeeinrichtung,1,22.0
+12623,Landsbergerstraße,233,Normalladeeinrichtung,1,22.0
+12623,Landsbergerstraße,233,Normalladeeinrichtung,1,22.0
+12627,Janusz-Korczak-Str.,6,Normalladeeinrichtung,2,22.0
+12627,Adele-Sandrock-Straße,0,Normalladeeinrichtung,1,3.7
+12627,Lichtenhainer Straße,23,Normalladeeinrichtung,1,3.7
+12627,Tangermünder Straße,7,Normalladeeinrichtung,1,3.7
+12627,Tangermünder Straße,7,Normalladeeinrichtung,1,3.7
+12627,Tangermünder Straße,3,Normalladeeinrichtung,1,3.7
+12627,Döbelner Straße,0,Normalladeeinrichtung,1,3.7
+12627,Döbelner Straße,0,Normalladeeinrichtung,1,3.7
+12627,Mark-Twain-Straße,6,Normalladeeinrichtung,1,3.7
+12627,Mark-Twain-Straße,38,Normalladeeinrichtung,1,3.7
+12627,Mark-Twain-Straße,44,Normalladeeinrichtung,1,3.7
+12627,Mark-Twain-Straße,48,Normalladeeinrichtung,1,3.7
+12627,Döbelner Straße,"1-5,7",Normalladeeinrichtung,2,22.0
+12627,Döbelner Straße,"1-5,7",Schnellladeeinrichtung,2,150.0
+12627,Döbelner Straße,6,Normalladeeinrichtung,2,22.0
+12627,Hoyerswerdaer Straße,4,Normalladeeinrichtung,2,22.0
+12627,Kokoschkastraße,1,Normalladeeinrichtung,2,22.0
+12627,Henny-Porten-Straße,6,Normalladeeinrichtung,2,22.0
+12629,Klausdorfer Str.,2,Normalladeeinrichtung,2,30.0
+12629,Eisenacher Straße,0,Normalladeeinrichtung,1,3.7
+12629,Eisenacher Straße,0,Normalladeeinrichtung,1,3.7
+12629,Havelländer Ring,43,Normalladeeinrichtung,1,3.7
+12629,Fercher Straße,0,Normalladeeinrichtung,1,3.7
+12629,Fercher Straße,0,Normalladeeinrichtung,1,3.7
+12629,Havelländer Ring,2,Normalladeeinrichtung,2,22.0
+12629,Zossener Straße/Brigitte-Reimann-Straße,27,Normalladeeinrichtung,2,44.0
+12629,Zossener Straße/Brigitte-Reimann-Straße,27,Normalladeeinrichtung,2,44.0
+12629,Havelländer Ring,2,Normalladeeinrichtung,2,22.0
+12679,Brodowiner Ring,1,Normalladeeinrichtung,2,22.0
+12679,Rudolf-Leonhard-Straße,13F,Normalladeeinrichtung,1,3.7
+12679,Rudolf-Leonhard-Straße,13,Normalladeeinrichtung,1,3.7
+12679,Märkische Allee,276,Schnellladeeinrichtung,3,50.0
+12679,Marzahner Promenade,8,Normalladeeinrichtung,2,44.0
+12679,Ludwig-Renn-Straße,31,Normalladeeinrichtung,2,22.0
+12679,Franz-Stenzer-Straße,63,Normalladeeinrichtung,4,44.0
+12679,Franz-Stenzer-Straße,21,Normalladeeinrichtung,4,44.0
+12679,Zühlsdorferstraße,38,Normalladeeinrichtung,2,44.0
+12679,Blumberger Damm,162,Normalladeeinrichtung,2,22.0
+12679,Franz-Stenzer-Straße,3,Normalladeeinrichtung,2,22.0
+12681,Märkische Allee,61,Schnellladeeinrichtung,2,300.0
+12681,Märkische Allee,61,Schnellladeeinrichtung,2,300.0
+12681,Bitterfelder Str.,12,Normalladeeinrichtung,1,3.7
+12681,Boxberger Str.,9,Normalladeeinrichtung,2,30.0
+12681,Allee der Kosmonauten,95,Normalladeeinrichtung,1,3.7
+12681,Allee der Kosmonauten,99,Normalladeeinrichtung,1,3.7
+12681,Allee der Kosmonauten,103,Normalladeeinrichtung,1,3.7
+12681,Allee der Kosmonauten,0,Normalladeeinrichtung,1,3.7
+12681,Allee der Kosmonauten,0,Normalladeeinrichtung,1,3.7
+12681,Allee der Kosmonauten,0,Normalladeeinrichtung,1,3.7
+12681,Zur Alten Börse,57,Normalladeeinrichtung,1,22.0
+12681,Zur Alten Börse,57,Normalladeeinrichtung,1,22.0
+12681,Zur Alten Börse,57,Normalladeeinrichtung,1,22.0
+12681,Rhinstr.,100,Normalladeeinrichtung,2,44.0
+12681,Rhinstr.,120,Normalladeeinrichtung,2,44.0
+12681,Rhinstr.,120,Normalladeeinrichtung,2,22.0
+12681,Marzahner Chaussee,201,Schnellladeeinrichtung,3,75.0
+12681,Märkische Spitze,15,Normalladeeinrichtung,2,22.0
+12681,Märkische Spitze,15,Schnellladeeinrichtung,2,150.0
+12681,Märkische Spitze,15,Schnellladeeinrichtung,2,300.0
+12681,Helene-Weigel-Platz,1,Normalladeeinrichtung,2,22.0
+12681,Helene-Weigel-Platz,2,Normalladeeinrichtung,2,22.0
+12681,Rhinstr.,52 A,Normalladeeinrichtung,1,22.0
+12681,Wolfener Straße,32-34,Normalladeeinrichtung,2,22.0
+12681,Wolfener Straße,32-34,Normalladeeinrichtung,2,22.0
+12681,Wolfener Straße,32-34,Schnellladeeinrichtung,1,150.0
+12681,Wolfener Straße,32-34,Normalladeeinrichtung,1,11.0
+12681,Wolfener Straße,32-34,Normalladeeinrichtung,1,11.0
+12681,Wolfener Straße,32-34,Normalladeeinrichtung,1,11.0
+12681,Wolfener Straße,32-34,Normalladeeinrichtung,1,11.0
+12681,Märkische Allee,166-172,Schnellladeeinrichtung,2,72.0
+12681,Langhoffstraße,26,Normalladeeinrichtung,2,22.0
+12681,Nordring,4,Schnellladeeinrichtung,2,300.0
+12681,Allee der Kosmonauten,26b,Normalladeeinrichtung,1,11.0
+12681,Allee der Kosmonauten,26b,Normalladeeinrichtung,1,11.0
+12681,Allee der Kosmonauten,26b,Normalladeeinrichtung,1,11.0
+12681,Allee der Kosmonauten,26b,Normalladeeinrichtung,1,11.0
+12681,Allee der Kosmonauten,26b,Normalladeeinrichtung,1,11.0
+12681,Allee der Kosmonauten,26b,Normalladeeinrichtung,1,11.0
+12681,Allee der Kosmonauten,26b,Normalladeeinrichtung,1,11.0
+12681,Allee der Kosmonauten,26b,Normalladeeinrichtung,1,11.0
+12681,Allee der Kosmonauten,26b,Schnellladeeinrichtung,2,360.0
+12681,Allee der Kosmonauten,26b,Schnellladeeinrichtung,2,120.0
+12681,Allee der Kosmonauten,26b,Schnellladeeinrichtung,2,150.0
+12683,Kulmseestr.,9,Schnellladeeinrichtung,2,150.0
+12683,Hanoier Str.,10,Normalladeeinrichtung,2,22.0
+12683,Lauinger Str.,82,Normalladeeinrichtung,1,3.7
+12683,Minsker Str.,10,Normalladeeinrichtung,2,30.0
+12683,Oberfeldstraße,18/A,Normalladeeinrichtung,1,3.7
+12683,Oberfeldstraße,17,Normalladeeinrichtung,1,3.7
+12683,Oberfeldstraße,15,Normalladeeinrichtung,1,3.7
+12683,Oberfeldstraße,9,Normalladeeinrichtung,1,3.7
+12683,Oberfeldstraße,7,Normalladeeinrichtung,1,3.7
+12683,Oberfeldstraße,41,Normalladeeinrichtung,1,3.7
+12683,Oberfeldstraße,33,Normalladeeinrichtung,1,3.7
+12683,Oberfeldstraße,32,Normalladeeinrichtung,1,3.7
+12683,Oberfeldstraße,30,Normalladeeinrichtung,1,3.7
+12683,Oberfeldstraße,11/A,Normalladeeinrichtung,1,3.7
+12683,Am Binsengrund,11,Normalladeeinrichtung,1,3.7
+12683,Am Binsengrund,13,Normalladeeinrichtung,1,3.7
+12683,Am Binsengrund,5,Normalladeeinrichtung,1,3.7
+12683,Am Binsengrund,7,Normalladeeinrichtung,1,3.7
+12683,Am Binsengrund ggü.,2,Normalladeeinrichtung,1,3.7
+12683,Fortunaallee,22,Normalladeeinrichtung,1,3.7
+12683,Fortunaallee,42B,Normalladeeinrichtung,1,3.7
+12683,Fortunaallee,47A,Normalladeeinrichtung,1,3.7
+12683,Oberfeldstraße,38,Normalladeeinrichtung,1,3.7
+12683,Budsiner Straße,17,Normalladeeinrichtung,1,3.7
+12683,Budsiner Straße,0,Normalladeeinrichtung,1,3.7
+12683,Dudweilerstraße,10,Normalladeeinrichtung,1,3.7
+12683,Dudweilerstraße,12,Normalladeeinrichtung,1,3.7
+12683,Dudweilerstraße,6,Normalladeeinrichtung,1,3.7
+12683,Fortunaallee,5,Normalladeeinrichtung,1,3.7
+12683,Geraldweg,0,Normalladeeinrichtung,1,3.7
+12683,Geraldweg,0,Normalladeeinrichtung,1,3.7
+12683,Geraldweg,0,Normalladeeinrichtung,1,3.7
+12683,Geraldweg,0,Normalladeeinrichtung,1,3.7
+12683,Geraldweg,0,Normalladeeinrichtung,1,3.7
+12683,Grabensprung,120,Normalladeeinrichtung,1,3.7
+12683,Grabensprung,130,Normalladeeinrichtung,1,3.7
+12683,Grabensprung,0,Normalladeeinrichtung,1,3.7
+12683,Fortunaallee,0,Normalladeeinrichtung,1,3.7
+12683,Geraldweg,0,Normalladeeinrichtung,1,3.7
+12683,Geraldweg,0,Normalladeeinrichtung,1,3.7
+12683,Oberfeldstraße,0,Normalladeeinrichtung,1,3.7
+12683,Oberfeldstraße,0,Normalladeeinrichtung,1,3.7
+12683,Oberfeldstraße,38,Normalladeeinrichtung,1,3.7
+12683,Schwabenallee,35,Normalladeeinrichtung,1,3.7
+12683,Schwabenallee,37,Normalladeeinrichtung,1,3.7
+12683,Schwabenallee,41,Normalladeeinrichtung,1,3.7
+12683,Schwabenallee,47,Normalladeeinrichtung,1,3.7
+12683,Schwabenallee,55,Normalladeeinrichtung,1,3.7
+12683,Schwabenallee,22,Normalladeeinrichtung,1,3.7
+12683,Schwabenallee,61,Normalladeeinrichtung,1,3.7
+12683,Schwabenallee,65,Normalladeeinrichtung,1,3.7
+12683,Siegmarstraße,2A,Normalladeeinrichtung,1,3.7
+12683,Siegmarstraße,4,Normalladeeinrichtung,1,3.7
+12683,Siegmarstraße,29,Normalladeeinrichtung,1,3.7
+12683,Siegmarstraße,33,Normalladeeinrichtung,1,3.7
+12683,Siegmarstraße,65,Normalladeeinrichtung,1,3.7
+12683,Dohlengrund,67,Normalladeeinrichtung,1,3.7
+12683,Dohlengrund,75,Normalladeeinrichtung,1,3.7
+12683,Dohlengrund,77,Normalladeeinrichtung,1,3.7
+12683,Dohlengrund,81,Normalladeeinrichtung,1,3.7
+12683,Geraldweg,0,Normalladeeinrichtung,1,3.7
+12683,Geraldweg,0,Normalladeeinrichtung,1,3.7
+12683,Otto-Nagel-Straße,85,Normalladeeinrichtung,1,3.7
+12683,Otto-Nagel-Straße LM12,0,Normalladeeinrichtung,1,3.7
+12683,Otto-Nagel-Straße LM13,0,Normalladeeinrichtung,1,3.7
+12683,Otto-Nagel-Straße,95,Normalladeeinrichtung,1,3.7
+12683,Otto-Nagel-Straße,102,Normalladeeinrichtung,1,3.7
+12683,Otto-Nagel-Straße,24,Normalladeeinrichtung,1,3.7
+12683,Otto-Nagel-Straße,17,Normalladeeinrichtung,1,3.7
+12683,Boschpoler Str.,21,Normalladeeinrichtung,1,3.7
+12683,Boschpoler Str.,19,Normalladeeinrichtung,1,3.7
+12683,Cecilienstraße,45,Normalladeeinrichtung,1,3.7
+12683,Cecilienstraße,49,Normalladeeinrichtung,1,3.7
+12683,Eitelstraße,27,Normalladeeinrichtung,1,3.7
+12683,Eitelstraße,31,Normalladeeinrichtung,1,3.7
+12683,Eitelstraße,84A,Normalladeeinrichtung,1,3.7
+12683,Eitelstraße,38,Normalladeeinrichtung,1,3.7
+12683,Eitelstraße,40,Normalladeeinrichtung,1,3.7
+12683,Lemkestraße,168,Normalladeeinrichtung,1,3.7
+12683,Lemkestraße,170,Normalladeeinrichtung,1,3.7
+12683,Linderhofstraße,41,Normalladeeinrichtung,1,3.7
+12683,Linderhofstraße,45,Normalladeeinrichtung,1,3.7
+12683,Linderhofstraße,49,Normalladeeinrichtung,1,3.7
+12683,Alt-Biesdorf,38,Schnellladeeinrichtung,2,150.0
+12683,Alt-Biesdorf,38,Schnellladeeinrichtung,2,300.0
+12683,Alt-Biesdorf,38,Schnellladeeinrichtung,2,300.0
+12683,Alt-Biesdorf,38,Schnellladeeinrichtung,2,150.0
+12683,Birkenallee,3,Normalladeeinrichtung,2,30.0
+12683,Blumberger Damm,14,Normalladeeinrichtung,2,30.0
+12683,Köpenicker Str.,145-147,Schnellladeeinrichtung,3,50.0
+12683,Köpenicker Straße,24Y,Normalladeeinrichtung,2,44.0
+12683,Wuhlestr.,31,Normalladeeinrichtung,2,44.0
+12683,Luise-Zietz-Straße,104,Normalladeeinrichtung,2,22.0
+12683,Braunsdorfstr.,26,Normalladeeinrichtung,2,22.0
+12683,Kulmseestr.,4,Normalladeeinrichtung,2,44.0
+12683,Warener Straße,1,Normalladeeinrichtung,2,22.0
+12683,Minsker Straße,44,Normalladeeinrichtung,2,22.0
+12683,Hadubrandstraße ,2,Normalladeeinrichtung,1,11.0
+12683,Hadubrandweg ,6,Normalladeeinrichtung,1,11.0
+12683,Dingolfinger Str.,7,Schnellladeeinrichtung,4,50.0
+12683,Blumberger Damm,2,Normalladeeinrichtung,2,44.0
+12685,Krummenseer Str.,2,Normalladeeinrichtung,1,3.7
+12685,Althansweg,0,Normalladeeinrichtung,1,3.7
+12685,Althansweg,8,Normalladeeinrichtung,1,3.7
+12685,Auersbergstraße,0,Normalladeeinrichtung,1,3.7
+12685,Pekrunstraße,39,Normalladeeinrichtung,1,3.7
+12685,Schönagelstraße,70,Normalladeeinrichtung,1,3.7
+12685,Prötzeler Ring,8,Schnellladeeinrichtung,3,93.0
+12685,Auersbergstr.,14,Normalladeeinrichtung,2,22.0
+12685,Hasenholzer Allee,2,Normalladeeinrichtung,2,44.0
+12687,Max-Hermann-Str,2,Normalladeeinrichtung,2,22.0
+12687,Liebensteiner Straße,39,Normalladeeinrichtung,1,3.7
+12687,Liebensteiner Straße,43,Normalladeeinrichtung,1,3.7
+12687,Liebensteiner Straße,0,Normalladeeinrichtung,1,3.7
+12687,Wuhletalstraße,46,Normalladeeinrichtung,1,3.7
+12687,Liebensteiner Straße,35,Normalladeeinrichtung,1,3.7
+12687,Sella-Hasse-Straße,18,Normalladeeinrichtung,4,44.0
+12687,Walter-Felsenstein-Straße,14,Normalladeeinrichtung,2,22.0
+12687,Sella-Hasse-Straße,35,Normalladeeinrichtung,2,44.0
+12687,Märkische Allee,284,Normalladeeinrichtung,2,22.0
+12689,Golliner Straße,47,Normalladeeinrichtung,1,3.7
+12689,Golliner Straße,45,Normalladeeinrichtung,1,3.7
+12689,Borkheider Str.,17,Normalladeeinrichtung,1,3.7
+12689,Borkheider Str.,19,Normalladeeinrichtung,1,3.7
+12689,Borkheider Str.,23,Normalladeeinrichtung,1,3.7
+12689,Rabensteiner Straße,7,Normalladeeinrichtung,1,3.7
+12689,Wiesenstraße,27B,Normalladeeinrichtung,1,3.7
+12689,Rabensteiner Straße,19,Normalladeeinrichtung,1,3.7
+12689,Rabensteiner Straße,29,Normalladeeinrichtung,1,3.7
+12689,Rabensteiner Straße,33,Normalladeeinrichtung,1,3.7
+12689,Geraer Ring,7,Normalladeeinrichtung,2,30.0
+12689,Havemannstr.,1,Schnellladeeinrichtung,3,93.0
+12689,Wörlitzer Str.,5,Normalladeeinrichtung,2,22.0
+12689,Niemegker Str.,24,Normalladeeinrichtung,2,22.0
+12689,Havemannstr.,4,Normalladeeinrichtung,2,44.0
+12689,Schwarzwurzelstraße,20,Normalladeeinrichtung,1,11.0
+13051,Hansastr.,236,Normalladeeinrichtung,2,44.0
+13051,Hansastr.,236,Normalladeeinrichtung,2,44.0
+13051,Hansastr.,236,Normalladeeinrichtung,2,44.0
+13051,Hansastraße,211,Schnellladeeinrichtung,2,75.0
+13051,Hansastraße,202,Normalladeeinrichtung,2,22.0
+13053,Manetstr.,86,Normalladeeinrichtung,2,22.0
+13053,Weißenseer Weg,53,Normalladeeinrichtung,2,22.0
+13053,Marzahner Straße,24,Normalladeeinrichtung,2,44.0
+13053,Indira-Gandhi-Str.,106-109,Schnellladeeinrichtung,1,175.0
+13053,Indira-Gandhi-Str.,106-109,Schnellladeeinrichtung,1,175.0
+13053,Indira-Gandhi-Str.,106-109,Schnellladeeinrichtung,1,175.0
+13053,Indira-Gandhi-Str.,106-109,Schnellladeeinrichtung,1,175.0
+13053,Rotkamp,41,Normalladeeinrichtung,2,22.0
+13053,Falkenberger Chaussee,40,Normalladeeinrichtung,2,22.0
+13053,Falkenberger Chaussee,40,Normalladeeinrichtung,2,22.0
+13053,Rotkamp,41,Normalladeeinrichtung,2,22.0
+13053,Plauener Str.,163-165,Normalladeeinrichtung,2,22.0
+13053,Malchower Weg,51,Schnellladeeinrichtung,2,180.0
+13053,Malchower Weg,51,Schnellladeeinrichtung,2,180.0
+13054,Plauener Str.,163-165,Normalladeeinrichtung,2,22.0
+13055,Konrad-Wolf-Straße,24,Schnellladeeinrichtung,2,150.0
+13055,Konrad-Wolf-Straße,24,Schnellladeeinrichtung,2,150.0
+13055,Konrad-Wolf-Straße,24,Schnellladeeinrichtung,2,300.0
+13055,Konrad Wolf Straße,24,Schnellladeeinrichtung,2,300.0
+13055,Konrad Wolf Straße,24,Schnellladeeinrichtung,2,150.0
+13055,Konrad Wolf Straße,24,Schnellladeeinrichtung,2,150.0
+13055,Arendsweg,19,Normalladeeinrichtung,1,3.7
+13055,Konrad-Wolf-Str.,66,Normalladeeinrichtung,2,22.0
+13055,Bahnhofstr.,6,Normalladeeinrichtung,2,22.0
+13055,Große-Leege-Str.,73,Normalladeeinrichtung,2,22.0
+13055,Große-Leege-Str.,10 a,Normalladeeinrichtung,2,22.0
+13055,Ferdinand-Schultze-Str.,106,Schnellladeeinrichtung,2,150.0
+13055,Ferdinand-Schultze-Str.,106,Schnellladeeinrichtung,2,300.0
+13055,Ferdinand-Schultze-Str.,106,Schnellladeeinrichtung,2,300.0
+13055,Ferdinand-Schultze-Str.,106,Schnellladeeinrichtung,2,150.0
+13055,Leuenberger Straße,20,Normalladeeinrichtung,2,44.0
+13055,Goeckestraße,32a,Normalladeeinrichtung,2,22.0
+13055,Goeckestraße,32a,Normalladeeinrichtung,2,22.0
+13055,Plauener Str.,163-165,Schnellladeeinrichtung,2,150.0
+13055,Hauptstr.,9-10,Schnellladeeinrichtung,3,75.0
+13055,Große-Leege-Straße,53,Normalladeeinrichtung,2,22.0
+13055,Schleizer Straße,63,Normalladeeinrichtung,2,44.0
+13055,Worbiser Straße ,11,Normalladeeinrichtung,1,11.0
+13055,Gärtnerstraße ,17,Normalladeeinrichtung,1,11.0
+13055,Liebenwalder Str.,18,Normalladeeinrichtung,2,22.0
+13055,Gärtnerstraße,17,Normalladeeinrichtung,1,11.0
+13055,Gärtnerstraße,17,Normalladeeinrichtung,1,11.0
+13055,Gärtnerstraße,17,Normalladeeinrichtung,1,11.0
+13055,Große-Leege-Str.,115,Normalladeeinrichtung,2,44.0
+13055,Gärtnerstraße,17,Normalladeeinrichtung,2,22.0
+13055,Gärtnerstraße,17,Normalladeeinrichtung,2,22.0
+13055,Strausberger Str.,2,Normalladeeinrichtung,2,33.0
+13055,Landsberger Allee,267,Schnellladeeinrichtung,2,150.0
+13055,Landsberger Allee,267,Normalladeeinrichtung,2,22.0
+13057,Randowstraße,22,Normalladeeinrichtung,2,44.0
+13057,Randowstraße,32,Normalladeeinrichtung,2,22.0
+13057,Henriette-Herz-Allee,9,Normalladeeinrichtung,2,22.0
+13057,Henriette-Herz-Allee,9,Normalladeeinrichtung,2,22.0
+13057,Henriette-Herz-Allee,9,Normalladeeinrichtung,2,22.0
+13057,Am Gehrensee,2,Schnellladeeinrichtung,2,180.0
+13057,Falkenberger Chaussee,134/136,Normalladeeinrichtung,2,22.0
+13057,Falkenberger Chaussee,134/136,Normalladeeinrichtung,2,22.0
+13057,Falkenberger Chaussee,134/136,Normalladeeinrichtung,2,22.0
+13057,Falkenberger Chaussee,134-136,Normalladeeinrichtung,2,22.0
+13059,Grevesmühlener Str.,43,Normalladeeinrichtung,2,30.0
+13086,Brauhausstr.,2,Normalladeeinrichtung,2,22.0
+13086,Behaimstr.,25,Normalladeeinrichtung,2,22.0
+13086,Gäblerstr.,7,Normalladeeinrichtung,2,22.0
+13086,Roelckestr,108-109,Schnellladeeinrichtung,2,300.0
+13086,Roelckestr,108-109,Schnellladeeinrichtung,2,150.0
+13086,Roelckestr.,108-109,Schnellladeeinrichtung,2,300.0
+13086,Roelckestr.,108-109,Schnellladeeinrichtung,2,150.0
+13086,Pistoriusstr.,66-67,Normalladeeinrichtung,2,44.0
+13086,Roelckestraße,172,Schnellladeeinrichtung,3,72.0
+13086,Lehderstraße,33,Normalladeeinrichtung,2,22.0
+13088,Herbert-Baum-Str.,4,Normalladeeinrichtung,2,22.0
+13088,Gounodstr.,109,Normalladeeinrichtung,2,22.0
+13088,Smetanastr.,32,Normalladeeinrichtung,2,22.0
+13088,Gounodstr.,9,Normalladeeinrichtung,2,22.0
+13088,Liebermannstr.,40,Normalladeeinrichtung,2,22.0
+13088,Piesporter Str.,74,Normalladeeinrichtung,2,22.0
+13088,Gehringstr.,45,Schnellladeeinrichtung,2,150.0
+13088,Malchower Chaussee,10,Schnellladeeinrichtung,2,150.0
+13088,Malchower Chaussee,10,Normalladeeinrichtung,2,22.0
+13088,Gehringstr.,20,Normalladeeinrichtung,2,44.0
+13088,Roelckestraße,105,Normalladeeinrichtung,2,11.0
+13089,Rothenbachstr.,1,Schnellladeeinrichtung,1,175.0
+13089,Rothenbachstr.,1,Schnellladeeinrichtung,1,175.0
+13089,Prenzlauer Promenade,68,Schnellladeeinrichtung,2,150.0
+13089,Prenzlauer Promenade,65,Schnellladeeinrichtung,3,50.0
+13089,Romain-Rolland-Str.,124,Normalladeeinrichtung,2,30.0
+13089,Romain-Rolland-Straße,13,Schnellladeeinrichtung,2,360.0
+13089,Romain-Rolland-Straße,13,Schnellladeeinrichtung,2,360.0
+13089,Romain-Rolland-Str.,13,Schnellladeeinrichtung,3,72.0
+13089,Prenzlauer Promenade,87,Schnellladeeinrichtung,2,150.0
+13089,Prenzlauer Promenade,87,Schnellladeeinrichtung,2,150.0
+13089,Prenzlauer Promenade,87,Schnellladeeinrichtung,2,150.0
+13089,Prenzlauer Promenade,46,Normalladeeinrichtung,1,11.0
+13089,Prenzlauer Promenade,46,Normalladeeinrichtung,2,33.0
+13089,Rothenbachstraße,2,Schnellladeeinrichtung,2,180.0
+13089,Rothenbachstraße,2,Schnellladeeinrichtung,2,180.0
+13089,Blankenburger Str.,95,Normalladeeinrichtung,2,22.0
+13125,Schwanebecker Chaussee,50,Normalladeeinrichtung,2,44.0
+13125,Schwanebecker Chaussee,50,Normalladeeinrichtung,2,44.0
+13125,Schwanebecker Chaussee,50,Normalladeeinrichtung,2,44.0
+13125,Schwanebecker Chaussee,50,Normalladeeinrichtung,2,44.0
+13125,Schwanebecker Chaussee,50,Normalladeeinrichtung,2,44.0
+13125,Alt-Buch,53-57,Normalladeeinrichtung,2,22.0
+13125,Alt-Buch,53-57,Normalladeeinrichtung,2,22.0
+13125,Wiltbergstr.,29a,Normalladeeinrichtung,2,44.0
+13125,Robert-Rössle-Straße,10,Normalladeeinrichtung,1,22.0
+13125,Robert-Rössle-Straße,10,Normalladeeinrichtung,1,22.0
+13125,Robert-Rössle-Straße,10,Normalladeeinrichtung,1,22.0
+13125,Robert-Rössle-Straße,10,Normalladeeinrichtung,1,22.0
+13125,Robert-Rössle-Straße,10,Normalladeeinrichtung,1,22.0
+13125,Robert-Rössle-Straße,10,Normalladeeinrichtung,1,22.0
+13125,Alt-Karow,28a,Normalladeeinrichtung,3,22.0
+13125,Teichbergstraße,24,Schnellladeeinrichtung,2,180.0
+13125,Teichbergstraße,24,Schnellladeeinrichtung,2,180.0
+13125,Alt-Karow 12,12,Normalladeeinrichtung,2,22.0
+13125,Alt-Karow,12,Normalladeeinrichtung,2,22.0
+13125,Gärtnerstraße,17,Normalladeeinrichtung,2,22.0
+13127,Arnouxstr.,13,Normalladeeinrichtung,2,22.0
+13127,Zimbelstr.,4,Schnellladeeinrichtung,2,150.0
+13127,Pasewalker Str.,77,Schnellladeeinrichtung,3,50.0
+13127,Pankstraße,8-10,Normalladeeinrichtung,2,22.0
+13127,Zimbelstraße,26,Normalladeeinrichtung,4,22.0
+13127,Triftstraße,13,Normalladeeinrichtung,1,11.0
+13127,Bordeauxstraße ,17,Normalladeeinrichtung,1,22.0
+13129,Mühlenstr.,26,Schnellladeeinrichtung,2,150.0
+13129,Straße ,38,Normalladeeinrichtung,1,11.0
+13156,Siegfriedstr.,12,Normalladeeinrichtung,2,22.0
+13156,Nordendstr.,66c,Normalladeeinrichtung,1,3.7
+13156,Blankenburger Straße,81,Schnellladeeinrichtung,2,72.0
+13156,Blankenburger Straße,81,Schnellladeeinrichtung,2,72.0
+13156,Blankenburger Straße,81,Schnellladeeinrichtung,2,72.0
+13156,Blankenburger Straße,81,Schnellladeeinrichtung,2,72.0
+13156,Blankenburger Straße,81,Schnellladeeinrichtung,2,72.0
+13156,Waldstr.,1,Normalladeeinrichtung,2,22.0
+13156,Grabbeallee,27-29,Normalladeeinrichtung,2,44.0
+13156,Blankenburger Starße,36,Schnellladeeinrichtung,2,150.0
+13156,Siegfriedstraße,17,Normalladeeinrichtung,1,22.0
+13156,Siegfriedstraße,17,Normalladeeinrichtung,1,22.0
+13156,Siegfriedstraße,17,Normalladeeinrichtung,2,22.0
+13156,Blankenburger Str.,61,Schnellladeeinrichtung,2,360.0
+13156,Blankenburger Str.,61,Schnellladeeinrichtung,2,360.0
+13156,Blankenburger Str.,61,Schnellladeeinrichtung,2,360.0
+13158,Wilhelmsruher Damm,25,Schnellladeeinrichtung,2,150.0
+13158,Fontanestr.,82,Normalladeeinrichtung,2,22.0
+13158,Str. vor Schönholz,5,Schnellladeeinrichtung,2,180.0
+13158,Str. vor Schönholz,5,Schnellladeeinrichtung,2,180.0
+13159,Hauptstraße,30d,Normalladeeinrichtung,1,11.0
+13187,Wollankstrasse,16,Schnellladeeinrichtung,2,150.0
+13187,Wollankstrasse,16,Schnellladeeinrichtung,2,150.0
+13187,Wollankstrasse,16,Schnellladeeinrichtung,2,300.0
+13187,Brennerstr.,90,Normalladeeinrichtung,2,22.0
+13187,Kavalierstraße,15,Normalladeeinrichtung,2,22.0
+13187,Mühlenstr.,17,Normalladeeinrichtung,2,22.0
+13187,Hadlichstr.,33,Normalladeeinrichtung,2,22.0
+13187,Schulstr.,28,Normalladeeinrichtung,2,22.0
+13187,Ossietzkystr.,25,Normalladeeinrichtung,2,22.0
+13187,Mendelstr.,18,Normalladeeinrichtung,2,22.0
+13187,Maximilianstr.,45 a,Normalladeeinrichtung,2,22.0
+13187,Paracelsusstr.,24,Normalladeeinrichtung,2,22.0
+13187,Mühlenstraße ,13,Normalladeeinrichtung,1,11.0
+13189,Hallandstr.,59,Normalladeeinrichtung,1,3.7
+13189,Neumannstr.,2,Normalladeeinrichtung,2,22.0
+13189,Max-Lingner-Str.,8,Normalladeeinrichtung,2,22.0
+13189,Kissingenstr.,26,Normalladeeinrichtung,2,22.0
+13189,Schonensche Straße,35,Normalladeeinrichtung,2,22.0
+13189,Borkumstr.,1,Normalladeeinrichtung,2,22.0
+13347,Gerichtstr.,4,Schnellladeeinrichtung,2,150.0
+13347,Schulzendorfer Str.,26,Normalladeeinrichtung,2,22.0
+13347,Plantagenstr.,43,Normalladeeinrichtung,2,22.0
+13347,Nazarethkirchstr.,41,Normalladeeinrichtung,2,22.0
+13347,Groninger Str.,39,Normalladeeinrichtung,2,22.0
+13347,Turiner Str.,22,Normalladeeinrichtung,2,22.0
+13347,Neue Hochstr.,4,Normalladeeinrichtung,2,44.0
+13347,Neue Hochstraße,4,Normalladeeinrichtung,2,44.0
+13347,Gerichtstraße,65,Normalladeeinrichtung,2,22.0
+13347,Nazarethkirchstraße,50,Normalladeeinrichtung,2,22.0
+13347,Nazarethkirchstraße,50,Normalladeeinrichtung,2,22.0
+13347,Nazarethkirchstraße,50,Normalladeeinrichtung,2,22.0
+13347,Oudenarder Straße,22,Normalladeeinrichtung,2,22.0
+13347,Maxstraße,12,Normalladeeinrichtung,2,22.0
+13349,Bristolstr.,21,Normalladeeinrichtung,2,22.0
+13349,Müllerstraße,123-126,Schnellladeeinrichtung,2,72.0
+13351,Cornelius-Fredericks-Str.,76,Normalladeeinrichtung,2,22.0
+13351,Transvaalstrasse,32,Normalladeeinrichtung,2,22.0
+13353,Nordufer,6,Normalladeeinrichtung,2,22.0
+13353,Buchstr.,1,Normalladeeinrichtung,2,22.0
+13353,Genter Str.,45,Normalladeeinrichtung,2,22.0
+13353,Seestr.,18,Normalladeeinrichtung,1,3.7
+13353,Tegeler Straße,4-5,Normalladeeinrichtung,2,44.0
+13353,Genter Straße,68,Normalladeeinrichtung,2,22.0
+13353,Genter Straße,68,Normalladeeinrichtung,2,22.0
+13353,Seestraße,18-19,Schnellladeeinrichtung,2,150.0
+13353,Augustenburger Platz,1,Normalladeeinrichtung,2,44.0
+13353,Augustenburger Platz,1,Normalladeeinrichtung,2,44.0
+13353,Genter Straße,68,Normalladeeinrichtung,2,22.0
+13353,Sprengelstraße,41,Normalladeeinrichtung,2,22.0
+13353,Augustenburger Platz,1,Normalladeeinrichtung,1,22.0
+13353,Augustenburger Platz,1,Normalladeeinrichtung,1,22.0
+13353,Augustenburger Platz,1,Normalladeeinrichtung,1,22.0
+13353,Augustenburger Platz,1,Normalladeeinrichtung,1,22.0
+13353,Augustenburger Platz,1,Normalladeeinrichtung,1,22.0
+13353,Augustenburger Platz,1,Normalladeeinrichtung,1,22.0
+13353,Augustenburger Platz,1,Normalladeeinrichtung,1,22.0
+13355,Hussitenstr.,76,Normalladeeinrichtung,2,22.0
+13355,Rügener Str.,26,Normalladeeinrichtung,2,22.0
+13355,Ramlerstr.,1,Normalladeeinrichtung,2,22.0
+13355,Usedomer Str.,4,Normalladeeinrichtung,2,22.0
+13355,Gartenstr.,48,Normalladeeinrichtung,2,22.0
+13355,Hussitenstr.,34,Normalladeeinrichtung,2,22.0
+13355,Gustav-Meyer-Allee,25,Normalladeeinrichtung,1,22.0
+13355,Gustav-Meyer-Allee,25,Normalladeeinrichtung,1,22.0
+13355,Gustav-Meyer-Allee,25,Normalladeeinrichtung,1,22.0
+13355,Gustav-Meyer-Allee,25,Normalladeeinrichtung,1,22.0
+13355,Gustav-Meyer-Allee,25,Normalladeeinrichtung,1,22.0
+13355,Gustav-Meyer-Allee,25,Normalladeeinrichtung,1,22.0
+13355,Gustav-Meyer-Allee,25,Schnellladeeinrichtung,3,50.0
+13355,Gustav-Meyer-Allee,25,Normalladeeinrichtung,2,22.0
+13355,Voltastraße,5,Normalladeeinrichtung,2,22.0
+13355,Voltastraße,5,Schnellladeeinrichtung,2,150.0
+13355,Geneststr.,5,Normalladeeinrichtung,2,22.0
+13355,Ackerstraße,76Y,Normalladeeinrichtung,2,22.0
+13357,Jülicher Straße,1,Schnellladeeinrichtung,2,360.0
+13357,Sonderburger Str.,26,Normalladeeinrichtung,2,22.0
+13357,Heidebrinker Str.,21,Normalladeeinrichtung,2,22.0
+13357,Pankstr.,72,Normalladeeinrichtung,2,22.0
+13357,Kolberger Str.,30,Normalladeeinrichtung,2,22.0
+13357,Bastianstr.,24,Normalladeeinrichtung,2,30.0
+13357,Badstr.,4,Normalladeeinrichtung,4,44.0
+13357,Prinzenallee,75,Normalladeeinrichtung,2,44.0
+13357,Reinickendorfer Str.,41,Normalladeeinrichtung,2,44.0
+13357,Jülicher Straße,15,Normalladeeinrichtung,2,22.0
+13357,Kösliner Straße,4,Normalladeeinrichtung,2,22.0
+13357,Böttgerstraße,23,Normalladeeinrichtung,2,22.0
+13357,Böttgerstraße,23,Normalladeeinrichtung,2,22.0
+13357,Kösliner Straße,4,Normalladeeinrichtung,2,22.0
+13357,Kösliner Straße,4,Normalladeeinrichtung,2,22.0
+13357,Böttgerstraße,23,Normalladeeinrichtung,2,22.0
+13359,Nordbahnstr.,5,Normalladeeinrichtung,2,22.0
+13359,Steegerstraße 14,14,Schnellladeeinrichtung,2,150.0
+13359,Holzstraße,6,Normalladeeinrichtung,2,22.0
+13359,Osloer Str.,116A,Normalladeeinrichtung,2,22.0
+13359,Steegerstr.,14,Schnellladeeinrichtung,2,150.0
+13359,Schwedenstraße,9,Normalladeeinrichtung,2,11.0
+13403,Graf-Haeseler-Str.,24,Normalladeeinrichtung,2,22.0
+13403,Blankestr.,19,Normalladeeinrichtung,1,3.7
+13403,General-Barby-Straße,53,Normalladeeinrichtung,1,3.7
+13403,General-Barby-Straße,0,Normalladeeinrichtung,1,3.7
+13403,Hermann-Piper-Straße,0,Normalladeeinrichtung,1,3.7
+13403,General-Woyna-Straße,50,Normalladeeinrichtung,1,3.7
+13403,Eichborndamm,77-85,Schnellladeeinrichtung,2,72.0
+13403,Waldstr.,19,Schnellladeeinrichtung,3,72.0
+13403,Quäkerstraße,27,Normalladeeinrichtung,2,22.0
+13403,Saalmannstraße,7-9,Normalladeeinrichtung,2,22.0
+13403,Saalmannstraße,7-9,Schnellladeeinrichtung,1,150.0
+13403,Ollenhauerstr.,122,Schnellladeeinrichtung,2,93.0
+13403,Quäkerstraße,27,Normalladeeinrichtung,2,22.0
+13403,General-Woyna-Str.,63,Normalladeeinrichtung,2,22.0
+13403,Saalmannstr.,8,Normalladeeinrichtung,2,30.0
+13405,Scharnweberstraße,79-81,Schnellladeeinrichtung,1,175.0
+13405,Scharnweberstraße,79-81,Schnellladeeinrichtung,1,175.0
+13405,Scharnweberstr.,79/81,Schnellladeeinrichtung,2,360.0
+13405,Uranusweg,29,Normalladeeinrichtung,1,3.7
+13405,Uranusweg,25,Normalladeeinrichtung,1,3.7
+13405,Uranusweg,0,Normalladeeinrichtung,1,3.7
+13407,Aroser Allee,116,Normalladeeinrichtung,2,22.0
+13407,Rütlistraße,13,Normalladeeinrichtung,2,22.0
+13407,Roedernallee,49-50,Schnellladeeinrichtung,3,50.0
+13407,Flottenstraße,28-42,Normalladeeinrichtung,2,22.0
+13407,Rödernallee,179,Schnellladeeinrichtung,2,150.0
+13407,Alt-Reinickendorf,56-57,Normalladeeinrichtung,2,30.0
+13409,Reginhardstr.,66A,Normalladeeinrichtung,1,3.7
+13409,Reginhardstr.,32,Normalladeeinrichtung,2,22.0
+13409,Markstraße,16,Schnellladeeinrichtung,2,160.0
+13409,Indira-Gandhi-Str.,101,Schnellladeeinrichtung,3,50.0
+13409,Markstr.,41,Schnellladeeinrichtung,3,50.0
+13409,Pankower Allee  9,9,Normalladeeinrichtung,2,44.0
+13409,Residenzstraße,85,Schnellladeeinrichtung,2,93.0
+13409,Gesellschaftstr.,26,Normalladeeinrichtung,2,22.0
+13409,Kamekestr.,17,Normalladeeinrichtung,2,22.0
+13435,Wittenauer Str.,25,Normalladeeinrichtung,2,22.0
+13435,Lübarser Straße,40-46,Normalladeeinrichtung,2,22.0
+13435,Lübarser Straße,40-46,Schnellladeeinrichtung,2,150.0
+13435,Wittenauer Straße,18,Normalladeeinrichtung,2,33.0
+13437,Oranienburger Str.,61,Schnellladeeinrichtung,2,360.0
+13437,Tessenowstraße,59,Normalladeeinrichtung,1,3.7
+13437,Tessenowstraße,57,Normalladeeinrichtung,1,3.7
+13437,Tessenowstraße,41B,Normalladeeinrichtung,1,3.7
+13437,Tessenowstraße,40,Normalladeeinrichtung,1,3.7
+13437,Tessenowstraße,38A,Normalladeeinrichtung,1,3.7
+13437,Alt-Wittenau,88 und 89,Normalladeeinrichtung,1,3.7
+13437,Tessenowstraße,35,Normalladeeinrichtung,1,3.7
+13437,Tessenowstraße,33A,Normalladeeinrichtung,1,3.7
+13437,Schmitzweg,90,Normalladeeinrichtung,1,3.7
+13437,Brodersenstraße,24,Normalladeeinrichtung,1,3.7
+13437,Schmitzweg,98,Normalladeeinrichtung,1,3.7
+13437,Blomberger Weg,4,Normalladeeinrichtung,6,132.0
+13437,Oranienburger Str.,116,Schnellladeeinrichtung,2,150.0
+13437,Blunckstr.,14,Normalladeeinrichtung,2,30.0
+13439,Quickborner Str.,66-70,Schnellladeeinrichtung,3,50.0
+13465,Neubrücker Straße ggü. 44,0,Normalladeeinrichtung,1,3.7
+13465,Neubrücker Straße,53,Normalladeeinrichtung,1,3.7
+13465,Gawanstraße,31,Normalladeeinrichtung,1,3.7
+13465,Schönfließer Straße,116,Normalladeeinrichtung,1,3.7
+13465,Schönfließer Straße,120,Normalladeeinrichtung,1,3.7
+13465,Welfenallee,60,Normalladeeinrichtung,1,3.7
+13465,Welfenallee,56,Normalladeeinrichtung,1,3.7
+13465,Welfenallee,54,Normalladeeinrichtung,1,3.7
+13465,Maximiliankorso,52,Normalladeeinrichtung,1,3.7
+13465,Maximiliankorso,53,Normalladeeinrichtung,1,3.7
+13465,Maximiliankorso,6,Normalladeeinrichtung,1,3.7
+13465,Edelhofdamm,24,Normalladeeinrichtung,1,3.7
+13465,Edelhofdamm,26,Normalladeeinrichtung,1,3.7
+13465,Edelhofdamm,37,Normalladeeinrichtung,1,3.7
+13465,Edelhofdamm,0,Normalladeeinrichtung,1,3.7
+13465,Falkentaler Steig,112,Normalladeeinrichtung,1,3.7
+13465,Alemannenstraße,110,Normalladeeinrichtung,1,3.7
+13465,Alemannenstraße,106,Normalladeeinrichtung,1,3.7
+13465,Alemannenstraße,102A,Normalladeeinrichtung,1,3.7
+13465,Alemannenstraße,64A,Normalladeeinrichtung,1,3.7
+13465,Alemannenstraße,62,Normalladeeinrichtung,1,3.7
+13465,Alemannenstraße,0,Normalladeeinrichtung,1,3.7
+13465,Burgfrauenstraße,15,Normalladeeinrichtung,1,3.7
+13465,Donnersmarckallee,12,Normalladeeinrichtung,1,3.7
+13465,Donnersmarckallee,10A,Normalladeeinrichtung,1,3.7
+13465,Edelhofdamm,3A,Normalladeeinrichtung,1,3.7
+13465,Edelhofdamm,50,Normalladeeinrichtung,1,3.7
+13465,Edelhofdamm,52,Normalladeeinrichtung,1,3.7
+13465,Falkentaler Steig,120,Normalladeeinrichtung,1,3.7
+13465,Falkentaler Steig,116,Normalladeeinrichtung,1,3.7
+13465,Gawanstraße,45,Normalladeeinrichtung,1,3.7
+13465,Hainbuchenstraße,0,Normalladeeinrichtung,1,3.7
+13465,Hainbuchenstraße,0,Normalladeeinrichtung,1,3.7
+13465,Hainbuchenstraße,20,Normalladeeinrichtung,1,3.7
+13465,Hainbuchenstraße,14,Normalladeeinrichtung,1,3.7
+13465,Karmeliterweg,118,Normalladeeinrichtung,1,3.7
+13465,Karmeliterweg,108,Normalladeeinrichtung,1,3.7
+13465,Karmeliterweg,80,Normalladeeinrichtung,1,3.7
+13465,Maximiliankorso,64,Normalladeeinrichtung,1,3.7
+13465,Maximiliankorso,65F,Normalladeeinrichtung,1,3.7
+13465,Maximiliankorso,0,Normalladeeinrichtung,1,3.7
+13465,Neubrücker Str.,83,Normalladeeinrichtung,1,3.7
+13465,Neubrücker Str.,81,Normalladeeinrichtung,1,3.7
+13465,Stolzingstraße,52,Normalladeeinrichtung,1,3.7
+13465,Stolzingstraße,56,Normalladeeinrichtung,1,3.7
+13465,Stolzingstraße,60,Normalladeeinrichtung,1,3.7
+13465,Welfenallee,38,Normalladeeinrichtung,1,3.7
+13465,Welfenallee,74,Normalladeeinrichtung,1,3.7
+13465,Maximiliankorso,0,Normalladeeinrichtung,1,3.7
+13465,Welfenallee,6,Normalladeeinrichtung,2,22.0
+13465,Forstweg,59A,Normalladeeinrichtung,1,11.0
+13467,Hermsdorfer Damm,141-143,Schnellladeeinrichtung,2,300.0
+13467,Mühlenfeldstraße,8,Normalladeeinrichtung,1,3.7
+13467,Mühlenfeldstraße,81,Normalladeeinrichtung,1,3.7
+13467,Mühlenfeldstraße,96,Normalladeeinrichtung,1,3.7
+13467,Mühlenfeldstraße,0,Normalladeeinrichtung,1,3.7
+13467,Seebadstraße,30,Normalladeeinrichtung,1,3.7
+13467,Ulmenstraße,11,Normalladeeinrichtung,1,3.7
+13467,Ulmenstraße,5,Normalladeeinrichtung,1,3.7
+13467,Schulzendorfer Straße,53B,Normalladeeinrichtung,1,3.7
+13467,Schulzendorfer Straße,50,Normalladeeinrichtung,1,3.7
+13467,Falkentaler Steig,58,Normalladeeinrichtung,1,3.7
+13467,Hermsdorfer Damm,237,Normalladeeinrichtung,1,3.7
+13467,Hermsdorfer Damm,233A,Normalladeeinrichtung,1,3.7
+13467,Hermsdorfer Damm,0,Normalladeeinrichtung,1,3.7
+13467,Veltheimstraße,7,Normalladeeinrichtung,1,3.7
+13467,Veltheimstraße,15,Normalladeeinrichtung,1,3.7
+13467,Veltheimstraße,19,Normalladeeinrichtung,1,3.7
+13467,Veltheimstraße,21,Normalladeeinrichtung,1,3.7
+13467,Veltheimstraße,47-47D,Normalladeeinrichtung,1,3.7
+13467,Veltheimstraße,49-49D,Normalladeeinrichtung,1,3.7
+13467,Mühlenfeldstraße,10,Normalladeeinrichtung,1,3.7
+13467,Mühlenfeldstraße,0,Normalladeeinrichtung,1,3.7
+13467,Falkentaler Steig,26,Normalladeeinrichtung,1,3.7
+13467,Falkentaler Steig,12,Normalladeeinrichtung,1,3.7
+13467,Falkentaler Steig,8,Normalladeeinrichtung,1,3.7
+13467,Mühlenfeldstraße,23,Normalladeeinrichtung,1,3.7
+13467,Mühlenfeldstraße,29,Normalladeeinrichtung,1,3.7
+13467,Mühlenfeldstraße,63,Normalladeeinrichtung,1,3.7
+13467,Mühlenfeldstraße,114,Normalladeeinrichtung,1,3.7
+13467,Schulzendorfer Str.,13,Normalladeeinrichtung,1,3.7
+13467,Schulzendorfer Str.,10,Normalladeeinrichtung,1,3.7
+13467,Schulzendorfer Str.,9,Normalladeeinrichtung,1,3.7
+13467,Schildower Straße,0,Normalladeeinrichtung,1,3.7
+13467,Veltheimstraße,37,Normalladeeinrichtung,1,3.7
+13467,Veltheimstraße,63,Normalladeeinrichtung,1,3.7
+13467,Wickhofstr.,14,Normalladeeinrichtung,2,30.0
+13469,Waidmannsluster Damm,136,Normalladeeinrichtung,1,3.7
+13469,Lahrer Pfad ggü. 5A,0,Normalladeeinrichtung,1,3.7
+13469,Lahrer Pfad ggü. 9,0,Normalladeeinrichtung,1,3.7
+13469,Dianastraße,65,Normalladeeinrichtung,1,3.7
+13469,Dianastraße,25,Normalladeeinrichtung,1,3.7
+13469,Lahrer Pfad,6,Normalladeeinrichtung,1,3.7
+13469,Zabel-Krüger-Damm,6-10,Schnellladeeinrichtung,3,150.0
+13469,Oraniendamm,6-10,Schnellladeeinrichtung,2,150.0
+13469,Oraniendamm,6-10,Schnellladeeinrichtung,2,150.0
+13469,Gutachstr.,28,Normalladeeinrichtung,2,30.0
+13501,Zingster Str.,30,Normalladeeinrichtung,1,3.7
+13503,Im Rehgrund ,52,Normalladeeinrichtung,1,11.0
+13507,Am Tegeler Hafen,3,Normalladeeinrichtung,2,22.0
+13507,Am Borsigturm,48,Normalladeeinrichtung,2,22.0
+13507,Namslaustr.,2,Normalladeeinrichtung,2,22.0
+13507,Namslaustraße,0,Normalladeeinrichtung,1,3.7
+13507,Namslaustraße,71,Normalladeeinrichtung,1,3.7
+13507,Namslaustraße,0,Normalladeeinrichtung,1,3.7
+13507,Neheimer Straße,0,Normalladeeinrichtung,1,3.7
+13507,Neheimer Straße,0,Normalladeeinrichtung,1,3.7
+13507,Namslaustraße Bei Hausnr.,65,Normalladeeinrichtung,1,3.7
+13507,Namslaustraße,0,Normalladeeinrichtung,1,3.7
+13507,Namslaustraße,0,Normalladeeinrichtung,1,3.7
+13507,Namslaustraße,0,Normalladeeinrichtung,1,3.7
+13507,Namslaustraße,0,Normalladeeinrichtung,1,3.7
+13507,Neheimer Straße,0,Normalladeeinrichtung,1,3.7
+13507,Berliner Straße,24,Schnellladeeinrichtung,2,150.0
+13507,Flohrstr.,1-9,Normalladeeinrichtung,2,22.0
+13507,Grußdorfstr.,16,Normalladeeinrichtung,2,30.0
+13507,Lichtweg ,15,Normalladeeinrichtung,1,11.0
+13507,Alt-Tegel,22,Normalladeeinrichtung,2,22.0
+13509,Tile-Brügge-Weg,33-37,Normalladeeinrichtung,2,22.0
+13509,Ernststraße,50,Normalladeeinrichtung,1,3.7
+13509,Miraustraße,73,Normalladeeinrichtung,1,3.7
+13509,Miraustraße,67,Normalladeeinrichtung,1,3.7
+13509,Miraustraße,63,Normalladeeinrichtung,1,3.7
+13509,Ziekowstraße,0,Normalladeeinrichtung,1,3.7
+13509,Ziekowstraße,0,Normalladeeinrichtung,1,3.7
+13509,Ernststraße,0,Normalladeeinrichtung,1,3.7
+13509,Ernststraße,82,Normalladeeinrichtung,1,3.7
+13509,Jacobsenweg,60,Normalladeeinrichtung,1,3.7
+13509,Jacobsenweg,58,Normalladeeinrichtung,1,3.7
+13509,Ziekowstraße,0,Normalladeeinrichtung,1,3.7
+13509,Ernststraße,50,Normalladeeinrichtung,1,3.7
+13509,Jacobsenweg,32,Normalladeeinrichtung,1,3.7
+13509,Jacobsenweg,28,Normalladeeinrichtung,1,3.7
+13509,Jacobsenweg,25,Normalladeeinrichtung,1,3.7
+13509,Miraustraße Bei Hausnr.,137,Normalladeeinrichtung,1,3.7
+13509,Miraustraße,0,Normalladeeinrichtung,1,3.7
+13509,Miraustraße,57,Normalladeeinrichtung,1,3.7
+13509,Miraustraße,0,Normalladeeinrichtung,1,3.7
+13509,Am Nordgraben,2,Normalladeeinrichtung,2,43.0
+13509,Am Nordgraben,2,Normalladeeinrichtung,2,43.0
+13509,Holzhauser Str.,11,Normalladeeinrichtung,2,44.0
+13509,Holzhauser Str.,11,Normalladeeinrichtung,2,44.0
+13509,Holzhauser Str.,11,Normalladeeinrichtung,2,44.0
+13509,Holzhauser Straße,11,Normalladeeinrichtung,2,44.0
+13509,Holzhauser Straße,11,Normalladeeinrichtung,2,44.0
+13509,Holzhauser Straße,11,Normalladeeinrichtung,2,44.0
+13509,Holzhauser Straße,11,Normalladeeinrichtung,2,44.0
+13509,Holzhauser Str.,168,Schnellladeeinrichtung,2,72.0
+13509,Holzhauser Str.,9,Normalladeeinrichtung,2,22.0
+13539,Rummelsburger Landstr.,16,Schnellladeeinrichtung,1,175.0
+13539,Rummelsburger Landstr.,16,Schnellladeeinrichtung,1,175.0
+13581,Wilhelmshavener Str.,27,Normalladeeinrichtung,2,22.0
+13581,Straßburger Str.,30,Normalladeeinrichtung,2,30.0
+13581,Krowelstraße,41,Normalladeeinrichtung,1,3.7
+13581,Krowelstraße,21,Normalladeeinrichtung,1,3.7
+13581,Krowelstraße,22,Normalladeeinrichtung,1,3.7
+13581,Krowelstraße,0,Normalladeeinrichtung,1,3.7
+13581,Krowelstraße,35,Normalladeeinrichtung,1,3.7
+13581,Krowelstraße,0,Normalladeeinrichtung,1,3.7
+13581,Krumme Gärten,1,Normalladeeinrichtung,1,3.7
+13581,Krumme Gärten,3,Normalladeeinrichtung,1,3.7
+13581,Krumme Gärten,7,Normalladeeinrichtung,1,3.7
+13581,Krumme Gärten,0,Normalladeeinrichtung,1,3.7
+13581,Seecktstraße,0,Normalladeeinrichtung,1,3.7
+13581,Seecktstraße,0,Normalladeeinrichtung,1,3.7
+13581,Johannastraße,35,Normalladeeinrichtung,1,3.7
+13581,Seecktstraße,0,Normalladeeinrichtung,1,3.7
+13581,Brunsbütteler Damm,144,Schnellladeeinrichtung,2,150.0
+13581,Brunsbütteler Damm,144,Schnellladeeinrichtung,2,300.0
+13581,Brunsbütteler Damm,40,Schnellladeeinrichtung,2,93.0
+13581,Brunsbütteler Damm,87,Normalladeeinrichtung,2,22.0
+13581,Brunsbütteler Damm,87,Normalladeeinrichtung,2,22.0
+13581,Brunsbütteler Damm,87,Normalladeeinrichtung,2,22.0
+13581,Brunsbütteler Damm,87,Normalladeeinrichtung,2,22.0
+13581,Seeburger Str.,27,Normalladeeinrichtung,2,44.0
+13581,Seeburger Straße,27,Normalladeeinrichtung,2,44.0
+13581,Seeburger Straße,27,Normalladeeinrichtung,2,44.0
+13581,Seeburger Straße,27,Normalladeeinrichtung,2,44.0
+13581,Seeburger Straße,27,Normalladeeinrichtung,2,44.0
+13581,Brunsbütteler Damm,4,Normalladeeinrichtung,2,44.0
+13581,Sedanstraße,6,Normalladeeinrichtung,2,22.0
+13581,Brunsbütteler Damm,153,Normalladeeinrichtung,2,44.0
+13581,Staakener Straße,16,Normalladeeinrichtung,2,22.0
+13583,Askanierring,40,Schnellladeeinrichtung,2,150.0
+13583,Askanierring,40,Schnellladeeinrichtung,2,150.0
+13583,Dallgower Str.,2,Normalladeeinrichtung,2,22.0
+13583,Zweibrücker Straße,40,Normalladeeinrichtung,1,3.7
+13583,Zweibrücker Straße,48,Normalladeeinrichtung,1,3.7
+13583,Dyrotzer Straße,32,Normalladeeinrichtung,1,3.7
+13583,Falkenseer Chaussee,259,Normalladeeinrichtung,2,44.0
+13583,Zweibrücker Straße,86,Normalladeeinrichtung,2,22.0
+13583,Zweibrücker Straße,86,Normalladeeinrichtung,2,22.0
+13583,Germersheimer Weg,28,Normalladeeinrichtung,2,22.0
+13583,Borkzeile.,7,Normalladeeinrichtung,2,22.0
+13585,Bismarckstr.,14,Normalladeeinrichtung,2,30.0
+13585,Feldstr.,51,Normalladeeinrichtung,2,22.0
+13585,Jagowstr.,4,Normalladeeinrichtung,2,22.0
+13585,Mittelstr.,14,Normalladeeinrichtung,2,22.0
+13585,Hedwigstr.,8,Normalladeeinrichtung,2,30.0
+13585,Askanierring,0,Normalladeeinrichtung,1,3.7
+13585,Askanierring,99,Normalladeeinrichtung,1,3.7
+13585,Askanierring,97,Normalladeeinrichtung,1,3.7
+13585,Flankenschanze,4,Normalladeeinrichtung,1,3.7
+13585,Flankenschanze,8,Normalladeeinrichtung,1,3.7
+13585,Flankenschanze,46A,Normalladeeinrichtung,1,3.7
+13585,Flankenschanze,0,Normalladeeinrichtung,1,3.7
+13585,Flankenschanze,0,Normalladeeinrichtung,1,3.7
+13585,Flankenschanze,0,Normalladeeinrichtung,1,3.7
+13585,Bismarckstraße,7,Normalladeeinrichtung,1,3.7
+13585,Bismarckstraße,62,Normalladeeinrichtung,1,3.7
+13585,Bismarckstraße,4,Normalladeeinrichtung,1,3.7
+13585,Bismarckstraße,14,Normalladeeinrichtung,1,3.7
+13585,Falkenhagener Straße,0,Normalladeeinrichtung,1,3.7
+13585,Feldstraße,43,Normalladeeinrichtung,1,3.7
+13585,Lynarstraße Zwischen,0,Normalladeeinrichtung,1,3.7
+13585,Lynarstraße,17,Normalladeeinrichtung,1,3.7
+13585,Lynarstraße,32,Normalladeeinrichtung,1,3.7
+13585,Lynarstraße,36,Normalladeeinrichtung,1,3.7
+13585,Lynarstraße,7,Normalladeeinrichtung,1,3.7
+13585,Marschallstraße,9,Normalladeeinrichtung,1,3.7
+13585,Marschallstraße,11,Normalladeeinrichtung,1,3.7
+13585,Falkenhagener Straße,38,Normalladeeinrichtung,1,3.7
+13585,Falkenhagener Straße,31,Normalladeeinrichtung,1,3.7
+13585,Falkenhagener Straße,22,Normalladeeinrichtung,1,3.7
+13585,Marschallstraße,8,Normalladeeinrichtung,1,3.7
+13585,Askanierring,0,Normalladeeinrichtung,1,3.7
+13585,Falkenhagener Straße,37,Normalladeeinrichtung,1,3.7
+13585,Falkenhagener Straße,53,Normalladeeinrichtung,1,3.7
+13585,Falkenhagener Straße,14,Normalladeeinrichtung,1,3.7
+13585,Falkenhagener Straße,57,Normalladeeinrichtung,1,3.7
+13585,Falkenhagener Straße,7,Normalladeeinrichtung,1,3.7
+13585,Falkenhagener Straße,63,Normalladeeinrichtung,1,3.7
+13585,Falkenhagener Straße,4,Normalladeeinrichtung,1,3.7
+13585,Feldstraße,37,Normalladeeinrichtung,1,3.7
+13585,Feldstraße,12,Normalladeeinrichtung,1,3.7
+13585,Parkstraße,14,Normalladeeinrichtung,1,3.7
+13585,Parkstraße,41,Normalladeeinrichtung,1,3.7
+13585,Parkstraße,0,Normalladeeinrichtung,1,3.7
+13585,Parkstraße,0,Normalladeeinrichtung,1,3.7
+13585,Neue Bergstraße,6,Normalladeeinrichtung,2,43.0
+13585,Neue Bergstraße,6,Normalladeeinrichtung,2,43.0
+13585,Kleine Mittelstraße,8,Normalladeeinrichtung,2,22.0
+13585,Kleine Mittelstraße,8,Normalladeeinrichtung,2,22.0
+13585,Kurstraße,19,Normalladeeinrichtung,2,22.0
+13585,Schäferstraße,25,Normalladeeinrichtung,2,22.0
+13585,Kurstraße,19,Normalladeeinrichtung,2,22.0
+13585,Kleine Mittelstraße,8,Normalladeeinrichtung,2,22.0
+13585,Fehrbelliner Strasse,0,Normalladeeinrichtung,2,22.0
+13585,Schäferstraße,25,Normalladeeinrichtung,2,22.0
+13585,Hohenzollernring,117,Normalladeeinrichtung,2,44.0
+13587,Michelstadter Weg,85,Normalladeeinrichtung,2,22.0
+13587,Hugo-Cassierer-Str.,24,Normalladeeinrichtung,2,22.0
+13587,Askanierring,0,Normalladeeinrichtung,1,3.7
+13587,Askanierring,108,Normalladeeinrichtung,1,3.7
+13587,Eschenweg,8,Normalladeeinrichtung,1,3.7
+13587,Aalemannufer,1,Normalladeeinrichtung,1,3.7
+13587,Schlehenweg,7,Normalladeeinrichtung,1,3.7
+13587,Merianweg,13,Normalladeeinrichtung,1,3.7
+13587,Mertensstraße,17,Normalladeeinrichtung,1,3.7
+13587,Mertensstraße,23,Normalladeeinrichtung,1,3.7
+13587,Mertensstraße,33,Normalladeeinrichtung,1,3.7
+13587,Wichernstraße,13,Normalladeeinrichtung,1,3.7
+13587,Wichernstraße,14,Normalladeeinrichtung,1,3.7
+13587,Wichernstraße,29,Normalladeeinrichtung,1,3.7
+13587,Streitstraße,18,Normalladeeinrichtung,2,22.0
+13587,Hugo-Cassirer-Straße 37,37,Normalladeeinrichtung,2,44.0
+13587,Goltzstraße,69,Normalladeeinrichtung,2,22.0
+13587,Cautiusstraße,34,Normalladeeinrichtung,2,22.0
+13587,Goltzstraße,69,Normalladeeinrichtung,2,22.0
+13587,Cautiusstraße,34,Normalladeeinrichtung,2,22.0
+13587,Bamihlstraße,7,Normalladeeinrichtung,2,22.0
+13587,Cautiusstraße,34,Normalladeeinrichtung,2,22.0
+13587,Reußstr.,11,Normalladeeinrichtung,2,22.0
+13587,Wansdorfer Platz,2,Normalladeeinrichtung,2,22.0
+13587,Mertensstraße,63,Normalladeeinrichtung,2,22.0
+13589,Pionierstraße,79,Normalladeeinrichtung,1,3.7
+13589,Pionierstraße,79,Normalladeeinrichtung,1,3.7
+13589,Pionierstraße Zwischen,0,Normalladeeinrichtung,1,3.7
+13589,Wasserwerkstr.,2,Normalladeeinrichtung,2,22.0
+13589,Griesinger Str,29,Normalladeeinrichtung,2,22.0
+13591,Schulstr.,1,Normalladeeinrichtung,1,3.7
+13591,Eichholzbahn,0,Normalladeeinrichtung,1,3.7
+13591,Filmwerkeweg,1,Normalladeeinrichtung,1,3.7
+13591,Hauptstraße,14,Normalladeeinrichtung,1,3.7
+13591,Seegefelder Weg,391,Schnellladeeinrichtung,3,50.0
+13591,Heidebergplan,5,Normalladeeinrichtung,2,30.0
+13591,Siedlungsweg ,6,Normalladeeinrichtung,1,11.0
+13593,Sandstr.,60,Normalladeeinrichtung,2,22.0
+13593,Obstallee,28,Normalladeeinrichtung,2,22.0
+13593,Pillnitzer Weg,1,Normalladeeinrichtung,2,30.0
+13593,Heerstr.,324,Schnellladeeinrichtung,1,175.0
+13593,Heerstr.,324,Schnellladeeinrichtung,1,175.0
+13593,Heerstr.,324,Schnellladeeinrichtung,1,175.0
+13593,Blasewitzer Ring  7,7,Normalladeeinrichtung,2,44.0
+13593,Reclamweg,2,Normalladeeinrichtung,2,22.0
+13593,Obstallee,3,Normalladeeinrichtung,2,22.0
+13593,Wilhelmstr.,21-25,Schnellladeeinrichtung,3,184.0
+13593,Heerstr.,325,Schnellladeeinrichtung,2,150.0
+13593,Heerstr.,325,Schnellladeeinrichtung,2,150.0
+13593,Reclamweg,2,Normalladeeinrichtung,2,22.0
+13593,Obstallee,3,Normalladeeinrichtung,2,22.0
+13593,Maulbeerallee,8,Normalladeeinrichtung,2,22.0
+13595,Franzstr.,4,Normalladeeinrichtung,2,22.0
+13595,Pichelsdorfer Straße,123,Normalladeeinrichtung,1,3.7
+13595,Adamstraße,27,Normalladeeinrichtung,1,3.7
+13595,Adamstraße,28,Normalladeeinrichtung,1,3.7
+13595,Heerstraße,284,Normalladeeinrichtung,2,44.0
+13595,Heerstraße,284,Normalladeeinrichtung,2,44.0
+13595,Graetschelsteig,2,Schnellladeeinrichtung,2,150.0
+13595,Alt-Pichelsdorf,41,Normalladeeinrichtung,2,44.0
+13595,Földerichplatz,73,Normalladeeinrichtung,2,44.0
+13595,Betckestraße,6,Normalladeeinrichtung,4,44.0
+13595,Heerstr.,285,Schnellladeeinrichtung,2,300.0
+13595,Brüderstraße,8,Normalladeeinrichtung,2,22.0
+13595,Ulmenstr.,24,Normalladeeinrichtung,2,22.0
+13597,Schürstr.,17,Normalladeeinrichtung,2,22.0
+13597,Mauerstr.,10,Normalladeeinrichtung,2,22.0
+13597,Moritzstr.,11,Normalladeeinrichtung,2,22.0
+13597,Stresowplatz,2,Normalladeeinrichtung,2,30.0
+13597,Charlottenburger Chaussee,49,Schnellladeeinrichtung,2,150.0
+13597,Stresowplatz,0,Normalladeeinrichtung,1,3.7
+13597,Stresowplatz,0,Normalladeeinrichtung,1,3.7
+13597,Stresowplatz,15,Normalladeeinrichtung,1,3.7
+13597,Stresowplatz,16,Normalladeeinrichtung,1,3.7
+13597,An den Freiheitswiesen,6,Schnellladeeinrichtung,2,150.0
+13597,An den Freiheitswiesen,6,Schnellladeeinrichtung,2,300.0
+13597,Ruhlebener Strasse,23,Normalladeeinrichtung,2,42.0
+13597,Ruhrlebenerstrasse,23,Normalladeeinrichtung,2,42.0
+13597,Ruhlebener Strasse,23,Normalladeeinrichtung,2,42.0
+13597,Charlottenburger Chaussee,18,Schnellladeeinrichtung,3,50.0
+13597,Ruhlebener Str. 161,161,Normalladeeinrichtung,2,44.0
+13597,Am Juliusturm,106,Normalladeeinrichtung,2,44.0
+13597,Lindenufer,29,Normalladeeinrichtung,2,22.0
+13597,Freiheit,6,Normalladeeinrichtung,2,22.0
+13599,Zitadellenweg,30 - 70,Normalladeeinrichtung,2,44.0
+13599,Am Juliusturm,33,Schnellladeeinrichtung,1,175.0
+13599,Am Juliusturm,33,Schnellladeeinrichtung,1,175.0
+13599,Romy-Schneider-Str.,11a,Normalladeeinrichtung,2,22.0
+13599,Faucherweg,0,Normalladeeinrichtung,1,3.7
+13599,Gartenfelder Straße,37,Normalladeeinrichtung,2,43.0
+13599,Gartenfelder Straße,37,Normalladeeinrichtung,2,43.0
+13599,Gartenfelder Straße,37,Normalladeeinrichtung,2,43.0
+13599,Gartenfelder Straße,37,Normalladeeinrichtung,2,22.0
+13599,Burscheider Weg,5,Normalladeeinrichtung,2,22.0
+13599,Nonnendammallee,175,Schnellladeeinrichtung,3,50.0
+13599,Gartenfelderstr,74D,Normalladeeinrichtung,2,44.0
+13599,Gartenfelder Straße,71,Schnellladeeinrichtung,2,150.0
+13599,Ferdinand-Friedensburg-Platz,0,Normalladeeinrichtung,2,44.0
+13599,Gartenfelder Str.,106,Schnellladeeinrichtung,2,150.0
+13599,Nonnendammallee,7,Schnellladeeinrichtung,2,150.0
+13599,Am Juliusturm,40-46,Schnellladeeinrichtung,2,72.0
+13599,Zitadellenweg,23-27,Normalladeeinrichtung,2,22.0
+13599,Zitadellenweg,34,Normalladeeinrichtung,2,44.0
+13599,Nonnendammallee,1,Normalladeeinrichtung,2,33.0
+13599,Am Juliusturm,14-38,Normalladeeinrichtung,1,3.7
+13599,Am Juliusturm,14-38,Normalladeeinrichtung,1,3.7
+13599,Am Juliusturm,14-38,Normalladeeinrichtung,1,3.7
+13599,Am Juliusturm,14-38,Normalladeeinrichtung,1,3.7
+13599,Am Juliusturm,14-38,Normalladeeinrichtung,1,3.7
+13599,Am Juliusturm,14-38,Normalladeeinrichtung,1,3.7
+13599,Am Juliusturm,14-38,Normalladeeinrichtung,1,3.7
+13599,Am Juliusturm,14-38,Normalladeeinrichtung,1,3.7
+13599,Am Juliusturm,14-38,Normalladeeinrichtung,1,3.7
+13599,Am Juliusturm,14-38,Normalladeeinrichtung,1,3.7
+13599,Am Juliusturm,14-38,Normalladeeinrichtung,1,3.7
+13599,Am Juliusturm,14-38,Normalladeeinrichtung,1,3.7
+13599,Am Juliusturm,14-38,Normalladeeinrichtung,1,3.7
+13599,Am Juliusturm,14-38,Normalladeeinrichtung,1,3.7
+13599,Am Juliusturm,14-38,Normalladeeinrichtung,1,3.7
+13599,Am Juliusturm,14-38,Normalladeeinrichtung,1,3.7
+13599,Am Juliusturm,14-38,Normalladeeinrichtung,1,3.7
+13599,Am Juliusturm,14-38,Normalladeeinrichtung,1,3.7
+13599,Am Juliusturm,14-38,Normalladeeinrichtung,1,3.7
+13599,Am Juliusturm,14-38,Normalladeeinrichtung,1,3.7
+13627,Heilmannring,55,Normalladeeinrichtung,2,22.0
+13627,Klausingring,21,Normalladeeinrichtung,2,44.0
+13627,Reichweindamm,8,Schnellladeeinrichtung,2,150.0
+13629,Ohmstraße,7,Normalladeeinrichtung,1,3.7
+13629,Motardstraße,0,Normalladeeinrichtung,1,3.7
+13629,Motardstraße,0,Normalladeeinrichtung,1,3.7
+13629,Motardstraße,0,Normalladeeinrichtung,1,3.7
+13629,Ohmstraße,9,Normalladeeinrichtung,1,3.7
+13629,Wernerwerkdamm,10,Normalladeeinrichtung,1,3.7
+13629,Wernerwerkdamm,30,Normalladeeinrichtung,1,3.7
+13629,Wernerwerkdamm,29,Normalladeeinrichtung,1,3.7
+13629,Wernerwerkdamm,26,Normalladeeinrichtung,1,3.7
+13629,Wernerwerkdamm,25,Normalladeeinrichtung,1,3.7
+13629,Nonnendammallee,101,Normalladeeinrichtung,2,44.0
+13629,Ohmstr.,6,Normalladeeinrichtung,2,30.0
+13629,Nonnendammallee,62 - 64,Normalladeeinrichtung,2,22.0
+13629,Dihlmannstr.,16,Normalladeeinrichtung,2,22.0
+13629,Nonnendammallee,62 - 64,Normalladeeinrichtung,2,22.0
+13629,Nonnendammallee,62 - 64,Normalladeeinrichtung,2,22.0
+13629,Nonnendammallee,62 - 64,Schnellladeeinrichtung,3,150.0
+13629,Siemensdamm,59-62,Normalladeeinrichtung,1,11.0
+14050,Eschenallee,1,Normalladeeinrichtung,2,22.0
+14050,Haeselerstr.,28,Normalladeeinrichtung,2,22.0
+14050,Fredericiastr.,11,Normalladeeinrichtung,2,22.0
+14050,Lindenallee,28,Normalladeeinrichtung,2,22.0
+14050,Steubenpl. 2-4,2-4,Normalladeeinrichtung,2,44.0
+14050,Soorstraße,23,Normalladeeinrichtung,2,22.0
+14050,Soorstraße,23,Normalladeeinrichtung,2,22.0
+14050,Soorstraße,23,Normalladeeinrichtung,2,22.0
+14052,Preußenallee,34,Normalladeeinrichtung,1,3.7
+14052,Gotha-Allee,17,Normalladeeinrichtung,2,22.0
+14052,Theodor-Heuss-Platz,5,Normalladeeinrichtung,2,44.0
+14055,Dickensweg,25,Normalladeeinrichtung,2,30.0
+14055,Spandauer Damm,134,Schnellladeeinrichtung,2,93.0
+14055,Kiplingweg,22,Normalladeeinrichtung,1,3.7
+14055,Heerstr.,36,Normalladeeinrichtung,2,22.0
+14055,Messedamm,24,Schnellladeeinrichtung,2,93.0
+14055,Jaffestr.,0,Normalladeeinrichtung,2,22.0
+14055,Jaffestr.,0,Schnellladeeinrichtung,2,93.0
+14055,Heerstraße,35,Schnellladeeinrichtung,2,50.0
+14055,Halenseestraße,51,Schnellladeeinrichtung,3,300.0
+14055,Heerstraße,35,Schnellladeeinrichtung,2,50.0
+14055,Heerstraße,84,Normalladeeinrichtung,1,22.0
+14057,Suarezstr.,30,Normalladeeinrichtung,2,22.0
+14057,Witzlebenstr.,36,Normalladeeinrichtung,2,22.0
+14057,Herbartstr.,15,Normalladeeinrichtung,2,22.0
+14057,Riehlstr.,19,Normalladeeinrichtung,2,22.0
+14057,Sophie-Charlotten-Str.,55,Normalladeeinrichtung,2,22.0
+14057,Bredtschneiderstr.,10,Normalladeeinrichtung,2,22.0
+14057,Leonhardstr.,14,Normalladeeinrichtung,2,22.0
+14057,Kaiserdamm,117,Normalladeeinrichtung,4,11.0
+14057,Kaiserdamm,117,Normalladeeinrichtung,3,11.0
+14057,Wundtstr.,52,Normalladeeinrichtung,2,22.0
+14057,Messedamm,1,Normalladeeinrichtung,2,44.0
+14059,Königin-Elisabeth-Str.,33,Normalladeeinrichtung,2,22.0
+14059,Horstweg,9,Normalladeeinrichtung,2,22.0
+14059,Schloßstr.,64,Normalladeeinrichtung,2,22.0
+14059,Dernburgstr.,57,Normalladeeinrichtung,2,22.0
+14059,Sophie-Charlotten-Str.,105,Normalladeeinrichtung,2,22.0
+14059,Nehringstr.,4,Normalladeeinrichtung,2,22.0
+14059,Danckelmannstr.,1,Normalladeeinrichtung,2,22.0
+14059,Heubnerweg,6,Normalladeeinrichtung,2,22.0
+14059,Knobelsdorffstr.,53,Normalladeeinrichtung,2,22.0
+14059,Knobelsdorffstr.,2,Normalladeeinrichtung,2,22.0
+14059,Fürstenbrunner Weg,14-18,Schnellladeeinrichtung,3,75.0
+14059,Schloßstraße,1A,Normalladeeinrichtung,2,44.0
+14059,Sophie-Charlotten-Str.,41,Normalladeeinrichtung,2,44.0
+14059,Sophie-Charlotten-Straße,92,Normalladeeinrichtung,2,22.0
+14059,Spandauer Damm,106,Normalladeeinrichtung,2,22.0
+14059,Spandauer Damm,106,Normalladeeinrichtung,2,22.0
+14059,Sophie-Charlotten-Straße,7,Normalladeeinrichtung,2,33.0
+14089,Am Landschaftspark Gatow,45,Normalladeeinrichtung,2,30.0
+14089,Contessaweg,34,Normalladeeinrichtung,1,3.7
+14089,Contessaweg,26,Normalladeeinrichtung,1,3.7
+14089,Contessaweg,24,Normalladeeinrichtung,1,3.7
+14089,Contessaweg,20,Normalladeeinrichtung,1,3.7
+14089,Imchenallee,46,Normalladeeinrichtung,1,3.7
+14089,Imchenallee,38,Normalladeeinrichtung,1,3.7
+14089,Contessaweg,14,Normalladeeinrichtung,1,3.7
+14089,Imchenallee,46,Normalladeeinrichtung,1,3.7
+14089,Katzwanger Steig,22,Normalladeeinrichtung,1,3.7
+14089,Wertheimweg,35,Normalladeeinrichtung,1,3.7
+14089,Wertheimweg,8,Normalladeeinrichtung,1,3.7
+14089,Wertheimweg,6,Normalladeeinrichtung,1,3.7
+14089,Gautinger Weg,12,Normalladeeinrichtung,1,3.7
+14089,Kladower Damm,221,Normalladeeinrichtung,2,22.0
+14089,Kladower Damm,221,Normalladeeinrichtung,2,22.0
+14109,Am kleinen Wannsee,5,Normalladeeinrichtung,2,22.0
+14109,Kyllmannstr.,21,Normalladeeinrichtung,2,30.0
+14109,Dreilindenstraße,0,Normalladeeinrichtung,1,3.7
+14109,Dreilindenstraße,52,Normalladeeinrichtung,1,3.7
+14109,Dreilindenstraße,52,Normalladeeinrichtung,1,3.7
+14109,Dreilindenstraße,52,Normalladeeinrichtung,1,3.7
+14109,Dreilindenstraße,72A,Normalladeeinrichtung,1,3.7
+14109,Dreilindenstraße,80,Normalladeeinrichtung,1,3.7
+14109,Nibelungenstraße,0,Normalladeeinrichtung,1,3.7
+14109,Nibelungenstraße,0,Normalladeeinrichtung,1,3.7
+14109,Nibelungenstraße,0,Normalladeeinrichtung,1,3.7
+14109,Fintelmannstraße,9,Normalladeeinrichtung,1,3.7
+14109,Fintelmannstraße,9,Normalladeeinrichtung,1,3.7
+14109,Friedenstraße,0,Normalladeeinrichtung,1,3.7
+14109,Friedenstraße,0,Normalladeeinrichtung,1,3.7
+14109,Alsenstraße,0,Normalladeeinrichtung,1,3.7
+14109,Am Großen Wannsee,30,Normalladeeinrichtung,1,3.7
+14109,Am Großen Wannsee,34,Normalladeeinrichtung,1,3.7
+14109,Am Großen Wannsee,0,Normalladeeinrichtung,1,3.7
+14109,Am Großen Wannsee,0,Normalladeeinrichtung,1,3.7
+14109,Am Großen Wannsee,55,Normalladeeinrichtung,1,3.7
+14109,Am Großen Wannsee,57,Normalladeeinrichtung,1,3.7
+14109,Am Großen Wannsee,57A,Normalladeeinrichtung,1,3.7
+14109,Conradstraße,19,Normalladeeinrichtung,2,22.0
+14129,Hohenzollernplatz,5,Normalladeeinrichtung,2,22.0
+14129,Breisgauer Str.,7,Normalladeeinrichtung,2,22.0
+14129,Altvaterstraße,16,Normalladeeinrichtung,1,3.7
+14129,Altvaterstraße,21,Normalladeeinrichtung,1,3.7
+14129,Am Schlachtensee,12,Normalladeeinrichtung,1,3.7
+14129,Am Schlachtensee,26,Normalladeeinrichtung,1,3.7
+14129,Altvaterstraße,15A,Normalladeeinrichtung,1,3.7
+14129,Altvaterstraße,9,Normalladeeinrichtung,1,3.7
+14129,Am Schlachtensee,30,Normalladeeinrichtung,1,3.7
+14129,Am Schlachtensee,38,Normalladeeinrichtung,1,3.7
+14129,Altvaterstraße,15,Normalladeeinrichtung,1,3.7
+14129,Breisgauer Str.,28,Normalladeeinrichtung,1,3.7
+14129,Breisgauer Str.,29C,Normalladeeinrichtung,1,3.7
+14129,Breisgauer Str.,35,Normalladeeinrichtung,1,3.7
+14129,Breisgauer Str.,40,Normalladeeinrichtung,1,3.7
+14129,Breisgauer Str.,46,Normalladeeinrichtung,1,3.7
+14129,Von-Luck-Straße,0,Normalladeeinrichtung,1,3.7
+14129,Von-Luck-Straße,1,Normalladeeinrichtung,1,3.7
+14129,Matterhornstraße,0,Normalladeeinrichtung,1,3.7
+14129,Matterhornstraße,0,Normalladeeinrichtung,1,3.7
+14129,Matterhornstraße,21,Normalladeeinrichtung,1,3.7
+14129,Matterhornstraße ggü.,9,Normalladeeinrichtung,1,3.7
+14129,Von-Luck-Straße,0,Normalladeeinrichtung,1,3.7
+14129,Von-Luck-Straße,0,Normalladeeinrichtung,1,3.7
+14129,Von-Luck-Straße,0,Normalladeeinrichtung,1,3.7
+14129,Von-Luck-Straße,3,Normalladeeinrichtung,1,3.7
+14129,Von-Luck-Straße,0,Normalladeeinrichtung,1,3.7
+14129,Von-Luck-Straße,0,Normalladeeinrichtung,1,3.7
+14129,Matterhornstraße,0,Normalladeeinrichtung,1,3.7
+14129,Matterhornstraße,84,Normalladeeinrichtung,1,3.7
+14129,"Grunewald,An der A115",0,Schnellladeeinrichtung,4,225.0
+14129,"Grunewald,An der A115",0,Schnellladeeinrichtung,2,225.0
+14129,"Grunewald,An der A115",0,Schnellladeeinrichtung,2,225.0
+14129,"Grunewald,An der A115",0,Schnellladeeinrichtung,4,300.0
+14129,"Grunewald,An der A115",0,Schnellladeeinrichtung,2,300.0
+14129,Potsdamer Chaussee 68,A,Normalladeeinrichtung,2,44.0
+14129,Potsdamer Chaussee,80,Schnellladeeinrichtung,2,72.0
+14129,Potsdamer Chaussee,80,Schnellladeeinrichtung,2,72.0
+14129,Potsdamer Chaussee,80,Schnellladeeinrichtung,2,72.0
+14163,Fischerhüttenstr.,118,Normalladeeinrichtung,1,3.7
+14163,Niklasstr.,31,Normalladeeinrichtung,2,22.0
+14163,Urselweg,1,Normalladeeinrichtung,2,22.0
+14163,Argentinische Allee,34,Normalladeeinrichtung,2,22.0
+14163,Busseallee,13,Normalladeeinrichtung,1,3.7
+14163,Busseallee,33,Normalladeeinrichtung,1,3.7
+14163,Busseallee,5/7,Normalladeeinrichtung,1,3.7
+14163,Busseallee,27,Normalladeeinrichtung,1,3.7
+14163,Sven-Hedin-Straße,13,Normalladeeinrichtung,1,3.7
+14163,Sven-Hedin-Straße,3,Normalladeeinrichtung,1,3.7
+14163,Sven-Hedin-Straße ggü.,12,Normalladeeinrichtung,1,3.7
+14163,Sven-Hedin-Straße ggü.,20,Normalladeeinrichtung,1,3.7
+14163,Sven-Hedin-Straße ggü.,46,Normalladeeinrichtung,1,3.7
+14163,Anhaltiner Straße,25,Normalladeeinrichtung,1,3.7
+14163,Anhaltiner Straße,1,Normalladeeinrichtung,1,3.7
+14163,Anhaltiner Straße,3,Normalladeeinrichtung,1,3.7
+14163,Anhaltiner Straße,9,Normalladeeinrichtung,1,3.7
+14163,Anhaltiner Straße,12,Normalladeeinrichtung,1,3.7
+14163,Anhaltiner Straße,4,Normalladeeinrichtung,1,3.7
+14163,Hohentwielsteig,0,Normalladeeinrichtung,1,3.7
+14163,Hohentwielsteig,0,Normalladeeinrichtung,1,3.7
+14163,Hohentwielsteig,0,Normalladeeinrichtung,1,3.7
+14163,Beuckestraße,1,Normalladeeinrichtung,1,3.7
+14163,Beuckestraße,5,Normalladeeinrichtung,1,3.7
+14163,Beuckestraße,11,Normalladeeinrichtung,1,3.7
+14163,Beuckestraße,19,Normalladeeinrichtung,1,3.7
+14163,Beuckestraße,17,Normalladeeinrichtung,1,3.7
+14163,Idsteiner Straße,20,Normalladeeinrichtung,1,3.7
+14163,Idsteiner Straße,26,Normalladeeinrichtung,1,3.7
+14163,Idsteiner Straße,28,Normalladeeinrichtung,1,3.7
+14163,Idsteiner Straße,28,Normalladeeinrichtung,1,3.7
+14163,Argentinische Allee,34,Normalladeeinrichtung,2,22.0
+14163,Düppelstraße,27,Normalladeeinrichtung,2,22.0
+14163,Königstraße,2,Normalladeeinrichtung,2,22.0
+14163,Hartmannsweilerweg,5,Normalladeeinrichtung,2,22.0
+14165,Leuchtenburgstr.,15,Normalladeeinrichtung,1,3.7
+14165,Buschgrabenweg,22,Normalladeeinrichtung,1,3.7
+14165,Buschgrabenweg,8,Normalladeeinrichtung,1,3.7
+14165,BuschgrabenweganKreuzung,0,Normalladeeinrichtung,1,3.7
+14165,Berlepschstraße ggü 20,0,Normalladeeinrichtung,1,3.7
+14165,Berlepschstraße ggü 20 LM9,0,Normalladeeinrichtung,1,3.7
+14165,Berlepschstraße,22,Normalladeeinrichtung,1,3.7
+14165,Berlepschstraße ggü 26 LM12,0,Normalladeeinrichtung,1,3.7
+14165,Berlepschstraße,118,Normalladeeinrichtung,1,3.7
+14165,Berlepschstraße,122,Normalladeeinrichtung,1,3.7
+14165,Berlepschstraße,126,Normalladeeinrichtung,1,3.7
+14165,Windsteiner Weg,61,Normalladeeinrichtung,1,3.7
+14165,Windsteiner Weg,52,Normalladeeinrichtung,1,3.7
+14167,Hampsteadstr.,49,Normalladeeinrichtung,2,22.0
+14167,Osteweg,69,Normalladeeinrichtung,1,3.7
+14167,Mühlenstr. 20,A,Normalladeeinrichtung,2,22.0
+14167,Laehr`scher Jagdweg,46,Normalladeeinrichtung,2,30.0
+14167,Türksteinweg,31a,Normalladeeinrichtung,2,30.0
+14167,Hampsteadstraße,11,Normalladeeinrichtung,1,3.7
+14167,Hampsteadstraße,11,Normalladeeinrichtung,1,3.7
+14167,Hampsteadstraße,7,Normalladeeinrichtung,1,3.7
+14167,Goerzallee,327,Normalladeeinrichtung,2,44.0
+14167,Goerzallee,327,Normalladeeinrichtung,2,44.0
+14169,Clayallee,326,Normalladeeinrichtung,2,22.0
+14169,Sundgauer Str.,12,Normalladeeinrichtung,2,22.0
+14169,Schützallee,18,Normalladeeinrichtung,1,3.7
+14169,Schützallee,30,Normalladeeinrichtung,1,3.7
+14169,Schützallee,16,Normalladeeinrichtung,1,3.7
+14169,Am Waldfriedhof Spielplatz,0,Normalladeeinrichtung,1,3.7
+14169,Am Waldfriedhof Spielplatz,0,Normalladeeinrichtung,1,3.7
+14169,Am Waldfriedhof Spielplatz,0,Normalladeeinrichtung,1,3.7
+14169,Waltraudstr. Nr.,45,Normalladeeinrichtung,1,3.7
+14169,Mörchinger Straße,26,Normalladeeinrichtung,1,3.7
+14169,Mörchinger Straße,0,Normalladeeinrichtung,1,3.7
+14169,Mörchinger Str.,28,Normalladeeinrichtung,1,3.7
+14169,Juttastr.,0,Normalladeeinrichtung,1,3.7
+14169,Juttastr.,0,Normalladeeinrichtung,1,3.7
+14169,Sophie-Charlotte-Straße,26,Normalladeeinrichtung,1,3.7
+14169,Riemeisterstraße,132A,Normalladeeinrichtung,2,44.0
+14169,Riemeisterstraße,132A,Normalladeeinrichtung,2,44.0
+14169,Berliner Str.,20,Schnellladeeinrichtung,2,300.0
+14169,Charlottenburger Straße,10,Normalladeeinrichtung,2,22.0
+14169,Milinowskistraße,2,Normalladeeinrichtung,2,22.0
+14192,Lückhoffstr.,9,Normalladeeinrichtung,2,22.0
+14193,Fontanestr.,1,Normalladeeinrichtung,2,22.0
+14193,Hubertusallee,54,Normalladeeinrichtung,1,3.7
+14193,Caspar-Theyß-Str.,33,Normalladeeinrichtung,2,22.0
+14193,Berkaer Straße,29,Normalladeeinrichtung,2,22.0
+14193,Hilde-Ephraim-Str. ,3,Normalladeeinrichtung,1,11.0
+14195,Podbielskiallee,81,Normalladeeinrichtung,2,22.0
+14195,Thanner Pfad,3,Normalladeeinrichtung,2,22.0
+14195,Saargemünder Str.,2,Normalladeeinrichtung,2,22.0
+14195,Thielallee,49,Normalladeeinrichtung,2,22.0
+14195,Breitenbachplatz,16,Normalladeeinrichtung,2,22.0
+14195,Königin-Luise-Str.,40,Normalladeeinrichtung,2,22.0
+14195,Pacelliallee,8,Normalladeeinrichtung,1,3.7
+14195,Königin-Luise-Str.,78a,Normalladeeinrichtung,1,3.7
+14195,Taylostr.,11,Normalladeeinrichtung,1,3.7
+14195,Peter-Lenne-Str.,18,Normalladeeinrichtung,2,22.0
+14195,Ihnestraße,72,Normalladeeinrichtung,1,3.7
+14195,Ihnestraße,66,Normalladeeinrichtung,1,3.7
+14195,Corrensplatz,6,Normalladeeinrichtung,1,3.7
+14195,Corrensplatz,3,Normalladeeinrichtung,1,3.7
+14195,Corrensplatz,5,Normalladeeinrichtung,1,3.7
+14195,Corrensplatz,5,Normalladeeinrichtung,1,3.7
+14195,Im Dol,7,Normalladeeinrichtung,1,3.7
+14195,Im Dol,9,Normalladeeinrichtung,1,3.7
+14195,Im Dol,62A,Normalladeeinrichtung,1,3.7
+14195,Im Dol,13,Normalladeeinrichtung,1,3.7
+14195,Taylorstraße,0,Normalladeeinrichtung,1,3.7
+14195,Taylorstraße,0,Normalladeeinrichtung,1,3.7
+14195,Taylorstraße,0,Normalladeeinrichtung,1,3.7
+14195,Taylorstraße,0,Normalladeeinrichtung,1,3.7
+14195,Taylorstraße,0,Normalladeeinrichtung,1,3.7
+14195,Taylorstraße,0,Normalladeeinrichtung,1,3.7
+14195,Iltisstraße,1,Normalladeeinrichtung,2,44.0
+14195,Iltisstraße,1,Normalladeeinrichtung,2,44.0
+14195,Harnackstr.,24,Normalladeeinrichtung,2,22.0
+14195,Königin-Luise-Str.,52,Normalladeeinrichtung,2,22.0
+14197,Rüdesheimer Str.,2,Normalladeeinrichtung,2,22.0
+14197,Rudolf-Mosse-Str.,9,Normalladeeinrichtung,2,22.0
+14197,Spessartstr.,8,Normalladeeinrichtung,2,22.0
+14197,Schlangenbader Str.,26,Normalladeeinrichtung,2,22.0
+14197,Mecklenburgische Str.,56,Normalladeeinrichtung,1,3.7
+14197,Bundesallee,62,Normalladeeinrichtung,1,3.7
+14197,Schlangenbader Str.,88,Normalladeeinrichtung,2,30.0
+14197,Wiesbadener Straße,53-55,Schnellladeeinrichtung,2,72.0
+14197,Wiesbadener Straße,53-55,Schnellladeeinrichtung,2,150.0
+14197,Wiesbadener Straße,53-55,Schnellladeeinrichtung,2,72.0
+14197,Steinrückweg,10,Normalladeeinrichtung,2,22.0
+14197,Steinrüceg,10,Normalladeeinrichtung,2,22.0
+14199,Forckenbeckstr.,96,Normalladeeinrichtung,2,22.0
+14199,Hohenzollerndamm,110A,Normalladeeinrichtung,2,22.0
+14199,Warnemünder Str.,7,Normalladeeinrichtung,1,3.7
+14199,Berkaer Str.,40,Normalladeeinrichtung,2,22.0
+14199,Kissinger Str.,16,Normalladeeinrichtung,2,22.0
+14199,Hohenzollerndamm,137,Normalladeeinrichtung,2,22.0
+14199,Fritz-Wildung-Straße,26,Normalladeeinrichtung,2,44.0
+12529,Wassmannsdorfer Allee,1,Schnellladeeinrichtung,2,360.0
+12529,Wassmannsdorfer Allee,1,Schnellladeeinrichtung,2,360.0
+12529,Kirchstr.,15-17,Schnellladeeinrichtung,4,100.0
+12529,Am Rondell,8,Normalladeeinrichtung,2,42.0
+12529,Am Rondell,8,Normalladeeinrichtung,2,42.0
+12529,Am Rondell,8,Normalladeeinrichtung,2,42.0
+12529,Hans-Grade-Allee,61,Normalladeeinrichtung,2,44.0
+12529,Hans-Grade-Allee,61,Normalladeeinrichtung,2,44.0
+12529,Hans-Grade-Allee,61,Normalladeeinrichtung,2,44.0
+12529,Hans-Grade-Allee,61,Schnellladeeinrichtung,1,300.0
+12529,Hans-Grade-Allee,61,Schnellladeeinrichtung,1,300.0
+12529,Hans-Grade-Allee,61,Schnellladeeinrichtung,1,300.0
+12529,Hans-Grade-Allee,61,Schnellladeeinrichtung,1,300.0
+12529,Hans-Grade-Allee,61,Schnellladeeinrichtung,1,300.0
+12529,Karl-Marx-Straße,55,Normalladeeinrichtung,2,22.0
+12529,Fontanestr.,3,Normalladeeinrichtung,1,11.0
+12529,Am Flughafen,1/3/5,Normalladeeinrichtung,4,44.0
+12529,Am Flughafen,1/3/5,Normalladeeinrichtung,2,22.0
+12529,Hugo-Junkers-Ring,1,Schnellladeeinrichtung,2,150.0
+12529,Hugo-Junkers-Ring,1,Normalladeeinrichtung,2,22.0
+12529,Margarete-von-Etzdorf-Straße,1,Normalladeeinrichtung,2,22.0
+12529,Margarete-von-Etzdorf-Straße,1,Normalladeeinrichtung,2,22.0
+12529,Margarete-von-Etzdorf-Straße,1,Normalladeeinrichtung,2,22.0
+12529,Hugo-Junkers-Ring,1,Normalladeeinrichtung,2,22.0
+12529,Hugo-Junkers-Ring,1,Normalladeeinrichtung,2,22.0
+12529,Hugo-Junkers-Ring,1,Normalladeeinrichtung,2,22.0
+12529,Hugo-Junkers-Ring,1,Normalladeeinrichtung,2,22.0
+12529,Hugo-Junkers-Ring,1,Normalladeeinrichtung,2,22.0
+12529,Hugo-Junkers-Ring,1,Normalladeeinrichtung,2,22.0
+12529,Margarete-von-Etzdorf-Straße,1,Normalladeeinrichtung,2,22.0
+12529,Margarete-von-Etzdorf-Straße,1,Normalladeeinrichtung,2,22.0
+12529,Hans Grade Allee,5,Schnellladeeinrichtung,1,250.0
+12529,Hans Grade Allee,5,Schnellladeeinrichtung,1,250.0
+12529,Hans Grade Allee,5,Schnellladeeinrichtung,1,250.0
+12529,Hans Grade Allee,5,Schnellladeeinrichtung,1,250.0
+12529,Hans Grade Allee,5,Schnellladeeinrichtung,1,250.0
+12529,Hans Grade Allee,5,Schnellladeeinrichtung,1,250.0
+12529,Hans Grade Allee,5,Schnellladeeinrichtung,1,250.0
+12529,Hans Grade Allee,5,Schnellladeeinrichtung,1,250.0
+12529,Hans Grade Allee,5,Schnellladeeinrichtung,1,250.0
+12529,Hans Grade Allee,5,Schnellladeeinrichtung,1,250.0
+12529,Hans Grade Allee,5,Schnellladeeinrichtung,1,250.0
+12529,Hans Grade Allee,5,Schnellladeeinrichtung,1,250.0
+12529,Hans Grade Allee,5,Schnellladeeinrichtung,1,250.0
+12529,Hans Grade Allee,5,Schnellladeeinrichtung,1,250.0
+12529,Hans Grade Allee,5,Schnellladeeinrichtung,1,250.0
+12529,Hans Grade Allee,5,Schnellladeeinrichtung,1,250.0
+10249,Petersburger Straße,16,Normalladeeinrichtung,2,44.0
+10249,Petersburger Straße,16,Normalladeeinrichtung,2,44.0
+13599,Südring,13,Normalladeeinrichtung,2,44.0
+13599,Südring,13,Normalladeeinrichtung,2,44.0

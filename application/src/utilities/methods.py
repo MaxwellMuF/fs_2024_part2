@@ -20,7 +20,7 @@ def count_plz_occurrences(df_lstat2, sort_col=("PLZ")):
     """Counts loading stations per PLZ"""
     # Group by PLZ and count occurrences, keeping geometry
     result_df = df_lstat2.groupby(sort_col).agg(
-        Number=('KW', 'count'),
+        Number=('Anzahl Ladepunkte', 'sum'),
         geometry=('geometry', 'first')
     ).reset_index()
     

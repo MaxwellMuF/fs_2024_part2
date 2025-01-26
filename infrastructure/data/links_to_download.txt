@@ -1,8 +1,8 @@
-ladesäulen:
-https://data.bundesnetzagentur.de/Bundesnetzagentur/SharedDocs/Downloads/DE/Sachgebiete/Energie/Unternehmen_Institutionen/E_Mobilitaet/Ladesaeulenregister_01122024.csv
-
-excel:
+ladesäulen excel:
 https://data.bundesnetzagentur.de/Bundesnetzagentur/SharedDocs/Downloads/DE/Sachgebiete/Energie/Unternehmen_Institutionen/E_Mobilitaet/Ladesaeulenregister_01122024.xlsx
 
 plt_einwohner:
 https://downloads.suche-https://downloads.suche-postleitzahl.org/v2/public/plz_einwohner.csv
+
+berlin_geodata:
+"https://tsb-opendata.s3.eu-central-1.amazonaws.com/plz/plz.geojson"

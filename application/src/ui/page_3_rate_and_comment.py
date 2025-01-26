@@ -10,7 +10,6 @@ import streamlit    as st
 # from application.src.utilities          import methods
 from application.src.utilities          import helper_page_2 as helper2
 from application.src.utilities          import helper_page_3 as helper3
-from infrastructure.src.data_process    import data_pipeline
 
 
 
@@ -33,15 +32,9 @@ def filter_zip_code_widget(df: pd.DataFrame) -> pd.DataFrame:
         df_subset_user_street = helper2.subset_with_criteria(df=df_subset_user_zip_code, column="Straße", 
                                                             criteria=user_selected_street)
 
-        # make subset data to show it
-        df_user_selected_subset_show = helper2.drop_column_and_sort_by_column(df_subset_user_street,
-                    list_drop_column_names=["geometry", "Breitengrad", "Längengrad", "Bundesland"],
-                    sort_column_name="KW")
-        df_user_selected_subset_show.drop_duplicates(inplace=True)
-
         st.write("Here is your filtered data frame:")
-        dict_user_selected_row = show_user_selected_df(df_user_selected_subset_show)
-        df_selected_to_rate = helper3.user_selected_row_to_df(df_user_selected_subset_show, dict_user_selected_row)
+        dict_user_selected_row = show_user_selected_df(df_subset_user_street)
+        df_selected_to_rate = helper3.user_selected_row_to_df(df_subset_user_street, dict_user_selected_row)
 
     return df_selected_to_rate
 
@@ -157,16 +150,16 @@ def all_users_submissions_widget():
     return 
 # ----------------------------- streamlit page ------------------------------
 
-def init_data(geodata_path: str="infrastructure/data/datasets/geodata_berlin_plz.csv", 
-              charging_data_path: str="infrastructure/data/datasets/Ladesaeulenregister.csv") -> None:
+def init_data(geodata_path: str="infrastructure/data/raw_data/geodata_berlin_plz.csv", 
+              charging_data_path: str="domain/data/processed_data_for_ui/Ladesaeulenregister.csv") -> None:
     """Init and process data only ones at the start of the app (instead of every tick)"""
     if "df_charging_berlin_rate" not in st.session_state:
-        df_geodat_plz = pd.read_csv(geodata_path, sep=';', low_memory=False)
+        # df_geodat_plz = pd.read_csv(geodata_path, sep=',', low_memory=False)
         df_charging = pd.read_csv(charging_data_path, sep=',', low_memory=False)
-        required_columns = ('Postleitzahl', 'Straße', 'Hausnummer', 'Anzahl Ladepunkte', 'Breitengrad', 'Bundesland',
-                            'Längengrad', 'Nennleistung Ladeeinrichtung [kW]')
+        df_charging.drop_duplicates(inplace=True)
+        df_charging.drop(columns=["Art der Ladeeinrichung"], inplace=True)
 
-    return data_pipeline.data_process(df_geodat_plz, df_charging, required_columns)
+    return df_charging
 
 def make_streamlit_page_elements(df_every_station: pd.DataFrame) -> None:
 
