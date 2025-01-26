@@ -8,7 +8,8 @@ from domain.src.berlin_data_process.data_pipeline_berlin import (FilterColumns,
                                                                  FilterBerlin,
                                                                  Validator,
                                                                  Pipeline,
-                                                                 LoadRawData)
+                                                                 LoadRawData,
+                                                                 SaveProcessedDate)
 
 
 # # Run test from main directory (as streamlit does with scripts) 
@@ -125,13 +126,26 @@ class TestLoadRawData(unittest.TestCase):
         self.path = "infrastructure/data/raw_data/plz_einwohner.csv"
 
     def test_process(self):
-        loader = LoadRawData(path=self.path)
+        loader = LoadRawData(load_path=self.path)
         result = loader.process()
 
         self.assertTrue(type(result) == list)
         self.assertTrue(type(result[0]) == dict)
+    
+class TestSaveProcessedDate(unittest.TestCase):
+    def setUp(self):
+        """Set up all required test data"""
+        self.testdata               = [{"PLZ":1100, "Straße":"some_street", "KW":3.7}] * 10
+        self.path = "infrastructure/data/raw_data/plz_einwohner.csv"
 
+    def test_process(self):
+        saver = SaveProcessedDate(save_path=self.path)
 
+        with self.assertRaises(ValueError) as context:
+            saver.process(self, data=self.testdata)
+        self.assertIn("Saved data '{self.load_path.split('/')[-1]}' successfully", 
+                      str(context.exception))
+        
 
 # Print test runs: # unfortunately @time and time.time is not working because of wrapper of unittest 
 print(f"{'-'*100}\nTest data pipeline Berlin, date: {datetime.today().strftime('%Y-%m-%d %H:%M:%S')}\n")

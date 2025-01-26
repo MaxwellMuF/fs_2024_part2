@@ -74,11 +74,19 @@ class Pipeline:
 
 @dataclass
 class LoadRawData:
-    path: str
+    load_path: str
 
     def process(self)-> List[Dict[str, Any]]:
         """Load raw data from directory"""
-        with open(self.path, mode="r", encoding="utf-8") as csvfile:
+        with open(self.load_path, mode="r", encoding="utf-8") as csvfile:
             reader = list(csv.DictReader(csvfile))
-        print(f"Loaded data '{self.path.split('/')[-1]}' successfully")
+        print(f"Loaded data '{self.load_path.split('/')[-1]}' successfully")
         return reader
+    
+@dataclass
+class SaveProcessedDate:
+    save_path: str
+
+    def process(self)-> List[Dict[str, Any]]:
+        """Save processed data at given path"""
+        return
