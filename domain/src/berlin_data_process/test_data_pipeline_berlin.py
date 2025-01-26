@@ -30,7 +30,7 @@ class TestFilterColumns(unittest.TestCase):
 
         with self.assertRaises(KeyError) as context:
             filter_columns2.process(self.testdata_incorrect)
-        self.assertIn("Missing required column: 0 in row: {1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9}", 
+        self.assertIn("FilterColumns: Missing required column: 0 in row: {1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9}", 
                       str(context.exception))
  
 
@@ -67,7 +67,7 @@ class TestFilterBerlin(unittest.TestCase):
 class TestValidator(unittest.TestCase):
     def setUp(self):
         """Set up all required test data"""
-        self.testdata               = [{"PLZ":10, "Straße":"some_street", "KW":3.7}]
+        self.testdata               = [{"PLZ":10, "Straße":"some_street", "KW":3.7}] * 100_000
         self.testdata_incorrect     = [{"PLZ":10, "Straße":"some_street", "KW":3.7},
                                        {"PLZ":10.1, "Straße":"some_street", "KW":3.7},
                                        {"PLZ":10, "Straße":"some_street", "KW":"some_str"}]
@@ -85,5 +85,9 @@ class TestValidator(unittest.TestCase):
         # 2. Case:
         validator2                  = data_pipeline_berlin.Validator(self.required_types)
 
-        self.assertEqual(validator2.process(self.testdata_incorrect), expected)
+        with self.assertRaises(ValueError) as context:
+            validator2.process(self.testdata_incorrect)
+        self.assertIn("Skipped invalid row: {'PLZ': 10, 'Straße': 'some_street', 'KW': 'some_str'}. Error: could not convert string to float: 'some_str'", 
+                      str(context.exception))
+        self.assertEqual(validator2.process(self.testdata), expected)
 

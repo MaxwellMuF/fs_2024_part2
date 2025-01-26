@@ -7,10 +7,10 @@ from typing         import List, Dict, Any
 
 @dataclass
 class FilterColumns:
-    """Filer columns by given List[str] and remove unnessesary ones"""
     required_columns: List[str]
 
-    def process(self, data: List[Dict[str, Any]]):#
+    def process(self, data: List[Dict[str, Any]]):
+        """Filer columns by given List[str] and remove unnessesary ones"""
         filtered_data = []
         for row in data:
             try:
@@ -18,15 +18,15 @@ class FilterColumns:
                 filtered_row = {key: row[key] for key in self.required_columns}
                 filtered_data.append(filtered_row)
             except KeyError as e:
-                raise KeyError(f"Missing required column: {e.args[0]} in row: {row}")
+                raise KeyError(f"FilterColumns: Missing required column: {e.args[0]} in row: {row}")
         return filtered_data
 
 
 @dataclass
 class Cleaner:
-    """Cleans the data by removing rows with missing values."""
     
     def process(self, data: List[Dict[str, Any]], reject_data: List[str]):
+        """Cleans the data by removing rows with missing values."""
         cleaned_data = [row for row in data if all(value not in reject_data for value in row.values())]
         print(f"Cleaner: Removed {len(data)-len(cleaned_data)} rows")
         return cleaned_data
@@ -34,19 +34,30 @@ class Cleaner:
 
 @dataclass
 class FilterBerlin:
-    """Filer rows by given List[str] and remove unnessesary ones"""
     filter_plz_min: int
     filter_plz_max: int
 
     def process(self, data: List[Dict[str, Any]]):
+        """Filer rows by given List[str] and remove unnessesary ones"""
         return [row for row in data if self.filter_plz_min < int(row['PLZ']) < self.filter_plz_max]
 
 @dataclass
 class Validator:
-    """Validate if column value can be converted to required type"""
     required_types: Dict[str, Any]
 
     def process(self, data: List[Dict[str, Any]]):
-        return
+        """Validate if column value can be converted to required type"""
+        validated_data = []
+        for row in data:
+            try:
+                for col, col_type in self.required_types.items():
+                    row[col] = col_type(row[col])
+                validated_data.append(row)
+
+            except ValueError as e:
+                raise ValueError(f"Validator: Skipped invalid row: {row}. Error: {e}")
+            
+        print(f"Validator: Validated data types. Remaining rows: {len(validated_data)}")
+        return validated_data
         
     
