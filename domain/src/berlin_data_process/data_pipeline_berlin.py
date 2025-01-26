@@ -40,5 +40,13 @@ class FilterBerlin:
 
     def process(self, data: List[Dict[str, Any]]):
         return [row for row in data if self.filter_plz_min < int(row['PLZ']) < self.filter_plz_max]
+
+@dataclass
+class Validator:
+    """Validate if column value can be converted to required type"""
+    required_types: Dict[str, Any]
+
+    def process(self, data: List[Dict[str, Any]]):
+        return
         
     
