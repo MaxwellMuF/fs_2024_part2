@@ -126,8 +126,12 @@ class TestLoadRawData(unittest.TestCase):
 
     def test_process(self):
         loader = LoadRawData(path=self.path)
+        result = loader.process()
 
-        self.assertIsInstance(type(loader), List[Dict[str,str]])
+        self.assertTrue(type(result) == list)
+        self.assertTrue(type(result[0]) == dict)
+
+
 
 # Print test runs: # unfortunately @time and time.time is not working because of wrapper of unittest 
 print(f"{'-'*100}\nTest data pipeline Berlin, date: {datetime.today().strftime('%Y-%m-%d %H:%M:%S')}\n")

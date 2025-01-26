@@ -78,4 +78,7 @@ class LoadRawData:
 
     def process(self)-> List[Dict[str, Any]]:
         """Load raw data from directory"""
-        return 
+        with open(self.path, mode="r", encoding="utf-8") as csvfile:
+            reader = list(csv.DictReader(csvfile))
+        print(f"Loaded data '{self.path.split('/')[-1]}' successfully")
+        return reader
