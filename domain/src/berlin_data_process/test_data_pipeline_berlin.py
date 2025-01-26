@@ -5,7 +5,7 @@ from domain.src.berlin_data_process import data_pipeline_berlin
 
 
 # # Run test from main directory (as streamlit does with scripts) 
-# python -m unittest domain\src\tests\test_data_pipeline_berlin.py
+# python -m unittest domain\src\berlin_data_process\test_data_pipeline_berlin.py
 
 #  --------------------------------------- Tests ------------------------------------------------------
 
@@ -40,8 +40,9 @@ class TestDataCleaner(unittest.TestCase):
         
     def test_process(self):
         # 1. Case all data passed
-        cleaned_data = data_pipeline_berlin.DataCleaner(self.residents_testdata1)
-        self.assertEqual(cleaned_data, self.residents_testdata1)
+        cleaner1 = data_pipeline_berlin.DataCleaner()
+        self.assertEqual(cleaner1.process(self.residents_testdata1), self.residents_testdata1)
+
         # 2. Case: filtered all rows
-        cleaned_data = data_pipeline_berlin.DataCleaner(self.residents_testdata2)
-        self.assertEqual(cleaned_data, [])
+        cleaner2 = data_pipeline_berlin.DataCleaner()
+        self.assertEqual(cleaner2.process(self.residents_testdata2), [])
