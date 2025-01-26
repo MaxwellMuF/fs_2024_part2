@@ -5,7 +5,7 @@ from domain.src.berlin_data_process import data_pipeline_berlin
 
 
 # # Run test from main directory (as streamlit does with scripts) 
-# python -m unittest domain\src\tests\test_user_data_process.py
+# python -m unittest domain\src\tests\test_data_pipeline_berlin.py
 
 #  --------------------------------------- Tests ------------------------------------------------------
 
