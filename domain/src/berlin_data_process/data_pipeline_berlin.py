@@ -7,16 +7,16 @@ from typing         import List, Dict, Any
 
 @dataclass
 class RenameTargetColumn:
-    rename_column_list: List[str]
+    rename_column: Dict[str,str]
 
     def process(self, data: List[Dict[str,Any]]) -> List[Dict[str, Any]]:
         """Rename target column 'PLZ' if nessesary"""
         for idx,row in enumerate(data):
             temp_dict = {}
             for key in row.keys():
-                if key in self.rename_column_list:
+                if key in self.rename_column.keys():
                     temp_dict = row.copy()
-                    temp_dict["PLZ"] = temp_dict.pop(key)
+                    temp_dict[self.rename_column[key]] = temp_dict.pop(key)
             # using temp dict, cause data and row cannot be changed in the same iterration of key in row.keys
             if temp_dict:
                 data[idx] = temp_dict

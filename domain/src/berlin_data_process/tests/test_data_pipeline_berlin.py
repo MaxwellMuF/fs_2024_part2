@@ -27,10 +27,10 @@ class TestRenameTargetColumn(unittest.TestCase):
                                        {"plz"                                   : 10201},
                                        {"einwohner"                             : 6000}]
         
-        self.rename_column_dict     = [{"Postleitzahl"                      : "PLZ",
+        self.rename_column_dict     = { "Postleitzahl"                      : "PLZ",
                                         "Nennleistung Ladeeinrichtung [kW]" : "KW",
                                         "plz"                               : "PLZ",
-                                        "einwohner"                         : "Residents"}]
+                                        "einwohner"                         : "Residents"}
         
     def test_process(self):
         """Process test: rename columns in given list to 'PLZ'"""
@@ -39,7 +39,7 @@ class TestRenameTargetColumn(unittest.TestCase):
                                        {"PLZ"           : 10201},
                                        {"Residents"     : 6000}]
         
-        renamer     = RenameTargetColumn(rename_column_list=self.rename_column_dict)
+        renamer     = RenameTargetColumn(rename_column=self.rename_column_dict)
 
         self.assertEqual(renamer.process(self.testdata), expected)
 
