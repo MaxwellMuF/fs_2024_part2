@@ -99,3 +99,16 @@ class SaveProcessedDate:
             writer.writerows(data)
         print(f"Saved data '{self.save_path.split('/')[-1]}' successfully")
         return data # for Testing
+
+
+def activate_data_validator_pipeline(self):
+    load_data_path = "domain/src/berlin_data_process/tests/test_file.csv"
+    save_data_path = ""
+    loader = LoadRawData(load_path= load_data_path)
+    filter_columns = FilterColumns(required_columns =["PLZ", "Straße", "KW"])
+    cleaner = Cleaner(reject_data                   =["", "None", "NaN", "0"])
+    filter_berlin = FilterBerlin(filter_plz_min     =1000, filter_plz_max=1400, filter_column="PLZ")
+    validator = Validator(required_types            ={"PLZ":int, "Straße":str, "KW":float})
+    saver = SaveProcessedDate(save_path=save_data_path)
+    pipeline = Pipeline(steps                       =[loader, filter_columns, cleaner, 
+                                                        filter_berlin, validator, saver])

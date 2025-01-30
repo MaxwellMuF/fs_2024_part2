@@ -18,6 +18,21 @@ from domain.src.berlin_data_process.data_pipeline_berlin import (FilterColumns,
 
 #  --------------------------------------- Tests ------------------------------------------------------
 
+class TestRenameTargetColumn(unittest.TestCase):
+    def setUp(self):
+        """Rename target column 'PLZ' if nessesary"""
+        self.testdata               = [{"Postleitzahl"  : 10200},
+                                       {"plz"           : 10201}]
+        
+    def test_process(self):
+        expected                    = [{"PLZ"           : 10200},
+                                       {"PLZ"           : 10201}]
+        self.target_column_list          = ["Postleitzahl", "plz"]
+        renamer     = RenameTargetColumn(target_column_list=self.target_column_list)
+
+        self.assertEqual(renamer.process(self.testdata), expected)
+
+
 class TestFilterColumns(unittest.TestCase):
     def setUp(self):
         """Set up all required test data"""
