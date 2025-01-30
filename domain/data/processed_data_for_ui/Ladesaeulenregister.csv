@@ -1,4 +1,4 @@
-PLZ,Straße,Hausnummer,Art der Ladeeinrichung,Anzahl Ladepunkte,KW
+PLZ,Straße,Hausnummer,Art der Ladeeinrichung,Anzahl Ladepunkte,Nennleistung Ladeeinrichtung [kW]
 10115,Koppenplatz,11,Normalladeeinrichtung,2,30.0
 10115,Schröderstr.,9,Normalladeeinrichtung,2,22.0
 10115,Ruppiner Str.,5,Normalladeeinrichtung,2,22.0

@@ -2,7 +2,7 @@ import streamlit as st
 # Own python files
 from application.src.utilities import methods_login
 from infrastructure.src.data_downloader import downloader_pipeline
-from domain.src.berlin_data_process import data_pipeline_berlin_old
+from domain.src.berlin_data_process import data_pipeline_berlin
 
 # Initialize st.session_state (st.Class properties) at start or reload of app/page. 
 def init_st_session_state():
@@ -13,7 +13,7 @@ def init_st_session_state():
 @st.cache_resource()
 def download_data_from_url():
     downloader_pipeline.activate_dowload()
-    data_pipeline_berlin_old.activate_pipeline_berlin()
+    data_pipeline_berlin.activate_data_pipeline_berlin()
 # ------------------------------- Pages --------------------------------------
 
 def pages_bevor_login():
@@ -43,7 +43,7 @@ def main():
     This is where the navigator is defined that leads to all scripts and functions. 
     And the authenticator process is called.
     """
-    # download_data_from_url()
+    download_data_from_url()
     # init_st_session_state()
 
     # load authenticator config and create login st.authenticator

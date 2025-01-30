@@ -7,18 +7,19 @@ from typing         import List, Dict, Any
 
 @dataclass
 class RenameTargetColumn:
-    target_column_list: List[str]
+    rename_column_list: List[str]
 
     def process(self, data: List[Dict[str,Any]]) -> List[Dict[str, Any]]:
         """Rename target column 'PLZ' if nessesary"""
-        filtered_data = []
         for idx,row in enumerate(data):
+            temp_dict = {}
             for key in row.keys():
-                if key in self.target_column_list:
+                if key in self.rename_column_list:
                     temp_dict = row.copy()
                     temp_dict["PLZ"] = temp_dict.pop(key)
             # using temp dict, cause data and row cannot be changed in the same iterration of key in row.keys
-            data[idx] = temp_dict
+            if temp_dict:
+                data[idx] = temp_dict
                 
         return data
     
@@ -85,7 +86,7 @@ class Validator:
 class Pipeline:
     steps: List[Any]  
 
-    def run(self, data: List[Dict[str, Any]])-> List[Dict[str, Any]]:
+    def run(self, data: List[Dict[str, Any]] = None)-> List[Dict[str, Any]]:
         """Executes a series of steps to process the data."""
         for step in self.steps:
             data = step.process(data)
@@ -119,14 +120,33 @@ class SaveProcessedDate:
         return data # for Testing
 
 
-def activate_data_validator_pipeline(self):
-    load_data_path = "domain/src/berlin_data_process/tests/test_file.csv"
-    save_data_path = ""
-    loader = LoadRawData(load_path= load_data_path)
-    filter_columns = FilterColumns(required_columns =["PLZ", "Straße", "KW"])
-    cleaner = Cleaner(reject_data                   =["", "None", "NaN", "0"])
-    filter_berlin = FilterBerlin(filter_plz_min     =1000, filter_plz_max=1400, filter_column="PLZ")
-    validator = Validator(required_types            ={"PLZ":int, "Straße":str, "KW":float})
-    saver = SaveProcessedDate(save_path=save_data_path)
-    pipeline = Pipeline(steps                       =[loader, filter_columns, cleaner, 
-                                                        filter_berlin, validator, saver])
+def activate_data_pipeline_berlin(): # [geodata_berlin_plz.csv, Ladesaeulenregister.csv, plz_einwohner.csv]
+    load_data_path = "infrastructure/data/raw_data"
+    save_data_path = "domain/data/processed_data_for_ui"
+    list_file = ["geodata_berlin_plz.csv", "Ladesaeulenregister.csv", "plz_einwohner.csv"]
+    list_rename_columns = ["Postleitzahl", "plz"]
+    list_filter_columns = [["PLZ","geometry"], 
+                           ["PLZ","Straße","Hausnummer","Art der Ladeeinrichung","Anzahl Ladepunkte",
+                            "Nennleistung Ladeeinrichtung [kW]"],
+                           ["PLZ","einwohner"]]
+    list_required_types = [{"PLZ":int},
+                           {"PLZ":int, "Straße":str,"Hausnummer":str, "Art der Ladeeinrichung":str,
+                            "Anzahl Ladepunkte":int, "Nennleistung Ladeeinrichtung [kW]":float},
+                           {"PLZ":int, "einwohner":int}]
+
+
+    for idx in range(len(list_file)):
+        loader                      = LoadRawData(load_path                 =f"{load_data_path}/{list_file[idx]}")
+        renamer                     = RenameTargetColumn(rename_column_list =list_rename_columns)
+        filter_columns              = FilterColumns(required_columns        =list_filter_columns[idx])
+        cleaner                     = Cleaner(reject_data                   =["", "None", "NaN"])
+        filter_berlin               = FilterBerlin(filter_plz_min           =10000,filter_plz_max=14200,filter_column="PLZ")
+        validator                   = Validator(required_types              =list_required_types[idx])
+        saver                       = SaveProcessedDate(save_path           =f"{save_data_path}/{list_file[idx]}")
+        pipeline                    = Pipeline(steps                        =[loader, renamer, filter_columns, cleaner, 
+                                                                              filter_berlin, validator, saver])
+        pipeline.run()
+        
+
+if __name__ == "__main__":
+    activate_data_pipeline_berlin()

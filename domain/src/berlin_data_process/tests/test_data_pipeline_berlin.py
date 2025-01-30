@@ -22,15 +22,24 @@ from domain.src.berlin_data_process.data_pipeline_berlin import (RenameTargetCol
 class TestRenameTargetColumn(unittest.TestCase):
     def setUp(self):
         """Set up all required test data"""
-        self.testdata               = [{"Postleitzahl"  : 10200},
-                                       {"plz"           : 10201}]
+        self.testdata               = [{"Postleitzahl"                          : 10200},
+                                       {"Nennleistung Ladeeinrichtung [kW]"     : 30},
+                                       {"plz"                                   : 10201},
+                                       {"einwohner"                             : 6000}]
+        
+        self.rename_column_dict     = [{"Postleitzahl"                      : "PLZ",
+                                        "Nennleistung Ladeeinrichtung [kW]" : "KW",
+                                        "plz"                               : "PLZ",
+                                        "einwohner"                         : "Residents"}]
         
     def test_process(self):
         """Process test: rename columns in given list to 'PLZ'"""
         expected                    = [{"PLZ"           : 10200},
-                                       {"PLZ"           : 10201}]
-        self.target_column_list          = ["Postleitzahl", "plz"]
-        renamer     = RenameTargetColumn(target_column_list=self.target_column_list)
+                                       {"KW"            : 30},
+                                       {"PLZ"           : 10201},
+                                       {"Residents"     : 6000}]
+        
+        renamer     = RenameTargetColumn(rename_column_list=self.rename_column_dict)
 
         self.assertEqual(renamer.process(self.testdata), expected)
 
