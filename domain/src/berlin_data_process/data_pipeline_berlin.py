@@ -16,9 +16,7 @@ class RenameTargetColumn:
             temp_dict = row.copy()
             for key in row.keys():
                 if key in self.rename_column.keys():
-                    # temp_dict = row.copy()
                     temp_dict[self.rename_column[key]] = temp_dict.pop(key)
-                    # print(f"row: {idx}")
             # using temp dict, cause data and row cannot be changed in the same iterration of key in row.keys
             if temp_dict != row:
                 data[idx] = temp_dict

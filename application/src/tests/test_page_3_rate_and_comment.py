@@ -7,12 +7,11 @@ import streamlit as st
 from unittest.mock import MagicMock, patch
 
 # Test the following methods from helper_page_2
-from infrastructure.src.data_process.data_pipeline import data_process
 from application.src.ui.page_3_rate_and_comment import (
                                                         init_data
                                                         )
 
-# # Run test from main directory (as streamlit does with scripts) 
+# test fails because of session states. Hard to reproduce with Mock
 # python -m unittest application\src\tests\test_page_3_rate_and_comment.py
 
 #  --------------------------------------- Tests ------------------------------------------------------

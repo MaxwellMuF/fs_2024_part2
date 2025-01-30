@@ -1,13 +1,8 @@
 import time
-import json
-
-import numpy        as np
 import pandas       as pd
 import streamlit    as st
 
-# from datetime       import datetime
 # Own python files
-# from application.src.utilities          import methods
 from application.src.utilities          import helper_page_2 as helper2
 from application.src.utilities          import helper_page_3 as helper3
 
@@ -63,21 +58,16 @@ def config_edit_df_user_posts() -> dict[str:st.column_config]:
 
 def interactiv_df_for_user_comment_widget(df_user_changes: pd.DataFrame) -> None:
     """Spawn interactiv df for user posts: 
-            1. Create config
-            2. Spawn interactiv dataframe
-            3. Spawn submit button
-            4. If submitted, save data in user DB
+            1. Spawn interactiv dataframe
+            2. If submitted, save data in user DB
             """
-    # 1. Define config for interactiv df with st.column_config
-    config = config_edit_df_user_posts()
-
     # Create container user post
     with st.container(border=True):
         st.header(body="Rate and comment on your selection",
                   help=st.session_state.text_for_page_3_help["interactiv_df_for_user_comment_widget_help"])
         st.write("You can leave a recommendation or a comment for an selection recommendation:")
         
-        # 2. Spawn interactiv df
+        # 1. Spawn interactiv df
         df_user_changes["Rating"] = [""] * len(df_user_changes)
         df_user_changes["Comment"] = [""] * len(df_user_changes)
 
@@ -85,10 +75,10 @@ def interactiv_df_for_user_comment_widget(df_user_changes: pd.DataFrame) -> None
             df_stations_user_edit = st.data_editor(df_user_changes,
                                                    use_container_width=True, hide_index=True, num_rows='fixed')
         else:
-            df_stations_user_edit = st.data_editor(df_user_changes, column_config=config,
+            df_stations_user_edit = st.data_editor(df_user_changes, column_config=config_edit_df_user_posts(),
                                                    use_container_width=True, hide_index=True, num_rows='fixed')
 
-        # 4. Spawn button to submit
+        # 2. Spawn button to submit
         if st.button("Submit post", key="submited_post"):
             # Save post if submitted: add post to DB and save DB
             helper3.load_db_add_dict_save_db(path_to_db="application/data/data_user/DataBase_user_changes.json", 
@@ -101,29 +91,25 @@ def interactiv_df_for_user_comment_widget(df_user_changes: pd.DataFrame) -> None
 
 def interactiv_df_users_previous_submissions_widget(df_user_comment_submitted: pd.DataFrame) -> None:
     """Spawn interactiv df for user posts: 
-            1. Create config
-            2. Spawn interactiv dataframe from loaded user DB
-            3. Spawn submit button
-            4. If submitted, save data in user DB
+            1. Spawn interactiv dataframe from loaded user DB
+            2. If submitted, save data in user DB
             """
-    # 1. Define config for interactiv df with st.column_config
-    config = config_edit_df_user_posts()
-
     # Create container user post
     with st.container(border=True):
         st.header(body="Your previous submissions", 
                   help=st.session_state.text_for_page_3_help["interactiv_df_users_previous_submissions_widget_help"])
         st.write("Do you want to change them? No Problem! Just make your modifications below and submit it.")
         
-        # 2. Spawn interactiv df
+        # 1. Spawn interactiv df
         if df_user_comment_submitted.empty:
             df_user_rate_data_base = st.data_editor(df_user_comment_submitted, key="unused_df_edit",
                                                    use_container_width=True, hide_index=True, num_rows='fixed')
         else:
-            df_user_rate_data_base = st.data_editor(df_user_comment_submitted, column_config=config, key="unused_df_edit",
-                                                   use_container_width=True, hide_index=True, num_rows='dynamic')
+            df_user_rate_data_base = st.data_editor(df_user_comment_submitted, column_config=config_edit_df_user_posts(), 
+                                                    key="unused_df_edit", use_container_width=True, hide_index=True, 
+                                                    num_rows='dynamic')
 
-        # 4. Spawn button to submit
+        # 2. Spawn button to submit
         if st.button("Submit post", key="submited_post_changes"):
             # Save post if submitted: add post to DB and save DB
             helper3.load_db_add_dict_save_db(path_to_db="application/data/data_user/DataBase_user_changes.json", 
@@ -153,16 +139,24 @@ def all_users_submissions_widget():
 def init_data(geodata_path: str="infrastructure/data/raw_data/geodata_berlin_plz.csv", 
               charging_data_path: str="domain/data/processed_data_for_ui/Ladesaeulenregister.csv") -> None:
     """Init and process data only ones at the start of the app (instead of every tick)"""
-    if "df_charging_berlin_rate" not in st.session_state:
-        # df_geodat_plz = pd.read_csv(geodata_path, sep=',', low_memory=False)
-        df_charging = pd.read_csv(charging_data_path, sep=',', low_memory=False)
-        df_charging.drop_duplicates(inplace=True)
-        df_charging.drop(columns=["Art der Ladeeinrichung"], inplace=True)
+    df_charging = pd.read_csv(charging_data_path, sep=',', low_memory=False)
+    df_charging.drop_duplicates(inplace=True)
+    df_charging.drop(columns=["Art der Ladeeinrichung"], inplace=True)
 
     return df_charging
 
-def make_streamlit_page_elements(df_every_station: pd.DataFrame) -> None:
+def init_session_states():
+    """Init the streamlit session states for this page"""
+    if "text_for_page_3_help" not in st.session_state:
+        # because of the funny behaior of load a json into python str into streamlit md, we need to trippe '\' in '\n'
+        st.session_state.text_for_page_3_help = helper2.load_json("application/data/data_ui_texts/text_for_page_3_help.json")
+    if "df_charging_berlin_rate" not in st.session_state:
+        st.session_state.df_charging_berlin_rate = init_data()
 
+    return
+
+def make_streamlit_page_elements(df_every_station: pd.DataFrame) -> None:
+    """Call all widget funcs for the page"""
     # filter and drop and show
     df_user_selected_subset = filter_zip_code_widget(df_every_station)
    
@@ -185,16 +179,12 @@ def main() -> None:
             Load and process data and save it as streamlit state.
             Makes heatmap of electric Charging Stations in berlin.
             And show selected data and submit and save user posts."""
-    if "text_for_page_3_help" not in st.session_state:
-        # because of the funny behaior of load a json into python str into streamlit md, we need to trippe '\' in '\n'
-        st.session_state.text_for_page_3_help = helper2.load_json("application/data/data_ui_texts/text_for_page_3_help.json")
-
+    init_session_states()
     st.title(body="Rate your Charging Station",
              help=st.session_state.text_for_page_3_help["main_help"])
-    if "df_charging_berlin_rate" not in st.session_state:
-        st.session_state.df_charging_berlin_rate = init_data()
     make_streamlit_page_elements(st.session_state.df_charging_berlin_rate)
+
     return
 
-# call main directly because of st.navigation
+# Call main
 main()

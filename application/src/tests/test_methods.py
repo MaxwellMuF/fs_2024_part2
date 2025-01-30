@@ -15,7 +15,7 @@ class TestCountPLZOccurrences(unittest.TestCase):
 
         self.df_test_input = pd.DataFrame({
             "PLZ": [10179, 10179, 10243, 10243, 10243],
-            "KW": [22.0, 11.0, 50.0, 22.0, 11.0],
+            "Anzahl Ladepunkte": [22, 11, 2, 6, 3],
             "geometry": [
                 "POINT(13.408056 52.518611)",
                 "POINT(13.408056 52.518611)",
@@ -27,7 +27,7 @@ class TestCountPLZOccurrences(unittest.TestCase):
 
         self.df_expected_output = pd.DataFrame({
             "PLZ": [10179, 10243],
-            "Number": [2, 3],
+            "Number": [33, 11],
             "geometry": ["POINT(13.408056 52.518611)", "POINT(13.454281 52.514233)"]
         })
 

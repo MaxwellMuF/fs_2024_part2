@@ -49,7 +49,7 @@ def add_col_available(df: pd.DataFrame, chance: list[float, float]):
 
 #7
 def merge_with_geometry(df: pd.DataFrame, df_geo: pd.DataFrame) -> pd.DataFrame:
-    # Merge df_charging_berlin and df_geodat_plt to get geo data for berlins zip codes
+    """Merge df_charging_berlin and df_geodat_plt to get geo data for berlins zip codes"""
     df_merged                  = df.merge(df_geo, on='PLZ', how ='right') #pdict["geocode"]
     df_merged.dropna(subset    =['geometry'], inplace=True)
 

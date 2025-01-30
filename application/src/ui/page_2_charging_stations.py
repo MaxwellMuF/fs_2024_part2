@@ -1,8 +1,5 @@
-import time
-import json
 import folium  
 
-import numpy        as np
 import pandas       as pd
 import streamlit    as st
 
@@ -57,7 +54,6 @@ def spawn_heatmap_berlin_widget(df_numbers_per_kW: pd.DataFrame, df_numbers: pd.
         m = folium.Map(location=[52.52, 13.40], zoom_start=10)
         # catch case: empty df, i.e. no charging station found
         if len(df_numbers_per_kW) == 0:
-            # st.write("Sorry, there is no such Charging Stations in berlin yet")
             st.warning("Sorry, there is no such Charging Stations in berlin yet", icon="⚠️")
             st_folium(m, width=800, height=600)
         else:
@@ -123,6 +119,7 @@ def config_edit_df_user_posts() -> dict[str:st.column_config]:
     return config
 
 def calculate_number_charging_stations(df: pd.DataFrame) -> int:
+    """Sum of certain column"""
     return int(df["Anzahl Ladepunkte"].sum())
 
 def show_address_and_availibility_widget(df_user_selected_subset_show: pd.DataFrame) -> pd.DataFrame:
@@ -139,6 +136,25 @@ def show_address_and_availibility_widget(df_user_selected_subset_show: pd.DataFr
 
 
 # ----------------------------- streamlit page ------------------------------
+# @methods.timer
+def init_data(geodata_path: str="domain/data/processed_data_for_ui/geodata_berlin_plz.csv", 
+              charging_data_path: str="domain/data/processed_data_for_ui/Ladesaeulenregister.csv") -> None:
+    """Init and process data only ones at the start of the app (instead of every tick)"""
+
+    df_geodat_plz = pd.read_csv(geodata_path, sep=',', low_memory=False)
+    df_charging = pd.read_csv(charging_data_path, sep=',', low_memory=False)
+
+    return helper2.merge_with_geometry(df=df_charging, df_geo=df_geodat_plz)
+
+def init_session_states():
+    """Init the streamlit session states for this page"""
+    if "text_for_page_2_help" not in st.session_state:
+        # because of the funny behaior of load a json into python str into streamlit md, we need to trippe '\' in '\n'
+        st.session_state.text_for_page_2_help = helper2.load_json("application/data/data_ui_texts/text_for_page_2_help.json")
+    if "df_charging_berlin_search" not in st.session_state:
+        st.session_state.df_charging_berlin_search = init_data()
+
+    return
 
 # Make Heatmap of berlin with number of charging stations
 def make_streamlit_page_elements(df: pd.DataFrame) -> None:
@@ -175,33 +191,11 @@ def make_streamlit_page_elements(df: pd.DataFrame) -> None:
     return
 
 # @methods.timer
-def init_data(geodata_path: str="domain/data/processed_data_for_ui/geodata_berlin_plz.csv", 
-              charging_data_path: str="domain/data/processed_data_for_ui/Ladesaeulenregister.csv") -> None:
-    """Init and process data only ones at the start of the app (instead of every tick)"""
-
-    df_geodat_plz = pd.read_csv(geodata_path, sep=',', low_memory=False)
-    df_charging = pd.read_csv(charging_data_path, sep=',', low_memory=False)
-    # required_columns = ('Postleitzahl', 'Bundesland', 'Straße', 'Hausnummer',
-    #                             'Ort', 'Nennleistung Ladeeinrichtung [kW]')
-
-    return helper2.merge_with_geometry(df=df_charging, df_geo=df_geodat_plz)
-
-# @methods.timer
 def main() -> None:
-    """Main of the Charging Stations page: 
-            Load and process data and save it as streamlit state.
-            Makes heatmap of electric Charging Stations in berlin.
-            And show selected data and submit and save user posts."""
-    
-    if "text_for_page_2_help" not in st.session_state:
-        # because of the funny behaior of load a json into python str into streamlit md, we need to trippe '\' in '\n'
-        st.session_state.text_for_page_2_help = helper2.load_json("application/data/data_ui_texts/text_for_page_2_help.json")
-    if "df_charging_berlin_search" not in st.session_state:
-        st.session_state.df_charging_berlin_search = init_data()
-
+    """Main of the Charging Stations page: Make title and call init and sequence of elements"""
+    init_session_states()
     st.title(body="Find a suitable Charging Station",
              help=st.session_state.text_for_page_2_help["main_help"])
-
     make_streamlit_page_elements(st.session_state.df_charging_berlin_search)
     
     return

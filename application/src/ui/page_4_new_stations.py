@@ -7,7 +7,6 @@ from streamlit_folium       import st_folium
 from branca.colormap        import LinearColormap
 
 # Own python files
-from application.src.utilities   import methods
 from application.src.utilities   import helper_page_2 as helper2
 
 
@@ -207,20 +206,13 @@ def make_streamlit_page_elements(df_charging: pd.DataFrame, df_residents: pd.Dat
 
 def main() -> None:
     """Init session state and call make_streamlit_page_elements."""
-    
     init_session_states()
     st.title(body="Coverage of Charging Stations",
              help=st.session_state.text_for_page_4_help["show_df_density_help"])
-
-
     make_streamlit_page_elements(st.session_state.df_charging_berlin_new_stations,
                                  st.session_state.df_residents_new_stations)
     
     return
 
-# call main directly because of st.navigation
+# Call main
 main()
-
-# does not work with streamlit.navigation(Page)
-# if __name__ == "__main__":
-#     main()

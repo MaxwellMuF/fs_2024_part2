@@ -13,7 +13,8 @@ from application.src.utilities.helper_page_3 import (
                                                      load_or_init_user_db,
                                                      load_all_users_db,
                                                      add_date_or_date_column,
-                                                     save_json
+                                                     save_json,
+                                                     load_db_add_dict_save_db
                                                     )
 
 # # Run test from main directory (as streamlit does with scripts) 
@@ -211,24 +212,139 @@ class TestSaveJson(unittest.TestCase):
 # 6
 ## spending too much time on trying to implement streamlit methods like st.session_state in tests
 # class TestLoadDbAddDictSaveDb(unittest.TestCase):
-#     @patch("streamlit_app_folder.helper_page_2_charging_stations.st")
-#     @patch("streamlit_app_folder.helper_page_2_charging_stations.save_json")
-#     @patch("streamlit_app_folder.helper_page_2_charging_stations.load_json", return_value={"existing_user": {"col1": {0: 1, 1: 2}, "col2": {0: 3, 1: 4}}})
-#     def test_load_db_add_dict_save_db(self, mock_st, mock_save_json, mock_load_json):
-#         """Test load_db_add_dict_save_db function."""
-#         temp_db_path = "test.json"
-#         df_to_add = pd.DataFrame({"col1":[1,2], "col2":[3,4]})
-#         mock_st.session_state = {"username": "test_user"}
-#         st.write("")
-#         load_db_add_dict_save_db(temp_db_path, df_to_add)
 
-#         mock_load_json.assert_called_once_with(path=temp_db_path)
-#         mock_save_json.assert_called_once()
+#     @patch("application.src.utilities.helper_page_3.helper2.load_json")
+#     @patch("application.src.utilities.helper_page_3.save_json")
+#     @patch("application.src.utilities.helper_page_3.add_date_or_date_column")
+#     # @patch("application.src.utilities.helper_page_3.st.session_state")
+#     def test_user_in_db_no_overwrite(self, mock_session_state, mock_add_date, mock_save_json, mock_load_json):
+#         """Test case where user exists in the database, and overwrite is False."""
+#         # Mock session state
+#         st.session_state.username = "test_user"
 
-#         saved_data = mock_save_json.call_args[0][0]
-#         self.assertIn("test_user", saved_data)
-#         self.assertEqual(saved_data["test_user"], df_to_add.to_dict())
+#         # Mock the user database loaded from JSON
+#         mock_load_json.return_value = {
+#             "test_user": {
+#                 "ID": [1],
+#                 "Name": ["Station A"],
+#                 "Date": ["2025-01-01 12:00:00"]
+#             }
+#         }
 
+#         # Input DataFrame to add
+#         df_to_add = pd.DataFrame({
+#             "ID": [2],
+#             "Name": ["Station B"]
+#         })
 
-if __name__ == "__main__":
-    unittest.main()
+#         # Mock the output of add_date_or_date_column
+#         mock_add_date.return_value = pd.DataFrame({
+#             "ID": [2],
+#             "Name": ["Station B"],
+#             "Date": ["2025-01-02 12:00:00"]
+#         })
+
+#         # Expected concatenated DataFrame
+#         expected_user_database = {
+#             "test_user": {
+#                 "ID": [2, 1],
+#                 "Name": ["Station B", "Station A"],
+#                 "Date": ["2025-01-02 12:00:00", "2025-01-01 12:00:00"]
+#             }
+#         }
+
+#         # Call the function
+#         path_to_db = "mock_path.json"
+#         load_db_add_dict_save_db(path_to_db, df_to_add, overwrite=False)
+
+#         # Verify the save_json call
+#         mock_save_json.assert_called_once_with(expected_user_database, path=path_to_db)
+
+#     @patch("application.src.utilities.helper_page_3.helper2.load_json")
+#     @patch("application.src.utilities.helper_page_3.save_json")
+#     @patch("application.src.utilities.helper_page_3.add_date_or_date_column")
+#     # @patch("application.src.utilities.helper_page_3.st.session_state")
+#     def test_user_not_in_db(self, mock_session_state, mock_add_date, mock_save_json, mock_load_json):
+#         """Test case where user does not exist in the database."""
+#         # Mock session state
+#         st.session_state.username = "new_user"
+
+#         # Mock the user database loaded from JSON
+#         mock_load_json.return_value = {}
+
+#         # Input DataFrame to add
+#         df_to_add = pd.DataFrame({
+#             "ID": [1],
+#             "Name": ["Station A"]
+#         })
+
+#         # Mock the output of add_date_or_date_column
+#         mock_add_date.return_value = pd.DataFrame({
+#             "ID": [1],
+#             "Name": ["Station A"],
+#             "Date": ["2025-01-01 12:00:00"]
+#         })
+
+#         # Expected user database
+#         expected_user_database = {
+#             "new_user": {
+#                 "ID": [1],
+#                 "Name": ["Station A"],
+#                 "Date": ["2025-01-01 12:00:00"]
+#             }
+#         }
+
+#         # Call the function
+#         path_to_db = "mock_path.json"
+#         load_db_add_dict_save_db(path_to_db, df_to_add, overwrite=False)
+
+#         # Verify the save_json call
+#         mock_save_json.assert_called_once_with(expected_user_database, path=path_to_db)
+
+#     @patch("application.src.utilities.helper_page_3.helper2.load_json")
+#     @patch("application.src.utilities.helper_page_3.save_json")
+#     @patch("application.src.utilities.helper_page_3.add_date_or_date_column")
+#     # @patch("application.src.utilities.helper_page_3.st.session_state")
+#     def test_user_in_db_with_overwrite(self, mock_session_state, mock_add_date, mock_save_json, mock_load_json):
+#         """Test case where user exists in the database, and overwrite is True."""
+#         # Mock session state
+#         st.session_state.username = "test_user"
+
+#         # Mock the user database loaded from JSON
+#         mock_load_json.return_value = {
+#             "test_user": {
+#                 "ID": [1],
+#                 "Name": ["Station A"],
+#                 "Date": ["2025-01-01 12:00:00"]
+#             }
+#         }
+
+#         # Input DataFrame to add
+#         df_to_add = pd.DataFrame({
+#             "ID": [2],
+#             "Name": ["Station B"]
+#         })
+
+#         # Mock the output of add_date_or_date_column
+#         mock_add_date.return_value = pd.DataFrame({
+#             "ID": [2],
+#             "Name": ["Station B"],
+#             "Date": ["2025-01-02 12:00:00"]
+#         })
+
+#         # Expected user database after overwrite
+#         expected_user_database = {
+#             "test_user": {
+#                 "ID": [2],
+#                 "Name": ["Station B"],
+#                 "Date": ["2025-01-02 12:00:00"]
+#             }
+#         }
+
+#         # Call the function
+#         path_to_db = "mock_path.json"
+#         load_db_add_dict_save_db(path_to_db, df_to_add, overwrite=True)
+
+#         # Verify the save_json call
+#         mock_save_json.assert_called_once_with(expected_user_database, path=path_to_db)
+

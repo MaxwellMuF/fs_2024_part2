@@ -2,7 +2,8 @@ import unittest
 from unittest.mock import MagicMock, patch
 from application.src.ui.page_1_welcome import welcome_text, image_with_motivation  # Replace with your module name
 
-
+# Test fails because of st.container. However Mock cant reproduce st.containers
+# python -m unittest application\src\tests\test_helper_page_3.py
 class TestStreamlitFunctions(unittest.TestCase):
 
     @patch("application.src.ui.page_1_welcome.st")

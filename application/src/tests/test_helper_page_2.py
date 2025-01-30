@@ -1,8 +1,12 @@
 import unittest
 import tempfile
-import pandas as pd
 
-from unittest.mock import MagicMock, patch
+import pandas               as pd
+import geopandas            as gpd
+
+from io                     import StringIO
+from shapely                import wkt
+from unittest.mock          import MagicMock, patch
 
 # Test the following methods from helper_page_2
 from application.src.utilities.helper_page_2 import (
@@ -11,7 +15,8 @@ from application.src.utilities.helper_page_2 import (
                                                         list_for_tooltip,               # 3
                                                         drop_column_and_sort_by_column, # 4
                                                         load_json,                      # 5
-                                                        add_col_available               # 6
+                                                        add_col_available,              # 6
+                                                        merge_with_geometry             # 7
                                                         )
 
 
@@ -143,6 +148,49 @@ class TestAddColAvailable(unittest.TestCase):
         expected = pd.DataFrame({"A": [1, 2, 3], "Available": ["✔️", "❌", "✔️"]})
         pd.testing.assert_frame_equal(result, expected)
 
+# 7
+class TestMergeWithGeometry(unittest.TestCase):
 
-if __name__ == "__main__":
-    unittest.main()
+    def setUp(self):
+        """Create sample data for testing"""
+        # Sample data for geodata
+        self.geodata_csv = StringIO(
+            """PLZ;geometry
+            10115;"POINT(13.388859 52.517037)"
+            10117;"POINT(13.397634 52.529407)"
+            10119;"POINT(13.423680 52.524758)"
+            """
+        )
+
+        # Sample data for other data
+        self.charging_csv = StringIO(
+            """PLZ;Value
+            10115;10
+            10117;20
+            10119;30
+            """
+        )
+
+        # Expected output
+        self.df_expected_output = gpd.GeoDataFrame({
+            "PLZ": [10115, 10117, 10119],
+            "Value": [10, 20, 30],
+            "geometry": [
+                wkt.loads("POINT(13.388859 52.517037)"),
+                wkt.loads("POINT(13.397634 52.529407)"),
+                wkt.loads("POINT(13.423680 52.524758)")
+            ]
+        }, geometry="geometry")
+
+    def test_merge_with_geometry(self):
+        """Test merging dataframes with geometry data"""
+        # Convert the StringIO CSV data into DataFrames
+        df_geo = pd.read_csv(self.geodata_csv, sep=";")
+        df = pd.read_csv(self.charging_csv, sep=";")
+
+        # Run the merge_with_geometry function
+        result = merge_with_geometry(df, df_geo)
+
+        # Compare the resulting GeoDataFrame to the expected GeoDataFrame
+        pd.testing.assert_frame_equal(result, self.df_expected_output)
+

@@ -30,6 +30,7 @@ def load_or_init_user_db(df_user_selected_subset_show: pd.DataFrame) -> pd.DataF
 
 # 3
 def load_all_users_db() -> pd.DataFrame:
+    """Load DB contains all users comments and rates"""
     users_db_dict = helper2.load_json(path="application/data/data_user/DataBase_user_changes.json")
     df_all_users_posts = pd.DataFrame()
     for user in users_db_dict.keys():
@@ -41,6 +42,7 @@ def load_all_users_db() -> pd.DataFrame:
 
 # 4
 def add_date_or_date_column(df: pd.DataFrame):
+    """Add current Date + time as new column or as entry in row"""
     if "Date" in df.columns:
         for idx in df.index:
             # do not overwrite existing date (in page_3: interactiv_df_users_previous_submissions_widget())
@@ -53,16 +55,18 @@ def add_date_or_date_column(df: pd.DataFrame):
 
 # 5
 def save_json(dict_for_saving, path="DataBase_user_changes.json"):
+    """Dump dict to json"""
     with open(path, "w", encoding='utf-8') as file:
         json.dump(dict_for_saving, file)
     return
 
 # 6
 def load_db_add_dict_save_db(path_to_db, df_to_add: pd.DataFrame, overwrite: str=False):
+    """4 Cases: 1. user in DB, use DB, 2. user not in DB, new DB, 3./4. if overwrite: overwrite, else concat"""
     # Load data
     user_name = st.session_state.username
     user_database = helper2.load_json(path=path_to_db)
-    # if user exist use db else init db
+    # if user exist use DB else init DB
     if user_name in user_database.keys():
         df_user_database = pd.DataFrame(user_database[user_name])
     else:
@@ -79,8 +83,6 @@ def load_db_add_dict_save_db(path_to_db, df_to_add: pd.DataFrame, overwrite: str
         # i.e. later rows overwrite earlier rows with same index (see testing_tests.py, search "Orig concat")
         df_user_database_all = pd.concat([df_to_add_with_date, df_user_database], axis=0)
 
-    # df_user_database_all.drop_duplicates(inplace=True)
-    # user_database[user_name] = df_to_add.to_dict()
     user_database[user_name] = df_user_database_all.to_dict()
     save_json(user_database, path=path_to_db)
     return

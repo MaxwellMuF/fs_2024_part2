@@ -40,5 +40,7 @@ def main():
     image_with_motivation()
     welcome_text()
 
+    return
+
 # call main directly because of st.navigation
 main()
