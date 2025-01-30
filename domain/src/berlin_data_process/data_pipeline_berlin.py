@@ -124,7 +124,10 @@ def activate_data_pipeline_berlin(): # [geodata_berlin_plz.csv, Ladesaeulenregis
     load_data_path = "infrastructure/data/raw_data"
     save_data_path = "domain/data/processed_data_for_ui"
     list_file = ["geodata_berlin_plz.csv", "Ladesaeulenregister.csv", "plz_einwohner.csv"]
-    list_rename_columns = ["Postleitzahl", "plz"]
+    dict_rename_columns = {"Postleitzahl"                       : "PLZ", 
+                           "Nennleistung Ladeeinrichtung [kW]"  : "KW",
+                           "plz"                                : "PLZ", 
+                           "einwohner"                          : "Residents"}
     list_filter_columns = [["PLZ","geometry"], 
                            ["PLZ","Straße","Hausnummer","Art der Ladeeinrichung","Anzahl Ladepunkte",
                             "Nennleistung Ladeeinrichtung [kW]"],
@@ -137,7 +140,7 @@ def activate_data_pipeline_berlin(): # [geodata_berlin_plz.csv, Ladesaeulenregis
 
     for idx in range(len(list_file)):
         loader                      = LoadRawData(load_path                 =f"{load_data_path}/{list_file[idx]}")
-        renamer                     = RenameTargetColumn(rename_column_list =list_rename_columns)
+        renamer                     = RenameTargetColumn(rename_column      =dict_rename_columns)
         filter_columns              = FilterColumns(required_columns        =list_filter_columns[idx])
         cleaner                     = Cleaner(reject_data                   =["", "None", "NaN"])
         filter_berlin               = FilterBerlin(filter_plz_min           =10000,filter_plz_max=14200,filter_column="PLZ")
