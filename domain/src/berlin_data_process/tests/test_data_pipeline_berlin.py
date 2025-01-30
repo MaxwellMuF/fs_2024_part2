@@ -4,7 +4,8 @@ from typing         import List, Dict, Any
 from datetime       import datetime
 
 # Test the following methods from user_data_process
-from domain.src.berlin_data_process.data_pipeline_berlin import (FilterColumns,
+from domain.src.berlin_data_process.data_pipeline_berlin import (RenameTargetColumn,
+                                                                 FilterColumns,
                                                                  Cleaner,
                                                                  FilterBerlin,
                                                                  Validator,
@@ -20,11 +21,12 @@ from domain.src.berlin_data_process.data_pipeline_berlin import (FilterColumns,
 
 class TestRenameTargetColumn(unittest.TestCase):
     def setUp(self):
-        """Rename target column 'PLZ' if nessesary"""
+        """Set up all required test data"""
         self.testdata               = [{"Postleitzahl"  : 10200},
                                        {"plz"           : 10201}]
         
     def test_process(self):
+        """Process test: rename columns in given list to 'PLZ'"""
         expected                    = [{"PLZ"           : 10200},
                                        {"PLZ"           : 10201}]
         self.target_column_list          = ["Postleitzahl", "plz"]

@@ -6,6 +6,24 @@ from typing         import List, Dict, Any
 #  --------------------------------------- Pipeline Classes ------------------------------------------------------
 
 @dataclass
+class RenameTargetColumn:
+    target_column_list: List[str]
+
+    def process(self, data: List[Dict[str,Any]]) -> List[Dict[str, Any]]:
+        """Rename target column 'PLZ' if nessesary"""
+        filtered_data = []
+        for idx,row in enumerate(data):
+            for key in row.keys():
+                if key in self.target_column_list:
+                    temp_dict = row.copy()
+                    temp_dict["PLZ"] = temp_dict.pop(key)
+            # using temp dict, cause data and row cannot be changed in the same iterration of key in row.keys
+            data[idx] = temp_dict
+                
+        return data
+    
+
+@dataclass
 class FilterColumns:
     required_columns: List[str]
 
