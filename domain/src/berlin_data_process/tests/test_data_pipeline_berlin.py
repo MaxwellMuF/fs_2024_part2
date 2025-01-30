@@ -55,16 +55,16 @@ class TestFilterColumns(unittest.TestCase):
         """Process test: 1. filter correct, 2. missing column"""
         # 1. Case: pass test
         expected            = [{key:value for key,value in zip(range(5),range(5))}]*2
-        filter_columns      = FilterColumns(required_columns=self.required_columns)
+        filter      = FilterColumns(required_columns=self.required_columns)
 
-        self.assertEqual(filter_columns.process(self.testdata), expected)
+        self.assertEqual(filter.process(self.testdata), expected)
 
         # 2. Case: incomplete data
         expected            = []
-        filter_columns2     = FilterColumns(required_columns=self.required_columns)
+        filter2     = FilterColumns(required_columns=self.required_columns)
 
         with self.assertRaises(KeyError) as context:
-            filter_columns2.process(self.testdata_incorrect)
+            filter2.process(self.testdata_incorrect)
         self.assertIn("FilterColumns: Missing required column: 0 in row: {1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9}", 
                       str(context.exception))
  
@@ -73,15 +73,15 @@ class TestCleaner(unittest.TestCase):
     def setUp(self):
         """Set up all required test data"""
         self.residents_reject_data = ["", "None", "NaN", "0"]
-        self.test_data = [{i:values} for i,values in zip(range(len(self.residents_reject_data)),
+        self.test_data = [{key:values} for key,values in zip(range(len(self.residents_reject_data)),
                                                              self.residents_reject_data)]
         self.test_data += [{"key":"some_value"}, {"key2":"some_value2"}]
         
     def test_process(self):
         """Process test: 2 of 6 rows pass"""
         expected = [{"key":"some_value"}, {"key2":"some_value2"}]
-        cleaner1 = Cleaner(reject_data=self.residents_reject_data)
-        self.assertEqual(cleaner1.process(self.test_data), expected)
+        cleaner = Cleaner(reject_data=self.residents_reject_data)
+        self.assertEqual(cleaner.process(self.test_data), expected)
         
 class TestFilterBerlin(unittest.TestCase):
     def setUp(self):
