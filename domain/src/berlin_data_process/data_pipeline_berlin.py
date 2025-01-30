@@ -13,12 +13,14 @@ class RenameTargetColumn:
         """Rename target column 'PLZ' if nessesary"""
         for idx,row in enumerate(data):
             temp_dict = {}
+            temp_dict = row.copy()
             for key in row.keys():
                 if key in self.rename_column.keys():
-                    temp_dict = row.copy()
+                    # temp_dict = row.copy()
                     temp_dict[self.rename_column[key]] = temp_dict.pop(key)
+                    # print(f"row: {idx}")
             # using temp dict, cause data and row cannot be changed in the same iterration of key in row.keys
-            if temp_dict:
+            if temp_dict != row:
                 data[idx] = temp_dict
                 
         return data
@@ -120,7 +122,7 @@ class SaveProcessedDate:
         return data # for Testing
 
 
-def activate_data_pipeline_berlin(): # [geodata_berlin_plz.csv, Ladesaeulenregister.csv, plz_einwohner.csv]
+def activate_data_pipeline_berlin():
     load_data_path = "infrastructure/data/raw_data"
     save_data_path = "domain/data/processed_data_for_ui"
     list_file = ["geodata_berlin_plz.csv", "Ladesaeulenregister.csv", "plz_einwohner.csv"]
@@ -130,12 +132,12 @@ def activate_data_pipeline_berlin(): # [geodata_berlin_plz.csv, Ladesaeulenregis
                            "einwohner"                          : "Residents"}
     list_filter_columns = [["PLZ","geometry"], 
                            ["PLZ","Straße","Hausnummer","Art der Ladeeinrichung","Anzahl Ladepunkte",
-                            "Nennleistung Ladeeinrichtung [kW]"],
-                           ["PLZ","einwohner"]]
+                            "KW"],
+                           ["PLZ","Residents"]]
     list_required_types = [{"PLZ":int},
                            {"PLZ":int, "Straße":str,"Hausnummer":str, "Art der Ladeeinrichung":str,
-                            "Anzahl Ladepunkte":int, "Nennleistung Ladeeinrichtung [kW]":float},
-                           {"PLZ":int, "einwohner":int}]
+                            "Anzahl Ladepunkte":int, "KW":float},
+                           {"PLZ":int, "Residents":int}]
 
 
     for idx in range(len(list_file)):
