@@ -2,7 +2,7 @@ import unittest
 import pandas as pd
 from io import StringIO
 # Own python files: will be tested
-from infrastructure.src.data_process.data_pipeline import data_process
+from domain.src.berlin_data_process import data_process_stations
 
 class TestDataProcess(unittest.TestCase):
 
@@ -42,7 +42,7 @@ class TestDataProcess(unittest.TestCase):
         df_charging = pd.read_csv(self.charging_csv, sep=";")
 
         # Run the data_process function
-        result = data_process(df_geodata, df_charging)
+        result = data_process_stations(df_geodata, df_charging)
 
         # Convert the geometry column to strings for comparison
         result["geometry"] = result["geometry"].apply(str)
