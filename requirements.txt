@@ -6,3 +6,4 @@ streamlit_authenticator
 streamlit_folium
 folium
 branca
+diagrams
