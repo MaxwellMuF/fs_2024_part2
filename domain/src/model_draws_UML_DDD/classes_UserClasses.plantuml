@@ -1,0 +1,37 @@
+@startuml classes_UserClasses
+set namespaceSeparator none
+class "Cleaner" as data_pipeline_berlin.Cleaner {
+  reject_data : List[str]
+  process(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]
+}
+class "FilterBerlin" as data_pipeline_berlin.FilterBerlin {
+  filter_column : str
+  filter_plz_max : int
+  filter_plz_min : int
+  process(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]
+}
+class "FilterColumns" as data_pipeline_berlin.FilterColumns {
+  required_columns : List[str]
+  process(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]
+}
+class "LoadRawData" as data_pipeline_berlin.LoadRawData {
+  load_path : str
+  process(data) -> List[Dict[str, Any]]
+}
+class "Pipeline" as data_pipeline_berlin.Pipeline {
+  steps : List[Any]
+  run(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]
+}
+class "RenameTargetColumn" as data_pipeline_berlin.RenameTargetColumn {
+  rename_column : Dict[str, str]
+  process(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]
+}
+class "SaveProcessedDate" as data_pipeline_berlin.SaveProcessedDate {
+  save_path : str
+  process(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]
+}
+class "Validator" as data_pipeline_berlin.Validator {
+  required_types : Dict[str, Any]
+  process(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]
+}
+@enduml

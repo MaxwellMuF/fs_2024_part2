@@ -121,6 +121,7 @@ class SaveProcessedDate:
 
 
 def activate_data_pipeline_berlin():
+    """"Activate pipeline and init properties of pipeline classes"""
     load_data_path = "infrastructure/data/raw_data"
     save_data_path = "domain/data/processed_data_for_ui"
     list_file = ["geodata_berlin_plz.csv", "Ladesaeulenregister.csv", "plz_einwohner.csv"]
@@ -149,7 +150,8 @@ def activate_data_pipeline_berlin():
         pipeline                    = Pipeline(steps                        =[loader, renamer, filter_columns, cleaner, 
                                                                               filter_berlin, validator, saver])
         pipeline.run()
-        
+    
+    return
 
 if __name__ == "__main__":
     activate_data_pipeline_berlin()
