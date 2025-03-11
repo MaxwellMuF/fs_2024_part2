@@ -5,7 +5,7 @@ def welcome_text():
     with st.container(border=True):
         st.subheader(body="About the project:",
                      help="")
-        st.write(f'Hello *{st.session_state.get("name", "Guest_default_for_testing")}*! \
+        st.write(f'Hello *{st.session_state.get("username", "Guest_default_for_testing")}*! \
                 Thank you for your interest in the project. \
                 Here you will find a short description of what the project is about:') # Use get method to run tests
         st.write("*ChargeHub Berlin* is an interactive platform designed to provide Berlin residents \
