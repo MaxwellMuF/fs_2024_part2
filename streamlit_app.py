@@ -1,6 +1,6 @@
 import streamlit as st
 # Own python files
-from application.src.utilities import methods_login
+from application.src.utilities import st_methods_login
 from infrastructure.src.data_downloader import downloader_pipeline
 from domain.src.berlin_data_process import data_pipeline_berlin
 
@@ -8,6 +8,10 @@ from domain.src.berlin_data_process import data_pipeline_berlin
 def init_st_session_state():
     """Initialize all streamlit.session_states that are needed or required in the app."""
     # ---- here were a lot of variables (session_state) bevor using st.authenticator and st.navigation -----
+    if "logged_in" not in st.session_state:
+        st.session_state["logged_in"] = None
+    if "path_credential_users" not in st.session_state:
+        st.session_state["path_credential_users"] = "application/data/data_user/credential_users.yaml"
     return
 
 @st.cache_resource()
@@ -18,12 +22,10 @@ def download_data_from_url():
 
 def pages_bevor_login():
     """Pages of streamlit app bevor login defined by functions"""
-    login = st.Page(methods_login.login_widget, title="Login", icon=":material/login:")
-    register_new_user = st.Page(methods_login.register_new_user_widget, title="Sign Up", icon=":material/person_add:")
-    forgot_password = st.Page(methods_login.forgot_password_widget, title="Forget Password", icon=":material/lock_reset:")
-    forgot_username = st.Page(methods_login.forgot_username_widget, title="Forget Username", icon=":material/help_outline:")
-
-    return [login, register_new_user, forgot_password, forgot_username]
+    login = st.Page(st_methods_login.login_box, title="Login", icon=":material/login:")
+    register_new_user = st.Page(st_methods_login.register_box, title="Sign Up", icon=":material/person_add:")
+    
+    return [login, register_new_user]
 
 def pages_after_login():
     """Pages of streamlit app after login defined by functions and python files"""
@@ -31,11 +33,10 @@ def pages_after_login():
     charging_stations = st.Page("application/src/ui/page_2_charging_stations.py", title="Charging Stations", icon=":material/dynamic_form:") #, default=True
     rate_and_comment = st.Page("application/src/ui/page_3_rate_and_comment.py", title="Rate and Comment", icon=":material/chat_bubble:")
     new_stations = st.Page("application/src/ui/page_4_new_stations.py", title="Add New Stations", icon=":material/add_circle:")    
-    reset_password = st.Page(methods_login.reset_password_widget, title="Reset Password", icon=":material/lock_reset:")
-    logout = st.Page(methods_login.logout_widget, title="Logout", icon=":material/logout:")
+    logout = st.Page(st_methods_login.logout_box, title="Logout", icon=":material/logout:")
 
     # add_notes
-    return [welcome, charging_stations, rate_and_comment, new_stations, reset_password, logout]
+    return [welcome, charging_stations, rate_and_comment, new_stations, logout]
 
 def main():
     """
@@ -44,19 +45,16 @@ def main():
     And the authenticator process is called.
     """
     # download_data_from_url() 
-    # init_st_session_state()
+    init_st_session_state()
 
-    # load authenticator config and create login st.authenticator
-    config = methods_login.load_config(config_path="application/data/data_user/config.yaml")
-    methods_login.create_authenticator(config)
 
     # Show pages before a user is logged in
-    if not st.session_state.authentication_status:
+    if not st.session_state["logged_in"]:
         page_navigator = st.navigation(pages_bevor_login())
         page_navigator.run()
     
     # Show pages after a user is logged in (Note: st.authenticator uses browser cookies)
-    elif st.session_state.authentication_status:
+    elif st.session_state["logged_in"]:
         page_navigator = st.navigation(pages_after_login())
         page_navigator.run()
 
@@ -64,8 +62,6 @@ def main():
     else:
         print("We should never get here!")
     
-    # save authenticator config
-    methods_login.save_config(config, config_path="application/data/data_user/config.yaml")
     
     return
 

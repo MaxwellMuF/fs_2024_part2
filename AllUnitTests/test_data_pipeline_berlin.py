@@ -143,6 +143,9 @@ class TestSaveProcessedDate(unittest.TestCase):
         """Set up all required test data"""
         self.testdata               = [{"PLZ":1100, "Straße":"some_street", "KW":3.7}] * 10
         self.path = "domain/data/processed_data_for_ui/test_file.csv"
+        
+    # def tearDown(self):
+    #     os.remove(self.path)
 
     def test_process(self):
         saver = SaveProcessedDate(save_path=self.path)

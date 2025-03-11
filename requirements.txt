@@ -2,7 +2,8 @@ numpy
 pandas
 geopandas
 streamlit
-streamlit_authenticator
+bcrypt
+pyyaml
 streamlit_folium
 folium
 branca
