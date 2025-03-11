@@ -7,7 +7,8 @@ from application.src.utilities.authenticator_exceptions import (UserNotExistErro
                                                                 UserExistError,
                                                                 UserNameError,
                                                                 RegisterKeyError,
-                                                                PasswordEqualError)
+                                                                PasswordEqualError,
+                                                                PasswordLengthError)
 
 class Hasher:
     """Helper for hashing string and compare them by using bcrypt"""
@@ -89,6 +90,8 @@ class RegisterNewUser(Authenticator):
             raise RegisterKeyError
         elif new_user_dict["password"] != new_user_dict["password_repeat"]:
             raise PasswordEqualError
+        elif len(new_user_dict["password"]) > 72:
+            raise PasswordLengthError
         self._new_user_credential = new_user_dict
 
     def save_new_user(self):

@@ -2,12 +2,20 @@ import unittest
 import bcrypt
 import yaml
 import os
-from application.src.utilities.authenticator_exceptions import (
-    UserNotExistError, PasswordWrongError, MissingFieldError,
-    UserExistError, UserNameError, RegisterKeyError, PasswordEqualError
-)
-from application.src.utilities.authenticator import Hasher, FileLoader, Authenticator, RegisterNewUser
-"""helo"""
+from application.src.utilities.authenticator_exceptions import (UserNotExistError, 
+                                                                PasswordWrongError, 
+                                                                MissingFieldError, 
+                                                                UserExistError, 
+                                                                UserNameError, 
+                                                                RegisterKeyError, 
+                                                                PasswordEqualError, 
+                                                                PasswordLengthError)
+
+from application.src.utilities.authenticator import (Hasher, 
+                                                     FileLoader, 
+                                                     Authenticator, 
+                                                     RegisterNewUser)
+
 class TestHasher(unittest.TestCase):
     def setUp(self):
         self.hasher = Hasher()
@@ -105,6 +113,11 @@ class TestRegisterNewUser(unittest.TestCase):
         new_user = {"username": "existing_user", "password": "pass", "password_repeat": "pass", "register_key": "regkey"}
         with self.assertRaises(UserExistError):
             self.registrar.new_user_credential = new_user
+    
+    def test_new_user_credential_user_exists(self):
+        new_user = {"username": "existing_'user", "password": "pass", "password_repeat": "pass", "register_key": "regkey"}
+        with self.assertRaises(UserNameError):
+            self.registrar.new_user_credential = new_user
 
     def test_new_user_credential_invalid_register_key(self):
         new_user = {"username": "newuser", "password": "pass", "password_repeat": "pass", "register_key": "wrongkey"}
@@ -114,6 +127,11 @@ class TestRegisterNewUser(unittest.TestCase):
     def test_new_user_credential_password_mismatch(self):
         new_user = {"username": "newuser", "password": "pass", "password_repeat": "wrongpass", "register_key": "regkey"}
         with self.assertRaises(PasswordEqualError):
+            self.registrar.new_user_credential = new_user
+    
+    def test_new_user_password_too_long(self):
+        new_user = {"username": "newuser", "password": "pass"*20, "password_repeat": "pass"*20, "register_key": "regkey"}
+        with self.assertRaises(PasswordLengthError):
             self.registrar.new_user_credential = new_user
 
     def test_save_new_user(self):

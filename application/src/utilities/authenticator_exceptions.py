@@ -37,3 +37,8 @@ class PasswordEqualError(Exception):
     """Error that passwords are not equal"""
     def __init__(self):
         super().__init__("Password and repeat password do not match! Please check your input.")
+
+class PasswordLengthError(Exception):
+    """Password is too long for hasher"""
+    def __init__(self):
+        super().__init__("Password is too long! Please use a password with 72 digits or less.")
