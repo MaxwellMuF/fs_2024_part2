@@ -24,8 +24,8 @@ class Hasher:
 class FileLoader:
     """Load yaml files savely and dump them"""
     def __init__(self, path: str):
-        self.path_credential = path
-        self.credential_users = self.load_yaml()
+        self.path_credential: str = path
+        self.credential_users: dict[str,dict[str,str]] = self.load_yaml()
 
     def load_yaml(self) -> str:
         """Load yaml file from path safe."""
@@ -67,6 +67,23 @@ class Authenticator(Hasher, FileLoader):
             raise PasswordWrongError
         return
 
+    def reset_password(self, username: str, password: str, password_new: str, repeat_new_password: str) -> None:
+        """Reset password if user and password correct and valid"""
+        self.username = username
+        self.password = password
+        
+        if password_new != repeat_new_password:
+            raise PasswordEqualError
+        if len(password) > 72:
+            raise PasswordLengthError
+        
+        # change pw and save
+        self.credential_users[self.username]["password"] = self.hash_string(string=password_new)
+        self.save_yaml(self.credential_users)
+        
+        return
+        
+        
 class RegisterNewUser(Authenticator):
     def __init__(self, path_credential: str):
         super().__init__(path_credential)

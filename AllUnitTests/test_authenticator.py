@@ -82,7 +82,7 @@ class TestAuthenticator(unittest.TestCase):
             
     def test_reset_password(self):
         password_new = "testabc"
-        self.authenticator.reset_password(self, username="test_user", password="test123", password_new=password_new,
+        self.authenticator.reset_password(username="test_user", password="test123", password_new=password_new,
                                           repeat_new_password=password_new)
         self.authenticator.password = password_new # Should not raise error
         
