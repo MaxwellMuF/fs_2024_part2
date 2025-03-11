@@ -33,10 +33,11 @@ def pages_after_login():
     charging_stations = st.Page("application/src/ui/page_2_charging_stations.py", title="Charging Stations", icon=":material/dynamic_form:") #, default=True
     rate_and_comment = st.Page("application/src/ui/page_3_rate_and_comment.py", title="Rate and Comment", icon=":material/chat_bubble:")
     new_stations = st.Page("application/src/ui/page_4_new_stations.py", title="Add New Stations", icon=":material/add_circle:")    
+    reset_password = st.Page(st_methods_login.reset_password_box, title="Reset Password", icon=":material/lock_reset:")
     logout = st.Page(st_methods_login.logout_box, title="Logout", icon=":material/logout:")
 
     # add_notes
-    return [welcome, charging_stations, rate_and_comment, new_stations, logout]
+    return [welcome, charging_stations, rate_and_comment, new_stations, reset_password, logout]
 
 def main():
     """

@@ -92,3 +92,24 @@ def register_new_user(register_new_user_dict: dict) -> None:
         st.success(body="Registration was successful!", icon=":material/check_circle:")
     
     return
+
+def reset_password_box() -> None:
+    with st.form(key="Reset_password"):
+        st.header(body="Reset Password", help=f"Hello {st.session_state.username}. \
+                                                If you like to change your password, you can do so here.")
+        
+        password = st.text_input(label="Old Password:", type="password")
+        password_new = st.text_input(label="New Password:", type="password")
+        password_new_repeat = st.text_input(label="Repeat New Password:", type="password")
+        
+        st.form_submit_button(label="Reset Password")
+        
+    if st.session_state["FormSubmitter:Reset_password-Reset Password"]:
+        try:    
+            reseter = Authenticator(path_credential=st.session_state.path_credential_users)
+            reseter.reset_password(username=st.session_state.username, password=password,
+                                   password_new=password_new, repeat_new_password=password_new_repeat)
+        except Exception as error:
+            st.error(body=f"Error: {error}", icon=":material/error:")
+        else:
+            st.success(body="Your password has been successfully reset!", icon=":material/check_circle:")
