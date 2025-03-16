@@ -1,6 +1,4 @@
 
-#  --------------------------------------- Functions ------------------------------------------------------
-
 class DataValidator:
     def __init__(self, 
                  data_of_one_user   : dict,
@@ -35,6 +33,7 @@ class DataValidator:
         return True
     
     def run_validations(self):
+        """returns a boolean for the statement all tests passed"""
         return self.check_required_columns_exist() \
                 and self.check_columns_types() \
                 and self.check_required_column_values_not_empty()

@@ -1,0 +1,31 @@
+@startuml
+class Hasher {
+    +hash_string(string: str): str
+    +check_pw(string: str, hashed_string: str): bool
+}
+
+class FileLoader {
+    -path_credential: str
+    -credential_users: dict[str, dict[str, str]]
+    +load_yaml(): dict
+    +save_yaml(credential_users: dict[str, dict[str, str]]): None
+}
+
+class Authenticator {
+    -_username: str
+    +username: str
+    +password: str
+    +reset_password(username: str, password: str, password_new: str, repeat_new_password: str): None
+}
+
+class RegisterNewUser {
+    -_new_user_credential: dict[str, dict]
+    +new_user_credential: dict
+    +save_new_user(): None
+}
+
+Hasher <|-- Authenticator
+FileLoader <|-- Authenticator
+Authenticator <|-- RegisterNewUser
+
+@enduml

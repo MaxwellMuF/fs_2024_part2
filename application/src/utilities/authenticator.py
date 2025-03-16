@@ -33,10 +33,10 @@ class FileLoader:
             credential_users = yaml.safe_load(stream=file)
         return credential_users
     
-    def save_yaml(self, credential_users: dict[str,dict[str,str]]) -> None:
+    def save_yaml(self, new_credential_users: dict[str,dict[str,str]]) -> None:
         """Dump dict as yaml in given path."""
         with open(file=self.path_credential, mode="w") as file:
-            yaml.safe_dump(data=credential_users, stream=file)
+            yaml.safe_dump(data=new_credential_users, stream=file)
         return
     
 class Authenticator(Hasher, FileLoader):
